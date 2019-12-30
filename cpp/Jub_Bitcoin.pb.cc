@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -20,7 +19,7 @@ extern PROTOBUF_INTERNAL_EXPORT_Jub_5fBitcoin_2eproto ::PROTOBUF_NAMESPACE_ID::i
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fBitcoin_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_QRC20Output_Jub_5fBitcoin_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fBitcoin_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Return0Output_Jub_5fBitcoin_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fBitcoin_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_StandardOutput_Jub_5fBitcoin_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_Jub_5fCommon_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Bip32Path_Jub_5fCommon_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_Jub_5fCommon_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Bip44Path_Jub_5fCommon_2eproto;
 namespace JUB {
 namespace Proto {
 namespace Bitcoin {
@@ -47,9 +46,9 @@ class QRC20OutputDefaultTypeInternal {
 class OutputBTCDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OutputBTC> _instance;
-  const ::JUB::Proto::Bitcoin::StandardOutput* standardoputput_;
-  const ::JUB::Proto::Bitcoin::Return0Output* return0output_;
-  const ::JUB::Proto::Bitcoin::QRC20Output* qrc20output_;
+  const ::JUB::Proto::Bitcoin::StandardOutput* std_output_;
+  const ::JUB::Proto::Bitcoin::Return0Output* return0_output_;
+  const ::JUB::Proto::Bitcoin::QRC20Output* qrc20_output_;
 } _OutputBTC_default_instance_;
 class TransactionBTCDefaultTypeInternal {
  public:
@@ -70,7 +69,7 @@ static void InitDefaultsscc_info_ContextCfgBTC_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ContextCfgBTC_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ContextCfgBTC_Jub_5fBitcoin_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ContextCfgBTC_Jub_5fBitcoin_2eproto}, {}};
 
 static void InitDefaultsscc_info_InputBTC_Jub_5fBitcoin_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -84,8 +83,8 @@ static void InitDefaultsscc_info_InputBTC_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_InputBTC_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_InputBTC_Jub_5fBitcoin_2eproto}, {
-      &scc_info_Bip32Path_Jub_5fCommon_2eproto.base,}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_InputBTC_Jub_5fBitcoin_2eproto}, {
+      &scc_info_Bip44Path_Jub_5fCommon_2eproto.base,}};
 
 static void InitDefaultsscc_info_OutputBTC_Jub_5fBitcoin_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -99,7 +98,7 @@ static void InitDefaultsscc_info_OutputBTC_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_OutputBTC_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsscc_info_OutputBTC_Jub_5fBitcoin_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_OutputBTC_Jub_5fBitcoin_2eproto}, {
       &scc_info_StandardOutput_Jub_5fBitcoin_2eproto.base,
       &scc_info_Return0Output_Jub_5fBitcoin_2eproto.base,
       &scc_info_QRC20Output_Jub_5fBitcoin_2eproto.base,}};
@@ -116,7 +115,7 @@ static void InitDefaultsscc_info_QRC20Output_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_QRC20Output_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_QRC20Output_Jub_5fBitcoin_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_QRC20Output_Jub_5fBitcoin_2eproto}, {}};
 
 static void InitDefaultsscc_info_Return0Output_Jub_5fBitcoin_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -130,7 +129,7 @@ static void InitDefaultsscc_info_Return0Output_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Return0Output_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Return0Output_Jub_5fBitcoin_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Return0Output_Jub_5fBitcoin_2eproto}, {}};
 
 static void InitDefaultsscc_info_StandardOutput_Jub_5fBitcoin_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -144,8 +143,8 @@ static void InitDefaultsscc_info_StandardOutput_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_StandardOutput_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_StandardOutput_Jub_5fBitcoin_2eproto}, {
-      &scc_info_Bip32Path_Jub_5fCommon_2eproto.base,}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_StandardOutput_Jub_5fBitcoin_2eproto}, {
+      &scc_info_Bip44Path_Jub_5fCommon_2eproto.base,}};
 
 static void InitDefaultsscc_info_TransactionBTC_Jub_5fBitcoin_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -159,7 +158,7 @@ static void InitDefaultsscc_info_TransactionBTC_Jub_5fBitcoin_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_TransactionBTC_Jub_5fBitcoin_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_TransactionBTC_Jub_5fBitcoin_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_TransactionBTC_Jub_5fBitcoin_2eproto}, {
       &scc_info_InputBTC_Jub_5fBitcoin_2eproto.base,
       &scc_info_OutputBTC_Jub_5fBitcoin_2eproto.base,}};
 
@@ -181,8 +180,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fBitcoin_2eproto::offsets
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::InputBTC, prehash_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::InputBTC, preindex_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::InputBTC, pre_hash_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::InputBTC, pre_index_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::InputBTC, amount_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::InputBTC, path_),
   ~0u,  // no _has_bits_
@@ -192,7 +191,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fBitcoin_2eproto::offsets
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::StandardOutput, address_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::StandardOutput, amount_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::StandardOutput, changeaddress_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::StandardOutput, change_address_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::StandardOutput, path_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::Return0Output, _internal_metadata_),
@@ -213,9 +212,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fBitcoin_2eproto::offsets
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::OutputBTC, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::OutputBTC, type_),
-  offsetof(::JUB::Proto::Bitcoin::OutputBTCDefaultTypeInternal, standardoputput_),
-  offsetof(::JUB::Proto::Bitcoin::OutputBTCDefaultTypeInternal, return0output_),
-  offsetof(::JUB::Proto::Bitcoin::OutputBTCDefaultTypeInternal, qrc20output_),
+  offsetof(::JUB::Proto::Bitcoin::OutputBTCDefaultTypeInternal, std_output_),
+  offsetof(::JUB::Proto::Bitcoin::OutputBTCDefaultTypeInternal, return0_output_),
+  offsetof(::JUB::Proto::Bitcoin::OutputBTCDefaultTypeInternal, qrc20_output_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::OutputBTC, output_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Bitcoin::TransactionBTC, _internal_metadata_),
@@ -253,19 +252,19 @@ const char descriptor_table_protodef_Jub_5fBitcoin_2eproto[] PROTOBUF_SECTION_VA
   "in_path\030\001 \001(\t\0228\n\tcoin_type\030\002 \001(\0162%.JUB.P"
   "roto.Bitcoin.ENUM_COIN_TYPE_BTC\022:\n\ntrans"
   "_type\030\003 \001(\0162&.JUB.Proto.Bitcoin.ENUM_TRA"
-  "N_STYPE_BTC\"h\n\010InputBTC\022\017\n\007preHash\030\001 \001(\t"
-  "\022\020\n\010preIndex\030\002 \001(\r\022\016\n\006amount\030\003 \001(\004\022)\n\004pa"
-  "th\030\004 \001(\0132\033.JUB.Proto.Common.Bip32Path\"s\n"
-  "\016StandardOutput\022\017\n\007address\030\001 \001(\t\022\016\n\006amou"
-  "nt\030\002 \001(\004\022\025\n\rchangeAddress\030\003 \001(\010\022)\n\004path\030"
-  "\004 \001(\0132\033.JUB.Proto.Common.Bip32Path\"-\n\rRe"
-  "turn0Output\022\016\n\006amount\030\001 \001(\004\022\014\n\004data\030\002 \001("
-  "\t\"\033\n\013QRC20Output\022\014\n\004data\030\001 \001(\t\"\374\001\n\tOutpu"
-  "tBTC\0225\n\004type\030\001 \001(\0162\'.JUB.Proto.Bitcoin.E"
-  "NUM_SCRIPT_TYPE_BTC\022<\n\017standardOputput\030\002"
-  " \001(\0132!.JUB.Proto.Bitcoin.StandardOutputH"
-  "\000\0229\n\rreturn0Output\030\003 \001(\0132 .JUB.Proto.Bit"
-  "coin.Return0OutputH\000\0225\n\013qrc20Output\030\004 \001("
+  "N_STYPE_BTC\"j\n\010InputBTC\022\020\n\010pre_hash\030\001 \001("
+  "\t\022\021\n\tpre_index\030\002 \001(\r\022\016\n\006amount\030\003 \001(\004\022)\n\004"
+  "path\030\004 \001(\0132\033.JUB.Proto.Common.Bip44Path\""
+  "t\n\016StandardOutput\022\017\n\007address\030\001 \001(\t\022\016\n\006am"
+  "ount\030\002 \001(\004\022\026\n\016change_address\030\003 \001(\010\022)\n\004pa"
+  "th\030\004 \001(\0132\033.JUB.Proto.Common.Bip44Path\"-\n"
+  "\rReturn0Output\022\016\n\006amount\030\001 \001(\004\022\014\n\004data\030\002"
+  " \001(\t\"\033\n\013QRC20Output\022\014\n\004data\030\001 \001(\t\"\371\001\n\tOu"
+  "tputBTC\0225\n\004type\030\001 \001(\0162\'.JUB.Proto.Bitcoi"
+  "n.ENUM_SCRIPT_TYPE_BTC\0227\n\nstd_output\030\002 \001"
+  "(\0132!.JUB.Proto.Bitcoin.StandardOutputH\000\022"
+  ":\n\016return0_output\030\003 \001(\0132 .JUB.Proto.Bitc"
+  "oin.Return0OutputH\000\0226\n\014qrc20_output\030\004 \001("
   "\0132\036.JUB.Proto.Bitcoin.QRC20OutputH\000B\010\n\006o"
   "utput\"\217\001\n\016TransactionBTC\022\017\n\007version\030\001 \001("
   "\r\022\020\n\010locktime\030\002 \001(\r\022+\n\006inputs\030\003 \003(\0132\033.JU"
@@ -274,13 +273,13 @@ const char descriptor_table_protodef_Jub_5fBitcoin_2eproto[] PROTOBUF_SECTION_VA
   "COIN_TYPE_BTC\022\013\n\007COINBTC\020\000\022\013\n\007COINBCH\020\001\022"
   "\013\n\007COINLTC\020\002\022\014\n\010COINUSDT\020\003\022\014\n\010COINDASH\020\004"
   "\022\014\n\010COINQTUM\020\005*N\n\023ENUM_TRAN_STYPE_BTC\022\t\n"
-  "\005p2pkh\020\000\022\017\n\013p2sh_p2wpkh\020\001\022\021\n\rp2sh_multis"
-  "ig\020\002\022\010\n\004p2pk\020\003*C\n\rBTC_UNIT_TYPE\022\007\n\003BTC\020\000"
+  "\005P2PKH\020\000\022\017\n\013P2SH_P2WPKH\020\001\022\021\n\rP2SH_MULTIS"
+  "IG\020\002\022\010\n\004P2PK\020\003*C\n\rBTC_UNIT_TYPE\022\007\n\003BTC\020\000"
   "\022\010\n\004cBTC\020\001\022\010\n\004mBTC\020\002\022\010\n\004uBTC\020\003\022\013\n\007Satosh"
-  "i\020\004*<\n\024ENUM_SCRIPT_TYPE_BTC\022\014\n\010STANDARD\020"
-  "\000\022\013\n\007RETURN0\020\001\022\t\n\005QRC20\020\003B6\n\025com.jubiter"
-  ".sdk.protoB\rBitcoinProtos\242\002\rBitcoinProto"
-  "sb\006proto3"
+  "i\020\004*B\n\024ENUM_SCRIPT_TYPE_BTC\022\014\n\010SC_P2PKH\020"
+  "\000\022\016\n\nSC_RETURN0\020\001\022\014\n\010SC_QRC20\020\003B6\n\025com.j"
+  "ubiter.sdk.protoB\rBitcoinProtos\242\002\rBitcoi"
+  "nProtosb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fBitcoin_2eproto_deps[1] = {
   &::descriptor_table_Jub_5fCommon_2eproto,
@@ -297,7 +296,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fBitcoin_2eproto_once;
 static bool descriptor_table_Jub_5fBitcoin_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fBitcoin_2eproto = {
-  &descriptor_table_Jub_5fBitcoin_2eproto_initialized, descriptor_table_protodef_Jub_5fBitcoin_2eproto, "Jub_Bitcoin.proto", 1289,
+  &descriptor_table_Jub_5fBitcoin_2eproto_initialized, descriptor_table_protodef_Jub_5fBitcoin_2eproto, "Jub_Bitcoin.proto", 1295,
   &descriptor_table_Jub_5fBitcoin_2eproto_once, descriptor_table_Jub_5fBitcoin_2eproto_sccs, descriptor_table_Jub_5fBitcoin_2eproto_deps, 7, 1,
   schemas, file_default_instances, TableStruct_Jub_5fBitcoin_2eproto::offsets,
   file_level_metadata_Jub_5fBitcoin_2eproto, 7, file_level_enum_descriptors_Jub_5fBitcoin_2eproto, file_level_service_descriptors_Jub_5fBitcoin_2eproto,
@@ -393,7 +392,7 @@ ContextCfgBTC::ContextCfgBTC(const ContextCfgBTC& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   main_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.main_path().empty()) {
+  if (!from._internal_main_path().empty()) {
     main_path_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.main_path_);
   }
   ::memcpy(&coin_type_, &from.coin_type_,
@@ -441,7 +440,6 @@ void ContextCfgBTC::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ContextCfgBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -452,7 +450,9 @@ const char* ContextCfgBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
       // string main_path = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_main_path(), ptr, ctx, "JUB.Proto.Bitcoin.ContextCfgBTC.main_path");
+          auto str = _internal_mutable_main_path();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "JUB.Proto.Bitcoin.ContextCfgBTC.main_path"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -461,7 +461,7 @@ const char* ContextCfgBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_coin_type(static_cast<::JUB::Proto::Bitcoin::ENUM_COIN_TYPE_BTC>(val));
+          _internal_set_coin_type(static_cast<::JUB::Proto::Bitcoin::ENUM_COIN_TYPE_BTC>(val));
         } else goto handle_unusual;
         continue;
       // .JUB.Proto.Bitcoin.ENUM_TRAN_STYPE_BTC trans_type = 3;
@@ -469,7 +469,7 @@ const char* ContextCfgBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_trans_type(static_cast<::JUB::Proto::Bitcoin::ENUM_TRAN_STYPE_BTC>(val));
+          _internal_set_trans_type(static_cast<::JUB::Proto::Bitcoin::ENUM_TRAN_STYPE_BTC>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -491,118 +491,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ContextCfgBTC::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.ContextCfgBTC)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string main_path = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_main_path()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->main_path().data(), static_cast<int>(this->main_path().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "JUB.Proto.Bitcoin.ContextCfgBTC.main_path"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .JUB.Proto.Bitcoin.ENUM_COIN_TYPE_BTC coin_type = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_coin_type(static_cast< ::JUB::Proto::Bitcoin::ENUM_COIN_TYPE_BTC >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JUB.Proto.Bitcoin.ENUM_TRAN_STYPE_BTC trans_type = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_trans_type(static_cast< ::JUB::Proto::Bitcoin::ENUM_TRAN_STYPE_BTC >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.ContextCfgBTC)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.ContextCfgBTC)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ContextCfgBTC::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.ContextCfgBTC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string main_path = 1;
-  if (this->main_path().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->main_path().data(), static_cast<int>(this->main_path().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "JUB.Proto.Bitcoin.ContextCfgBTC.main_path");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->main_path(), output);
-  }
-
-  // .JUB.Proto.Bitcoin.ENUM_COIN_TYPE_BTC coin_type = 2;
-  if (this->coin_type() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      2, this->coin_type(), output);
-  }
-
-  // .JUB.Proto.Bitcoin.ENUM_TRAN_STYPE_BTC trans_type = 3;
-  if (this->trans_type() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      3, this->trans_type(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.ContextCfgBTC)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ContextCfgBTC::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ContextCfgBTC::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.ContextCfgBTC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -610,29 +501,30 @@ void ContextCfgBTC::SerializeWithCachedSizes(
   // string main_path = 1;
   if (this->main_path().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->main_path().data(), static_cast<int>(this->main_path().length()),
+      this->_internal_main_path().data(), static_cast<int>(this->_internal_main_path().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "JUB.Proto.Bitcoin.ContextCfgBTC.main_path");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->main_path(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_main_path(), target);
   }
 
   // .JUB.Proto.Bitcoin.ENUM_COIN_TYPE_BTC coin_type = 2;
   if (this->coin_type() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      2, this->coin_type(), target);
+      2, this->_internal_coin_type(), target);
   }
 
   // .JUB.Proto.Bitcoin.ENUM_TRAN_STYPE_BTC trans_type = 3;
   if (this->trans_type() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      3, this->trans_type(), target);
+      3, this->_internal_trans_type(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.ContextCfgBTC)
   return target;
@@ -642,11 +534,6 @@ size_t ContextCfgBTC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.ContextCfgBTC)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -655,21 +542,25 @@ size_t ContextCfgBTC::ByteSizeLong() const {
   if (this->main_path().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->main_path());
+        this->_internal_main_path());
   }
 
   // .JUB.Proto.Bitcoin.ENUM_COIN_TYPE_BTC coin_type = 2;
   if (this->coin_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->coin_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_coin_type());
   }
 
   // .JUB.Proto.Bitcoin.ENUM_TRAN_STYPE_BTC trans_type = 3;
   if (this->trans_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->trans_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_trans_type());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -702,10 +593,10 @@ void ContextCfgBTC::MergeFrom(const ContextCfgBTC& from) {
     main_path_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.main_path_);
   }
   if (from.coin_type() != 0) {
-    set_coin_type(from.coin_type());
+    _internal_set_coin_type(from._internal_coin_type());
   }
   if (from.trans_type() != 0) {
-    set_trans_type(from.trans_type());
+    _internal_set_trans_type(from._internal_trans_type());
   }
 }
 
@@ -744,15 +635,15 @@ void ContextCfgBTC::InternalSwap(ContextCfgBTC* other) {
 // ===================================================================
 
 void InputBTC::InitAsDefaultInstance() {
-  ::JUB::Proto::Bitcoin::_InputBTC_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip32Path*>(
-      ::JUB::Proto::Common::Bip32Path::internal_default_instance());
+  ::JUB::Proto::Bitcoin::_InputBTC_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
+      ::JUB::Proto::Common::Bip44Path::internal_default_instance());
 }
 class InputBTC::_Internal {
  public:
-  static const ::JUB::Proto::Common::Bip32Path& path(const InputBTC* msg);
+  static const ::JUB::Proto::Common::Bip44Path& path(const InputBTC* msg);
 };
 
-const ::JUB::Proto::Common::Bip32Path&
+const ::JUB::Proto::Common::Bip44Path&
 InputBTC::_Internal::path(const InputBTC* msg) {
   return *msg->path_;
 }
@@ -771,27 +662,27 @@ InputBTC::InputBTC(const InputBTC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  prehash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.prehash().empty()) {
-    prehash_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.prehash_);
+  pre_hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_pre_hash().empty()) {
+    pre_hash_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pre_hash_);
   }
-  if (from.has_path()) {
-    path_ = new ::JUB::Proto::Common::Bip32Path(*from.path_);
+  if (from._internal_has_path()) {
+    path_ = new ::JUB::Proto::Common::Bip44Path(*from.path_);
   } else {
     path_ = nullptr;
   }
   ::memcpy(&amount_, &from.amount_,
-    static_cast<size_t>(reinterpret_cast<char*>(&preindex_) -
-    reinterpret_cast<char*>(&amount_)) + sizeof(preindex_));
+    static_cast<size_t>(reinterpret_cast<char*>(&pre_index_) -
+    reinterpret_cast<char*>(&amount_)) + sizeof(pre_index_));
   // @@protoc_insertion_point(copy_constructor:JUB.Proto.Bitcoin.InputBTC)
 }
 
 void InputBTC::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_InputBTC_Jub_5fBitcoin_2eproto.base);
-  prehash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  pre_hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&path_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&preindex_) -
-      reinterpret_cast<char*>(&path_)) + sizeof(preindex_));
+      reinterpret_cast<char*>(&pre_index_) -
+      reinterpret_cast<char*>(&path_)) + sizeof(pre_index_));
 }
 
 InputBTC::~InputBTC() {
@@ -800,7 +691,7 @@ InputBTC::~InputBTC() {
 }
 
 void InputBTC::SharedDtor() {
-  prehash_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  pre_hash_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete path_;
 }
 
@@ -819,18 +710,17 @@ void InputBTC::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  prehash_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  pre_hash_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
     delete path_;
   }
   path_ = nullptr;
   ::memset(&amount_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&preindex_) -
-      reinterpret_cast<char*>(&amount_)) + sizeof(preindex_));
+      reinterpret_cast<char*>(&pre_index_) -
+      reinterpret_cast<char*>(&amount_)) + sizeof(pre_index_));
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* InputBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -838,17 +728,19 @@ const char* InputBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string preHash = 1;
+      // string pre_hash = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_prehash(), ptr, ctx, "JUB.Proto.Bitcoin.InputBTC.preHash");
+          auto str = _internal_mutable_pre_hash();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "JUB.Proto.Bitcoin.InputBTC.pre_hash"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 preIndex = 2;
+      // uint32 pre_index = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          preindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          pre_index_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -859,10 +751,10 @@ const char* InputBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .JUB.Proto.Common.Bip32Path path = 4;
+      // .JUB.Proto.Common.Bip44Path path = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(mutable_path(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_path(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -885,166 +777,46 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool InputBTC::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.InputBTC)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string preHash = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_prehash()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->prehash().data(), static_cast<int>(this->prehash().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "JUB.Proto.Bitcoin.InputBTC.preHash"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // uint32 preIndex = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &preindex_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint64 amount = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &amount_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JUB.Proto.Common.Bip32Path path = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_path()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.InputBTC)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.InputBTC)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void InputBTC::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.InputBTC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string preHash = 1;
-  if (this->prehash().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->prehash().data(), static_cast<int>(this->prehash().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "JUB.Proto.Bitcoin.InputBTC.preHash");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->prehash(), output);
-  }
-
-  // uint32 preIndex = 2;
-  if (this->preindex() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->preindex(), output);
-  }
-
-  // uint64 amount = 3;
-  if (this->amount() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(3, this->amount(), output);
-  }
-
-  // .JUB.Proto.Common.Bip32Path path = 4;
-  if (this->has_path()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, _Internal::path(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.InputBTC)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* InputBTC::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* InputBTC::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.InputBTC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string preHash = 1;
-  if (this->prehash().size() > 0) {
+  // string pre_hash = 1;
+  if (this->pre_hash().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->prehash().data(), static_cast<int>(this->prehash().length()),
+      this->_internal_pre_hash().data(), static_cast<int>(this->_internal_pre_hash().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "JUB.Proto.Bitcoin.InputBTC.preHash");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->prehash(), target);
+      "JUB.Proto.Bitcoin.InputBTC.pre_hash");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_pre_hash(), target);
   }
 
-  // uint32 preIndex = 2;
-  if (this->preindex() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->preindex(), target);
+  // uint32 pre_index = 2;
+  if (this->pre_index() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_pre_index(), target);
   }
 
   // uint64 amount = 3;
   if (this->amount() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->amount(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->_internal_amount(), target);
   }
 
-  // .JUB.Proto.Common.Bip32Path path = 4;
+  // .JUB.Proto.Common.Bip44Path path = 4;
   if (this->has_path()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, _Internal::path(this), target);
+      InternalWriteMessage(
+        4, _Internal::path(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.InputBTC)
   return target;
@@ -1054,23 +826,18 @@ size_t InputBTC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.InputBTC)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string preHash = 1;
-  if (this->prehash().size() > 0) {
+  // string pre_hash = 1;
+  if (this->pre_hash().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->prehash());
+        this->_internal_pre_hash());
   }
 
-  // .JUB.Proto.Common.Bip32Path path = 4;
+  // .JUB.Proto.Common.Bip44Path path = 4;
   if (this->has_path()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1081,16 +848,20 @@ size_t InputBTC::ByteSizeLong() const {
   if (this->amount() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
-        this->amount());
+        this->_internal_amount());
   }
 
-  // uint32 preIndex = 2;
-  if (this->preindex() != 0) {
+  // uint32 pre_index = 2;
+  if (this->pre_index() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->preindex());
+        this->_internal_pre_index());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1118,18 +889,18 @@ void InputBTC::MergeFrom(const InputBTC& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.prehash().size() > 0) {
+  if (from.pre_hash().size() > 0) {
 
-    prehash_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.prehash_);
+    pre_hash_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pre_hash_);
   }
   if (from.has_path()) {
-    mutable_path()->::JUB::Proto::Common::Bip32Path::MergeFrom(from.path());
+    _internal_mutable_path()->::JUB::Proto::Common::Bip44Path::MergeFrom(from._internal_path());
   }
   if (from.amount() != 0) {
-    set_amount(from.amount());
+    _internal_set_amount(from._internal_amount());
   }
-  if (from.preindex() != 0) {
-    set_preindex(from.preindex());
+  if (from.pre_index() != 0) {
+    _internal_set_pre_index(from._internal_pre_index());
   }
 }
 
@@ -1154,11 +925,11 @@ bool InputBTC::IsInitialized() const {
 void InputBTC::InternalSwap(InputBTC* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  prehash_.Swap(&other->prehash_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  pre_hash_.Swap(&other->pre_hash_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(path_, other->path_);
   swap(amount_, other->amount_);
-  swap(preindex_, other->preindex_);
+  swap(pre_index_, other->pre_index_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InputBTC::GetMetadata() const {
@@ -1169,15 +940,15 @@ void InputBTC::InternalSwap(InputBTC* other) {
 // ===================================================================
 
 void StandardOutput::InitAsDefaultInstance() {
-  ::JUB::Proto::Bitcoin::_StandardOutput_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip32Path*>(
-      ::JUB::Proto::Common::Bip32Path::internal_default_instance());
+  ::JUB::Proto::Bitcoin::_StandardOutput_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
+      ::JUB::Proto::Common::Bip44Path::internal_default_instance());
 }
 class StandardOutput::_Internal {
  public:
-  static const ::JUB::Proto::Common::Bip32Path& path(const StandardOutput* msg);
+  static const ::JUB::Proto::Common::Bip44Path& path(const StandardOutput* msg);
 };
 
-const ::JUB::Proto::Common::Bip32Path&
+const ::JUB::Proto::Common::Bip44Path&
 StandardOutput::_Internal::path(const StandardOutput* msg) {
   return *msg->path_;
 }
@@ -1197,17 +968,17 @@ StandardOutput::StandardOutput(const StandardOutput& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.address().empty()) {
+  if (!from._internal_address().empty()) {
     address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
   }
-  if (from.has_path()) {
-    path_ = new ::JUB::Proto::Common::Bip32Path(*from.path_);
+  if (from._internal_has_path()) {
+    path_ = new ::JUB::Proto::Common::Bip44Path(*from.path_);
   } else {
     path_ = nullptr;
   }
   ::memcpy(&amount_, &from.amount_,
-    static_cast<size_t>(reinterpret_cast<char*>(&changeaddress_) -
-    reinterpret_cast<char*>(&amount_)) + sizeof(changeaddress_));
+    static_cast<size_t>(reinterpret_cast<char*>(&change_address_) -
+    reinterpret_cast<char*>(&amount_)) + sizeof(change_address_));
   // @@protoc_insertion_point(copy_constructor:JUB.Proto.Bitcoin.StandardOutput)
 }
 
@@ -1215,8 +986,8 @@ void StandardOutput::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_StandardOutput_Jub_5fBitcoin_2eproto.base);
   address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&path_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&changeaddress_) -
-      reinterpret_cast<char*>(&path_)) + sizeof(changeaddress_));
+      reinterpret_cast<char*>(&change_address_) -
+      reinterpret_cast<char*>(&path_)) + sizeof(change_address_));
 }
 
 StandardOutput::~StandardOutput() {
@@ -1250,12 +1021,11 @@ void StandardOutput::Clear() {
   }
   path_ = nullptr;
   ::memset(&amount_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&changeaddress_) -
-      reinterpret_cast<char*>(&amount_)) + sizeof(changeaddress_));
+      reinterpret_cast<char*>(&change_address_) -
+      reinterpret_cast<char*>(&amount_)) + sizeof(change_address_));
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* StandardOutput::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1266,7 +1036,9 @@ const char* StandardOutput::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // string address = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_address(), ptr, ctx, "JUB.Proto.Bitcoin.StandardOutput.address");
+          auto str = _internal_mutable_address();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "JUB.Proto.Bitcoin.StandardOutput.address"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1277,17 +1049,17 @@ const char* StandardOutput::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool changeAddress = 3;
+      // bool change_address = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          changeaddress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          change_address_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .JUB.Proto.Common.Bip32Path path = 4;
+      // .JUB.Proto.Common.Bip44Path path = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(mutable_path(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_path(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1310,131 +1082,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool StandardOutput::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.StandardOutput)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string address = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_address()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->address().data(), static_cast<int>(this->address().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "JUB.Proto.Bitcoin.StandardOutput.address"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // uint64 amount = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &amount_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool changeAddress = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &changeaddress_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JUB.Proto.Common.Bip32Path path = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_path()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.StandardOutput)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.StandardOutput)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void StandardOutput::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.StandardOutput)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string address = 1;
-  if (this->address().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->address().data(), static_cast<int>(this->address().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "JUB.Proto.Bitcoin.StandardOutput.address");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->address(), output);
-  }
-
-  // uint64 amount = 2;
-  if (this->amount() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(2, this->amount(), output);
-  }
-
-  // bool changeAddress = 3;
-  if (this->changeaddress() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->changeaddress(), output);
-  }
-
-  // .JUB.Proto.Common.Bip32Path path = 4;
-  if (this->has_path()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, _Internal::path(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.StandardOutput)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* StandardOutput::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* StandardOutput::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.StandardOutput)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1442,34 +1092,36 @@ void StandardOutput::SerializeWithCachedSizes(
   // string address = 1;
   if (this->address().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->address().data(), static_cast<int>(this->address().length()),
+      this->_internal_address().data(), static_cast<int>(this->_internal_address().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "JUB.Proto.Bitcoin.StandardOutput.address");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->address(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_address(), target);
   }
 
   // uint64 amount = 2;
   if (this->amount() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->amount(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_amount(), target);
   }
 
-  // bool changeAddress = 3;
-  if (this->changeaddress() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->changeaddress(), target);
+  // bool change_address = 3;
+  if (this->change_address() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_change_address(), target);
   }
 
-  // .JUB.Proto.Common.Bip32Path path = 4;
+  // .JUB.Proto.Common.Bip44Path path = 4;
   if (this->has_path()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, _Internal::path(this), target);
+      InternalWriteMessage(
+        4, _Internal::path(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.StandardOutput)
   return target;
@@ -1479,11 +1131,6 @@ size_t StandardOutput::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.StandardOutput)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1492,10 +1139,10 @@ size_t StandardOutput::ByteSizeLong() const {
   if (this->address().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->address());
+        this->_internal_address());
   }
 
-  // .JUB.Proto.Common.Bip32Path path = 4;
+  // .JUB.Proto.Common.Bip44Path path = 4;
   if (this->has_path()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1506,14 +1153,18 @@ size_t StandardOutput::ByteSizeLong() const {
   if (this->amount() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
-        this->amount());
+        this->_internal_amount());
   }
 
-  // bool changeAddress = 3;
-  if (this->changeaddress() != 0) {
+  // bool change_address = 3;
+  if (this->change_address() != 0) {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1546,13 +1197,13 @@ void StandardOutput::MergeFrom(const StandardOutput& from) {
     address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.address_);
   }
   if (from.has_path()) {
-    mutable_path()->::JUB::Proto::Common::Bip32Path::MergeFrom(from.path());
+    _internal_mutable_path()->::JUB::Proto::Common::Bip44Path::MergeFrom(from._internal_path());
   }
   if (from.amount() != 0) {
-    set_amount(from.amount());
+    _internal_set_amount(from._internal_amount());
   }
-  if (from.changeaddress() != 0) {
-    set_changeaddress(from.changeaddress());
+  if (from.change_address() != 0) {
+    _internal_set_change_address(from._internal_change_address());
   }
 }
 
@@ -1581,7 +1232,7 @@ void StandardOutput::InternalSwap(StandardOutput* other) {
     GetArenaNoVirtual());
   swap(path_, other->path_);
   swap(amount_, other->amount_);
-  swap(changeaddress_, other->changeaddress_);
+  swap(change_address_, other->change_address_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata StandardOutput::GetMetadata() const {
@@ -1607,7 +1258,7 @@ Return0Output::Return0Output(const Return0Output& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.data().empty()) {
+  if (!from._internal_data().empty()) {
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
   amount_ = from.amount_;
@@ -1649,7 +1300,6 @@ void Return0Output::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* Return0Output::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1667,7 +1317,9 @@ const char* Return0Output::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
       // string data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_data(), ptr, ctx, "JUB.Proto.Bitcoin.Return0Output.data");
+          auto str = _internal_mutable_data();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "JUB.Proto.Bitcoin.Return0Output.data"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1690,119 +1342,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Return0Output::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.Return0Output)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint64 amount = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &amount_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_data()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->data().data(), static_cast<int>(this->data().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "JUB.Proto.Bitcoin.Return0Output.data"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.Return0Output)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.Return0Output)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Return0Output::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.Return0Output)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint64 amount = 1;
-  if (this->amount() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(1, this->amount(), output);
-  }
-
-  // string data = 2;
-  if (this->data().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->data().data(), static_cast<int>(this->data().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "JUB.Proto.Bitcoin.Return0Output.data");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->data(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.Return0Output)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* Return0Output::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Return0Output::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.Return0Output)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 amount = 1;
   if (this->amount() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->amount(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_amount(), target);
   }
 
   // string data = 2;
   if (this->data().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->data().data(), static_cast<int>(this->data().length()),
+      this->_internal_data().data(), static_cast<int>(this->_internal_data().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "JUB.Proto.Bitcoin.Return0Output.data");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->data(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_data(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.Return0Output)
   return target;
@@ -1812,11 +1377,6 @@ size_t Return0Output::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.Return0Output)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1825,16 +1385,20 @@ size_t Return0Output::ByteSizeLong() const {
   if (this->data().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->data());
+        this->_internal_data());
   }
 
   // uint64 amount = 1;
   if (this->amount() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
-        this->amount());
+        this->_internal_amount());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1867,7 +1431,7 @@ void Return0Output::MergeFrom(const Return0Output& from) {
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
   if (from.amount() != 0) {
-    set_amount(from.amount());
+    _internal_set_amount(from._internal_amount());
   }
 }
 
@@ -1920,7 +1484,7 @@ QRC20Output::QRC20Output(const QRC20Output& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.data().empty()) {
+  if (!from._internal_data().empty()) {
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
   // @@protoc_insertion_point(copy_constructor:JUB.Proto.Bitcoin.QRC20Output)
@@ -1959,7 +1523,6 @@ void QRC20Output::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* QRC20Output::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1970,7 +1533,9 @@ const char* QRC20Output::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // string data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_data(), ptr, ctx, "JUB.Proto.Bitcoin.QRC20Output.data");
+          auto str = _internal_mutable_data();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "JUB.Proto.Bitcoin.QRC20Output.data"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1993,78 +1558,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool QRC20Output::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.QRC20Output)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string data = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_data()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->data().data(), static_cast<int>(this->data().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "JUB.Proto.Bitcoin.QRC20Output.data"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.QRC20Output)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.QRC20Output)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void QRC20Output::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.QRC20Output)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string data = 1;
-  if (this->data().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->data().data(), static_cast<int>(this->data().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "JUB.Proto.Bitcoin.QRC20Output.data");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->data(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.QRC20Output)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* QRC20Output::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* QRC20Output::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.QRC20Output)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2072,17 +1568,16 @@ void QRC20Output::SerializeWithCachedSizes(
   // string data = 1;
   if (this->data().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->data().data(), static_cast<int>(this->data().length()),
+      this->_internal_data().data(), static_cast<int>(this->_internal_data().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "JUB.Proto.Bitcoin.QRC20Output.data");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->data(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_data(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.QRC20Output)
   return target;
@@ -2092,11 +1587,6 @@ size_t QRC20Output::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.QRC20Output)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2105,9 +1595,13 @@ size_t QRC20Output::ByteSizeLong() const {
   if (this->data().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->data());
+        this->_internal_data());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -2174,73 +1668,73 @@ void QRC20Output::InternalSwap(QRC20Output* other) {
 // ===================================================================
 
 void OutputBTC::InitAsDefaultInstance() {
-  ::JUB::Proto::Bitcoin::_OutputBTC_default_instance_.standardoputput_ = const_cast< ::JUB::Proto::Bitcoin::StandardOutput*>(
+  ::JUB::Proto::Bitcoin::_OutputBTC_default_instance_.std_output_ = const_cast< ::JUB::Proto::Bitcoin::StandardOutput*>(
       ::JUB::Proto::Bitcoin::StandardOutput::internal_default_instance());
-  ::JUB::Proto::Bitcoin::_OutputBTC_default_instance_.return0output_ = const_cast< ::JUB::Proto::Bitcoin::Return0Output*>(
+  ::JUB::Proto::Bitcoin::_OutputBTC_default_instance_.return0_output_ = const_cast< ::JUB::Proto::Bitcoin::Return0Output*>(
       ::JUB::Proto::Bitcoin::Return0Output::internal_default_instance());
-  ::JUB::Proto::Bitcoin::_OutputBTC_default_instance_.qrc20output_ = const_cast< ::JUB::Proto::Bitcoin::QRC20Output*>(
+  ::JUB::Proto::Bitcoin::_OutputBTC_default_instance_.qrc20_output_ = const_cast< ::JUB::Proto::Bitcoin::QRC20Output*>(
       ::JUB::Proto::Bitcoin::QRC20Output::internal_default_instance());
 }
 class OutputBTC::_Internal {
  public:
-  static const ::JUB::Proto::Bitcoin::StandardOutput& standardoputput(const OutputBTC* msg);
-  static const ::JUB::Proto::Bitcoin::Return0Output& return0output(const OutputBTC* msg);
-  static const ::JUB::Proto::Bitcoin::QRC20Output& qrc20output(const OutputBTC* msg);
+  static const ::JUB::Proto::Bitcoin::StandardOutput& std_output(const OutputBTC* msg);
+  static const ::JUB::Proto::Bitcoin::Return0Output& return0_output(const OutputBTC* msg);
+  static const ::JUB::Proto::Bitcoin::QRC20Output& qrc20_output(const OutputBTC* msg);
 };
 
 const ::JUB::Proto::Bitcoin::StandardOutput&
-OutputBTC::_Internal::standardoputput(const OutputBTC* msg) {
-  return *msg->output_.standardoputput_;
+OutputBTC::_Internal::std_output(const OutputBTC* msg) {
+  return *msg->output_.std_output_;
 }
 const ::JUB::Proto::Bitcoin::Return0Output&
-OutputBTC::_Internal::return0output(const OutputBTC* msg) {
-  return *msg->output_.return0output_;
+OutputBTC::_Internal::return0_output(const OutputBTC* msg) {
+  return *msg->output_.return0_output_;
 }
 const ::JUB::Proto::Bitcoin::QRC20Output&
-OutputBTC::_Internal::qrc20output(const OutputBTC* msg) {
-  return *msg->output_.qrc20output_;
+OutputBTC::_Internal::qrc20_output(const OutputBTC* msg) {
+  return *msg->output_.qrc20_output_;
 }
-void OutputBTC::set_allocated_standardoputput(::JUB::Proto::Bitcoin::StandardOutput* standardoputput) {
+void OutputBTC::set_allocated_std_output(::JUB::Proto::Bitcoin::StandardOutput* std_output) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_output();
-  if (standardoputput) {
+  if (std_output) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
-      standardoputput = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, standardoputput, submessage_arena);
+      std_output = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, std_output, submessage_arena);
     }
-    set_has_standardoputput();
-    output_.standardoputput_ = standardoputput;
+    set_has_std_output();
+    output_.std_output_ = std_output;
   }
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Bitcoin.OutputBTC.standardOputput)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Bitcoin.OutputBTC.std_output)
 }
-void OutputBTC::set_allocated_return0output(::JUB::Proto::Bitcoin::Return0Output* return0output) {
+void OutputBTC::set_allocated_return0_output(::JUB::Proto::Bitcoin::Return0Output* return0_output) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_output();
-  if (return0output) {
+  if (return0_output) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
-      return0output = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, return0output, submessage_arena);
+      return0_output = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, return0_output, submessage_arena);
     }
-    set_has_return0output();
-    output_.return0output_ = return0output;
+    set_has_return0_output();
+    output_.return0_output_ = return0_output;
   }
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Bitcoin.OutputBTC.return0Output)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Bitcoin.OutputBTC.return0_output)
 }
-void OutputBTC::set_allocated_qrc20output(::JUB::Proto::Bitcoin::QRC20Output* qrc20output) {
+void OutputBTC::set_allocated_qrc20_output(::JUB::Proto::Bitcoin::QRC20Output* qrc20_output) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_output();
-  if (qrc20output) {
+  if (qrc20_output) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
-      qrc20output = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, qrc20output, submessage_arena);
+      qrc20_output = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, qrc20_output, submessage_arena);
     }
-    set_has_qrc20output();
-    output_.qrc20output_ = qrc20output;
+    set_has_qrc20_output();
+    output_.qrc20_output_ = qrc20_output;
   }
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Bitcoin.OutputBTC.qrc20Output)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Bitcoin.OutputBTC.qrc20_output)
 }
 OutputBTC::OutputBTC()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
@@ -2254,16 +1748,16 @@ OutputBTC::OutputBTC(const OutputBTC& from)
   type_ = from.type_;
   clear_has_output();
   switch (from.output_case()) {
-    case kStandardOputput: {
-      mutable_standardoputput()->::JUB::Proto::Bitcoin::StandardOutput::MergeFrom(from.standardoputput());
+    case kStdOutput: {
+      _internal_mutable_std_output()->::JUB::Proto::Bitcoin::StandardOutput::MergeFrom(from._internal_std_output());
       break;
     }
     case kReturn0Output: {
-      mutable_return0output()->::JUB::Proto::Bitcoin::Return0Output::MergeFrom(from.return0output());
+      _internal_mutable_return0_output()->::JUB::Proto::Bitcoin::Return0Output::MergeFrom(from._internal_return0_output());
       break;
     }
     case kQrc20Output: {
-      mutable_qrc20output()->::JUB::Proto::Bitcoin::QRC20Output::MergeFrom(from.qrc20output());
+      _internal_mutable_qrc20_output()->::JUB::Proto::Bitcoin::QRC20Output::MergeFrom(from._internal_qrc20_output());
       break;
     }
     case OUTPUT_NOT_SET: {
@@ -2302,16 +1796,16 @@ const OutputBTC& OutputBTC::default_instance() {
 void OutputBTC::clear_output() {
 // @@protoc_insertion_point(one_of_clear_start:JUB.Proto.Bitcoin.OutputBTC)
   switch (output_case()) {
-    case kStandardOputput: {
-      delete output_.standardoputput_;
+    case kStdOutput: {
+      delete output_.std_output_;
       break;
     }
     case kReturn0Output: {
-      delete output_.return0output_;
+      delete output_.return0_output_;
       break;
     }
     case kQrc20Output: {
-      delete output_.qrc20output_;
+      delete output_.qrc20_output_;
       break;
     }
     case OUTPUT_NOT_SET: {
@@ -2333,7 +1827,6 @@ void OutputBTC::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* OutputBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -2346,27 +1839,27 @@ const char* OutputBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_type(static_cast<::JUB::Proto::Bitcoin::ENUM_SCRIPT_TYPE_BTC>(val));
+          _internal_set_type(static_cast<::JUB::Proto::Bitcoin::ENUM_SCRIPT_TYPE_BTC>(val));
         } else goto handle_unusual;
         continue;
-      // .JUB.Proto.Bitcoin.StandardOutput standardOputput = 2;
+      // .JUB.Proto.Bitcoin.StandardOutput std_output = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_standardoputput(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_std_output(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .JUB.Proto.Bitcoin.Return0Output return0Output = 3;
+      // .JUB.Proto.Bitcoin.Return0Output return0_output = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_return0output(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_return0_output(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .JUB.Proto.Bitcoin.QRC20Output qrc20Output = 4;
+      // .JUB.Proto.Bitcoin.QRC20Output qrc20_output = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(mutable_qrc20output(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_qrc20_output(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2389,158 +1882,47 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool OutputBTC::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.OutputBTC)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .JUB.Proto.Bitcoin.ENUM_SCRIPT_TYPE_BTC type = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::JUB::Proto::Bitcoin::ENUM_SCRIPT_TYPE_BTC >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .JUB.Proto.Bitcoin.StandardOutput standardOputput = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_standardoputput()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JUB.Proto.Bitcoin.Return0Output return0Output = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_return0output()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JUB.Proto.Bitcoin.QRC20Output qrc20Output = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_qrc20output()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.OutputBTC)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.OutputBTC)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void OutputBTC::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.OutputBTC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .JUB.Proto.Bitcoin.ENUM_SCRIPT_TYPE_BTC type = 1;
-  if (this->type() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      1, this->type(), output);
-  }
-
-  // .JUB.Proto.Bitcoin.StandardOutput standardOputput = 2;
-  if (has_standardoputput()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::standardoputput(this), output);
-  }
-
-  // .JUB.Proto.Bitcoin.Return0Output return0Output = 3;
-  if (has_return0output()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::return0output(this), output);
-  }
-
-  // .JUB.Proto.Bitcoin.QRC20Output qrc20Output = 4;
-  if (has_qrc20output()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, _Internal::qrc20output(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.OutputBTC)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* OutputBTC::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* OutputBTC::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.OutputBTC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .JUB.Proto.Bitcoin.ENUM_SCRIPT_TYPE_BTC type = 1;
   if (this->type() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->type(), target);
+      1, this->_internal_type(), target);
   }
 
-  // .JUB.Proto.Bitcoin.StandardOutput standardOputput = 2;
-  if (has_standardoputput()) {
+  // .JUB.Proto.Bitcoin.StandardOutput std_output = 2;
+  if (_internal_has_std_output()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::standardoputput(this), target);
+      InternalWriteMessage(
+        2, _Internal::std_output(this), target, stream);
   }
 
-  // .JUB.Proto.Bitcoin.Return0Output return0Output = 3;
-  if (has_return0output()) {
+  // .JUB.Proto.Bitcoin.Return0Output return0_output = 3;
+  if (_internal_has_return0_output()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::return0output(this), target);
+      InternalWriteMessage(
+        3, _Internal::return0_output(this), target, stream);
   }
 
-  // .JUB.Proto.Bitcoin.QRC20Output qrc20Output = 4;
-  if (has_qrc20output()) {
+  // .JUB.Proto.Bitcoin.QRC20Output qrc20_output = 4;
+  if (_internal_has_qrc20_output()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, _Internal::qrc20output(this), target);
+      InternalWriteMessage(
+        4, _Internal::qrc20_output(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.OutputBTC)
   return target;
@@ -2550,11 +1932,6 @@ size_t OutputBTC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.OutputBTC)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2562,34 +1939,38 @@ size_t OutputBTC::ByteSizeLong() const {
   // .JUB.Proto.Bitcoin.ENUM_SCRIPT_TYPE_BTC type = 1;
   if (this->type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   switch (output_case()) {
-    // .JUB.Proto.Bitcoin.StandardOutput standardOputput = 2;
-    case kStandardOputput: {
+    // .JUB.Proto.Bitcoin.StandardOutput std_output = 2;
+    case kStdOutput: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *output_.standardoputput_);
+          *output_.std_output_);
       break;
     }
-    // .JUB.Proto.Bitcoin.Return0Output return0Output = 3;
+    // .JUB.Proto.Bitcoin.Return0Output return0_output = 3;
     case kReturn0Output: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *output_.return0output_);
+          *output_.return0_output_);
       break;
     }
-    // .JUB.Proto.Bitcoin.QRC20Output qrc20Output = 4;
+    // .JUB.Proto.Bitcoin.QRC20Output qrc20_output = 4;
     case kQrc20Output: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *output_.qrc20output_);
+          *output_.qrc20_output_);
       break;
     }
     case OUTPUT_NOT_SET: {
       break;
     }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
   }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
@@ -2619,19 +2000,19 @@ void OutputBTC::MergeFrom(const OutputBTC& from) {
   (void) cached_has_bits;
 
   if (from.type() != 0) {
-    set_type(from.type());
+    _internal_set_type(from._internal_type());
   }
   switch (from.output_case()) {
-    case kStandardOputput: {
-      mutable_standardoputput()->::JUB::Proto::Bitcoin::StandardOutput::MergeFrom(from.standardoputput());
+    case kStdOutput: {
+      _internal_mutable_std_output()->::JUB::Proto::Bitcoin::StandardOutput::MergeFrom(from._internal_std_output());
       break;
     }
     case kReturn0Output: {
-      mutable_return0output()->::JUB::Proto::Bitcoin::Return0Output::MergeFrom(from.return0output());
+      _internal_mutable_return0_output()->::JUB::Proto::Bitcoin::Return0Output::MergeFrom(from._internal_return0_output());
       break;
     }
     case kQrc20Output: {
-      mutable_qrc20output()->::JUB::Proto::Bitcoin::QRC20Output::MergeFrom(from.qrc20output());
+      _internal_mutable_qrc20_output()->::JUB::Proto::Bitcoin::QRC20Output::MergeFrom(from._internal_qrc20_output());
       break;
     }
     case OUTPUT_NOT_SET: {
@@ -2734,7 +2115,6 @@ void TransactionBTC::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* TransactionBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -2762,10 +2142,10 @@ const char* TransactionBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_inputs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_inputs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .JUB.Proto.Bitcoin.OutputBTC outputs = 4;
@@ -2774,10 +2154,10 @@ const char* TransactionBTC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_outputs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_outputs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 34);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -2799,162 +2179,44 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool TransactionBTC::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JUB.Proto.Bitcoin.TransactionBTC)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 version = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &version_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 locktime = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &locktime_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .JUB.Proto.Bitcoin.InputBTC inputs = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_inputs()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .JUB.Proto.Bitcoin.OutputBTC outputs = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_outputs()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JUB.Proto.Bitcoin.TransactionBTC)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JUB.Proto.Bitcoin.TransactionBTC)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void TransactionBTC::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JUB.Proto.Bitcoin.TransactionBTC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 version = 1;
-  if (this->version() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->version(), output);
-  }
-
-  // uint32 locktime = 2;
-  if (this->locktime() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->locktime(), output);
-  }
-
-  // repeated .JUB.Proto.Bitcoin.InputBTC inputs = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->inputs_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->inputs(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .JUB.Proto.Bitcoin.OutputBTC outputs = 4;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->outputs_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4,
-      this->outputs(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JUB.Proto.Bitcoin.TransactionBTC)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* TransactionBTC::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* TransactionBTC::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Bitcoin.TransactionBTC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 version = 1;
   if (this->version() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->version(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_version(), target);
   }
 
   // uint32 locktime = 2;
   if (this->locktime() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->locktime(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_locktime(), target);
   }
 
   // repeated .JUB.Proto.Bitcoin.InputBTC inputs = 3;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->inputs_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_inputs_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->inputs(static_cast<int>(i)), target);
+      InternalWriteMessage(3, this->_internal_inputs(i), target, stream);
   }
 
   // repeated .JUB.Proto.Bitcoin.OutputBTC outputs = 4;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->outputs_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_outputs_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->outputs(static_cast<int>(i)), target);
+      InternalWriteMessage(4, this->_internal_outputs(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Bitcoin.TransactionBTC)
   return target;
@@ -2964,51 +2226,42 @@ size_t TransactionBTC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Bitcoin.TransactionBTC)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .JUB.Proto.Bitcoin.InputBTC inputs = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->inputs_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->inputs(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_inputs_size();
+  for (const auto& msg : this->inputs_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .JUB.Proto.Bitcoin.OutputBTC outputs = 4;
-  {
-    unsigned int count = static_cast<unsigned int>(this->outputs_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->outputs(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_outputs_size();
+  for (const auto& msg : this->outputs_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // uint32 version = 1;
   if (this->version() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->version());
+        this->_internal_version());
   }
 
   // uint32 locktime = 2;
   if (this->locktime() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->locktime());
+        this->_internal_locktime());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3039,10 +2292,10 @@ void TransactionBTC::MergeFrom(const TransactionBTC& from) {
   inputs_.MergeFrom(from.inputs_);
   outputs_.MergeFrom(from.outputs_);
   if (from.version() != 0) {
-    set_version(from.version());
+    _internal_set_version(from._internal_version());
   }
   if (from.locktime() != 0) {
-    set_locktime(from.locktime());
+    _internal_set_locktime(from._internal_locktime());
   }
 }
 
@@ -3067,8 +2320,8 @@ bool TransactionBTC::IsInitialized() const {
 void TransactionBTC::InternalSwap(TransactionBTC* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&inputs_)->InternalSwap(CastToBase(&other->inputs_));
-  CastToBase(&outputs_)->InternalSwap(CastToBase(&other->outputs_));
+  inputs_.InternalSwap(&other->inputs_);
+  outputs_.InternalSwap(&other->outputs_);
   swap(version_, other->version_);
   swap(locktime_, other->locktime_);
 }
