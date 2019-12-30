@@ -8,21 +8,17 @@ option java_outer_classname = "EthereumProtos";
 option objc_class_prefix = "EthereumProtos";
 
 
-enum ENUM_PUB_FORMAT {
-    HEX = 0;
-    XPUB = 1;
-}
-
 message ContextCfgETH {
     string main_path = 1;
-    uint32 chainID = 2;
+    uint32 chain_id = 2;
 }
+
 message TransactionETH {
-    JUB.Proto.Common.Bip32Path path = 1;
+    JUB.Proto.Common.Bip44Path path = 1;
     uint32 nonce = 2;
-    uint32 gasLimit = 3;
-    string gasPriceInWei = 4;
+    uint32 gas_limit = 3;
+    string gas_price_in_wei = 4;
     string to = 5;
-    string valueInWei = 6;
+    string value_in_wei = 6;
     string input = 7;
 }

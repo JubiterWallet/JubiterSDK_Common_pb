@@ -1,0 +1,27 @@
+syntax = "proto3";
+import "Jub_Common.proto";
+
+package JUB.Proto.Hcashn;
+
+option java_package = "com.jubiter.sdk.proto";
+option java_outer_classname = "HcashnProtos";
+option objc_class_prefix = "HcashProtos";
+
+//message ContextCfgHC = JUB.Proto.Common.ContextCfg
+
+message InputHC {
+    uint64 amount = 1;
+    JUB.Proto.Common.Bip44Path path = 2;
+}
+
+message OutputHC {
+    bool change_address = 1;
+    JUB.Proto.Common.Bip44Path path = 2;
+}
+
+message TransactionHC {
+    uint32 version = 1;
+    uint32 locktime = 2;
+    repeated  InputHC  inputs = 3;
+    repeated OutputHC outputs = 4;
+}
