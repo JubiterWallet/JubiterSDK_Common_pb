@@ -58,6 +58,9 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 namespace JUB {
 namespace Proto {
 namespace EOS {
+class ActionEOS;
+class ActionEOSDefaultTypeInternal;
+extern ActionEOSDefaultTypeInternal _ActionEOS_default_instance_;
 class BuyRamAction;
 class BuyRamActionDefaultTypeInternal;
 extern BuyRamActionDefaultTypeInternal _BuyRamAction_default_instance_;
@@ -67,9 +70,6 @@ extern DelegateActionDefaultTypeInternal _DelegateAction_default_instance_;
 class SellRamAction;
 class SellRamActionDefaultTypeInternal;
 extern SellRamActionDefaultTypeInternal _SellRamAction_default_instance_;
-class TransactionEOS;
-class TransactionEOSDefaultTypeInternal;
-extern TransactionEOSDefaultTypeInternal _TransactionEOS_default_instance_;
 class TransferAction;
 class TransferActionDefaultTypeInternal;
 extern TransferActionDefaultTypeInternal _TransferAction_default_instance_;
@@ -77,10 +77,10 @@ extern TransferActionDefaultTypeInternal _TransferAction_default_instance_;
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
+template<> ::JUB::Proto::EOS::ActionEOS* Arena::CreateMaybeMessage<::JUB::Proto::EOS::ActionEOS>(Arena*);
 template<> ::JUB::Proto::EOS::BuyRamAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::BuyRamAction>(Arena*);
 template<> ::JUB::Proto::EOS::DelegateAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::DelegateAction>(Arena*);
 template<> ::JUB::Proto::EOS::SellRamAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::SellRamAction>(Arena*);
-template<> ::JUB::Proto::EOS::TransactionEOS* Arena::CreateMaybeMessage<::JUB::Proto::EOS::TransactionEOS>(Arena*);
 template<> ::JUB::Proto::EOS::TransferAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::TransferAction>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
@@ -830,23 +830,23 @@ class SellRamAction :
 };
 // -------------------------------------------------------------------
 
-class TransactionEOS :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.EOS.TransactionEOS) */ {
+class ActionEOS :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.EOS.ActionEOS) */ {
  public:
-  TransactionEOS();
-  virtual ~TransactionEOS();
+  ActionEOS();
+  virtual ~ActionEOS();
 
-  TransactionEOS(const TransactionEOS& from);
-  TransactionEOS(TransactionEOS&& from) noexcept
-    : TransactionEOS() {
+  ActionEOS(const ActionEOS& from);
+  ActionEOS(ActionEOS&& from) noexcept
+    : ActionEOS() {
     *this = ::std::move(from);
   }
 
-  inline TransactionEOS& operator=(const TransactionEOS& from) {
+  inline ActionEOS& operator=(const ActionEOS& from) {
     CopyFrom(from);
     return *this;
   }
-  inline TransactionEOS& operator=(TransactionEOS&& from) noexcept {
+  inline ActionEOS& operator=(ActionEOS&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -864,7 +864,7 @@ class TransactionEOS :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const TransactionEOS& default_instance();
+  static const ActionEOS& default_instance();
 
   enum ActionCase {
     kXferAction = 4,
@@ -875,34 +875,34 @@ class TransactionEOS :
   };
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const TransactionEOS* internal_default_instance() {
-    return reinterpret_cast<const TransactionEOS*>(
-               &_TransactionEOS_default_instance_);
+  static inline const ActionEOS* internal_default_instance() {
+    return reinterpret_cast<const ActionEOS*>(
+               &_ActionEOS_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(TransactionEOS& a, TransactionEOS& b) {
+  friend void swap(ActionEOS& a, ActionEOS& b) {
     a.Swap(&b);
   }
-  inline void Swap(TransactionEOS* other) {
+  inline void Swap(ActionEOS* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline TransactionEOS* New() const final {
-    return CreateMaybeMessage<TransactionEOS>(nullptr);
+  inline ActionEOS* New() const final {
+    return CreateMaybeMessage<ActionEOS>(nullptr);
   }
 
-  TransactionEOS* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<TransactionEOS>(arena);
+  ActionEOS* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ActionEOS>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const TransactionEOS& from);
-  void MergeFrom(const TransactionEOS& from);
+  void CopyFrom(const ActionEOS& from);
+  void MergeFrom(const ActionEOS& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -916,10 +916,10 @@ class TransactionEOS :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(TransactionEOS* other);
+  void InternalSwap(ActionEOS* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "JUB.Proto.EOS.TransactionEOS";
+    return "JUB.Proto.EOS.ActionEOS";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1055,7 +1055,7 @@ class TransactionEOS :
 
   void clear_action();
   ActionCase action_case() const;
-  // @@protoc_insertion_point(class_scope:JUB.Proto.EOS.TransactionEOS)
+  // @@protoc_insertion_point(class_scope:JUB.Proto.EOS.ActionEOS)
  private:
   class _Internal;
   void set_has_xfer_action();
@@ -1907,166 +1907,166 @@ inline void SellRamAction::set_allocated_byte(std::string* byte) {
 
 // -------------------------------------------------------------------
 
-// TransactionEOS
+// ActionEOS
 
 // .JUB.Proto.EOS.ENUM_EOS_ACTION_TYPE type = 1;
-inline void TransactionEOS::clear_type() {
+inline void ActionEOS::clear_type() {
   type_ = 0;
 }
-inline ::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE TransactionEOS::_internal_type() const {
+inline ::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE ActionEOS::_internal_type() const {
   return static_cast< ::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE >(type_);
 }
-inline ::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE TransactionEOS::type() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.type)
+inline ::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE ActionEOS::type() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.type)
   return _internal_type();
 }
-inline void TransactionEOS::_internal_set_type(::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE value) {
+inline void ActionEOS::_internal_set_type(::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE value) {
   
   type_ = value;
 }
-inline void TransactionEOS::set_type(::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE value) {
+inline void ActionEOS::set_type(::JUB::Proto::EOS::ENUM_EOS_ACTION_TYPE value) {
   _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.type)
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.ActionEOS.type)
 }
 
 // string currency = 2;
-inline void TransactionEOS::clear_currency() {
+inline void ActionEOS::clear_currency() {
   currency_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& TransactionEOS::currency() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.currency)
+inline const std::string& ActionEOS::currency() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.currency)
   return _internal_currency();
 }
-inline void TransactionEOS::set_currency(const std::string& value) {
+inline void ActionEOS::set_currency(const std::string& value) {
   _internal_set_currency(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.currency)
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.ActionEOS.currency)
 }
-inline std::string* TransactionEOS::mutable_currency() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.currency)
+inline std::string* ActionEOS::mutable_currency() {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionEOS.currency)
   return _internal_mutable_currency();
 }
-inline const std::string& TransactionEOS::_internal_currency() const {
+inline const std::string& ActionEOS::_internal_currency() const {
   return currency_.GetNoArena();
 }
-inline void TransactionEOS::_internal_set_currency(const std::string& value) {
+inline void ActionEOS::_internal_set_currency(const std::string& value) {
   
   currency_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void TransactionEOS::set_currency(std::string&& value) {
+inline void ActionEOS::set_currency(std::string&& value) {
   
   currency_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.currency)
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.ActionEOS.currency)
 }
-inline void TransactionEOS::set_currency(const char* value) {
+inline void ActionEOS::set_currency(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   currency_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.currency)
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.ActionEOS.currency)
 }
-inline void TransactionEOS::set_currency(const char* value, size_t size) {
+inline void ActionEOS::set_currency(const char* value, size_t size) {
   
   currency_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.currency)
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.ActionEOS.currency)
 }
-inline std::string* TransactionEOS::_internal_mutable_currency() {
+inline std::string* ActionEOS::_internal_mutable_currency() {
   
   return currency_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* TransactionEOS::release_currency() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.currency)
+inline std::string* ActionEOS::release_currency() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.ActionEOS.currency)
   
   return currency_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void TransactionEOS::set_allocated_currency(std::string* currency) {
+inline void ActionEOS::set_allocated_currency(std::string* currency) {
   if (currency != nullptr) {
     
   } else {
     
   }
   currency_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), currency);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.currency)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.ActionEOS.currency)
 }
 
 // string name = 3;
-inline void TransactionEOS::clear_name() {
+inline void ActionEOS::clear_name() {
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& TransactionEOS::name() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.name)
+inline const std::string& ActionEOS::name() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.name)
   return _internal_name();
 }
-inline void TransactionEOS::set_name(const std::string& value) {
+inline void ActionEOS::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.name)
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.ActionEOS.name)
 }
-inline std::string* TransactionEOS::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.name)
+inline std::string* ActionEOS::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionEOS.name)
   return _internal_mutable_name();
 }
-inline const std::string& TransactionEOS::_internal_name() const {
+inline const std::string& ActionEOS::_internal_name() const {
   return name_.GetNoArena();
 }
-inline void TransactionEOS::_internal_set_name(const std::string& value) {
+inline void ActionEOS::_internal_set_name(const std::string& value) {
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline void TransactionEOS::set_name(std::string&& value) {
+inline void ActionEOS::set_name(std::string&& value) {
   
   name_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.name)
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.ActionEOS.name)
 }
-inline void TransactionEOS::set_name(const char* value) {
+inline void ActionEOS::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.name)
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.ActionEOS.name)
 }
-inline void TransactionEOS::set_name(const char* value, size_t size) {
+inline void ActionEOS::set_name(const char* value, size_t size) {
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.name)
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.ActionEOS.name)
 }
-inline std::string* TransactionEOS::_internal_mutable_name() {
+inline std::string* ActionEOS::_internal_mutable_name() {
   
   return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* TransactionEOS::release_name() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.name)
+inline std::string* ActionEOS::release_name() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.ActionEOS.name)
   
   return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void TransactionEOS::set_allocated_name(std::string* name) {
+inline void ActionEOS::set_allocated_name(std::string* name) {
   if (name != nullptr) {
     
   } else {
     
   }
   name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.name)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.ActionEOS.name)
 }
 
 // .JUB.Proto.EOS.TransferAction xfer_action = 4;
-inline bool TransactionEOS::_internal_has_xfer_action() const {
+inline bool ActionEOS::_internal_has_xfer_action() const {
   return action_case() == kXferAction;
 }
-inline bool TransactionEOS::has_xfer_action() const {
+inline bool ActionEOS::has_xfer_action() const {
   return _internal_has_xfer_action();
 }
-inline void TransactionEOS::set_has_xfer_action() {
+inline void ActionEOS::set_has_xfer_action() {
   _oneof_case_[0] = kXferAction;
 }
-inline void TransactionEOS::clear_xfer_action() {
+inline void ActionEOS::clear_xfer_action() {
   if (_internal_has_xfer_action()) {
     delete action_.xfer_action_;
     clear_has_action();
   }
 }
-inline ::JUB::Proto::EOS::TransferAction* TransactionEOS::release_xfer_action() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.xfer_action)
+inline ::JUB::Proto::EOS::TransferAction* ActionEOS::release_xfer_action() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.ActionEOS.xfer_action)
   if (_internal_has_xfer_action()) {
     clear_has_action();
       ::JUB::Proto::EOS::TransferAction* temp = action_.xfer_action_;
@@ -2076,16 +2076,16 @@ inline ::JUB::Proto::EOS::TransferAction* TransactionEOS::release_xfer_action() 
     return nullptr;
   }
 }
-inline const ::JUB::Proto::EOS::TransferAction& TransactionEOS::_internal_xfer_action() const {
+inline const ::JUB::Proto::EOS::TransferAction& ActionEOS::_internal_xfer_action() const {
   return _internal_has_xfer_action()
       ? *action_.xfer_action_
       : *reinterpret_cast< ::JUB::Proto::EOS::TransferAction*>(&::JUB::Proto::EOS::_TransferAction_default_instance_);
 }
-inline const ::JUB::Proto::EOS::TransferAction& TransactionEOS::xfer_action() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.xfer_action)
+inline const ::JUB::Proto::EOS::TransferAction& ActionEOS::xfer_action() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.xfer_action)
   return _internal_xfer_action();
 }
-inline ::JUB::Proto::EOS::TransferAction* TransactionEOS::_internal_mutable_xfer_action() {
+inline ::JUB::Proto::EOS::TransferAction* ActionEOS::_internal_mutable_xfer_action() {
   if (!_internal_has_xfer_action()) {
     clear_action();
     set_has_xfer_action();
@@ -2094,29 +2094,29 @@ inline ::JUB::Proto::EOS::TransferAction* TransactionEOS::_internal_mutable_xfer
   }
   return action_.xfer_action_;
 }
-inline ::JUB::Proto::EOS::TransferAction* TransactionEOS::mutable_xfer_action() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.xfer_action)
+inline ::JUB::Proto::EOS::TransferAction* ActionEOS::mutable_xfer_action() {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionEOS.xfer_action)
   return _internal_mutable_xfer_action();
 }
 
 // .JUB.Proto.EOS.DelegateAction dele_action = 5;
-inline bool TransactionEOS::_internal_has_dele_action() const {
+inline bool ActionEOS::_internal_has_dele_action() const {
   return action_case() == kDeleAction;
 }
-inline bool TransactionEOS::has_dele_action() const {
+inline bool ActionEOS::has_dele_action() const {
   return _internal_has_dele_action();
 }
-inline void TransactionEOS::set_has_dele_action() {
+inline void ActionEOS::set_has_dele_action() {
   _oneof_case_[0] = kDeleAction;
 }
-inline void TransactionEOS::clear_dele_action() {
+inline void ActionEOS::clear_dele_action() {
   if (_internal_has_dele_action()) {
     delete action_.dele_action_;
     clear_has_action();
   }
 }
-inline ::JUB::Proto::EOS::DelegateAction* TransactionEOS::release_dele_action() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.dele_action)
+inline ::JUB::Proto::EOS::DelegateAction* ActionEOS::release_dele_action() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.ActionEOS.dele_action)
   if (_internal_has_dele_action()) {
     clear_has_action();
       ::JUB::Proto::EOS::DelegateAction* temp = action_.dele_action_;
@@ -2126,16 +2126,16 @@ inline ::JUB::Proto::EOS::DelegateAction* TransactionEOS::release_dele_action() 
     return nullptr;
   }
 }
-inline const ::JUB::Proto::EOS::DelegateAction& TransactionEOS::_internal_dele_action() const {
+inline const ::JUB::Proto::EOS::DelegateAction& ActionEOS::_internal_dele_action() const {
   return _internal_has_dele_action()
       ? *action_.dele_action_
       : *reinterpret_cast< ::JUB::Proto::EOS::DelegateAction*>(&::JUB::Proto::EOS::_DelegateAction_default_instance_);
 }
-inline const ::JUB::Proto::EOS::DelegateAction& TransactionEOS::dele_action() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.dele_action)
+inline const ::JUB::Proto::EOS::DelegateAction& ActionEOS::dele_action() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.dele_action)
   return _internal_dele_action();
 }
-inline ::JUB::Proto::EOS::DelegateAction* TransactionEOS::_internal_mutable_dele_action() {
+inline ::JUB::Proto::EOS::DelegateAction* ActionEOS::_internal_mutable_dele_action() {
   if (!_internal_has_dele_action()) {
     clear_action();
     set_has_dele_action();
@@ -2144,29 +2144,29 @@ inline ::JUB::Proto::EOS::DelegateAction* TransactionEOS::_internal_mutable_dele
   }
   return action_.dele_action_;
 }
-inline ::JUB::Proto::EOS::DelegateAction* TransactionEOS::mutable_dele_action() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.dele_action)
+inline ::JUB::Proto::EOS::DelegateAction* ActionEOS::mutable_dele_action() {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionEOS.dele_action)
   return _internal_mutable_dele_action();
 }
 
 // .JUB.Proto.EOS.BuyRamAction buy_ram_action = 6;
-inline bool TransactionEOS::_internal_has_buy_ram_action() const {
+inline bool ActionEOS::_internal_has_buy_ram_action() const {
   return action_case() == kBuyRamAction;
 }
-inline bool TransactionEOS::has_buy_ram_action() const {
+inline bool ActionEOS::has_buy_ram_action() const {
   return _internal_has_buy_ram_action();
 }
-inline void TransactionEOS::set_has_buy_ram_action() {
+inline void ActionEOS::set_has_buy_ram_action() {
   _oneof_case_[0] = kBuyRamAction;
 }
-inline void TransactionEOS::clear_buy_ram_action() {
+inline void ActionEOS::clear_buy_ram_action() {
   if (_internal_has_buy_ram_action()) {
     delete action_.buy_ram_action_;
     clear_has_action();
   }
 }
-inline ::JUB::Proto::EOS::BuyRamAction* TransactionEOS::release_buy_ram_action() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.buy_ram_action)
+inline ::JUB::Proto::EOS::BuyRamAction* ActionEOS::release_buy_ram_action() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.ActionEOS.buy_ram_action)
   if (_internal_has_buy_ram_action()) {
     clear_has_action();
       ::JUB::Proto::EOS::BuyRamAction* temp = action_.buy_ram_action_;
@@ -2176,16 +2176,16 @@ inline ::JUB::Proto::EOS::BuyRamAction* TransactionEOS::release_buy_ram_action()
     return nullptr;
   }
 }
-inline const ::JUB::Proto::EOS::BuyRamAction& TransactionEOS::_internal_buy_ram_action() const {
+inline const ::JUB::Proto::EOS::BuyRamAction& ActionEOS::_internal_buy_ram_action() const {
   return _internal_has_buy_ram_action()
       ? *action_.buy_ram_action_
       : *reinterpret_cast< ::JUB::Proto::EOS::BuyRamAction*>(&::JUB::Proto::EOS::_BuyRamAction_default_instance_);
 }
-inline const ::JUB::Proto::EOS::BuyRamAction& TransactionEOS::buy_ram_action() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.buy_ram_action)
+inline const ::JUB::Proto::EOS::BuyRamAction& ActionEOS::buy_ram_action() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.buy_ram_action)
   return _internal_buy_ram_action();
 }
-inline ::JUB::Proto::EOS::BuyRamAction* TransactionEOS::_internal_mutable_buy_ram_action() {
+inline ::JUB::Proto::EOS::BuyRamAction* ActionEOS::_internal_mutable_buy_ram_action() {
   if (!_internal_has_buy_ram_action()) {
     clear_action();
     set_has_buy_ram_action();
@@ -2194,29 +2194,29 @@ inline ::JUB::Proto::EOS::BuyRamAction* TransactionEOS::_internal_mutable_buy_ra
   }
   return action_.buy_ram_action_;
 }
-inline ::JUB::Proto::EOS::BuyRamAction* TransactionEOS::mutable_buy_ram_action() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.buy_ram_action)
+inline ::JUB::Proto::EOS::BuyRamAction* ActionEOS::mutable_buy_ram_action() {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionEOS.buy_ram_action)
   return _internal_mutable_buy_ram_action();
 }
 
 // .JUB.Proto.EOS.SellRamAction sell_ram_action = 7;
-inline bool TransactionEOS::_internal_has_sell_ram_action() const {
+inline bool ActionEOS::_internal_has_sell_ram_action() const {
   return action_case() == kSellRamAction;
 }
-inline bool TransactionEOS::has_sell_ram_action() const {
+inline bool ActionEOS::has_sell_ram_action() const {
   return _internal_has_sell_ram_action();
 }
-inline void TransactionEOS::set_has_sell_ram_action() {
+inline void ActionEOS::set_has_sell_ram_action() {
   _oneof_case_[0] = kSellRamAction;
 }
-inline void TransactionEOS::clear_sell_ram_action() {
+inline void ActionEOS::clear_sell_ram_action() {
   if (_internal_has_sell_ram_action()) {
     delete action_.sell_ram_action_;
     clear_has_action();
   }
 }
-inline ::JUB::Proto::EOS::SellRamAction* TransactionEOS::release_sell_ram_action() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.sell_ram_action)
+inline ::JUB::Proto::EOS::SellRamAction* ActionEOS::release_sell_ram_action() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.ActionEOS.sell_ram_action)
   if (_internal_has_sell_ram_action()) {
     clear_has_action();
       ::JUB::Proto::EOS::SellRamAction* temp = action_.sell_ram_action_;
@@ -2226,16 +2226,16 @@ inline ::JUB::Proto::EOS::SellRamAction* TransactionEOS::release_sell_ram_action
     return nullptr;
   }
 }
-inline const ::JUB::Proto::EOS::SellRamAction& TransactionEOS::_internal_sell_ram_action() const {
+inline const ::JUB::Proto::EOS::SellRamAction& ActionEOS::_internal_sell_ram_action() const {
   return _internal_has_sell_ram_action()
       ? *action_.sell_ram_action_
       : *reinterpret_cast< ::JUB::Proto::EOS::SellRamAction*>(&::JUB::Proto::EOS::_SellRamAction_default_instance_);
 }
-inline const ::JUB::Proto::EOS::SellRamAction& TransactionEOS::sell_ram_action() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.sell_ram_action)
+inline const ::JUB::Proto::EOS::SellRamAction& ActionEOS::sell_ram_action() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionEOS.sell_ram_action)
   return _internal_sell_ram_action();
 }
-inline ::JUB::Proto::EOS::SellRamAction* TransactionEOS::_internal_mutable_sell_ram_action() {
+inline ::JUB::Proto::EOS::SellRamAction* ActionEOS::_internal_mutable_sell_ram_action() {
   if (!_internal_has_sell_ram_action()) {
     clear_action();
     set_has_sell_ram_action();
@@ -2244,19 +2244,19 @@ inline ::JUB::Proto::EOS::SellRamAction* TransactionEOS::_internal_mutable_sell_
   }
   return action_.sell_ram_action_;
 }
-inline ::JUB::Proto::EOS::SellRamAction* TransactionEOS::mutable_sell_ram_action() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.sell_ram_action)
+inline ::JUB::Proto::EOS::SellRamAction* ActionEOS::mutable_sell_ram_action() {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionEOS.sell_ram_action)
   return _internal_mutable_sell_ram_action();
 }
 
-inline bool TransactionEOS::has_action() const {
+inline bool ActionEOS::has_action() const {
   return action_case() != ACTION_NOT_SET;
 }
-inline void TransactionEOS::clear_has_action() {
+inline void ActionEOS::clear_has_action() {
   _oneof_case_[0] = ACTION_NOT_SET;
 }
-inline TransactionEOS::ActionCase TransactionEOS::action_case() const {
-  return TransactionEOS::ActionCase(_oneof_case_[0]);
+inline ActionEOS::ActionCase ActionEOS::action_case() const {
+  return ActionEOS::ActionCase(_oneof_case_[0]);
 }
 #ifdef __GNUC__
   #pragma GCC diagnostic pop

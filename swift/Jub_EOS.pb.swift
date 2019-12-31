@@ -149,7 +149,7 @@ struct JUB_Proto_EOS_SellRamAction {
   init() {}
 }
 
-struct JUB_Proto_EOS_TransactionEOS {
+struct JUB_Proto_EOS_ActionEOS {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -215,7 +215,7 @@ struct JUB_Proto_EOS_TransactionEOS {
     case sellRamAction(JUB_Proto_EOS_SellRamAction)
 
   #if !swift(>=4.1)
-    static func ==(lhs: JUB_Proto_EOS_TransactionEOS.OneOf_Action, rhs: JUB_Proto_EOS_TransactionEOS.OneOf_Action) -> Bool {
+    static func ==(lhs: JUB_Proto_EOS_ActionEOS.OneOf_Action, rhs: JUB_Proto_EOS_ActionEOS.OneOf_Action) -> Bool {
       switch (lhs, rhs) {
       case (.xferAction(let l), .xferAction(let r)): return l == r
       case (.deleAction(let l), .deleAction(let r)): return l == r
@@ -422,7 +422,7 @@ extension JUB_Proto_EOS_SellRamAction: SwiftProtobuf.Message, SwiftProtobuf._Mes
   }
 }
 
-extension JUB_Proto_EOS_TransactionEOS: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension JUB_Proto_EOS_ActionEOS: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".TransactionEOS"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "type"),
@@ -438,7 +438,7 @@ extension JUB_Proto_EOS_TransactionEOS: SwiftProtobuf.Message, SwiftProtobuf._Me
     var _type: JUB_Proto_EOS_ENUM_EOS_ACTION_TYPE = .xfer
     var _currency: String = String()
     var _name: String = String()
-    var _action: JUB_Proto_EOS_TransactionEOS.OneOf_Action?
+    var _action: JUB_Proto_EOS_ActionEOS.OneOf_Action?
 
     static let defaultInstance = _StorageClass()
 
@@ -531,7 +531,7 @@ extension JUB_Proto_EOS_TransactionEOS: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: JUB_Proto_EOS_TransactionEOS, rhs: JUB_Proto_EOS_TransactionEOS) -> Bool {
+  static func ==(lhs: JUB_Proto_EOS_ActionEOS, rhs: JUB_Proto_EOS_ActionEOS) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

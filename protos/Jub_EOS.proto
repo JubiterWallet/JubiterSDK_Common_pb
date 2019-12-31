@@ -43,7 +43,7 @@ message SellRamAction {
     string byte = 2;
 }
 
-message TransactionEOS {
+message ActionEOS {
     ENUM_EOS_ACTION_TYPE type = 1;
     string currency = 2;
     string name = 3;
