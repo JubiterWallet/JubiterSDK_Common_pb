@@ -19,7 +19,7 @@ extern PROTOBUF_INTERNAL_EXPORT_Jub_5fHcash_2eproto ::PROTOBUF_NAMESPACE_ID::int
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fHcash_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_OutputHC_Jub_5fHcash_2eproto;
 namespace JUB {
 namespace Proto {
-namespace Hcashn {
+namespace Hcash {
 class InputHCDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<InputHC> _instance;
@@ -32,18 +32,18 @@ class TransactionHCDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TransactionHC> _instance;
 } _TransactionHC_default_instance_;
-}  // namespace Hcashn
+}  // namespace Hcash
 }  // namespace Proto
 }  // namespace JUB
 static void InitDefaultsscc_info_InputHC_Jub_5fHcash_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::JUB::Proto::Hcashn::_InputHC_default_instance_;
-    new (ptr) ::JUB::Proto::Hcashn::InputHC();
+    void* ptr = &::JUB::Proto::Hcash::_InputHC_default_instance_;
+    new (ptr) ::JUB::Proto::Hcash::InputHC();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::JUB::Proto::Hcashn::InputHC::InitAsDefaultInstance();
+  ::JUB::Proto::Hcash::InputHC::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_InputHC_Jub_5fHcash_2eproto =
@@ -54,11 +54,11 @@ static void InitDefaultsscc_info_OutputHC_Jub_5fHcash_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::JUB::Proto::Hcashn::_OutputHC_default_instance_;
-    new (ptr) ::JUB::Proto::Hcashn::OutputHC();
+    void* ptr = &::JUB::Proto::Hcash::_OutputHC_default_instance_;
+    new (ptr) ::JUB::Proto::Hcash::OutputHC();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::JUB::Proto::Hcashn::OutputHC::InitAsDefaultInstance();
+  ::JUB::Proto::Hcash::OutputHC::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_OutputHC_Jub_5fHcash_2eproto =
@@ -69,11 +69,11 @@ static void InitDefaultsscc_info_TransactionHC_Jub_5fHcash_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::JUB::Proto::Hcashn::_TransactionHC_default_instance_;
-    new (ptr) ::JUB::Proto::Hcashn::TransactionHC();
+    void* ptr = &::JUB::Proto::Hcash::_TransactionHC_default_instance_;
+    new (ptr) ::JUB::Proto::Hcash::TransactionHC();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::JUB::Proto::Hcashn::TransactionHC::InitAsDefaultInstance();
+  ::JUB::Proto::Hcash::TransactionHC::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_TransactionHC_Jub_5fHcash_2eproto =
@@ -87,52 +87,52 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fHcash_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::InputHC, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::InputHC, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::InputHC, amount_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::InputHC, path_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::InputHC, amount_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::InputHC, path_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::OutputHC, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::OutputHC, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::OutputHC, change_address_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::OutputHC, path_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::OutputHC, change_address_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::OutputHC, path_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::TransactionHC, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::TransactionHC, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::TransactionHC, version_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::TransactionHC, locktime_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::TransactionHC, inputs_),
-  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcashn::TransactionHC, outputs_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::TransactionHC, version_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::TransactionHC, locktime_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::TransactionHC, inputs_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Hcash::TransactionHC, outputs_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::JUB::Proto::Hcashn::InputHC)},
-  { 7, -1, sizeof(::JUB::Proto::Hcashn::OutputHC)},
-  { 14, -1, sizeof(::JUB::Proto::Hcashn::TransactionHC)},
+  { 0, -1, sizeof(::JUB::Proto::Hcash::InputHC)},
+  { 7, -1, sizeof(::JUB::Proto::Hcash::OutputHC)},
+  { 14, -1, sizeof(::JUB::Proto::Hcash::TransactionHC)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Hcashn::_InputHC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Hcashn::_OutputHC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Hcashn::_TransactionHC_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Hcash::_InputHC_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Hcash::_OutputHC_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Hcash::_TransactionHC_default_instance_),
 };
 
 const char descriptor_table_protodef_Jub_5fHcash_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\017Jub_Hcash.proto\022\020JUB.Proto.Hcashn\032\020Jub"
+  "\n\017Jub_Hcash.proto\022\020JUB.Proto.Hcash\032\020Jub"
   "_Common.proto\"D\n\007InputHC\022\016\n\006amount\030\001 \001(\004"
   "\022)\n\004path\030\002 \001(\0132\033.JUB.Proto.Common.Bip44P"
   "ath\"M\n\010OutputHC\022\026\n\016change_address\030\001 \001(\010\022"
   ")\n\004path\030\002 \001(\0132\033.JUB.Proto.Common.Bip44Pa"
   "th\"\212\001\n\rTransactionHC\022\017\n\007version\030\001 \001(\r\022\020\n"
   "\010locktime\030\002 \001(\r\022)\n\006inputs\030\003 \003(\0132\031.JUB.Pr"
-  "oto.Hcashn.InputHC\022+\n\007outputs\030\004 \003(\0132\032.JU"
-  "B.Proto.Hcashn.OutputHCB3\n\025com.jubiter.s"
-  "dk.protoB\014HcashnProtos\242\002\013HcashProtosb\006pr"
+  "oto.Hcash.InputHC\022+\n\007outputs\030\004 \003(\0132\032.JU"
+  "B.Proto.Hcash.OutputHCB3\n\025com.jubiter.s"
+  "dk.protoB\014HcashProtos\242\002\013HcashProtosb\006pr"
   "oto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fHcash_2eproto_deps[1] = {
@@ -156,12 +156,12 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5f
 static bool dynamic_init_dummy_Jub_5fHcash_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Jub_5fHcash_2eproto), true);
 namespace JUB {
 namespace Proto {
-namespace Hcashn {
+namespace Hcash {
 
 // ===================================================================
 
 void InputHC::InitAsDefaultInstance() {
-  ::JUB::Proto::Hcashn::_InputHC_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
+  ::JUB::Proto::Hcash::_InputHC_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
       ::JUB::Proto::Common::Bip44Path::internal_default_instance());
 }
 class InputHC::_Internal {
@@ -182,7 +182,7 @@ void InputHC::clear_path() {
 InputHC::InputHC()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(constructor:JUB.Proto.Hcash.InputHC)
 }
 InputHC::InputHC(const InputHC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -194,7 +194,7 @@ InputHC::InputHC(const InputHC& from)
     path_ = nullptr;
   }
   amount_ = from.amount_;
-  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Hcash.InputHC)
 }
 
 void InputHC::SharedCtor() {
@@ -205,7 +205,7 @@ void InputHC::SharedCtor() {
 }
 
 InputHC::~InputHC() {
-  // @@protoc_insertion_point(destructor:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(destructor:JUB.Proto.Hcash.InputHC)
   SharedDtor();
 }
 
@@ -223,7 +223,7 @@ const InputHC& InputHC::default_instance() {
 
 
 void InputHC::Clear() {
-// @@protoc_insertion_point(message_clear_start:JUB.Proto.Hcashn.InputHC)
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.Hcash.InputHC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -279,7 +279,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* InputHC::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Hcash.InputHC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -301,12 +301,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Hcash.InputHC)
   return target;
 }
 
 size_t InputHC::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Hcashn.InputHC)
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Hcash.InputHC)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -337,22 +337,22 @@ size_t InputHC::ByteSizeLong() const {
 }
 
 void InputHC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Hcashn.InputHC)
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Hcash.InputHC)
   GOOGLE_DCHECK_NE(&from, this);
   const InputHC* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InputHC>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Hcash.InputHC)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Hcash.InputHC)
     MergeFrom(*source);
   }
 }
 
 void InputHC::MergeFrom(const InputHC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Hcashn.InputHC)
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Hcash.InputHC)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -367,14 +367,14 @@ void InputHC::MergeFrom(const InputHC& from) {
 }
 
 void InputHC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Hcashn.InputHC)
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Hcash.InputHC)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void InputHC::CopyFrom(const InputHC& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Hcashn.InputHC)
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Hcash.InputHC)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -399,7 +399,7 @@ void InputHC::InternalSwap(InputHC* other) {
 // ===================================================================
 
 void OutputHC::InitAsDefaultInstance() {
-  ::JUB::Proto::Hcashn::_OutputHC_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
+  ::JUB::Proto::Hcash::_OutputHC_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
       ::JUB::Proto::Common::Bip44Path::internal_default_instance());
 }
 class OutputHC::_Internal {
@@ -420,7 +420,7 @@ void OutputHC::clear_path() {
 OutputHC::OutputHC()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(constructor:JUB.Proto.Hcash.OutputHC)
 }
 OutputHC::OutputHC(const OutputHC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -432,7 +432,7 @@ OutputHC::OutputHC(const OutputHC& from)
     path_ = nullptr;
   }
   change_address_ = from.change_address_;
-  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Hcash.OutputHC)
 }
 
 void OutputHC::SharedCtor() {
@@ -443,7 +443,7 @@ void OutputHC::SharedCtor() {
 }
 
 OutputHC::~OutputHC() {
-  // @@protoc_insertion_point(destructor:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(destructor:JUB.Proto.Hcash.OutputHC)
   SharedDtor();
 }
 
@@ -461,7 +461,7 @@ const OutputHC& OutputHC::default_instance() {
 
 
 void OutputHC::Clear() {
-// @@protoc_insertion_point(message_clear_start:JUB.Proto.Hcashn.OutputHC)
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.Hcash.OutputHC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -517,7 +517,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* OutputHC::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Hcash.OutputHC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -539,12 +539,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Hcash.OutputHC)
   return target;
 }
 
 size_t OutputHC::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Hcashn.OutputHC)
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Hcash.OutputHC)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -573,22 +573,22 @@ size_t OutputHC::ByteSizeLong() const {
 }
 
 void OutputHC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Hcashn.OutputHC)
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Hcash.OutputHC)
   GOOGLE_DCHECK_NE(&from, this);
   const OutputHC* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OutputHC>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Hcash.OutputHC)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Hcash.OutputHC)
     MergeFrom(*source);
   }
 }
 
 void OutputHC::MergeFrom(const OutputHC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Hcashn.OutputHC)
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Hcash.OutputHC)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -603,14 +603,14 @@ void OutputHC::MergeFrom(const OutputHC& from) {
 }
 
 void OutputHC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Hcashn.OutputHC)
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Hcash.OutputHC)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void OutputHC::CopyFrom(const OutputHC& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Hcashn.OutputHC)
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Hcash.OutputHC)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -643,7 +643,7 @@ class TransactionHC::_Internal {
 TransactionHC::TransactionHC()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(constructor:JUB.Proto.Hcash.TransactionHC)
 }
 TransactionHC::TransactionHC(const TransactionHC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -654,7 +654,7 @@ TransactionHC::TransactionHC(const TransactionHC& from)
   ::memcpy(&version_, &from.version_,
     static_cast<size_t>(reinterpret_cast<char*>(&locktime_) -
     reinterpret_cast<char*>(&version_)) + sizeof(locktime_));
-  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Hcash.TransactionHC)
 }
 
 void TransactionHC::SharedCtor() {
@@ -665,7 +665,7 @@ void TransactionHC::SharedCtor() {
 }
 
 TransactionHC::~TransactionHC() {
-  // @@protoc_insertion_point(destructor:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(destructor:JUB.Proto.Hcash.TransactionHC)
   SharedDtor();
 }
 
@@ -682,7 +682,7 @@ const TransactionHC& TransactionHC::default_instance() {
 
 
 void TransactionHC::Clear() {
-// @@protoc_insertion_point(message_clear_start:JUB.Proto.Hcashn.TransactionHC)
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.Hcash.TransactionHC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -716,7 +716,7 @@ const char* TransactionHC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .JUB.Proto.Hcashn.InputHC inputs = 3;
+      // repeated .JUB.Proto.Hcash.InputHC inputs = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
@@ -728,7 +728,7 @@ const char* TransactionHC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
-      // repeated .JUB.Proto.Hcashn.OutputHC outputs = 4;
+      // repeated .JUB.Proto.Hcash.OutputHC outputs = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr -= 1;
@@ -762,7 +762,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* TransactionHC::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Hcash.TransactionHC)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -778,7 +778,7 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_locktime(), target);
   }
 
-  // repeated .JUB.Proto.Hcashn.InputHC inputs = 3;
+  // repeated .JUB.Proto.Hcash.InputHC inputs = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_inputs_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -786,7 +786,7 @@ failure:
       InternalWriteMessage(3, this->_internal_inputs(i), target, stream);
   }
 
-  // repeated .JUB.Proto.Hcashn.OutputHC outputs = 4;
+  // repeated .JUB.Proto.Hcash.OutputHC outputs = 4;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_outputs_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -798,26 +798,26 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Hcash.TransactionHC)
   return target;
 }
 
 size_t TransactionHC::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Hcashn.TransactionHC)
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Hcash.TransactionHC)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .JUB.Proto.Hcashn.InputHC inputs = 3;
+  // repeated .JUB.Proto.Hcash.InputHC inputs = 3;
   total_size += 1UL * this->_internal_inputs_size();
   for (const auto& msg : this->inputs_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated .JUB.Proto.Hcashn.OutputHC outputs = 4;
+  // repeated .JUB.Proto.Hcash.OutputHC outputs = 4;
   total_size += 1UL * this->_internal_outputs_size();
   for (const auto& msg : this->outputs_) {
     total_size +=
@@ -848,22 +848,22 @@ size_t TransactionHC::ByteSizeLong() const {
 }
 
 void TransactionHC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Hcashn.TransactionHC)
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Hcash.TransactionHC)
   GOOGLE_DCHECK_NE(&from, this);
   const TransactionHC* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TransactionHC>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Hcash.TransactionHC)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Hcash.TransactionHC)
     MergeFrom(*source);
   }
 }
 
 void TransactionHC::MergeFrom(const TransactionHC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Hcashn.TransactionHC)
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Hcash.TransactionHC)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -880,14 +880,14 @@ void TransactionHC::MergeFrom(const TransactionHC& from) {
 }
 
 void TransactionHC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Hcashn.TransactionHC)
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Hcash.TransactionHC)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TransactionHC::CopyFrom(const TransactionHC& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Hcashn.TransactionHC)
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Hcash.TransactionHC)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -912,18 +912,18 @@ void TransactionHC::InternalSwap(TransactionHC* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace Hcashn
+}  // namespace Hcash
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::JUB::Proto::Hcashn::InputHC* Arena::CreateMaybeMessage< ::JUB::Proto::Hcashn::InputHC >(Arena* arena) {
-  return Arena::CreateInternal< ::JUB::Proto::Hcashn::InputHC >(arena);
+template<> PROTOBUF_NOINLINE ::JUB::Proto::Hcash::InputHC* Arena::CreateMaybeMessage< ::JUB::Proto::Hcash::InputHC >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::Hcash::InputHC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::JUB::Proto::Hcashn::OutputHC* Arena::CreateMaybeMessage< ::JUB::Proto::Hcashn::OutputHC >(Arena* arena) {
-  return Arena::CreateInternal< ::JUB::Proto::Hcashn::OutputHC >(arena);
+template<> PROTOBUF_NOINLINE ::JUB::Proto::Hcash::OutputHC* Arena::CreateMaybeMessage< ::JUB::Proto::Hcash::OutputHC >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::Hcash::OutputHC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::JUB::Proto::Hcashn::TransactionHC* Arena::CreateMaybeMessage< ::JUB::Proto::Hcashn::TransactionHC >(Arena* arena) {
-  return Arena::CreateInternal< ::JUB::Proto::Hcashn::TransactionHC >(arena);
+template<> PROTOBUF_NOINLINE ::JUB::Proto::Hcash::TransactionHC* Arena::CreateMaybeMessage< ::JUB::Proto::Hcash::TransactionHC >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::Hcash::TransactionHC >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

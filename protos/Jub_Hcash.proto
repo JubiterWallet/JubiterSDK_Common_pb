@@ -1,10 +1,10 @@
 syntax = "proto3";
 import "Jub_Common.proto";
 
-package JUB.Proto.Hcashn;
+package JUB.Proto.Hcash;
 
 option java_package = "com.jubiter.sdk.proto";
-option java_outer_classname = "HcashnProtos";
+option java_outer_classname = "HcashProtos";
 option objc_class_prefix = "HcashProtos";
 
 //message ContextCfgHC = JUB.Proto.Common.ContextCfg

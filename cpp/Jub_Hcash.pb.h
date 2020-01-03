@@ -57,7 +57,7 @@ struct TableStruct_Jub_5fHcash_2eproto {
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fHcash_2eproto;
 namespace JUB {
 namespace Proto {
-namespace Hcashn {
+namespace Hcash {
 class InputHC;
 class InputHCDefaultTypeInternal;
 extern InputHCDefaultTypeInternal _InputHC_default_instance_;
@@ -67,22 +67,22 @@ extern OutputHCDefaultTypeInternal _OutputHC_default_instance_;
 class TransactionHC;
 class TransactionHCDefaultTypeInternal;
 extern TransactionHCDefaultTypeInternal _TransactionHC_default_instance_;
-}  // namespace Hcashn
+}  // namespace Hcash
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
-template<> ::JUB::Proto::Hcashn::InputHC* Arena::CreateMaybeMessage<::JUB::Proto::Hcashn::InputHC>(Arena*);
-template<> ::JUB::Proto::Hcashn::OutputHC* Arena::CreateMaybeMessage<::JUB::Proto::Hcashn::OutputHC>(Arena*);
-template<> ::JUB::Proto::Hcashn::TransactionHC* Arena::CreateMaybeMessage<::JUB::Proto::Hcashn::TransactionHC>(Arena*);
+template<> ::JUB::Proto::Hcash::InputHC* Arena::CreateMaybeMessage<::JUB::Proto::Hcash::InputHC>(Arena*);
+template<> ::JUB::Proto::Hcash::OutputHC* Arena::CreateMaybeMessage<::JUB::Proto::Hcash::OutputHC>(Arena*);
+template<> ::JUB::Proto::Hcash::TransactionHC* Arena::CreateMaybeMessage<::JUB::Proto::Hcash::TransactionHC>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
 namespace Proto {
-namespace Hcashn {
+namespace Hcash {
 
 // ===================================================================
 
 class InputHC :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Hcashn.InputHC) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Hcash.InputHC) */ {
  public:
   InputHC();
   virtual ~InputHC();
@@ -162,7 +162,7 @@ class InputHC :
   void InternalSwap(InputHC* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "JUB.Proto.Hcashn.InputHC";
+    return "JUB.Proto.Hcash.InputHC";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -214,7 +214,7 @@ class InputHC :
   void _internal_set_amount(::PROTOBUF_NAMESPACE_ID::uint64 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:JUB.Proto.Hcashn.InputHC)
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Hcash.InputHC)
  private:
   class _Internal;
 
@@ -227,7 +227,7 @@ class InputHC :
 // -------------------------------------------------------------------
 
 class OutputHC :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Hcashn.OutputHC) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Hcash.OutputHC) */ {
  public:
   OutputHC();
   virtual ~OutputHC();
@@ -307,7 +307,7 @@ class OutputHC :
   void InternalSwap(OutputHC* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "JUB.Proto.Hcashn.OutputHC";
+    return "JUB.Proto.Hcash.OutputHC";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -359,7 +359,7 @@ class OutputHC :
   void _internal_set_change_address(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:JUB.Proto.Hcashn.OutputHC)
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Hcash.OutputHC)
  private:
   class _Internal;
 
@@ -372,7 +372,7 @@ class OutputHC :
 // -------------------------------------------------------------------
 
 class TransactionHC :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Hcashn.TransactionHC) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Hcash.TransactionHC) */ {
  public:
   TransactionHC();
   virtual ~TransactionHC();
@@ -452,7 +452,7 @@ class TransactionHC :
   void InternalSwap(TransactionHC* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "JUB.Proto.Hcashn.TransactionHC";
+    return "JUB.Proto.Hcash.TransactionHC";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -482,40 +482,40 @@ class TransactionHC :
     kVersionFieldNumber = 1,
     kLocktimeFieldNumber = 2,
   };
-  // repeated .JUB.Proto.Hcashn.InputHC inputs = 3;
+  // repeated .JUB.Proto.Hcash.InputHC inputs = 3;
   int inputs_size() const;
   private:
   int _internal_inputs_size() const;
   public:
   void clear_inputs();
-  ::JUB::Proto::Hcashn::InputHC* mutable_inputs(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::InputHC >*
+  ::JUB::Proto::Hcash::InputHC* mutable_inputs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::InputHC >*
       mutable_inputs();
   private:
-  const ::JUB::Proto::Hcashn::InputHC& _internal_inputs(int index) const;
-  ::JUB::Proto::Hcashn::InputHC* _internal_add_inputs();
+  const ::JUB::Proto::Hcash::InputHC& _internal_inputs(int index) const;
+  ::JUB::Proto::Hcash::InputHC* _internal_add_inputs();
   public:
-  const ::JUB::Proto::Hcashn::InputHC& inputs(int index) const;
-  ::JUB::Proto::Hcashn::InputHC* add_inputs();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::InputHC >&
+  const ::JUB::Proto::Hcash::InputHC& inputs(int index) const;
+  ::JUB::Proto::Hcash::InputHC* add_inputs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::InputHC >&
       inputs() const;
 
-  // repeated .JUB.Proto.Hcashn.OutputHC outputs = 4;
+  // repeated .JUB.Proto.Hcash.OutputHC outputs = 4;
   int outputs_size() const;
   private:
   int _internal_outputs_size() const;
   public:
   void clear_outputs();
-  ::JUB::Proto::Hcashn::OutputHC* mutable_outputs(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::OutputHC >*
+  ::JUB::Proto::Hcash::OutputHC* mutable_outputs(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::OutputHC >*
       mutable_outputs();
   private:
-  const ::JUB::Proto::Hcashn::OutputHC& _internal_outputs(int index) const;
-  ::JUB::Proto::Hcashn::OutputHC* _internal_add_outputs();
+  const ::JUB::Proto::Hcash::OutputHC& _internal_outputs(int index) const;
+  ::JUB::Proto::Hcash::OutputHC* _internal_add_outputs();
   public:
-  const ::JUB::Proto::Hcashn::OutputHC& outputs(int index) const;
-  ::JUB::Proto::Hcashn::OutputHC* add_outputs();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::OutputHC >&
+  const ::JUB::Proto::Hcash::OutputHC& outputs(int index) const;
+  ::JUB::Proto::Hcash::OutputHC* add_outputs();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::OutputHC >&
       outputs() const;
 
   // uint32 version = 1;
@@ -536,13 +536,13 @@ class TransactionHC :
   void _internal_set_locktime(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:JUB.Proto.Hcashn.TransactionHC)
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Hcash.TransactionHC)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::InputHC > inputs_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::OutputHC > outputs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::InputHC > inputs_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::OutputHC > outputs_;
   ::PROTOBUF_NAMESPACE_ID::uint32 version_;
   ::PROTOBUF_NAMESPACE_ID::uint32 locktime_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -567,7 +567,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint64 InputHC::_internal_amount() const {
   return amount_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint64 InputHC::amount() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.InputHC.amount)
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.InputHC.amount)
   return _internal_amount();
 }
 inline void InputHC::_internal_set_amount(::PROTOBUF_NAMESPACE_ID::uint64 value) {
@@ -576,7 +576,7 @@ inline void InputHC::_internal_set_amount(::PROTOBUF_NAMESPACE_ID::uint64 value)
 }
 inline void InputHC::set_amount(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_set_amount(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Hcashn.InputHC.amount)
+  // @@protoc_insertion_point(field_set:JUB.Proto.Hcash.InputHC.amount)
 }
 
 // .JUB.Proto.Common.Bip44Path path = 2;
@@ -592,11 +592,11 @@ inline const ::JUB::Proto::Common::Bip44Path& InputHC::_internal_path() const {
       &::JUB::Proto::Common::_Bip44Path_default_instance_);
 }
 inline const ::JUB::Proto::Common::Bip44Path& InputHC::path() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.InputHC.path)
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.InputHC.path)
   return _internal_path();
 }
 inline ::JUB::Proto::Common::Bip44Path* InputHC::release_path() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Hcashn.InputHC.path)
+  // @@protoc_insertion_point(field_release:JUB.Proto.Hcash.InputHC.path)
   
   ::JUB::Proto::Common::Bip44Path* temp = path_;
   path_ = nullptr;
@@ -611,7 +611,7 @@ inline ::JUB::Proto::Common::Bip44Path* InputHC::_internal_mutable_path() {
   return path_;
 }
 inline ::JUB::Proto::Common::Bip44Path* InputHC::mutable_path() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcashn.InputHC.path)
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcash.InputHC.path)
   return _internal_mutable_path();
 }
 inline void InputHC::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) {
@@ -630,7 +630,7 @@ inline void InputHC::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) {
     
   }
   path_ = path;
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Hcashn.InputHC.path)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Hcash.InputHC.path)
 }
 
 // -------------------------------------------------------------------
@@ -645,7 +645,7 @@ inline bool OutputHC::_internal_change_address() const {
   return change_address_;
 }
 inline bool OutputHC::change_address() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.OutputHC.change_address)
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.OutputHC.change_address)
   return _internal_change_address();
 }
 inline void OutputHC::_internal_set_change_address(bool value) {
@@ -654,7 +654,7 @@ inline void OutputHC::_internal_set_change_address(bool value) {
 }
 inline void OutputHC::set_change_address(bool value) {
   _internal_set_change_address(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Hcashn.OutputHC.change_address)
+  // @@protoc_insertion_point(field_set:JUB.Proto.Hcash.OutputHC.change_address)
 }
 
 // .JUB.Proto.Common.Bip44Path path = 2;
@@ -670,11 +670,11 @@ inline const ::JUB::Proto::Common::Bip44Path& OutputHC::_internal_path() const {
       &::JUB::Proto::Common::_Bip44Path_default_instance_);
 }
 inline const ::JUB::Proto::Common::Bip44Path& OutputHC::path() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.OutputHC.path)
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.OutputHC.path)
   return _internal_path();
 }
 inline ::JUB::Proto::Common::Bip44Path* OutputHC::release_path() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Hcashn.OutputHC.path)
+  // @@protoc_insertion_point(field_release:JUB.Proto.Hcash.OutputHC.path)
   
   ::JUB::Proto::Common::Bip44Path* temp = path_;
   path_ = nullptr;
@@ -689,7 +689,7 @@ inline ::JUB::Proto::Common::Bip44Path* OutputHC::_internal_mutable_path() {
   return path_;
 }
 inline ::JUB::Proto::Common::Bip44Path* OutputHC::mutable_path() {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcashn.OutputHC.path)
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcash.OutputHC.path)
   return _internal_mutable_path();
 }
 inline void OutputHC::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) {
@@ -708,7 +708,7 @@ inline void OutputHC::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) 
     
   }
   path_ = path;
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Hcashn.OutputHC.path)
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Hcash.OutputHC.path)
 }
 
 // -------------------------------------------------------------------
@@ -723,7 +723,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 TransactionHC::_internal_version() const 
   return version_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 TransactionHC::version() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.TransactionHC.version)
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.TransactionHC.version)
   return _internal_version();
 }
 inline void TransactionHC::_internal_set_version(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -732,7 +732,7 @@ inline void TransactionHC::_internal_set_version(::PROTOBUF_NAMESPACE_ID::uint32
 }
 inline void TransactionHC::set_version(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Hcashn.TransactionHC.version)
+  // @@protoc_insertion_point(field_set:JUB.Proto.Hcash.TransactionHC.version)
 }
 
 // uint32 locktime = 2;
@@ -743,7 +743,7 @@ inline ::PROTOBUF_NAMESPACE_ID::uint32 TransactionHC::_internal_locktime() const
   return locktime_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::uint32 TransactionHC::locktime() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.TransactionHC.locktime)
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.TransactionHC.locktime)
   return _internal_locktime();
 }
 inline void TransactionHC::_internal_set_locktime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
@@ -752,10 +752,10 @@ inline void TransactionHC::_internal_set_locktime(::PROTOBUF_NAMESPACE_ID::uint3
 }
 inline void TransactionHC::set_locktime(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_locktime(value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Hcashn.TransactionHC.locktime)
+  // @@protoc_insertion_point(field_set:JUB.Proto.Hcash.TransactionHC.locktime)
 }
 
-// repeated .JUB.Proto.Hcashn.InputHC inputs = 3;
+// repeated .JUB.Proto.Hcash.InputHC inputs = 3;
 inline int TransactionHC::_internal_inputs_size() const {
   return inputs_.size();
 }
@@ -765,36 +765,36 @@ inline int TransactionHC::inputs_size() const {
 inline void TransactionHC::clear_inputs() {
   inputs_.Clear();
 }
-inline ::JUB::Proto::Hcashn::InputHC* TransactionHC::mutable_inputs(int index) {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcashn.TransactionHC.inputs)
+inline ::JUB::Proto::Hcash::InputHC* TransactionHC::mutable_inputs(int index) {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcash.TransactionHC.inputs)
   return inputs_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::InputHC >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::InputHC >*
 TransactionHC::mutable_inputs() {
-  // @@protoc_insertion_point(field_mutable_list:JUB.Proto.Hcashn.TransactionHC.inputs)
+  // @@protoc_insertion_point(field_mutable_list:JUB.Proto.Hcash.TransactionHC.inputs)
   return &inputs_;
 }
-inline const ::JUB::Proto::Hcashn::InputHC& TransactionHC::_internal_inputs(int index) const {
+inline const ::JUB::Proto::Hcash::InputHC& TransactionHC::_internal_inputs(int index) const {
   return inputs_.Get(index);
 }
-inline const ::JUB::Proto::Hcashn::InputHC& TransactionHC::inputs(int index) const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.TransactionHC.inputs)
+inline const ::JUB::Proto::Hcash::InputHC& TransactionHC::inputs(int index) const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.TransactionHC.inputs)
   return _internal_inputs(index);
 }
-inline ::JUB::Proto::Hcashn::InputHC* TransactionHC::_internal_add_inputs() {
+inline ::JUB::Proto::Hcash::InputHC* TransactionHC::_internal_add_inputs() {
   return inputs_.Add();
 }
-inline ::JUB::Proto::Hcashn::InputHC* TransactionHC::add_inputs() {
-  // @@protoc_insertion_point(field_add:JUB.Proto.Hcashn.TransactionHC.inputs)
+inline ::JUB::Proto::Hcash::InputHC* TransactionHC::add_inputs() {
+  // @@protoc_insertion_point(field_add:JUB.Proto.Hcash.TransactionHC.inputs)
   return _internal_add_inputs();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::InputHC >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::InputHC >&
 TransactionHC::inputs() const {
-  // @@protoc_insertion_point(field_list:JUB.Proto.Hcashn.TransactionHC.inputs)
+  // @@protoc_insertion_point(field_list:JUB.Proto.Hcash.TransactionHC.inputs)
   return inputs_;
 }
 
-// repeated .JUB.Proto.Hcashn.OutputHC outputs = 4;
+// repeated .JUB.Proto.Hcash.OutputHC outputs = 4;
 inline int TransactionHC::_internal_outputs_size() const {
   return outputs_.size();
 }
@@ -804,32 +804,32 @@ inline int TransactionHC::outputs_size() const {
 inline void TransactionHC::clear_outputs() {
   outputs_.Clear();
 }
-inline ::JUB::Proto::Hcashn::OutputHC* TransactionHC::mutable_outputs(int index) {
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcashn.TransactionHC.outputs)
+inline ::JUB::Proto::Hcash::OutputHC* TransactionHC::mutable_outputs(int index) {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Hcash.TransactionHC.outputs)
   return outputs_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::OutputHC >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::OutputHC >*
 TransactionHC::mutable_outputs() {
-  // @@protoc_insertion_point(field_mutable_list:JUB.Proto.Hcashn.TransactionHC.outputs)
+  // @@protoc_insertion_point(field_mutable_list:JUB.Proto.Hcash.TransactionHC.outputs)
   return &outputs_;
 }
-inline const ::JUB::Proto::Hcashn::OutputHC& TransactionHC::_internal_outputs(int index) const {
+inline const ::JUB::Proto::Hcash::OutputHC& TransactionHC::_internal_outputs(int index) const {
   return outputs_.Get(index);
 }
-inline const ::JUB::Proto::Hcashn::OutputHC& TransactionHC::outputs(int index) const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Hcashn.TransactionHC.outputs)
+inline const ::JUB::Proto::Hcash::OutputHC& TransactionHC::outputs(int index) const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Hcash.TransactionHC.outputs)
   return _internal_outputs(index);
 }
-inline ::JUB::Proto::Hcashn::OutputHC* TransactionHC::_internal_add_outputs() {
+inline ::JUB::Proto::Hcash::OutputHC* TransactionHC::_internal_add_outputs() {
   return outputs_.Add();
 }
-inline ::JUB::Proto::Hcashn::OutputHC* TransactionHC::add_outputs() {
-  // @@protoc_insertion_point(field_add:JUB.Proto.Hcashn.TransactionHC.outputs)
+inline ::JUB::Proto::Hcash::OutputHC* TransactionHC::add_outputs() {
+  // @@protoc_insertion_point(field_add:JUB.Proto.Hcash.TransactionHC.outputs)
   return _internal_add_outputs();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcashn::OutputHC >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::Hcash::OutputHC >&
 TransactionHC::outputs() const {
-  // @@protoc_insertion_point(field_list:JUB.Proto.Hcashn.TransactionHC.outputs)
+  // @@protoc_insertion_point(field_list:JUB.Proto.Hcash.TransactionHC.outputs)
   return outputs_;
 }
 
@@ -843,7 +843,7 @@ TransactionHC::outputs() const {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace Hcashn
+}  // namespace Hcash
 }  // namespace Proto
 }  // namespace JUB
 

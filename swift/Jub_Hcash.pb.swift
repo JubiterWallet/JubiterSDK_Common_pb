@@ -19,7 +19,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct JUB_Proto_Hcashn_InputHC {
+struct JUB_Proto_Hcash_InputHC {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -45,7 +45,7 @@ struct JUB_Proto_Hcashn_InputHC {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct JUB_Proto_Hcashn_OutputHC {
+struct JUB_Proto_Hcash_OutputHC {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -71,7 +71,7 @@ struct JUB_Proto_Hcashn_OutputHC {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct JUB_Proto_Hcashn_TransactionHC {
+struct JUB_Proto_Hcash_TransactionHC {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -80,9 +80,9 @@ struct JUB_Proto_Hcashn_TransactionHC {
 
   var locktime: UInt32 = 0
 
-  var inputs: [JUB_Proto_Hcashn_InputHC] = []
+  var inputs: [JUB_Proto_Hcash_InputHC] = []
 
-  var outputs: [JUB_Proto_Hcashn_OutputHC] = []
+  var outputs: [JUB_Proto_Hcash_OutputHC] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -91,9 +91,9 @@ struct JUB_Proto_Hcashn_TransactionHC {
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
-fileprivate let _protobuf_package = "JUB.Proto.Hcashn"
+fileprivate let _protobuf_package = "JUB.Proto.Hcash"
 
-extension JUB_Proto_Hcashn_InputHC: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension JUB_Proto_Hcash_InputHC: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".InputHC"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "amount"),
@@ -146,7 +146,7 @@ extension JUB_Proto_Hcashn_InputHC: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: JUB_Proto_Hcashn_InputHC, rhs: JUB_Proto_Hcashn_InputHC) -> Bool {
+  static func ==(lhs: JUB_Proto_Hcash_InputHC, rhs: JUB_Proto_Hcash_InputHC) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -162,7 +162,7 @@ extension JUB_Proto_Hcashn_InputHC: SwiftProtobuf.Message, SwiftProtobuf._Messag
   }
 }
 
-extension JUB_Proto_Hcashn_OutputHC: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension JUB_Proto_Hcash_OutputHC: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".OutputHC"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "change_address"),
@@ -215,7 +215,7 @@ extension JUB_Proto_Hcashn_OutputHC: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: JUB_Proto_Hcashn_OutputHC, rhs: JUB_Proto_Hcashn_OutputHC) -> Bool {
+  static func ==(lhs: JUB_Proto_Hcash_OutputHC, rhs: JUB_Proto_Hcash_OutputHC) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -231,7 +231,7 @@ extension JUB_Proto_Hcashn_OutputHC: SwiftProtobuf.Message, SwiftProtobuf._Messa
   }
 }
 
-extension JUB_Proto_Hcashn_TransactionHC: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+extension JUB_Proto_Hcash_TransactionHC: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".TransactionHC"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "version"),
@@ -268,7 +268,7 @@ extension JUB_Proto_Hcashn_TransactionHC: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: JUB_Proto_Hcashn_TransactionHC, rhs: JUB_Proto_Hcashn_TransactionHC) -> Bool {
+  static func ==(lhs: JUB_Proto_Hcash_TransactionHC, rhs: JUB_Proto_Hcash_TransactionHC) -> Bool {
     if lhs.version != rhs.version {return false}
     if lhs.locktime != rhs.locktime {return false}
     if lhs.inputs != rhs.inputs {return false}
