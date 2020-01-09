@@ -49,7 +49,7 @@ struct TableStruct_Jub_5fCommon_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -59,9 +59,12 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 namespace JUB {
 namespace Proto {
 namespace Common {
-class Bip32Path;
-class Bip32PathDefaultTypeInternal;
-extern Bip32PathDefaultTypeInternal _Bip32Path_default_instance_;
+class Bip44Path;
+class Bip44PathDefaultTypeInternal;
+extern Bip44PathDefaultTypeInternal _Bip44Path_default_instance_;
+class ContextCfg;
+class ContextCfgDefaultTypeInternal;
+extern ContextCfgDefaultTypeInternal _ContextCfg_default_instance_;
 class DeviceInfo;
 class DeviceInfoDefaultTypeInternal;
 extern DeviceInfoDefaultTypeInternal _DeviceInfo_default_instance_;
@@ -74,20 +77,50 @@ extern ResultIntDefaultTypeInternal _ResultInt_default_instance_;
 class ResultString;
 class ResultStringDefaultTypeInternal;
 extern ResultStringDefaultTypeInternal _ResultString_default_instance_;
+class Slip48Path;
+class Slip48PathDefaultTypeInternal;
+extern Slip48PathDefaultTypeInternal _Slip48Path_default_instance_;
 }  // namespace Common
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
-template<> ::JUB::Proto::Common::Bip32Path* Arena::CreateMaybeMessage<::JUB::Proto::Common::Bip32Path>(Arena*);
+template<> ::JUB::Proto::Common::Bip44Path* Arena::CreateMaybeMessage<::JUB::Proto::Common::Bip44Path>(Arena*);
+template<> ::JUB::Proto::Common::ContextCfg* Arena::CreateMaybeMessage<::JUB::Proto::Common::ContextCfg>(Arena*);
 template<> ::JUB::Proto::Common::DeviceInfo* Arena::CreateMaybeMessage<::JUB::Proto::Common::DeviceInfo>(Arena*);
 template<> ::JUB::Proto::Common::ResultAny* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultAny>(Arena*);
 template<> ::JUB::Proto::Common::ResultInt* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultInt>(Arena*);
 template<> ::JUB::Proto::Common::ResultString* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultString>(Arena*);
+template<> ::JUB::Proto::Common::Slip48Path* Arena::CreateMaybeMessage<::JUB::Proto::Common::Slip48Path>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
 namespace Proto {
 namespace Common {
 
+enum ENUM_GRAPHENE_ROLE : int {
+  OWNER = 0,
+  ACTIVE = 1,
+  ENUM_GRAPHENE_ROLE_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ENUM_GRAPHENE_ROLE_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ENUM_GRAPHENE_ROLE_IsValid(int value);
+constexpr ENUM_GRAPHENE_ROLE ENUM_GRAPHENE_ROLE_MIN = OWNER;
+constexpr ENUM_GRAPHENE_ROLE ENUM_GRAPHENE_ROLE_MAX = ACTIVE;
+constexpr int ENUM_GRAPHENE_ROLE_ARRAYSIZE = ENUM_GRAPHENE_ROLE_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_GRAPHENE_ROLE_descriptor();
+template<typename T>
+inline const std::string& ENUM_GRAPHENE_ROLE_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ENUM_GRAPHENE_ROLE>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ENUM_GRAPHENE_ROLE_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ENUM_GRAPHENE_ROLE_descriptor(), enum_t_value);
+}
+inline bool ENUM_GRAPHENE_ROLE_Parse(
+    const std::string& name, ENUM_GRAPHENE_ROLE* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_GRAPHENE_ROLE>(
+    ENUM_GRAPHENE_ROLE_descriptor(), name, value);
+}
 enum ENUM_MNEMONIC_STRENGTH : int {
   STRENGTH128 = 0,
   STRENGTH192 = 1,
@@ -115,15 +148,15 @@ inline bool ENUM_MNEMONIC_STRENGTH_Parse(
     ENUM_MNEMONIC_STRENGTH_descriptor(), name, value);
 }
 enum CURVES : int {
-  secp256k1 = 0,
-  ed25519 = 1,
-  nist256p1 = 2,
+  SECP256K1 = 0,
+  ED25519 = 1,
+  NIST256P1 = 2,
   CURVES_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   CURVES_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool CURVES_IsValid(int value);
-constexpr CURVES CURVES_MIN = secp256k1;
-constexpr CURVES CURVES_MAX = nist256p1;
+constexpr CURVES CURVES_MIN = SECP256K1;
+constexpr CURVES CURVES_MAX = NIST256P1;
 constexpr int CURVES_ARRAYSIZE = CURVES_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CURVES_descriptor();
@@ -140,25 +173,50 @@ inline bool CURVES_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<CURVES>(
     CURVES_descriptor(), name, value);
 }
+enum ENUM_PUB_FORMAT : int {
+  HEX = 0,
+  XPUB = 1,
+  ENUM_PUB_FORMAT_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ENUM_PUB_FORMAT_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ENUM_PUB_FORMAT_IsValid(int value);
+constexpr ENUM_PUB_FORMAT ENUM_PUB_FORMAT_MIN = HEX;
+constexpr ENUM_PUB_FORMAT ENUM_PUB_FORMAT_MAX = XPUB;
+constexpr int ENUM_PUB_FORMAT_ARRAYSIZE = ENUM_PUB_FORMAT_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_PUB_FORMAT_descriptor();
+template<typename T>
+inline const std::string& ENUM_PUB_FORMAT_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ENUM_PUB_FORMAT>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ENUM_PUB_FORMAT_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ENUM_PUB_FORMAT_descriptor(), enum_t_value);
+}
+inline bool ENUM_PUB_FORMAT_Parse(
+    const std::string& name, ENUM_PUB_FORMAT* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_PUB_FORMAT>(
+    ENUM_PUB_FORMAT_descriptor(), name, value);
+}
 // ===================================================================
 
-class Bip32Path :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.Bip32Path) */ {
+class Bip44Path :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.Bip44Path) */ {
  public:
-  Bip32Path();
-  virtual ~Bip32Path();
+  Bip44Path();
+  virtual ~Bip44Path();
 
-  Bip32Path(const Bip32Path& from);
-  Bip32Path(Bip32Path&& from) noexcept
-    : Bip32Path() {
+  Bip44Path(const Bip44Path& from);
+  Bip44Path(Bip44Path&& from) noexcept
+    : Bip44Path() {
     *this = ::std::move(from);
   }
 
-  inline Bip32Path& operator=(const Bip32Path& from) {
+  inline Bip44Path& operator=(const Bip44Path& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Bip32Path& operator=(Bip32Path&& from) noexcept {
+  inline Bip44Path& operator=(Bip44Path&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -176,37 +234,37 @@ class Bip32Path :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Bip32Path& default_instance();
+  static const Bip44Path& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Bip32Path* internal_default_instance() {
-    return reinterpret_cast<const Bip32Path*>(
-               &_Bip32Path_default_instance_);
+  static inline const Bip44Path* internal_default_instance() {
+    return reinterpret_cast<const Bip44Path*>(
+               &_Bip44Path_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(Bip32Path& a, Bip32Path& b) {
+  friend void swap(Bip44Path& a, Bip44Path& b) {
     a.Swap(&b);
   }
-  inline void Swap(Bip32Path* other) {
+  inline void Swap(Bip44Path* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline Bip32Path* New() const final {
-    return CreateMaybeMessage<Bip32Path>(nullptr);
+  inline Bip44Path* New() const final {
+    return CreateMaybeMessage<Bip44Path>(nullptr);
   }
 
-  Bip32Path* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Bip32Path>(arena);
+  Bip44Path* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Bip44Path>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Bip32Path& from);
-  void MergeFrom(const Bip32Path& from);
+  void CopyFrom(const Bip44Path& from);
+  void MergeFrom(const Bip44Path& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -227,10 +285,10 @@ class Bip32Path :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Bip32Path* other);
+  void InternalSwap(Bip44Path* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "JUB.Proto.Common.Bip32Path";
+    return "JUB.Proto.Common.Bip44Path";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -258,23 +316,312 @@ class Bip32Path :
     kAddressIndexFieldNumber = 2,
     kChangeFieldNumber = 1,
   };
-  // uint64 addressIndex = 2;
-  void clear_addressindex();
-  ::PROTOBUF_NAMESPACE_ID::uint64 addressindex() const;
-  void set_addressindex(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  // uint64 address_index = 2;
+  void clear_address_index();
+  ::PROTOBUF_NAMESPACE_ID::uint64 address_index() const;
+  void set_address_index(::PROTOBUF_NAMESPACE_ID::uint64 value);
 
   // bool change = 1;
   void clear_change();
   bool change() const;
   void set_change(bool value);
 
-  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.Bip32Path)
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.Bip44Path)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 addressindex_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 address_index_;
   bool change_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fCommon_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Slip48Path :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.Slip48Path) */ {
+ public:
+  Slip48Path();
+  virtual ~Slip48Path();
+
+  Slip48Path(const Slip48Path& from);
+  Slip48Path(Slip48Path&& from) noexcept
+    : Slip48Path() {
+    *this = ::std::move(from);
+  }
+
+  inline Slip48Path& operator=(const Slip48Path& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Slip48Path& operator=(Slip48Path&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Slip48Path& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Slip48Path* internal_default_instance() {
+    return reinterpret_cast<const Slip48Path*>(
+               &_Slip48Path_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(Slip48Path& a, Slip48Path& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Slip48Path* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Slip48Path* New() const final {
+    return CreateMaybeMessage<Slip48Path>(nullptr);
+  }
+
+  Slip48Path* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Slip48Path>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Slip48Path& from);
+  void MergeFrom(const Slip48Path& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Slip48Path* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Common.Slip48Path";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fCommon_2eproto);
+    return ::descriptor_table_Jub_5fCommon_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNetworkFieldNumber = 1,
+    kAddressIndexFieldNumber = 3,
+    kKeyIndexFieldNumber = 4,
+    kRoleFieldNumber = 2,
+  };
+  // uint64 network = 1;
+  void clear_network();
+  ::PROTOBUF_NAMESPACE_ID::uint64 network() const;
+  void set_network(::PROTOBUF_NAMESPACE_ID::uint64 value);
+
+  // uint64 address_index = 3;
+  void clear_address_index();
+  ::PROTOBUF_NAMESPACE_ID::uint64 address_index() const;
+  void set_address_index(::PROTOBUF_NAMESPACE_ID::uint64 value);
+
+  // uint64 key_index = 4;
+  void clear_key_index();
+  ::PROTOBUF_NAMESPACE_ID::uint64 key_index() const;
+  void set_key_index(::PROTOBUF_NAMESPACE_ID::uint64 value);
+
+  // .JUB.Proto.Common.ENUM_GRAPHENE_ROLE role = 2;
+  void clear_role();
+  ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE role() const;
+  void set_role(::JUB::Proto::Common::ENUM_GRAPHENE_ROLE value);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.Slip48Path)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 network_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 address_index_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 key_index_;
+  int role_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fCommon_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ContextCfg :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.ContextCfg) */ {
+ public:
+  ContextCfg();
+  virtual ~ContextCfg();
+
+  ContextCfg(const ContextCfg& from);
+  ContextCfg(ContextCfg&& from) noexcept
+    : ContextCfg() {
+    *this = ::std::move(from);
+  }
+
+  inline ContextCfg& operator=(const ContextCfg& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ContextCfg& operator=(ContextCfg&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ContextCfg& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ContextCfg* internal_default_instance() {
+    return reinterpret_cast<const ContextCfg*>(
+               &_ContextCfg_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(ContextCfg& a, ContextCfg& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ContextCfg* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ContextCfg* New() const final {
+    return CreateMaybeMessage<ContextCfg>(nullptr);
+  }
+
+  ContextCfg* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ContextCfg>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ContextCfg& from);
+  void MergeFrom(const ContextCfg& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ContextCfg* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Common.ContextCfg";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fCommon_2eproto);
+    return ::descriptor_table_Jub_5fCommon_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMainPathFieldNumber = 1,
+  };
+  // string main_path = 1;
+  void clear_main_path();
+  const std::string& main_path() const;
+  void set_main_path(const std::string& value);
+  void set_main_path(std::string&& value);
+  void set_main_path(const char* value);
+  void set_main_path(const char* value, size_t size);
+  std::string* mutable_main_path();
+  std::string* release_main_path();
+  void set_allocated_main_path(std::string* main_path);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.ContextCfg)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr main_path_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fCommon_2eproto;
 };
@@ -322,7 +669,7 @@ class DeviceInfo :
                &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    3;
 
   friend void swap(DeviceInfo& a, DeviceInfo& b) {
     a.Swap(&b);
@@ -422,37 +769,37 @@ class DeviceInfo :
   std::string* release_label();
   void set_allocated_label(std::string* label);
 
-  // string bleVersion = 3;
-  void clear_bleversion();
-  const std::string& bleversion() const;
-  void set_bleversion(const std::string& value);
-  void set_bleversion(std::string&& value);
-  void set_bleversion(const char* value);
-  void set_bleversion(const char* value, size_t size);
-  std::string* mutable_bleversion();
-  std::string* release_bleversion();
-  void set_allocated_bleversion(std::string* bleversion);
+  // string ble_version = 3;
+  void clear_ble_version();
+  const std::string& ble_version() const;
+  void set_ble_version(const std::string& value);
+  void set_ble_version(std::string&& value);
+  void set_ble_version(const char* value);
+  void set_ble_version(const char* value, size_t size);
+  std::string* mutable_ble_version();
+  std::string* release_ble_version();
+  void set_allocated_ble_version(std::string* ble_version);
 
-  // string firmwareVersion = 4;
-  void clear_firmwareversion();
-  const std::string& firmwareversion() const;
-  void set_firmwareversion(const std::string& value);
-  void set_firmwareversion(std::string&& value);
-  void set_firmwareversion(const char* value);
-  void set_firmwareversion(const char* value, size_t size);
-  std::string* mutable_firmwareversion();
-  std::string* release_firmwareversion();
-  void set_allocated_firmwareversion(std::string* firmwareversion);
+  // string firmware_version = 4;
+  void clear_firmware_version();
+  const std::string& firmware_version() const;
+  void set_firmware_version(const std::string& value);
+  void set_firmware_version(std::string&& value);
+  void set_firmware_version(const char* value);
+  void set_firmware_version(const char* value, size_t size);
+  std::string* mutable_firmware_version();
+  std::string* release_firmware_version();
+  void set_allocated_firmware_version(std::string* firmware_version);
 
-  // uint32 pinRetry = 5;
-  void clear_pinretry();
-  ::PROTOBUF_NAMESPACE_ID::uint32 pinretry() const;
-  void set_pinretry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 pin_retry = 5;
+  void clear_pin_retry();
+  ::PROTOBUF_NAMESPACE_ID::uint32 pin_retry() const;
+  void set_pin_retry(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // uint32 pinMaxRetry = 6;
-  void clear_pinmaxretry();
-  ::PROTOBUF_NAMESPACE_ID::uint32 pinmaxretry() const;
-  void set_pinmaxretry(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 pin_max_retry = 6;
+  void clear_pin_max_retry();
+  ::PROTOBUF_NAMESPACE_ID::uint32 pin_max_retry() const;
+  void set_pin_max_retry(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
   // @@protoc_insertion_point(class_scope:JUB.Proto.Common.DeviceInfo)
  private:
@@ -461,10 +808,10 @@ class DeviceInfo :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sn_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr label_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bleversion_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr firmwareversion_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 pinretry_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 pinmaxretry_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ble_version_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr firmware_version_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 pin_retry_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 pin_max_retry_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fCommon_2eproto;
 };
@@ -512,7 +859,7 @@ class ResultInt :
                &_ResultInt_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    4;
 
   friend void swap(ResultInt& a, ResultInt& b) {
     a.Swap(&b);
@@ -586,10 +933,10 @@ class ResultInt :
     kStateCodeFieldNumber = 1,
     kValueFieldNumber = 2,
   };
-  // uint64 stateCode = 1;
-  void clear_statecode();
-  ::PROTOBUF_NAMESPACE_ID::uint64 statecode() const;
-  void set_statecode(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  // uint64 state_code = 1;
+  void clear_state_code();
+  ::PROTOBUF_NAMESPACE_ID::uint64 state_code() const;
+  void set_state_code(::PROTOBUF_NAMESPACE_ID::uint64 value);
 
   // uint32 value = 2;
   void clear_value();
@@ -601,7 +948,7 @@ class ResultInt :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 statecode_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 state_code_;
   ::PROTOBUF_NAMESPACE_ID::uint32 value_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fCommon_2eproto;
@@ -650,7 +997,7 @@ class ResultString :
                &_ResultString_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
   friend void swap(ResultString& a, ResultString& b) {
     a.Swap(&b);
@@ -735,10 +1082,10 @@ class ResultString :
   std::string* release_value();
   void set_allocated_value(std::string* value);
 
-  // uint64 stateCode = 1;
-  void clear_statecode();
-  ::PROTOBUF_NAMESPACE_ID::uint64 statecode() const;
-  void set_statecode(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  // uint64 state_code = 1;
+  void clear_state_code();
+  ::PROTOBUF_NAMESPACE_ID::uint64 state_code() const;
+  void set_state_code(::PROTOBUF_NAMESPACE_ID::uint64 value);
 
   // @@protoc_insertion_point(class_scope:JUB.Proto.Common.ResultString)
  private:
@@ -746,7 +1093,7 @@ class ResultString :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 statecode_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 state_code_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fCommon_2eproto;
 };
@@ -794,7 +1141,7 @@ class ResultAny :
                &_ResultAny_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
   friend void swap(ResultAny& a, ResultAny& b) {
     a.Swap(&b);
@@ -879,10 +1226,10 @@ class ResultAny :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< PROTOBUF_NAMESPACE_ID::Any >&
       value() const;
 
-  // uint64 stateCode = 1;
-  void clear_statecode();
-  ::PROTOBUF_NAMESPACE_ID::uint64 statecode() const;
-  void set_statecode(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  // uint64 state_code = 1;
+  void clear_state_code();
+  ::PROTOBUF_NAMESPACE_ID::uint64 state_code() const;
+  void set_state_code(::PROTOBUF_NAMESPACE_ID::uint64 value);
 
   // @@protoc_insertion_point(class_scope:JUB.Proto.Common.ResultAny)
  private:
@@ -890,7 +1237,7 @@ class ResultAny :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< PROTOBUF_NAMESPACE_ID::Any > value_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 statecode_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 state_code_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fCommon_2eproto;
 };
@@ -903,34 +1250,149 @@ class ResultAny :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// Bip32Path
+// Bip44Path
 
 // bool change = 1;
-inline void Bip32Path::clear_change() {
+inline void Bip44Path::clear_change() {
   change_ = false;
 }
-inline bool Bip32Path::change() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Bip32Path.change)
+inline bool Bip44Path::change() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Bip44Path.change)
   return change_;
 }
-inline void Bip32Path::set_change(bool value) {
+inline void Bip44Path::set_change(bool value) {
   
   change_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Bip32Path.change)
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Bip44Path.change)
 }
 
-// uint64 addressIndex = 2;
-inline void Bip32Path::clear_addressindex() {
-  addressindex_ = PROTOBUF_ULONGLONG(0);
+// uint64 address_index = 2;
+inline void Bip44Path::clear_address_index() {
+  address_index_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 Bip32Path::addressindex() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Bip32Path.addressIndex)
-  return addressindex_;
+inline ::PROTOBUF_NAMESPACE_ID::uint64 Bip44Path::address_index() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Bip44Path.address_index)
+  return address_index_;
 }
-inline void Bip32Path::set_addressindex(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void Bip44Path::set_address_index(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
-  addressindex_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Bip32Path.addressIndex)
+  address_index_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Bip44Path.address_index)
+}
+
+// -------------------------------------------------------------------
+
+// Slip48Path
+
+// uint64 network = 1;
+inline void Slip48Path::clear_network() {
+  network_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 Slip48Path::network() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Slip48Path.network)
+  return network_;
+}
+inline void Slip48Path::set_network(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  network_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Slip48Path.network)
+}
+
+// .JUB.Proto.Common.ENUM_GRAPHENE_ROLE role = 2;
+inline void Slip48Path::clear_role() {
+  role_ = 0;
+}
+inline ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE Slip48Path::role() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Slip48Path.role)
+  return static_cast< ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE >(role_);
+}
+inline void Slip48Path::set_role(::JUB::Proto::Common::ENUM_GRAPHENE_ROLE value) {
+  
+  role_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Slip48Path.role)
+}
+
+// uint64 address_index = 3;
+inline void Slip48Path::clear_address_index() {
+  address_index_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 Slip48Path::address_index() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Slip48Path.address_index)
+  return address_index_;
+}
+inline void Slip48Path::set_address_index(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  address_index_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Slip48Path.address_index)
+}
+
+// uint64 key_index = 4;
+inline void Slip48Path::clear_key_index() {
+  key_index_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 Slip48Path::key_index() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Slip48Path.key_index)
+  return key_index_;
+}
+inline void Slip48Path::set_key_index(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  key_index_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Slip48Path.key_index)
+}
+
+// -------------------------------------------------------------------
+
+// ContextCfg
+
+// string main_path = 1;
+inline void ContextCfg::clear_main_path() {
+  main_path_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& ContextCfg::main_path() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ContextCfg.main_path)
+  return main_path_.GetNoArena();
+}
+inline void ContextCfg::set_main_path(const std::string& value) {
+  
+  main_path_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ContextCfg.main_path)
+}
+inline void ContextCfg::set_main_path(std::string&& value) {
+  
+  main_path_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Common.ContextCfg.main_path)
+}
+inline void ContextCfg::set_main_path(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  main_path_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Common.ContextCfg.main_path)
+}
+inline void ContextCfg::set_main_path(const char* value, size_t size) {
+  
+  main_path_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Common.ContextCfg.main_path)
+}
+inline std::string* ContextCfg::mutable_main_path() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Common.ContextCfg.main_path)
+  return main_path_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* ContextCfg::release_main_path() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Common.ContextCfg.main_path)
+  
+  return main_path_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void ContextCfg::set_allocated_main_path(std::string* main_path) {
+  if (main_path != nullptr) {
+    
+  } else {
+    
+  }
+  main_path_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), main_path);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Common.ContextCfg.main_path)
 }
 
 // -------------------------------------------------------------------
@@ -1039,152 +1501,152 @@ inline void DeviceInfo::set_allocated_label(std::string* label) {
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Common.DeviceInfo.label)
 }
 
-// string bleVersion = 3;
-inline void DeviceInfo::clear_bleversion() {
-  bleversion_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// string ble_version = 3;
+inline void DeviceInfo::clear_ble_version() {
+  ble_version_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& DeviceInfo::bleversion() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.bleVersion)
-  return bleversion_.GetNoArena();
+inline const std::string& DeviceInfo::ble_version() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.ble_version)
+  return ble_version_.GetNoArena();
 }
-inline void DeviceInfo::set_bleversion(const std::string& value) {
+inline void DeviceInfo::set_ble_version(const std::string& value) {
   
-  bleversion_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.bleVersion)
+  ble_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.ble_version)
 }
-inline void DeviceInfo::set_bleversion(std::string&& value) {
+inline void DeviceInfo::set_ble_version(std::string&& value) {
   
-  bleversion_.SetNoArena(
+  ble_version_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Common.DeviceInfo.bleVersion)
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Common.DeviceInfo.ble_version)
 }
-inline void DeviceInfo::set_bleversion(const char* value) {
+inline void DeviceInfo::set_ble_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  bleversion_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.Common.DeviceInfo.bleVersion)
+  ble_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Common.DeviceInfo.ble_version)
 }
-inline void DeviceInfo::set_bleversion(const char* value, size_t size) {
+inline void DeviceInfo::set_ble_version(const char* value, size_t size) {
   
-  bleversion_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  ble_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Common.DeviceInfo.bleVersion)
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Common.DeviceInfo.ble_version)
 }
-inline std::string* DeviceInfo::mutable_bleversion() {
+inline std::string* DeviceInfo::mutable_ble_version() {
   
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Common.DeviceInfo.bleVersion)
-  return bleversion_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Common.DeviceInfo.ble_version)
+  return ble_version_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* DeviceInfo::release_bleversion() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Common.DeviceInfo.bleVersion)
+inline std::string* DeviceInfo::release_ble_version() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Common.DeviceInfo.ble_version)
   
-  return bleversion_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return ble_version_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeviceInfo::set_allocated_bleversion(std::string* bleversion) {
-  if (bleversion != nullptr) {
+inline void DeviceInfo::set_allocated_ble_version(std::string* ble_version) {
+  if (ble_version != nullptr) {
     
   } else {
     
   }
-  bleversion_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), bleversion);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Common.DeviceInfo.bleVersion)
+  ble_version_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ble_version);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Common.DeviceInfo.ble_version)
 }
 
-// string firmwareVersion = 4;
-inline void DeviceInfo::clear_firmwareversion() {
-  firmwareversion_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// string firmware_version = 4;
+inline void DeviceInfo::clear_firmware_version() {
+  firmware_version_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& DeviceInfo::firmwareversion() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.firmwareVersion)
-  return firmwareversion_.GetNoArena();
+inline const std::string& DeviceInfo::firmware_version() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.firmware_version)
+  return firmware_version_.GetNoArena();
 }
-inline void DeviceInfo::set_firmwareversion(const std::string& value) {
+inline void DeviceInfo::set_firmware_version(const std::string& value) {
   
-  firmwareversion_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.firmwareVersion)
+  firmware_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.firmware_version)
 }
-inline void DeviceInfo::set_firmwareversion(std::string&& value) {
+inline void DeviceInfo::set_firmware_version(std::string&& value) {
   
-  firmwareversion_.SetNoArena(
+  firmware_version_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Common.DeviceInfo.firmwareVersion)
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Common.DeviceInfo.firmware_version)
 }
-inline void DeviceInfo::set_firmwareversion(const char* value) {
+inline void DeviceInfo::set_firmware_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  firmwareversion_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.Common.DeviceInfo.firmwareVersion)
+  firmware_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Common.DeviceInfo.firmware_version)
 }
-inline void DeviceInfo::set_firmwareversion(const char* value, size_t size) {
+inline void DeviceInfo::set_firmware_version(const char* value, size_t size) {
   
-  firmwareversion_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  firmware_version_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Common.DeviceInfo.firmwareVersion)
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Common.DeviceInfo.firmware_version)
 }
-inline std::string* DeviceInfo::mutable_firmwareversion() {
+inline std::string* DeviceInfo::mutable_firmware_version() {
   
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Common.DeviceInfo.firmwareVersion)
-  return firmwareversion_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Common.DeviceInfo.firmware_version)
+  return firmware_version_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* DeviceInfo::release_firmwareversion() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Common.DeviceInfo.firmwareVersion)
+inline std::string* DeviceInfo::release_firmware_version() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Common.DeviceInfo.firmware_version)
   
-  return firmwareversion_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return firmware_version_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void DeviceInfo::set_allocated_firmwareversion(std::string* firmwareversion) {
-  if (firmwareversion != nullptr) {
+inline void DeviceInfo::set_allocated_firmware_version(std::string* firmware_version) {
+  if (firmware_version != nullptr) {
     
   } else {
     
   }
-  firmwareversion_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), firmwareversion);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Common.DeviceInfo.firmwareVersion)
+  firmware_version_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), firmware_version);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Common.DeviceInfo.firmware_version)
 }
 
-// uint32 pinRetry = 5;
-inline void DeviceInfo::clear_pinretry() {
-  pinretry_ = 0u;
+// uint32 pin_retry = 5;
+inline void DeviceInfo::clear_pin_retry() {
+  pin_retry_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 DeviceInfo::pinretry() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.pinRetry)
-  return pinretry_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 DeviceInfo::pin_retry() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.pin_retry)
+  return pin_retry_;
 }
-inline void DeviceInfo::set_pinretry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void DeviceInfo::set_pin_retry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  pinretry_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.pinRetry)
+  pin_retry_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.pin_retry)
 }
 
-// uint32 pinMaxRetry = 6;
-inline void DeviceInfo::clear_pinmaxretry() {
-  pinmaxretry_ = 0u;
+// uint32 pin_max_retry = 6;
+inline void DeviceInfo::clear_pin_max_retry() {
+  pin_max_retry_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 DeviceInfo::pinmaxretry() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.pinMaxRetry)
-  return pinmaxretry_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 DeviceInfo::pin_max_retry() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceInfo.pin_max_retry)
+  return pin_max_retry_;
 }
-inline void DeviceInfo::set_pinmaxretry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void DeviceInfo::set_pin_max_retry(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  pinmaxretry_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.pinMaxRetry)
+  pin_max_retry_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceInfo.pin_max_retry)
 }
 
 // -------------------------------------------------------------------
 
 // ResultInt
 
-// uint64 stateCode = 1;
-inline void ResultInt::clear_statecode() {
-  statecode_ = PROTOBUF_ULONGLONG(0);
+// uint64 state_code = 1;
+inline void ResultInt::clear_state_code() {
+  state_code_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 ResultInt::statecode() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ResultInt.stateCode)
-  return statecode_;
+inline ::PROTOBUF_NAMESPACE_ID::uint64 ResultInt::state_code() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ResultInt.state_code)
+  return state_code_;
 }
-inline void ResultInt::set_statecode(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void ResultInt::set_state_code(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
-  statecode_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ResultInt.stateCode)
+  state_code_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ResultInt.state_code)
 }
 
 // uint32 value = 2;
@@ -1205,18 +1667,18 @@ inline void ResultInt::set_value(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // ResultString
 
-// uint64 stateCode = 1;
-inline void ResultString::clear_statecode() {
-  statecode_ = PROTOBUF_ULONGLONG(0);
+// uint64 state_code = 1;
+inline void ResultString::clear_state_code() {
+  state_code_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 ResultString::statecode() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ResultString.stateCode)
-  return statecode_;
+inline ::PROTOBUF_NAMESPACE_ID::uint64 ResultString::state_code() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ResultString.state_code)
+  return state_code_;
 }
-inline void ResultString::set_statecode(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void ResultString::set_state_code(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
-  statecode_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ResultString.stateCode)
+  state_code_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ResultString.state_code)
 }
 
 // string value = 2;
@@ -1274,18 +1736,18 @@ inline void ResultString::set_allocated_value(std::string* value) {
 
 // ResultAny
 
-// uint64 stateCode = 1;
-inline void ResultAny::clear_statecode() {
-  statecode_ = PROTOBUF_ULONGLONG(0);
+// uint64 state_code = 1;
+inline void ResultAny::clear_state_code() {
+  state_code_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 ResultAny::statecode() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ResultAny.stateCode)
-  return statecode_;
+inline ::PROTOBUF_NAMESPACE_ID::uint64 ResultAny::state_code() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.ResultAny.state_code)
+  return state_code_;
 }
-inline void ResultAny::set_statecode(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void ResultAny::set_state_code(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
-  statecode_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ResultAny.stateCode)
+  state_code_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.ResultAny.state_code)
 }
 
 // repeated .google.protobuf.Any value = 2;
@@ -1326,6 +1788,10 @@ ResultAny::value() const {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -1335,6 +1801,11 @@ ResultAny::value() const {
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE>() {
+  return ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE_descriptor();
+}
 template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_MNEMONIC_STRENGTH> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_MNEMONIC_STRENGTH>() {
@@ -1344,6 +1815,11 @@ template <> struct is_proto_enum< ::JUB::Proto::Common::CURVES> : ::std::true_ty
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::CURVES>() {
   return ::JUB::Proto::Common::CURVES_descriptor();
+}
+template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_PUB_FORMAT> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_PUB_FORMAT>() {
+  return ::JUB::Proto::Common::ENUM_PUB_FORMAT_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

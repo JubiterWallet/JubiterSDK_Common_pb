@@ -31,7 +31,6 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "Jub_Common.pb.h"
 // @@protoc_insertion_point(includes)
@@ -76,31 +75,6 @@ namespace JUB {
 namespace Proto {
 namespace Ethereum {
 
-enum ENUM_PUB_FORMAT : int {
-  HEX = 0,
-  XPUB = 1,
-  ENUM_PUB_FORMAT_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  ENUM_PUB_FORMAT_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool ENUM_PUB_FORMAT_IsValid(int value);
-constexpr ENUM_PUB_FORMAT ENUM_PUB_FORMAT_MIN = HEX;
-constexpr ENUM_PUB_FORMAT ENUM_PUB_FORMAT_MAX = XPUB;
-constexpr int ENUM_PUB_FORMAT_ARRAYSIZE = ENUM_PUB_FORMAT_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_PUB_FORMAT_descriptor();
-template<typename T>
-inline const std::string& ENUM_PUB_FORMAT_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, ENUM_PUB_FORMAT>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function ENUM_PUB_FORMAT_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    ENUM_PUB_FORMAT_descriptor(), enum_t_value);
-}
-inline bool ENUM_PUB_FORMAT_Parse(
-    const std::string& name, ENUM_PUB_FORMAT* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_PUB_FORMAT>(
-    ENUM_PUB_FORMAT_descriptor(), name, value);
-}
 // ===================================================================
 
 class ContextCfgETH :
@@ -217,7 +191,7 @@ class ContextCfgETH :
 
   enum : int {
     kMainPathFieldNumber = 1,
-    kChainIDFieldNumber = 2,
+    kChainIdFieldNumber = 2,
   };
   // string main_path = 1;
   void clear_main_path();
@@ -230,10 +204,10 @@ class ContextCfgETH :
   std::string* release_main_path();
   void set_allocated_main_path(std::string* main_path);
 
-  // uint32 chainID = 2;
-  void clear_chainid();
-  ::PROTOBUF_NAMESPACE_ID::uint32 chainid() const;
-  void set_chainid(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 chain_id = 2;
+  void clear_chain_id();
+  ::PROTOBUF_NAMESPACE_ID::uint32 chain_id() const;
+  void set_chain_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
   // @@protoc_insertion_point(class_scope:JUB.Proto.Ethereum.ContextCfgETH)
  private:
@@ -241,7 +215,7 @@ class ContextCfgETH :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr main_path_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 chainid_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 chain_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fEthereum_2eproto;
 };
@@ -368,16 +342,16 @@ class TransactionETH :
     kNonceFieldNumber = 2,
     kGasLimitFieldNumber = 3,
   };
-  // string gasPriceInWei = 4;
-  void clear_gaspriceinwei();
-  const std::string& gaspriceinwei() const;
-  void set_gaspriceinwei(const std::string& value);
-  void set_gaspriceinwei(std::string&& value);
-  void set_gaspriceinwei(const char* value);
-  void set_gaspriceinwei(const char* value, size_t size);
-  std::string* mutable_gaspriceinwei();
-  std::string* release_gaspriceinwei();
-  void set_allocated_gaspriceinwei(std::string* gaspriceinwei);
+  // string gas_price_in_wei = 4;
+  void clear_gas_price_in_wei();
+  const std::string& gas_price_in_wei() const;
+  void set_gas_price_in_wei(const std::string& value);
+  void set_gas_price_in_wei(std::string&& value);
+  void set_gas_price_in_wei(const char* value);
+  void set_gas_price_in_wei(const char* value, size_t size);
+  std::string* mutable_gas_price_in_wei();
+  std::string* release_gas_price_in_wei();
+  void set_allocated_gas_price_in_wei(std::string* gas_price_in_wei);
 
   // string to = 5;
   void clear_to();
@@ -390,16 +364,16 @@ class TransactionETH :
   std::string* release_to();
   void set_allocated_to(std::string* to);
 
-  // string valueInWei = 6;
-  void clear_valueinwei();
-  const std::string& valueinwei() const;
-  void set_valueinwei(const std::string& value);
-  void set_valueinwei(std::string&& value);
-  void set_valueinwei(const char* value);
-  void set_valueinwei(const char* value, size_t size);
-  std::string* mutable_valueinwei();
-  std::string* release_valueinwei();
-  void set_allocated_valueinwei(std::string* valueinwei);
+  // string value_in_wei = 6;
+  void clear_value_in_wei();
+  const std::string& value_in_wei() const;
+  void set_value_in_wei(const std::string& value);
+  void set_value_in_wei(std::string&& value);
+  void set_value_in_wei(const char* value);
+  void set_value_in_wei(const char* value, size_t size);
+  std::string* mutable_value_in_wei();
+  std::string* release_value_in_wei();
+  void set_allocated_value_in_wei(std::string* value_in_wei);
 
   // string input = 7;
   void clear_input();
@@ -412,36 +386,36 @@ class TransactionETH :
   std::string* release_input();
   void set_allocated_input(std::string* input);
 
-  // .JUB.Proto.Common.Bip32Path path = 1;
+  // .JUB.Proto.Common.Bip44Path path = 1;
   bool has_path() const;
   void clear_path();
-  const ::JUB::Proto::Common::Bip32Path& path() const;
-  ::JUB::Proto::Common::Bip32Path* release_path();
-  ::JUB::Proto::Common::Bip32Path* mutable_path();
-  void set_allocated_path(::JUB::Proto::Common::Bip32Path* path);
+  const ::JUB::Proto::Common::Bip44Path& path() const;
+  ::JUB::Proto::Common::Bip44Path* release_path();
+  ::JUB::Proto::Common::Bip44Path* mutable_path();
+  void set_allocated_path(::JUB::Proto::Common::Bip44Path* path);
 
   // uint32 nonce = 2;
   void clear_nonce();
   ::PROTOBUF_NAMESPACE_ID::uint32 nonce() const;
   void set_nonce(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // uint32 gasLimit = 3;
-  void clear_gaslimit();
-  ::PROTOBUF_NAMESPACE_ID::uint32 gaslimit() const;
-  void set_gaslimit(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 gas_limit = 3;
+  void clear_gas_limit();
+  ::PROTOBUF_NAMESPACE_ID::uint32 gas_limit() const;
+  void set_gas_limit(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
   // @@protoc_insertion_point(class_scope:JUB.Proto.Ethereum.TransactionETH)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr gaspriceinwei_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr gas_price_in_wei_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr to_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr valueinwei_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_in_wei_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr input_;
-  ::JUB::Proto::Common::Bip32Path* path_;
+  ::JUB::Proto::Common::Bip44Path* path_;
   ::PROTOBUF_NAMESPACE_ID::uint32 nonce_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 gaslimit_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 gas_limit_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fEthereum_2eproto;
 };
@@ -507,51 +481,51 @@ inline void ContextCfgETH::set_allocated_main_path(std::string* main_path) {
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.ContextCfgETH.main_path)
 }
 
-// uint32 chainID = 2;
-inline void ContextCfgETH::clear_chainid() {
-  chainid_ = 0u;
+// uint32 chain_id = 2;
+inline void ContextCfgETH::clear_chain_id() {
+  chain_id_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 ContextCfgETH::chainid() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.ContextCfgETH.chainID)
-  return chainid_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 ContextCfgETH::chain_id() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.ContextCfgETH.chain_id)
+  return chain_id_;
 }
-inline void ContextCfgETH::set_chainid(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void ContextCfgETH::set_chain_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  chainid_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.ContextCfgETH.chainID)
+  chain_id_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.ContextCfgETH.chain_id)
 }
 
 // -------------------------------------------------------------------
 
 // TransactionETH
 
-// .JUB.Proto.Common.Bip32Path path = 1;
+// .JUB.Proto.Common.Bip44Path path = 1;
 inline bool TransactionETH::has_path() const {
   return this != internal_default_instance() && path_ != nullptr;
 }
-inline const ::JUB::Proto::Common::Bip32Path& TransactionETH::path() const {
-  const ::JUB::Proto::Common::Bip32Path* p = path_;
+inline const ::JUB::Proto::Common::Bip44Path& TransactionETH::path() const {
+  const ::JUB::Proto::Common::Bip44Path* p = path_;
   // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.path)
-  return p != nullptr ? *p : *reinterpret_cast<const ::JUB::Proto::Common::Bip32Path*>(
-      &::JUB::Proto::Common::_Bip32Path_default_instance_);
+  return p != nullptr ? *p : *reinterpret_cast<const ::JUB::Proto::Common::Bip44Path*>(
+      &::JUB::Proto::Common::_Bip44Path_default_instance_);
 }
-inline ::JUB::Proto::Common::Bip32Path* TransactionETH::release_path() {
+inline ::JUB::Proto::Common::Bip44Path* TransactionETH::release_path() {
   // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TransactionETH.path)
   
-  ::JUB::Proto::Common::Bip32Path* temp = path_;
+  ::JUB::Proto::Common::Bip44Path* temp = path_;
   path_ = nullptr;
   return temp;
 }
-inline ::JUB::Proto::Common::Bip32Path* TransactionETH::mutable_path() {
+inline ::JUB::Proto::Common::Bip44Path* TransactionETH::mutable_path() {
   
   if (path_ == nullptr) {
-    auto* p = CreateMaybeMessage<::JUB::Proto::Common::Bip32Path>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::JUB::Proto::Common::Bip44Path>(GetArenaNoVirtual());
     path_ = p;
   }
   // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TransactionETH.path)
   return path_;
 }
-inline void TransactionETH::set_allocated_path(::JUB::Proto::Common::Bip32Path* path) {
+inline void TransactionETH::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(path_);
@@ -584,69 +558,69 @@ inline void TransactionETH::set_nonce(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.nonce)
 }
 
-// uint32 gasLimit = 3;
-inline void TransactionETH::clear_gaslimit() {
-  gaslimit_ = 0u;
+// uint32 gas_limit = 3;
+inline void TransactionETH::clear_gas_limit() {
+  gas_limit_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 TransactionETH::gaslimit() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.gasLimit)
-  return gaslimit_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 TransactionETH::gas_limit() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.gas_limit)
+  return gas_limit_;
 }
-inline void TransactionETH::set_gaslimit(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void TransactionETH::set_gas_limit(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  gaslimit_ = value;
-  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.gasLimit)
+  gas_limit_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.gas_limit)
 }
 
-// string gasPriceInWei = 4;
-inline void TransactionETH::clear_gaspriceinwei() {
-  gaspriceinwei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// string gas_price_in_wei = 4;
+inline void TransactionETH::clear_gas_price_in_wei() {
+  gas_price_in_wei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& TransactionETH::gaspriceinwei() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
-  return gaspriceinwei_.GetNoArena();
+inline const std::string& TransactionETH::gas_price_in_wei() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
+  return gas_price_in_wei_.GetNoArena();
 }
-inline void TransactionETH::set_gaspriceinwei(const std::string& value) {
+inline void TransactionETH::set_gas_price_in_wei(const std::string& value) {
   
-  gaspriceinwei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
+  gas_price_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
 }
-inline void TransactionETH::set_gaspriceinwei(std::string&& value) {
+inline void TransactionETH::set_gas_price_in_wei(std::string&& value) {
   
-  gaspriceinwei_.SetNoArena(
+  gas_price_in_wei_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
 }
-inline void TransactionETH::set_gaspriceinwei(const char* value) {
+inline void TransactionETH::set_gas_price_in_wei(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  gaspriceinwei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
+  gas_price_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
 }
-inline void TransactionETH::set_gaspriceinwei(const char* value, size_t size) {
+inline void TransactionETH::set_gas_price_in_wei(const char* value, size_t size) {
   
-  gaspriceinwei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  gas_price_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
 }
-inline std::string* TransactionETH::mutable_gaspriceinwei() {
+inline std::string* TransactionETH::mutable_gas_price_in_wei() {
   
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
-  return gaspriceinwei_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
+  return gas_price_in_wei_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* TransactionETH::release_gaspriceinwei() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
+inline std::string* TransactionETH::release_gas_price_in_wei() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
   
-  return gaspriceinwei_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return gas_price_in_wei_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void TransactionETH::set_allocated_gaspriceinwei(std::string* gaspriceinwei) {
-  if (gaspriceinwei != nullptr) {
+inline void TransactionETH::set_allocated_gas_price_in_wei(std::string* gas_price_in_wei) {
+  if (gas_price_in_wei != nullptr) {
     
   } else {
     
   }
-  gaspriceinwei_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), gaspriceinwei);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.gasPriceInWei)
+  gas_price_in_wei_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), gas_price_in_wei);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.gas_price_in_wei)
 }
 
 // string to = 5;
@@ -700,55 +674,55 @@ inline void TransactionETH::set_allocated_to(std::string* to) {
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.to)
 }
 
-// string valueInWei = 6;
-inline void TransactionETH::clear_valueinwei() {
-  valueinwei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// string value_in_wei = 6;
+inline void TransactionETH::clear_value_in_wei() {
+  value_in_wei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline const std::string& TransactionETH::valueinwei() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.valueInWei)
-  return valueinwei_.GetNoArena();
+inline const std::string& TransactionETH::value_in_wei() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
+  return value_in_wei_.GetNoArena();
 }
-inline void TransactionETH::set_valueinwei(const std::string& value) {
+inline void TransactionETH::set_value_in_wei(const std::string& value) {
   
-  valueinwei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.valueInWei)
+  value_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
 }
-inline void TransactionETH::set_valueinwei(std::string&& value) {
+inline void TransactionETH::set_value_in_wei(std::string&& value) {
   
-  valueinwei_.SetNoArena(
+  value_in_wei_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TransactionETH.valueInWei)
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
 }
-inline void TransactionETH::set_valueinwei(const char* value) {
+inline void TransactionETH::set_value_in_wei(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  valueinwei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TransactionETH.valueInWei)
+  value_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
 }
-inline void TransactionETH::set_valueinwei(const char* value, size_t size) {
+inline void TransactionETH::set_value_in_wei(const char* value, size_t size) {
   
-  valueinwei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  value_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TransactionETH.valueInWei)
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
 }
-inline std::string* TransactionETH::mutable_valueinwei() {
+inline std::string* TransactionETH::mutable_value_in_wei() {
   
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TransactionETH.valueInWei)
-  return valueinwei_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
+  return value_in_wei_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline std::string* TransactionETH::release_valueinwei() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TransactionETH.valueInWei)
+inline std::string* TransactionETH::release_value_in_wei() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
   
-  return valueinwei_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return value_in_wei_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline void TransactionETH::set_allocated_valueinwei(std::string* valueinwei) {
-  if (valueinwei != nullptr) {
+inline void TransactionETH::set_allocated_value_in_wei(std::string* value_in_wei) {
+  if (value_in_wei != nullptr) {
     
   } else {
     
   }
-  valueinwei_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), valueinwei);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.valueInWei)
+  value_in_wei_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value_in_wei);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.value_in_wei)
 }
 
 // string input = 7;
@@ -813,16 +787,6 @@ inline void TransactionETH::set_allocated_input(std::string* input) {
 }  // namespace Ethereum
 }  // namespace Proto
 }  // namespace JUB
-
-PROTOBUF_NAMESPACE_OPEN
-
-template <> struct is_proto_enum< ::JUB::Proto::Ethereum::ENUM_PUB_FORMAT> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Ethereum::ENUM_PUB_FORMAT>() {
-  return ::JUB::Proto::Ethereum::ENUM_PUB_FORMAT_descriptor();
-}
-
-PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 
