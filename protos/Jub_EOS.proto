@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package JUB.Proto.EOS;
+
+option java_package = "com.jubiter.sdk.proto";
+option java_outer_classname = "EOSProtos";
+option objc_class_prefix = "EOSProtos";
+
+
+//message ContextCfgEOS = JUB.Proto.Common.ContextCfg
+
+enum ENUM_EOS_ACTION_TYPE {
+    XFER   = 0; // transfer
+      DELE = 1; //   delegatebw
+    UNDELE = 2; // undelegatebw
+    BUYRAM = 3; //  buyrambytes
+   SELLRAM = 4; // sellrambytes
+}
+
+message TransferAction {
+    string from = 1;
+    string to = 2;
+    string asset = 3;
+    string memo = 4;
+}
+
+message DelegateAction {
+    string from = 1;
+    string receiver = 2;
+    string net_qty = 3;
+    string cpu_qty = 4;
+    bool stake = 5;
+}
+
+message BuyRamAction {
+    string payer = 1;
+    string quant = 2;
+    string receiver = 3;
+}
+
+message SellRamAction {
+    string account = 1;
+    string byte = 2;
+}
+
+message ActionEOS {
+    ENUM_EOS_ACTION_TYPE type = 1;
+    string currency = 2;
+    string name = 3;
+    oneof action {
+        TransferAction    xfer_action = 4;
+        DelegateAction    dele_action = 5;
+          BuyRamAction  buy_ram_action = 6;
+         SellRamAction sell_ram_action = 7;
+    }
+}

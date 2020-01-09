@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package JUB.Proto.Ripple;
+
+option java_package = "com.jubiter.sdk.proto";
+option java_outer_classname = "RippleProtos";
+option objc_class_prefix = "RippleProtos";
+
+
+//message ContextCfgXRP = JUB.Proto.Common.ContextCfg
+
+enum ENUM_XRP_TX_TYPE {
+    PYMT = 0;
+}
+
+enum ENUM_XRP_PYMT_TYPE {
+    DXRP   = 0;  // Direct XRP payments
+    FX     = 1;  // Cross-currency payments(foreign exchange)
+    CHECKS = 2;  // Checks
+    ESCROW = 3;  // Escrow
+    PRTL   = 4;  // Partial Payments
+    CHAN   = 5;  // Payment Channels
+}
+
+message PymtAmount {
+    string currency = 1;    // [Optional]
+    string value = 2;
+    string issuer = 3;      // [Optional]
+}
+
+message PymtXRP {
+    ENUM_XRP_PYMT_TYPE type = 1;
+    PymtAmount amount = 2;
+    string destination = 3;
+    string destination_tag = 4;
+    string invoice_id = 5;       // [Optional]
+    PymtAmount send_max = 6;     // [Optional]
+    PymtAmount deliver_min = 7;  // [Optional]
+}
+
+message TransactionXRP {
+    string account = 1;
+    ENUM_XRP_TX_TYPE type = 2;
+    string fee = 3;
+    string sequence = 4;
+    string account_txn_id = 5;  // [Optional]
+    string flags = 6;
+    string last_ledger_sequence = 7;
+    string memos = 8;           // [Optional]
+    string source_tag = 9;      // [Optional]
+    oneof action {
+        PymtXRP pymt = 10;
+    }
+}
