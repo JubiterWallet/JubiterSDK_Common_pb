@@ -28,6 +28,12 @@ message PymtAmount {
     string issuer = 3;      // [Optional]
 }
 
+message XrpMemo {
+    string type = 1;
+    string data = 2;
+    string format = 3;      // [Optional]
+}
+
 message PymtXRP {
     ENUM_XRP_PYMT_TYPE type = 1;
     PymtAmount amount = 2;
@@ -46,7 +52,7 @@ message TransactionXRP {
     string account_txn_id = 5;  // [Optional]
     string flags = 6;
     string last_ledger_sequence = 7;
-    string memos = 8;           // [Optional]
+    XrpMemo memo = 8;           // [Optional]
     string source_tag = 9;      // [Optional]
     oneof action {
         PymtXRP pymt = 10;

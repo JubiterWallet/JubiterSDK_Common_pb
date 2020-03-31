@@ -48,7 +48,7 @@ struct TableStruct_Jub_5fRipple_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -67,6 +67,9 @@ extern PymtXRPDefaultTypeInternal _PymtXRP_default_instance_;
 class TransactionXRP;
 class TransactionXRPDefaultTypeInternal;
 extern TransactionXRPDefaultTypeInternal _TransactionXRP_default_instance_;
+class XrpMemo;
+class XrpMemoDefaultTypeInternal;
+extern XrpMemoDefaultTypeInternal _XrpMemo_default_instance_;
 }  // namespace Ripple
 }  // namespace Proto
 }  // namespace JUB
@@ -74,6 +77,7 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::JUB::Proto::Ripple::PymtAmount* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::PymtAmount>(Arena*);
 template<> ::JUB::Proto::Ripple::PymtXRP* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::PymtXRP>(Arena*);
 template<> ::JUB::Proto::Ripple::TransactionXRP* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::TransactionXRP>(Arena*);
+template<> ::JUB::Proto::Ripple::XrpMemo* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::XrpMemo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
 namespace Proto {
@@ -297,6 +301,169 @@ class PymtAmount :
 };
 // -------------------------------------------------------------------
 
+class XrpMemo :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Ripple.XrpMemo) */ {
+ public:
+  XrpMemo();
+  virtual ~XrpMemo();
+
+  XrpMemo(const XrpMemo& from);
+  XrpMemo(XrpMemo&& from) noexcept
+    : XrpMemo() {
+    *this = ::std::move(from);
+  }
+
+  inline XrpMemo& operator=(const XrpMemo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline XrpMemo& operator=(XrpMemo&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const XrpMemo& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const XrpMemo* internal_default_instance() {
+    return reinterpret_cast<const XrpMemo*>(
+               &_XrpMemo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(XrpMemo& a, XrpMemo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(XrpMemo* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline XrpMemo* New() const final {
+    return CreateMaybeMessage<XrpMemo>(nullptr);
+  }
+
+  XrpMemo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<XrpMemo>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const XrpMemo& from);
+  void MergeFrom(const XrpMemo& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(XrpMemo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Ripple.XrpMemo";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fRipple_2eproto);
+    return ::descriptor_table_Jub_5fRipple_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTypeFieldNumber = 1,
+    kDataFieldNumber = 2,
+    kFormatFieldNumber = 3,
+  };
+  // string type = 1;
+  void clear_type();
+  const std::string& type() const;
+  void set_type(const std::string& value);
+  void set_type(std::string&& value);
+  void set_type(const char* value);
+  void set_type(const char* value, size_t size);
+  std::string* mutable_type();
+  std::string* release_type();
+  void set_allocated_type(std::string* type);
+
+  // string data = 2;
+  void clear_data();
+  const std::string& data() const;
+  void set_data(const std::string& value);
+  void set_data(std::string&& value);
+  void set_data(const char* value);
+  void set_data(const char* value, size_t size);
+  std::string* mutable_data();
+  std::string* release_data();
+  void set_allocated_data(std::string* data);
+
+  // string format = 3;
+  void clear_format();
+  const std::string& format() const;
+  void set_format(const std::string& value);
+  void set_format(std::string&& value);
+  void set_format(const char* value);
+  void set_format(const char* value, size_t size);
+  std::string* mutable_format();
+  std::string* release_format();
+  void set_allocated_format(std::string* format);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Ripple.XrpMemo)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr format_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fRipple_2eproto;
+};
+// -------------------------------------------------------------------
+
 class PymtXRP :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Ripple.PymtXRP) */ {
  public:
@@ -339,7 +506,7 @@ class PymtXRP :
                &_PymtXRP_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(PymtXRP& a, PymtXRP& b) {
     a.Swap(&b);
@@ -544,7 +711,7 @@ class TransactionXRP :
                &_TransactionXRP_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(TransactionXRP& a, TransactionXRP& b) {
     a.Swap(&b);
@@ -621,8 +788,8 @@ class TransactionXRP :
     kAccountTxnIdFieldNumber = 5,
     kFlagsFieldNumber = 6,
     kLastLedgerSequenceFieldNumber = 7,
-    kMemosFieldNumber = 8,
     kSourceTagFieldNumber = 9,
+    kMemoFieldNumber = 8,
     kTypeFieldNumber = 2,
     kPymtFieldNumber = 10,
   };
@@ -692,17 +859,6 @@ class TransactionXRP :
   std::string* release_last_ledger_sequence();
   void set_allocated_last_ledger_sequence(std::string* last_ledger_sequence);
 
-  // string memos = 8;
-  void clear_memos();
-  const std::string& memos() const;
-  void set_memos(const std::string& value);
-  void set_memos(std::string&& value);
-  void set_memos(const char* value);
-  void set_memos(const char* value, size_t size);
-  std::string* mutable_memos();
-  std::string* release_memos();
-  void set_allocated_memos(std::string* memos);
-
   // string source_tag = 9;
   void clear_source_tag();
   const std::string& source_tag() const;
@@ -713,6 +869,14 @@ class TransactionXRP :
   std::string* mutable_source_tag();
   std::string* release_source_tag();
   void set_allocated_source_tag(std::string* source_tag);
+
+  // .JUB.Proto.Ripple.XrpMemo memo = 8;
+  bool has_memo() const;
+  void clear_memo();
+  const ::JUB::Proto::Ripple::XrpMemo& memo() const;
+  ::JUB::Proto::Ripple::XrpMemo* release_memo();
+  ::JUB::Proto::Ripple::XrpMemo* mutable_memo();
+  void set_allocated_memo(::JUB::Proto::Ripple::XrpMemo* memo);
 
   // .JUB.Proto.Ripple.ENUM_XRP_TX_TYPE type = 2;
   void clear_type();
@@ -744,8 +908,8 @@ class TransactionXRP :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr account_txn_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr flags_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr last_ledger_sequence_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr memos_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr source_tag_;
+  ::JUB::Proto::Ripple::XrpMemo* memo_;
   int type_;
   union ActionUnion {
     ActionUnion() {}
@@ -918,6 +1082,163 @@ inline void PymtAmount::set_allocated_issuer(std::string* issuer) {
   }
   issuer_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), issuer);
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.PymtAmount.issuer)
+}
+
+// -------------------------------------------------------------------
+
+// XrpMemo
+
+// string type = 1;
+inline void XrpMemo::clear_type() {
+  type_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& XrpMemo::type() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.XrpMemo.type)
+  return type_.GetNoArena();
+}
+inline void XrpMemo::set_type(const std::string& value) {
+  
+  type_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ripple.XrpMemo.type)
+}
+inline void XrpMemo::set_type(std::string&& value) {
+  
+  type_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ripple.XrpMemo.type)
+}
+inline void XrpMemo::set_type(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  type_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ripple.XrpMemo.type)
+}
+inline void XrpMemo::set_type(const char* value, size_t size) {
+  
+  type_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ripple.XrpMemo.type)
+}
+inline std::string* XrpMemo::mutable_type() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.XrpMemo.type)
+  return type_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* XrpMemo::release_type() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.XrpMemo.type)
+  
+  return type_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void XrpMemo::set_allocated_type(std::string* type) {
+  if (type != nullptr) {
+    
+  } else {
+    
+  }
+  type_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), type);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.XrpMemo.type)
+}
+
+// string data = 2;
+inline void XrpMemo::clear_data() {
+  data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& XrpMemo::data() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.XrpMemo.data)
+  return data_.GetNoArena();
+}
+inline void XrpMemo::set_data(const std::string& value) {
+  
+  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ripple.XrpMemo.data)
+}
+inline void XrpMemo::set_data(std::string&& value) {
+  
+  data_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ripple.XrpMemo.data)
+}
+inline void XrpMemo::set_data(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ripple.XrpMemo.data)
+}
+inline void XrpMemo::set_data(const char* value, size_t size) {
+  
+  data_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ripple.XrpMemo.data)
+}
+inline std::string* XrpMemo::mutable_data() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.XrpMemo.data)
+  return data_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* XrpMemo::release_data() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.XrpMemo.data)
+  
+  return data_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void XrpMemo::set_allocated_data(std::string* data) {
+  if (data != nullptr) {
+    
+  } else {
+    
+  }
+  data_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.XrpMemo.data)
+}
+
+// string format = 3;
+inline void XrpMemo::clear_format() {
+  format_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& XrpMemo::format() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.XrpMemo.format)
+  return format_.GetNoArena();
+}
+inline void XrpMemo::set_format(const std::string& value) {
+  
+  format_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ripple.XrpMemo.format)
+}
+inline void XrpMemo::set_format(std::string&& value) {
+  
+  format_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ripple.XrpMemo.format)
+}
+inline void XrpMemo::set_format(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  format_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ripple.XrpMemo.format)
+}
+inline void XrpMemo::set_format(const char* value, size_t size) {
+  
+  format_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ripple.XrpMemo.format)
+}
+inline std::string* XrpMemo::mutable_format() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.XrpMemo.format)
+  return format_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* XrpMemo::release_format() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.XrpMemo.format)
+  
+  return format_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void XrpMemo::set_allocated_format(std::string* format) {
+  if (format != nullptr) {
+    
+  } else {
+    
+  }
+  format_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), format);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.XrpMemo.format)
 }
 
 // -------------------------------------------------------------------
@@ -1568,55 +1889,55 @@ inline void TransactionXRP::set_allocated_last_ledger_sequence(std::string* last
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.TransactionXRP.last_ledger_sequence)
 }
 
-// string memos = 8;
-inline void TransactionXRP::clear_memos() {
-  memos_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+// .JUB.Proto.Ripple.XrpMemo memo = 8;
+inline bool TransactionXRP::has_memo() const {
+  return this != internal_default_instance() && memo_ != nullptr;
 }
-inline const std::string& TransactionXRP::memos() const {
-  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.TransactionXRP.memos)
-  return memos_.GetNoArena();
+inline void TransactionXRP::clear_memo() {
+  if (GetArenaNoVirtual() == nullptr && memo_ != nullptr) {
+    delete memo_;
+  }
+  memo_ = nullptr;
 }
-inline void TransactionXRP::set_memos(const std::string& value) {
+inline const ::JUB::Proto::Ripple::XrpMemo& TransactionXRP::memo() const {
+  const ::JUB::Proto::Ripple::XrpMemo* p = memo_;
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.TransactionXRP.memo)
+  return p != nullptr ? *p : *reinterpret_cast<const ::JUB::Proto::Ripple::XrpMemo*>(
+      &::JUB::Proto::Ripple::_XrpMemo_default_instance_);
+}
+inline ::JUB::Proto::Ripple::XrpMemo* TransactionXRP::release_memo() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.TransactionXRP.memo)
   
-  memos_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:JUB.Proto.Ripple.TransactionXRP.memos)
+  ::JUB::Proto::Ripple::XrpMemo* temp = memo_;
+  memo_ = nullptr;
+  return temp;
 }
-inline void TransactionXRP::set_memos(std::string&& value) {
+inline ::JUB::Proto::Ripple::XrpMemo* TransactionXRP::mutable_memo() {
   
-  memos_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ripple.TransactionXRP.memos)
+  if (memo_ == nullptr) {
+    auto* p = CreateMaybeMessage<::JUB::Proto::Ripple::XrpMemo>(GetArenaNoVirtual());
+    memo_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.TransactionXRP.memo)
+  return memo_;
 }
-inline void TransactionXRP::set_memos(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  memos_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ripple.TransactionXRP.memos)
-}
-inline void TransactionXRP::set_memos(const char* value, size_t size) {
-  
-  memos_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ripple.TransactionXRP.memos)
-}
-inline std::string* TransactionXRP::mutable_memos() {
-  
-  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.TransactionXRP.memos)
-  return memos_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* TransactionXRP::release_memos() {
-  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.TransactionXRP.memos)
-  
-  return memos_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void TransactionXRP::set_allocated_memos(std::string* memos) {
-  if (memos != nullptr) {
+inline void TransactionXRP::set_allocated_memo(::JUB::Proto::Ripple::XrpMemo* memo) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete memo_;
+  }
+  if (memo) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      memo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, memo, submessage_arena);
+    }
     
   } else {
     
   }
-  memos_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), memos);
-  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.TransactionXRP.memos)
+  memo_ = memo;
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.TransactionXRP.memo)
 }
 
 // string source_tag = 9;
@@ -1723,6 +2044,8 @@ inline TransactionXRP::ActionCase TransactionXRP::action_case() const {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

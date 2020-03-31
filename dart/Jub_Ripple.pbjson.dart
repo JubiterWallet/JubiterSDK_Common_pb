@@ -33,6 +33,15 @@ const PymtAmount$json = const {
   ],
 };
 
+const XrpMemo$json = const {
+  '1': 'XrpMemo',
+  '2': const [
+    const {'1': 'type', '3': 1, '4': 1, '5': 9, '10': 'type'},
+    const {'1': 'data', '3': 2, '4': 1, '5': 9, '10': 'data'},
+    const {'1': 'format', '3': 3, '4': 1, '5': 9, '10': 'format'},
+  ],
+};
+
 const PymtXRP$json = const {
   '1': 'PymtXRP',
   '2': const [
@@ -56,7 +65,7 @@ const TransactionXRP$json = const {
     const {'1': 'account_txn_id', '3': 5, '4': 1, '5': 9, '10': 'accountTxnId'},
     const {'1': 'flags', '3': 6, '4': 1, '5': 9, '10': 'flags'},
     const {'1': 'last_ledger_sequence', '3': 7, '4': 1, '5': 9, '10': 'lastLedgerSequence'},
-    const {'1': 'memos', '3': 8, '4': 1, '5': 9, '10': 'memos'},
+    const {'1': 'memo', '3': 8, '4': 1, '5': 11, '6': '.JUB.Proto.Ripple.XrpMemo', '10': 'memo'},
     const {'1': 'source_tag', '3': 9, '4': 1, '5': 9, '10': 'sourceTag'},
     const {'1': 'pymt', '3': 10, '4': 1, '5': 11, '6': '.JUB.Proto.Ripple.PymtXRP', '9': 0, '10': 'pymt'},
   ],

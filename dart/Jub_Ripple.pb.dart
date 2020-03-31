@@ -64,6 +64,57 @@ class PymtAmount extends $pb.GeneratedMessage {
   void clearIssuer() => clearField(3);
 }
 
+class XrpMemo extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('XrpMemo', package: const $pb.PackageName('JUB.Proto.Ripple'), createEmptyInstance: create)
+    ..aOS(1, 'type')
+    ..aOS(2, 'data')
+    ..aOS(3, 'format')
+    ..hasRequiredFields = false
+  ;
+
+  XrpMemo._() : super();
+  factory XrpMemo() => create();
+  factory XrpMemo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory XrpMemo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  XrpMemo clone() => XrpMemo()..mergeFromMessage(this);
+  XrpMemo copyWith(void Function(XrpMemo) updates) => super.copyWith((message) => updates(message as XrpMemo));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static XrpMemo create() => XrpMemo._();
+  XrpMemo createEmptyInstance() => create();
+  static $pb.PbList<XrpMemo> createRepeated() => $pb.PbList<XrpMemo>();
+  @$core.pragma('dart2js:noInline')
+  static XrpMemo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<XrpMemo>(create);
+  static XrpMemo _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get type => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set type($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get data => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set data($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasData() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearData() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get format => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set format($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasFormat() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFormat() => clearField(3);
+}
+
 class PymtXRP extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PymtXRP', package: const $pb.PackageName('JUB.Proto.Ripple'), createEmptyInstance: create)
     ..e<ENUM_XRP_PYMT_TYPE>(1, 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_XRP_PYMT_TYPE.DXRP, valueOf: ENUM_XRP_PYMT_TYPE.valueOf, enumValues: ENUM_XRP_PYMT_TYPE.values)
@@ -180,7 +231,7 @@ class TransactionXRP extends $pb.GeneratedMessage {
     ..aOS(5, 'accountTxnId')
     ..aOS(6, 'flags')
     ..aOS(7, 'lastLedgerSequence')
-    ..aOS(8, 'memos')
+    ..aOM<XrpMemo>(8, 'memo', subBuilder: XrpMemo.create)
     ..aOS(9, 'sourceTag')
     ..aOM<PymtXRP>(10, 'pymt', subBuilder: PymtXRP.create)
     ..hasRequiredFields = false
@@ -268,13 +319,15 @@ class TransactionXRP extends $pb.GeneratedMessage {
   void clearLastLedgerSequence() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get memos => $_getSZ(7);
+  XrpMemo get memo => $_getN(7);
   @$pb.TagNumber(8)
-  set memos($core.String v) { $_setString(7, v); }
+  set memo(XrpMemo v) { setField(8, v); }
   @$pb.TagNumber(8)
-  $core.bool hasMemos() => $_has(7);
+  $core.bool hasMemo() => $_has(7);
   @$pb.TagNumber(8)
-  void clearMemos() => clearField(8);
+  void clearMemo() => clearField(8);
+  @$pb.TagNumber(8)
+  XrpMemo ensureMemo() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.String get sourceTag => $_getSZ(8);

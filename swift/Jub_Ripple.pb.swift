@@ -141,6 +141,23 @@ struct JUB_Proto_Ripple_PymtAmount {
   init() {}
 }
 
+struct JUB_Proto_Ripple_XrpMemo {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  var type: String = String()
+
+  var data: String = String()
+
+  /// [Optional]
+  var format: String = String()
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+}
+
 struct JUB_Proto_Ripple_PymtXRP {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -245,10 +262,14 @@ struct JUB_Proto_Ripple_TransactionXRP {
   }
 
   /// [Optional]
-  var memos: String {
-    get {return _storage._memos}
-    set {_uniqueStorage()._memos = newValue}
+  var memo: JUB_Proto_Ripple_XrpMemo {
+    get {return _storage._memo ?? JUB_Proto_Ripple_XrpMemo()}
+    set {_uniqueStorage()._memo = newValue}
   }
+  /// Returns true if `memo` has been explicitly set.
+  var hasMemo: Bool {return _storage._memo != nil}
+  /// Clears the value of `memo`. Subsequent reads from it will return its default value.
+  mutating func clearMemo() {_uniqueStorage()._memo = nil}
 
   /// [Optional]
   var sourceTag: String {
@@ -345,6 +366,47 @@ extension JUB_Proto_Ripple_PymtAmount: SwiftProtobuf.Message, SwiftProtobuf._Mes
     if lhs.currency != rhs.currency {return false}
     if lhs.value != rhs.value {return false}
     if lhs.issuer != rhs.issuer {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension JUB_Proto_Ripple_XrpMemo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".XrpMemo"
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "type"),
+    2: .same(proto: "data"),
+    3: .same(proto: "format"),
+  ]
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeSingularStringField(value: &self.type)
+      case 2: try decoder.decodeSingularStringField(value: &self.data)
+      case 3: try decoder.decodeSingularStringField(value: &self.format)
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.type.isEmpty {
+      try visitor.visitSingularStringField(value: self.type, fieldNumber: 1)
+    }
+    if !self.data.isEmpty {
+      try visitor.visitSingularStringField(value: self.data, fieldNumber: 2)
+    }
+    if !self.format.isEmpty {
+      try visitor.visitSingularStringField(value: self.format, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  static func ==(lhs: JUB_Proto_Ripple_XrpMemo, rhs: JUB_Proto_Ripple_XrpMemo) -> Bool {
+    if lhs.type != rhs.type {return false}
+    if lhs.data != rhs.data {return false}
+    if lhs.format != rhs.format {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -469,7 +531,7 @@ extension JUB_Proto_Ripple_TransactionXRP: SwiftProtobuf.Message, SwiftProtobuf.
     5: .standard(proto: "account_txn_id"),
     6: .same(proto: "flags"),
     7: .standard(proto: "last_ledger_sequence"),
-    8: .same(proto: "memos"),
+    8: .same(proto: "memo"),
     9: .standard(proto: "source_tag"),
     10: .same(proto: "pymt"),
   ]
@@ -482,7 +544,7 @@ extension JUB_Proto_Ripple_TransactionXRP: SwiftProtobuf.Message, SwiftProtobuf.
     var _accountTxnID: String = String()
     var _flags: String = String()
     var _lastLedgerSequence: String = String()
-    var _memos: String = String()
+    var _memo: JUB_Proto_Ripple_XrpMemo? = nil
     var _sourceTag: String = String()
     var _action: JUB_Proto_Ripple_TransactionXRP.OneOf_Action?
 
@@ -498,7 +560,7 @@ extension JUB_Proto_Ripple_TransactionXRP: SwiftProtobuf.Message, SwiftProtobuf.
       _accountTxnID = source._accountTxnID
       _flags = source._flags
       _lastLedgerSequence = source._lastLedgerSequence
-      _memos = source._memos
+      _memo = source._memo
       _sourceTag = source._sourceTag
       _action = source._action
     }
@@ -523,7 +585,7 @@ extension JUB_Proto_Ripple_TransactionXRP: SwiftProtobuf.Message, SwiftProtobuf.
         case 5: try decoder.decodeSingularStringField(value: &_storage._accountTxnID)
         case 6: try decoder.decodeSingularStringField(value: &_storage._flags)
         case 7: try decoder.decodeSingularStringField(value: &_storage._lastLedgerSequence)
-        case 8: try decoder.decodeSingularStringField(value: &_storage._memos)
+        case 8: try decoder.decodeSingularMessageField(value: &_storage._memo)
         case 9: try decoder.decodeSingularStringField(value: &_storage._sourceTag)
         case 10:
           var v: JUB_Proto_Ripple_PymtXRP?
@@ -562,8 +624,8 @@ extension JUB_Proto_Ripple_TransactionXRP: SwiftProtobuf.Message, SwiftProtobuf.
       if !_storage._lastLedgerSequence.isEmpty {
         try visitor.visitSingularStringField(value: _storage._lastLedgerSequence, fieldNumber: 7)
       }
-      if !_storage._memos.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._memos, fieldNumber: 8)
+      if let v = _storage._memo {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
       }
       if !_storage._sourceTag.isEmpty {
         try visitor.visitSingularStringField(value: _storage._sourceTag, fieldNumber: 9)
@@ -587,7 +649,7 @@ extension JUB_Proto_Ripple_TransactionXRP: SwiftProtobuf.Message, SwiftProtobuf.
         if _storage._accountTxnID != rhs_storage._accountTxnID {return false}
         if _storage._flags != rhs_storage._flags {return false}
         if _storage._lastLedgerSequence != rhs_storage._lastLedgerSequence {return false}
-        if _storage._memos != rhs_storage._memos {return false}
+        if _storage._memo != rhs_storage._memo {return false}
         if _storage._sourceTag != rhs_storage._sourceTag {return false}
         if _storage._action != rhs_storage._action {return false}
         return true
