@@ -7,7 +7,7 @@
 
 
 ### Swift
-> ✗ protoc --proto_path=./protos --swift_out=./swift protos/Jub_Ripple.proto
+> ✗ protoc --swift_opt=Visibility=Public --proto_path=./protos --swift_out=./swift protos/Jub_Ripple.proto
 
 ### dart
 [《在 Flutter 中使用 protobuf》](https://cloud.tencent.com/developer/article/1411245)
