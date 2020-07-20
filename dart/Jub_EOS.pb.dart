@@ -9,6 +9,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'Jub_Common.pb.dart' as $0;
+
 import 'Jub_EOS.pbenum.dart';
 
 export 'Jub_EOS.pbenum.dart';
@@ -353,5 +355,113 @@ class ActionEOS extends $pb.GeneratedMessage {
   void clearSellRamAction() => clearField(7);
   @$pb.TagNumber(7)
   SellRamAction ensureSellRamAction() => $_ensure(6);
+}
+
+class ActionListEOS extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ActionListEOS', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
+    ..pc<ActionEOS>(1, 'actions', $pb.PbFieldType.PM, subBuilder: ActionEOS.create)
+    ..hasRequiredFields = false
+  ;
+
+  ActionListEOS._() : super();
+  factory ActionListEOS() => create();
+  factory ActionListEOS.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ActionListEOS.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ActionListEOS clone() => ActionListEOS()..mergeFromMessage(this);
+  ActionListEOS copyWith(void Function(ActionListEOS) updates) => super.copyWith((message) => updates(message as ActionListEOS));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static ActionListEOS create() => ActionListEOS._();
+  ActionListEOS createEmptyInstance() => create();
+  static $pb.PbList<ActionListEOS> createRepeated() => $pb.PbList<ActionListEOS>();
+  @$core.pragma('dart2js:noInline')
+  static ActionListEOS getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionListEOS>(create);
+  static ActionListEOS _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ActionEOS> get actions => $_getList(0);
+}
+
+class TransactionEOS extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionEOS', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
+    ..aOM<$0.Bip44Path>(1, 'path', subBuilder: $0.Bip44Path.create)
+    ..aOS(2, 'chainID', protoName: 'chainID')
+    ..aOS(3, 'expiration')
+    ..aOS(4, 'referenceBlockId', protoName: 'referenceBlockId')
+    ..aOS(5, 'referenceBlockTime', protoName: 'referenceBlockTime')
+    ..aOS(6, 'actionsInJSON', protoName: 'actionsInJSON')
+    ..hasRequiredFields = false
+  ;
+
+  TransactionEOS._() : super();
+  factory TransactionEOS() => create();
+  factory TransactionEOS.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TransactionEOS.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TransactionEOS clone() => TransactionEOS()..mergeFromMessage(this);
+  TransactionEOS copyWith(void Function(TransactionEOS) updates) => super.copyWith((message) => updates(message as TransactionEOS));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static TransactionEOS create() => TransactionEOS._();
+  TransactionEOS createEmptyInstance() => create();
+  static $pb.PbList<TransactionEOS> createRepeated() => $pb.PbList<TransactionEOS>();
+  @$core.pragma('dart2js:noInline')
+  static TransactionEOS getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionEOS>(create);
+  static TransactionEOS _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.Bip44Path get path => $_getN(0);
+  @$pb.TagNumber(1)
+  set path($0.Bip44Path v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPath() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Bip44Path ensurePath() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get chainID => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set chainID($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChainID() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChainID() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get expiration => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set expiration($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasExpiration() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearExpiration() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get referenceBlockId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set referenceBlockId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasReferenceBlockId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearReferenceBlockId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get referenceBlockTime => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set referenceBlockTime($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasReferenceBlockTime() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearReferenceBlockTime() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get actionsInJSON => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set actionsInJSON($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasActionsInJSON() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearActionsInJSON() => clearField(6);
 }
 

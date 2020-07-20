@@ -27,6 +27,8 @@
 
 CF_EXTERN_C_BEGIN
 
+@class CommonProtosBip44Path;
+@class EOSProtosActionEOS;
 @class EOSProtosBuyRamAction;
 @class EOSProtosDelegateAction;
 @class EOSProtosSellRamAction;
@@ -216,6 +218,49 @@ void SetEOSProtosActionEOS_Type_RawValue(EOSProtosActionEOS *message, int32_t va
  * Clears whatever value was set for the oneof 'action'.
  **/
 void EOSProtosActionEOS_ClearActionOneOfCase(EOSProtosActionEOS *message);
+
+#pragma mark - EOSProtosActionListEOS
+
+typedef GPB_ENUM(EOSProtosActionListEOS_FieldNumber) {
+  EOSProtosActionListEOS_FieldNumber_ActionsArray = 1,
+};
+
+@interface EOSProtosActionListEOS : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<EOSProtosActionEOS*> *actionsArray;
+/** The number of items in @c actionsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger actionsArray_Count;
+
+@end
+
+#pragma mark - EOSProtosTransactionEOS
+
+typedef GPB_ENUM(EOSProtosTransactionEOS_FieldNumber) {
+  EOSProtosTransactionEOS_FieldNumber_Path = 1,
+  EOSProtosTransactionEOS_FieldNumber_ChainId = 2,
+  EOSProtosTransactionEOS_FieldNumber_Expiration = 3,
+  EOSProtosTransactionEOS_FieldNumber_ReferenceBlockId = 4,
+  EOSProtosTransactionEOS_FieldNumber_ReferenceBlockTime = 5,
+  EOSProtosTransactionEOS_FieldNumber_ActionsInJson = 6,
+};
+
+@interface EOSProtosTransactionEOS : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) CommonProtosBip44Path *path;
+/** Test to see if @c path has been set. */
+@property(nonatomic, readwrite) BOOL hasPath;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *chainId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *expiration;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *referenceBlockId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *referenceBlockTime;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *actionsInJson;
+
+@end
 
 NS_ASSUME_NONNULL_END
 

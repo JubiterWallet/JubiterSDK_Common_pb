@@ -33,6 +33,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "Jub_Common.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_Jub_5fEOS_2eproto
@@ -48,7 +49,7 @@ struct TableStruct_Jub_5fEOS_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -61,6 +62,9 @@ namespace EOS {
 class ActionEOS;
 class ActionEOSDefaultTypeInternal;
 extern ActionEOSDefaultTypeInternal _ActionEOS_default_instance_;
+class ActionListEOS;
+class ActionListEOSDefaultTypeInternal;
+extern ActionListEOSDefaultTypeInternal _ActionListEOS_default_instance_;
 class BuyRamAction;
 class BuyRamActionDefaultTypeInternal;
 extern BuyRamActionDefaultTypeInternal _BuyRamAction_default_instance_;
@@ -70,6 +74,9 @@ extern DelegateActionDefaultTypeInternal _DelegateAction_default_instance_;
 class SellRamAction;
 class SellRamActionDefaultTypeInternal;
 extern SellRamActionDefaultTypeInternal _SellRamAction_default_instance_;
+class TransactionEOS;
+class TransactionEOSDefaultTypeInternal;
+extern TransactionEOSDefaultTypeInternal _TransactionEOS_default_instance_;
 class TransferAction;
 class TransferActionDefaultTypeInternal;
 extern TransferActionDefaultTypeInternal _TransferAction_default_instance_;
@@ -78,9 +85,11 @@ extern TransferActionDefaultTypeInternal _TransferAction_default_instance_;
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
 template<> ::JUB::Proto::EOS::ActionEOS* Arena::CreateMaybeMessage<::JUB::Proto::EOS::ActionEOS>(Arena*);
+template<> ::JUB::Proto::EOS::ActionListEOS* Arena::CreateMaybeMessage<::JUB::Proto::EOS::ActionListEOS>(Arena*);
 template<> ::JUB::Proto::EOS::BuyRamAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::BuyRamAction>(Arena*);
 template<> ::JUB::Proto::EOS::DelegateAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::DelegateAction>(Arena*);
 template<> ::JUB::Proto::EOS::SellRamAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::SellRamAction>(Arena*);
+template<> ::JUB::Proto::EOS::TransactionEOS* Arena::CreateMaybeMessage<::JUB::Proto::EOS::TransactionEOS>(Arena*);
 template<> ::JUB::Proto::EOS::TransferAction* Arena::CreateMaybeMessage<::JUB::Proto::EOS::TransferAction>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
@@ -1004,6 +1013,342 @@ class ActionEOS :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
 
+  friend struct ::TableStruct_Jub_5fEOS_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ActionListEOS :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.EOS.ActionListEOS) */ {
+ public:
+  ActionListEOS();
+  virtual ~ActionListEOS();
+
+  ActionListEOS(const ActionListEOS& from);
+  ActionListEOS(ActionListEOS&& from) noexcept
+    : ActionListEOS() {
+    *this = ::std::move(from);
+  }
+
+  inline ActionListEOS& operator=(const ActionListEOS& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ActionListEOS& operator=(ActionListEOS&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ActionListEOS& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ActionListEOS* internal_default_instance() {
+    return reinterpret_cast<const ActionListEOS*>(
+               &_ActionListEOS_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(ActionListEOS& a, ActionListEOS& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ActionListEOS* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ActionListEOS* New() const final {
+    return CreateMaybeMessage<ActionListEOS>(nullptr);
+  }
+
+  ActionListEOS* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ActionListEOS>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ActionListEOS& from);
+  void MergeFrom(const ActionListEOS& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ActionListEOS* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.EOS.ActionListEOS";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fEOS_2eproto);
+    return ::descriptor_table_Jub_5fEOS_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kActionsFieldNumber = 1,
+  };
+  // repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+  int actions_size() const;
+  void clear_actions();
+  ::JUB::Proto::EOS::ActionEOS* mutable_actions(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::EOS::ActionEOS >*
+      mutable_actions();
+  const ::JUB::Proto::EOS::ActionEOS& actions(int index) const;
+  ::JUB::Proto::EOS::ActionEOS* add_actions();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::EOS::ActionEOS >&
+      actions() const;
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.EOS.ActionListEOS)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::EOS::ActionEOS > actions_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fEOS_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TransactionEOS :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.EOS.TransactionEOS) */ {
+ public:
+  TransactionEOS();
+  virtual ~TransactionEOS();
+
+  TransactionEOS(const TransactionEOS& from);
+  TransactionEOS(TransactionEOS&& from) noexcept
+    : TransactionEOS() {
+    *this = ::std::move(from);
+  }
+
+  inline TransactionEOS& operator=(const TransactionEOS& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TransactionEOS& operator=(TransactionEOS&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TransactionEOS& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TransactionEOS* internal_default_instance() {
+    return reinterpret_cast<const TransactionEOS*>(
+               &_TransactionEOS_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(TransactionEOS& a, TransactionEOS& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TransactionEOS* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TransactionEOS* New() const final {
+    return CreateMaybeMessage<TransactionEOS>(nullptr);
+  }
+
+  TransactionEOS* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TransactionEOS>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TransactionEOS& from);
+  void MergeFrom(const TransactionEOS& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TransactionEOS* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.EOS.TransactionEOS";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fEOS_2eproto);
+    return ::descriptor_table_Jub_5fEOS_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kChainIDFieldNumber = 2,
+    kExpirationFieldNumber = 3,
+    kReferenceBlockIdFieldNumber = 4,
+    kReferenceBlockTimeFieldNumber = 5,
+    kActionsInJSONFieldNumber = 6,
+    kPathFieldNumber = 1,
+  };
+  // string chainID = 2;
+  void clear_chainid();
+  const std::string& chainid() const;
+  void set_chainid(const std::string& value);
+  void set_chainid(std::string&& value);
+  void set_chainid(const char* value);
+  void set_chainid(const char* value, size_t size);
+  std::string* mutable_chainid();
+  std::string* release_chainid();
+  void set_allocated_chainid(std::string* chainid);
+
+  // string expiration = 3;
+  void clear_expiration();
+  const std::string& expiration() const;
+  void set_expiration(const std::string& value);
+  void set_expiration(std::string&& value);
+  void set_expiration(const char* value);
+  void set_expiration(const char* value, size_t size);
+  std::string* mutable_expiration();
+  std::string* release_expiration();
+  void set_allocated_expiration(std::string* expiration);
+
+  // string referenceBlockId = 4;
+  void clear_referenceblockid();
+  const std::string& referenceblockid() const;
+  void set_referenceblockid(const std::string& value);
+  void set_referenceblockid(std::string&& value);
+  void set_referenceblockid(const char* value);
+  void set_referenceblockid(const char* value, size_t size);
+  std::string* mutable_referenceblockid();
+  std::string* release_referenceblockid();
+  void set_allocated_referenceblockid(std::string* referenceblockid);
+
+  // string referenceBlockTime = 5;
+  void clear_referenceblocktime();
+  const std::string& referenceblocktime() const;
+  void set_referenceblocktime(const std::string& value);
+  void set_referenceblocktime(std::string&& value);
+  void set_referenceblocktime(const char* value);
+  void set_referenceblocktime(const char* value, size_t size);
+  std::string* mutable_referenceblocktime();
+  std::string* release_referenceblocktime();
+  void set_allocated_referenceblocktime(std::string* referenceblocktime);
+
+  // string actionsInJSON = 6;
+  void clear_actionsinjson();
+  const std::string& actionsinjson() const;
+  void set_actionsinjson(const std::string& value);
+  void set_actionsinjson(std::string&& value);
+  void set_actionsinjson(const char* value);
+  void set_actionsinjson(const char* value, size_t size);
+  std::string* mutable_actionsinjson();
+  std::string* release_actionsinjson();
+  void set_allocated_actionsinjson(std::string* actionsinjson);
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  bool has_path() const;
+  void clear_path();
+  const ::JUB::Proto::Common::Bip44Path& path() const;
+  ::JUB::Proto::Common::Bip44Path* release_path();
+  ::JUB::Proto::Common::Bip44Path* mutable_path();
+  void set_allocated_path(::JUB::Proto::Common::Bip44Path* path);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.EOS.TransactionEOS)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr chainid_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr expiration_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr referenceblockid_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr referenceblocktime_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr actionsinjson_;
+  ::JUB::Proto::Common::Bip44Path* path_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fEOS_2eproto;
 };
 // ===================================================================
@@ -1999,9 +2344,351 @@ inline void ActionEOS::clear_has_action() {
 inline ActionEOS::ActionCase ActionEOS::action_case() const {
   return ActionEOS::ActionCase(_oneof_case_[0]);
 }
+// -------------------------------------------------------------------
+
+// ActionListEOS
+
+// repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+inline int ActionListEOS::actions_size() const {
+  return actions_.size();
+}
+inline void ActionListEOS::clear_actions() {
+  actions_.Clear();
+}
+inline ::JUB::Proto::EOS::ActionEOS* ActionListEOS::mutable_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.ActionListEOS.actions)
+  return actions_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::EOS::ActionEOS >*
+ActionListEOS::mutable_actions() {
+  // @@protoc_insertion_point(field_mutable_list:JUB.Proto.EOS.ActionListEOS.actions)
+  return &actions_;
+}
+inline const ::JUB::Proto::EOS::ActionEOS& ActionListEOS::actions(int index) const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.ActionListEOS.actions)
+  return actions_.Get(index);
+}
+inline ::JUB::Proto::EOS::ActionEOS* ActionListEOS::add_actions() {
+  // @@protoc_insertion_point(field_add:JUB.Proto.EOS.ActionListEOS.actions)
+  return actions_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::JUB::Proto::EOS::ActionEOS >&
+ActionListEOS::actions() const {
+  // @@protoc_insertion_point(field_list:JUB.Proto.EOS.ActionListEOS.actions)
+  return actions_;
+}
+
+// -------------------------------------------------------------------
+
+// TransactionEOS
+
+// .JUB.Proto.Common.Bip44Path path = 1;
+inline bool TransactionEOS::has_path() const {
+  return this != internal_default_instance() && path_ != nullptr;
+}
+inline const ::JUB::Proto::Common::Bip44Path& TransactionEOS::path() const {
+  const ::JUB::Proto::Common::Bip44Path* p = path_;
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.path)
+  return p != nullptr ? *p : *reinterpret_cast<const ::JUB::Proto::Common::Bip44Path*>(
+      &::JUB::Proto::Common::_Bip44Path_default_instance_);
+}
+inline ::JUB::Proto::Common::Bip44Path* TransactionEOS::release_path() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.path)
+  
+  ::JUB::Proto::Common::Bip44Path* temp = path_;
+  path_ = nullptr;
+  return temp;
+}
+inline ::JUB::Proto::Common::Bip44Path* TransactionEOS::mutable_path() {
+  
+  if (path_ == nullptr) {
+    auto* p = CreateMaybeMessage<::JUB::Proto::Common::Bip44Path>(GetArenaNoVirtual());
+    path_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.path)
+  return path_;
+}
+inline void TransactionEOS::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(path_);
+  }
+  if (path) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      path = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, path, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  path_ = path;
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.path)
+}
+
+// string chainID = 2;
+inline void TransactionEOS::clear_chainid() {
+  chainid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TransactionEOS::chainid() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.chainID)
+  return chainid_.GetNoArena();
+}
+inline void TransactionEOS::set_chainid(const std::string& value) {
+  
+  chainid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.chainID)
+}
+inline void TransactionEOS::set_chainid(std::string&& value) {
+  
+  chainid_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.chainID)
+}
+inline void TransactionEOS::set_chainid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  chainid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.chainID)
+}
+inline void TransactionEOS::set_chainid(const char* value, size_t size) {
+  
+  chainid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.chainID)
+}
+inline std::string* TransactionEOS::mutable_chainid() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.chainID)
+  return chainid_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TransactionEOS::release_chainid() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.chainID)
+  
+  return chainid_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransactionEOS::set_allocated_chainid(std::string* chainid) {
+  if (chainid != nullptr) {
+    
+  } else {
+    
+  }
+  chainid_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chainid);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.chainID)
+}
+
+// string expiration = 3;
+inline void TransactionEOS::clear_expiration() {
+  expiration_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TransactionEOS::expiration() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.expiration)
+  return expiration_.GetNoArena();
+}
+inline void TransactionEOS::set_expiration(const std::string& value) {
+  
+  expiration_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.expiration)
+}
+inline void TransactionEOS::set_expiration(std::string&& value) {
+  
+  expiration_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.expiration)
+}
+inline void TransactionEOS::set_expiration(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  expiration_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.expiration)
+}
+inline void TransactionEOS::set_expiration(const char* value, size_t size) {
+  
+  expiration_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.expiration)
+}
+inline std::string* TransactionEOS::mutable_expiration() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.expiration)
+  return expiration_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TransactionEOS::release_expiration() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.expiration)
+  
+  return expiration_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransactionEOS::set_allocated_expiration(std::string* expiration) {
+  if (expiration != nullptr) {
+    
+  } else {
+    
+  }
+  expiration_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), expiration);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.expiration)
+}
+
+// string referenceBlockId = 4;
+inline void TransactionEOS::clear_referenceblockid() {
+  referenceblockid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TransactionEOS::referenceblockid() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+  return referenceblockid_.GetNoArena();
+}
+inline void TransactionEOS::set_referenceblockid(const std::string& value) {
+  
+  referenceblockid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+}
+inline void TransactionEOS::set_referenceblockid(std::string&& value) {
+  
+  referenceblockid_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+}
+inline void TransactionEOS::set_referenceblockid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  referenceblockid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+}
+inline void TransactionEOS::set_referenceblockid(const char* value, size_t size) {
+  
+  referenceblockid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+}
+inline std::string* TransactionEOS::mutable_referenceblockid() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+  return referenceblockid_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TransactionEOS::release_referenceblockid() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+  
+  return referenceblockid_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransactionEOS::set_allocated_referenceblockid(std::string* referenceblockid) {
+  if (referenceblockid != nullptr) {
+    
+  } else {
+    
+  }
+  referenceblockid_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), referenceblockid);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.referenceBlockId)
+}
+
+// string referenceBlockTime = 5;
+inline void TransactionEOS::clear_referenceblocktime() {
+  referenceblocktime_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TransactionEOS::referenceblocktime() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+  return referenceblocktime_.GetNoArena();
+}
+inline void TransactionEOS::set_referenceblocktime(const std::string& value) {
+  
+  referenceblocktime_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+}
+inline void TransactionEOS::set_referenceblocktime(std::string&& value) {
+  
+  referenceblocktime_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+}
+inline void TransactionEOS::set_referenceblocktime(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  referenceblocktime_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+}
+inline void TransactionEOS::set_referenceblocktime(const char* value, size_t size) {
+  
+  referenceblocktime_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+}
+inline std::string* TransactionEOS::mutable_referenceblocktime() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+  return referenceblocktime_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TransactionEOS::release_referenceblocktime() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+  
+  return referenceblocktime_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransactionEOS::set_allocated_referenceblocktime(std::string* referenceblocktime) {
+  if (referenceblocktime != nullptr) {
+    
+  } else {
+    
+  }
+  referenceblocktime_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), referenceblocktime);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.referenceBlockTime)
+}
+
+// string actionsInJSON = 6;
+inline void TransactionEOS::clear_actionsinjson() {
+  actionsinjson_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TransactionEOS::actionsinjson() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+  return actionsinjson_.GetNoArena();
+}
+inline void TransactionEOS::set_actionsinjson(const std::string& value) {
+  
+  actionsinjson_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+}
+inline void TransactionEOS::set_actionsinjson(std::string&& value) {
+  
+  actionsinjson_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+}
+inline void TransactionEOS::set_actionsinjson(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  actionsinjson_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+}
+inline void TransactionEOS::set_actionsinjson(const char* value, size_t size) {
+  
+  actionsinjson_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+}
+inline std::string* TransactionEOS::mutable_actionsinjson() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+  return actionsinjson_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TransactionEOS::release_actionsinjson() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+  
+  return actionsinjson_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransactionEOS::set_allocated_actionsinjson(std::string* actionsinjson) {
+  if (actionsinjson != nullptr) {
+    
+  } else {
+    
+  }
+  actionsinjson_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), actionsinjson);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.TransactionEOS.actionsInJSON)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

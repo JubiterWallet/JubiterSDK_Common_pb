@@ -16,6 +16,7 @@
 #import <stdatomic.h>
 
 #import "JubEos.pbobjc.h"
+#import "JubCommon.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
 #pragma clang diagnostic push
@@ -26,8 +27,8 @@
 
 @implementation EOSProtosJubEosRoot
 
-// No extensions in the file and no imports, so no need to generate
-// +extensionRegistry.
+// No extensions in the file and none of the imports (direct or indirect)
+// defined extensions, so no need to generate +extensionRegistry.
 
 @end
 
@@ -511,6 +512,156 @@ void EOSProtosActionEOS_ClearActionOneOfCase(EOSProtosActionEOS *message) {
   GPBOneofDescriptor *oneof = [descriptor.oneofs objectAtIndex:0];
   GPBMaybeClearOneof(message, oneof, -1, 0);
 }
+#pragma mark - EOSProtosActionListEOS
+
+@implementation EOSProtosActionListEOS
+
+@dynamic actionsArray, actionsArray_Count;
+
+typedef struct EOSProtosActionListEOS__storage_ {
+  uint32_t _has_storage_[1];
+  NSMutableArray *actionsArray;
+} EOSProtosActionListEOS__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "actionsArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(EOSProtosActionEOS),
+        .number = EOSProtosActionListEOS_FieldNumber_ActionsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(EOSProtosActionListEOS__storage_, actionsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[EOSProtosActionListEOS class]
+                                     rootClass:[EOSProtosJubEosRoot class]
+                                          file:EOSProtosJubEosRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(EOSProtosActionListEOS__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - EOSProtosTransactionEOS
+
+@implementation EOSProtosTransactionEOS
+
+@dynamic hasPath, path;
+@dynamic chainId;
+@dynamic expiration;
+@dynamic referenceBlockId;
+@dynamic referenceBlockTime;
+@dynamic actionsInJson;
+
+typedef struct EOSProtosTransactionEOS__storage_ {
+  uint32_t _has_storage_[1];
+  CommonProtosBip44Path *path;
+  NSString *chainId;
+  NSString *expiration;
+  NSString *referenceBlockId;
+  NSString *referenceBlockTime;
+  NSString *actionsInJson;
+} EOSProtosTransactionEOS__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "path",
+        .dataTypeSpecific.className = GPBStringifySymbol(CommonProtosBip44Path),
+        .number = EOSProtosTransactionEOS_FieldNumber_Path,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(EOSProtosTransactionEOS__storage_, path),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "chainId",
+        .dataTypeSpecific.className = NULL,
+        .number = EOSProtosTransactionEOS_FieldNumber_ChainId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(EOSProtosTransactionEOS__storage_, chainId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "expiration",
+        .dataTypeSpecific.className = NULL,
+        .number = EOSProtosTransactionEOS_FieldNumber_Expiration,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(EOSProtosTransactionEOS__storage_, expiration),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "referenceBlockId",
+        .dataTypeSpecific.className = NULL,
+        .number = EOSProtosTransactionEOS_FieldNumber_ReferenceBlockId,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(EOSProtosTransactionEOS__storage_, referenceBlockId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "referenceBlockTime",
+        .dataTypeSpecific.className = NULL,
+        .number = EOSProtosTransactionEOS_FieldNumber_ReferenceBlockTime,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(EOSProtosTransactionEOS__storage_, referenceBlockTime),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "actionsInJson",
+        .dataTypeSpecific.className = NULL,
+        .number = EOSProtosTransactionEOS_FieldNumber_ActionsInJson,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(EOSProtosTransactionEOS__storage_, actionsInJson),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldTextFormatNameCustom),
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[EOSProtosTransactionEOS class]
+                                     rootClass:[EOSProtosJubEosRoot class]
+                                          file:EOSProtosJubEosRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(EOSProtosTransactionEOS__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\004\002\006A\000\004\020\000\005\022\000\006\nc\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 
 #pragma clang diagnostic pop
 

@@ -70,3 +70,22 @@ const ActionEOS$json = const {
   ],
 };
 
+const ActionListEOS$json = const {
+  '1': 'ActionListEOS',
+  '2': const [
+    const {'1': 'actions', '3': 1, '4': 3, '5': 11, '6': '.JUB.Proto.EOS.ActionEOS', '10': 'actions'},
+  ],
+};
+
+const TransactionEOS$json = const {
+  '1': 'TransactionEOS',
+  '2': const [
+    const {'1': 'path', '3': 1, '4': 1, '5': 11, '6': '.JUB.Proto.Common.Bip44Path', '10': 'path'},
+    const {'1': 'chainID', '3': 2, '4': 1, '5': 9, '10': 'chainID'},
+    const {'1': 'expiration', '3': 3, '4': 1, '5': 9, '10': 'expiration'},
+    const {'1': 'referenceBlockId', '3': 4, '4': 1, '5': 9, '10': 'referenceBlockId'},
+    const {'1': 'referenceBlockTime', '3': 5, '4': 1, '5': 9, '10': 'referenceBlockTime'},
+    const {'1': 'actionsInJSON', '3': 6, '4': 1, '5': 9, '10': 'actionsInJSON'},
+  ],
+};
+

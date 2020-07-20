@@ -218,6 +218,49 @@ public struct JUB_Proto_EOS_ActionEOS {
   public init() {}
 }
 
+public struct JUB_Proto_EOS_ActionListEOS {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var actions: [JUB_Proto_EOS_ActionEOS] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct JUB_Proto_EOS_TransactionEOS {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var path: JUB_Proto_Common_Bip44Path {
+    get {return _path ?? JUB_Proto_Common_Bip44Path()}
+    set {_path = newValue}
+  }
+  /// Returns true if `path` has been explicitly set.
+  public var hasPath: Bool {return self._path != nil}
+  /// Clears the value of `path`. Subsequent reads from it will return its default value.
+  public mutating func clearPath() {self._path = nil}
+
+  public var chainID: String = String()
+
+  public var expiration: String = String()
+
+  public var referenceBlockID: String = String()
+
+  public var referenceBlockTime: String = String()
+
+  public var actionsInJson: String = String()
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _path: JUB_Proto_Common_Bip44Path? = nil
+}
+
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "JUB.Proto.EOS"
@@ -492,6 +535,94 @@ extension JUB_Proto_EOS_ActionEOS: SwiftProtobuf.Message, SwiftProtobuf._Message
     if lhs.currency != rhs.currency {return false}
     if lhs.name != rhs.name {return false}
     if lhs.action != rhs.action {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension JUB_Proto_EOS_ActionListEOS: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".ActionListEOS"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "actions"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeRepeatedMessageField(value: &self.actions)
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.actions.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.actions, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: JUB_Proto_EOS_ActionListEOS, rhs: JUB_Proto_EOS_ActionListEOS) -> Bool {
+    if lhs.actions != rhs.actions {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension JUB_Proto_EOS_TransactionEOS: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".TransactionEOS"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "path"),
+    2: .same(proto: "chainID"),
+    3: .same(proto: "expiration"),
+    4: .same(proto: "referenceBlockId"),
+    5: .same(proto: "referenceBlockTime"),
+    6: .same(proto: "actionsInJSON"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeSingularMessageField(value: &self._path)
+      case 2: try decoder.decodeSingularStringField(value: &self.chainID)
+      case 3: try decoder.decodeSingularStringField(value: &self.expiration)
+      case 4: try decoder.decodeSingularStringField(value: &self.referenceBlockID)
+      case 5: try decoder.decodeSingularStringField(value: &self.referenceBlockTime)
+      case 6: try decoder.decodeSingularStringField(value: &self.actionsInJson)
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if let v = self._path {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    }
+    if !self.chainID.isEmpty {
+      try visitor.visitSingularStringField(value: self.chainID, fieldNumber: 2)
+    }
+    if !self.expiration.isEmpty {
+      try visitor.visitSingularStringField(value: self.expiration, fieldNumber: 3)
+    }
+    if !self.referenceBlockID.isEmpty {
+      try visitor.visitSingularStringField(value: self.referenceBlockID, fieldNumber: 4)
+    }
+    if !self.referenceBlockTime.isEmpty {
+      try visitor.visitSingularStringField(value: self.referenceBlockTime, fieldNumber: 5)
+    }
+    if !self.actionsInJson.isEmpty {
+      try visitor.visitSingularStringField(value: self.actionsInJson, fieldNumber: 6)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: JUB_Proto_EOS_TransactionEOS, rhs: JUB_Proto_EOS_TransactionEOS) -> Bool {
+    if lhs._path != rhs._path {return false}
+    if lhs.chainID != rhs.chainID {return false}
+    if lhs.expiration != rhs.expiration {return false}
+    if lhs.referenceBlockID != rhs.referenceBlockID {return false}
+    if lhs.referenceBlockTime != rhs.referenceBlockTime {return false}
+    if lhs.actionsInJson != rhs.actionsInJson {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

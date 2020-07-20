@@ -15,6 +15,8 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_Jub_5fCommon_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Bip44Path_Jub_5fCommon_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_Jub_5fEOS_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_ActionEOS_Jub_5fEOS_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fEOS_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BuyRamAction_Jub_5fEOS_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fEOS_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DelegateAction_Jub_5fEOS_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Jub_5fEOS_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SellRamAction_Jub_5fEOS_2eproto;
@@ -46,6 +48,14 @@ class ActionEOSDefaultTypeInternal {
   const ::JUB::Proto::EOS::BuyRamAction* buy_ram_action_;
   const ::JUB::Proto::EOS::SellRamAction* sell_ram_action_;
 } _ActionEOS_default_instance_;
+class ActionListEOSDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ActionListEOS> _instance;
+} _ActionListEOS_default_instance_;
+class TransactionEOSDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TransactionEOS> _instance;
+} _TransactionEOS_default_instance_;
 }  // namespace EOS
 }  // namespace Proto
 }  // namespace JUB
@@ -66,6 +76,21 @@ static void InitDefaultsscc_info_ActionEOS_Jub_5fEOS_2eproto() {
       &scc_info_DelegateAction_Jub_5fEOS_2eproto.base,
       &scc_info_BuyRamAction_Jub_5fEOS_2eproto.base,
       &scc_info_SellRamAction_Jub_5fEOS_2eproto.base,}};
+
+static void InitDefaultsscc_info_ActionListEOS_Jub_5fEOS_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::JUB::Proto::EOS::_ActionListEOS_default_instance_;
+    new (ptr) ::JUB::Proto::EOS::ActionListEOS();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::JUB::Proto::EOS::ActionListEOS::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ActionListEOS_Jub_5fEOS_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_ActionListEOS_Jub_5fEOS_2eproto}, {
+      &scc_info_ActionEOS_Jub_5fEOS_2eproto.base,}};
 
 static void InitDefaultsscc_info_BuyRamAction_Jub_5fEOS_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -109,6 +134,21 @@ static void InitDefaultsscc_info_SellRamAction_Jub_5fEOS_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SellRamAction_Jub_5fEOS_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_SellRamAction_Jub_5fEOS_2eproto}, {}};
 
+static void InitDefaultsscc_info_TransactionEOS_Jub_5fEOS_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::JUB::Proto::EOS::_TransactionEOS_default_instance_;
+    new (ptr) ::JUB::Proto::EOS::TransactionEOS();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::JUB::Proto::EOS::TransactionEOS::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TransactionEOS_Jub_5fEOS_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_TransactionEOS_Jub_5fEOS_2eproto}, {
+      &scc_info_Bip44Path_Jub_5fCommon_2eproto.base,}};
+
 static void InitDefaultsscc_info_TransferAction_Jub_5fEOS_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -123,7 +163,7 @@ static void InitDefaultsscc_info_TransferAction_Jub_5fEOS_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TransferAction_Jub_5fEOS_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_TransferAction_Jub_5fEOS_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fEOS_2eproto[5];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fEOS_2eproto[7];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Jub_5fEOS_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Jub_5fEOS_2eproto = nullptr;
 
@@ -175,6 +215,23 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fEOS_2eproto::offsets[] P
   offsetof(::JUB::Proto::EOS::ActionEOSDefaultTypeInternal, buy_ram_action_),
   offsetof(::JUB::Proto::EOS::ActionEOSDefaultTypeInternal, sell_ram_action_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::ActionEOS, action_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::ActionListEOS, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::ActionListEOS, actions_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, path_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, chainid_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, expiration_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, referenceblockid_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, referenceblocktime_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::TransactionEOS, actionsinjson_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::JUB::Proto::EOS::TransferAction)},
@@ -182,6 +239,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 19, -1, sizeof(::JUB::Proto::EOS::BuyRamAction)},
   { 27, -1, sizeof(::JUB::Proto::EOS::SellRamAction)},
   { 34, -1, sizeof(::JUB::Proto::EOS::ActionEOS)},
+  { 47, -1, sizeof(::JUB::Proto::EOS::ActionListEOS)},
+  { 53, -1, sizeof(::JUB::Proto::EOS::TransactionEOS)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -190,46 +249,57 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::EOS::_BuyRamAction_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::EOS::_SellRamAction_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::EOS::_ActionEOS_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::EOS::_ActionListEOS_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::EOS::_TransactionEOS_default_instance_),
 };
 
 const char descriptor_table_protodef_Jub_5fEOS_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rJub_EOS.proto\022\rJUB.Proto.EOS\"G\n\016Transf"
-  "erAction\022\014\n\004from\030\001 \001(\t\022\n\n\002to\030\002 \001(\t\022\r\n\005as"
-  "set\030\003 \001(\t\022\014\n\004memo\030\004 \001(\t\"a\n\016DelegateActio"
-  "n\022\014\n\004from\030\001 \001(\t\022\020\n\010receiver\030\002 \001(\t\022\017\n\007net"
-  "_qty\030\003 \001(\t\022\017\n\007cpu_qty\030\004 \001(\t\022\r\n\005stake\030\005 \001"
-  "(\010\">\n\014BuyRamAction\022\r\n\005payer\030\001 \001(\t\022\r\n\005qua"
-  "nt\030\002 \001(\t\022\020\n\010receiver\030\003 \001(\t\".\n\rSellRamAct"
-  "ion\022\017\n\007account\030\001 \001(\t\022\014\n\004byte\030\002 \001(\t\"\304\002\n\tA"
-  "ctionEOS\0221\n\004type\030\001 \001(\0162#.JUB.Proto.EOS.E"
-  "NUM_EOS_ACTION_TYPE\022\020\n\010currency\030\002 \001(\t\022\014\n"
-  "\004name\030\003 \001(\t\0224\n\013xfer_action\030\004 \001(\0132\035.JUB.P"
-  "roto.EOS.TransferActionH\000\0224\n\013dele_action"
-  "\030\005 \001(\0132\035.JUB.Proto.EOS.DelegateActionH\000\022"
-  "5\n\016buy_ram_action\030\006 \001(\0132\033.JUB.Proto.EOS."
-  "BuyRamActionH\000\0227\n\017sell_ram_action\030\007 \001(\0132"
-  "\034.JUB.Proto.EOS.SellRamActionH\000B\010\n\006actio"
-  "n*O\n\024ENUM_EOS_ACTION_TYPE\022\010\n\004XFER\020\000\022\010\n\004D"
-  "ELE\020\001\022\n\n\006UNDELE\020\002\022\n\n\006BUYRAM\020\003\022\013\n\007SELLRAM"
-  "\020\004B.\n\025com.jubiter.sdk.protoB\tEOSProtos\242\002"
-  "\tEOSProtosb\006proto3"
+  "\n\rJub_EOS.proto\022\rJUB.Proto.EOS\032\020Jub_Comm"
+  "on.proto\"G\n\016TransferAction\022\014\n\004from\030\001 \001(\t"
+  "\022\n\n\002to\030\002 \001(\t\022\r\n\005asset\030\003 \001(\t\022\014\n\004memo\030\004 \001("
+  "\t\"a\n\016DelegateAction\022\014\n\004from\030\001 \001(\t\022\020\n\010rec"
+  "eiver\030\002 \001(\t\022\017\n\007net_qty\030\003 \001(\t\022\017\n\007cpu_qty\030"
+  "\004 \001(\t\022\r\n\005stake\030\005 \001(\010\">\n\014BuyRamAction\022\r\n\005"
+  "payer\030\001 \001(\t\022\r\n\005quant\030\002 \001(\t\022\020\n\010receiver\030\003"
+  " \001(\t\".\n\rSellRamAction\022\017\n\007account\030\001 \001(\t\022\014"
+  "\n\004byte\030\002 \001(\t\"\304\002\n\tActionEOS\0221\n\004type\030\001 \001(\016"
+  "2#.JUB.Proto.EOS.ENUM_EOS_ACTION_TYPE\022\020\n"
+  "\010currency\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\0224\n\013xfer_ac"
+  "tion\030\004 \001(\0132\035.JUB.Proto.EOS.TransferActio"
+  "nH\000\0224\n\013dele_action\030\005 \001(\0132\035.JUB.Proto.EOS"
+  ".DelegateActionH\000\0225\n\016buy_ram_action\030\006 \001("
+  "\0132\033.JUB.Proto.EOS.BuyRamActionH\000\0227\n\017sell"
+  "_ram_action\030\007 \001(\0132\034.JUB.Proto.EOS.SellRa"
+  "mActionH\000B\010\n\006action\":\n\rActionListEOS\022)\n\007"
+  "actions\030\001 \003(\0132\030.JUB.Proto.EOS.ActionEOS\""
+  "\255\001\n\016TransactionEOS\022)\n\004path\030\001 \001(\0132\033.JUB.P"
+  "roto.Common.Bip44Path\022\017\n\007chainID\030\002 \001(\t\022\022"
+  "\n\nexpiration\030\003 \001(\t\022\030\n\020referenceBlockId\030\004"
+  " \001(\t\022\032\n\022referenceBlockTime\030\005 \001(\t\022\025\n\racti"
+  "onsInJSON\030\006 \001(\t*O\n\024ENUM_EOS_ACTION_TYPE\022"
+  "\010\n\004XFER\020\000\022\010\n\004DELE\020\001\022\n\n\006UNDELE\020\002\022\n\n\006BUYRA"
+  "M\020\003\022\013\n\007SELLRAM\020\004B.\n\025com.jubiter.sdk.prot"
+  "oB\tEOSProtos\242\002\tEOSProtosb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fEOS_2eproto_deps[1] = {
+  &::descriptor_table_Jub_5fCommon_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fEOS_2eproto_sccs[5] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fEOS_2eproto_sccs[7] = {
   &scc_info_ActionEOS_Jub_5fEOS_2eproto.base,
+  &scc_info_ActionListEOS_Jub_5fEOS_2eproto.base,
   &scc_info_BuyRamAction_Jub_5fEOS_2eproto.base,
   &scc_info_DelegateAction_Jub_5fEOS_2eproto.base,
   &scc_info_SellRamAction_Jub_5fEOS_2eproto.base,
+  &scc_info_TransactionEOS_Jub_5fEOS_2eproto.base,
   &scc_info_TransferAction_Jub_5fEOS_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fEOS_2eproto_once;
 static bool descriptor_table_Jub_5fEOS_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fEOS_2eproto = {
-  &descriptor_table_Jub_5fEOS_2eproto_initialized, descriptor_table_protodef_Jub_5fEOS_2eproto, "Jub_EOS.proto", 778,
-  &descriptor_table_Jub_5fEOS_2eproto_once, descriptor_table_Jub_5fEOS_2eproto_sccs, descriptor_table_Jub_5fEOS_2eproto_deps, 5, 0,
+  &descriptor_table_Jub_5fEOS_2eproto_initialized, descriptor_table_protodef_Jub_5fEOS_2eproto, "Jub_EOS.proto", 1032,
+  &descriptor_table_Jub_5fEOS_2eproto_once, descriptor_table_Jub_5fEOS_2eproto_sccs, descriptor_table_Jub_5fEOS_2eproto_deps, 7, 1,
   schemas, file_default_instances, TableStruct_Jub_5fEOS_2eproto::offsets,
-  file_level_metadata_Jub_5fEOS_2eproto, 5, file_level_enum_descriptors_Jub_5fEOS_2eproto, file_level_service_descriptors_Jub_5fEOS_2eproto,
+  file_level_metadata_Jub_5fEOS_2eproto, 7, file_level_enum_descriptors_Jub_5fEOS_2eproto, file_level_service_descriptors_Jub_5fEOS_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -2637,6 +2707,854 @@ void ActionEOS::InternalSwap(ActionEOS* other) {
 }
 
 
+// ===================================================================
+
+void ActionListEOS::InitAsDefaultInstance() {
+}
+class ActionListEOS::_Internal {
+ public:
+};
+
+ActionListEOS::ActionListEOS()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:JUB.Proto.EOS.ActionListEOS)
+}
+ActionListEOS::ActionListEOS(const ActionListEOS& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      actions_(from.actions_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.EOS.ActionListEOS)
+}
+
+void ActionListEOS::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ActionListEOS_Jub_5fEOS_2eproto.base);
+}
+
+ActionListEOS::~ActionListEOS() {
+  // @@protoc_insertion_point(destructor:JUB.Proto.EOS.ActionListEOS)
+  SharedDtor();
+}
+
+void ActionListEOS::SharedDtor() {
+}
+
+void ActionListEOS::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ActionListEOS& ActionListEOS::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ActionListEOS_Jub_5fEOS_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ActionListEOS::Clear() {
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.EOS.ActionListEOS)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  actions_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ActionListEOS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(add_actions(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 10);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ActionListEOS::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:JUB.Proto.EOS.ActionListEOS)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_actions()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:JUB.Proto.EOS.ActionListEOS)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:JUB.Proto.EOS.ActionListEOS)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ActionListEOS::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:JUB.Proto.EOS.ActionListEOS)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->actions_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->actions(static_cast<int>(i)),
+      output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:JUB.Proto.EOS.ActionListEOS)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ActionListEOS::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.EOS.ActionListEOS)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->actions_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->actions(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.EOS.ActionListEOS)
+  return target;
+}
+
+size_t ActionListEOS::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.EOS.ActionListEOS)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .JUB.Proto.EOS.ActionEOS actions = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->actions_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          this->actions(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ActionListEOS::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.EOS.ActionListEOS)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ActionListEOS* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ActionListEOS>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.EOS.ActionListEOS)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.EOS.ActionListEOS)
+    MergeFrom(*source);
+  }
+}
+
+void ActionListEOS::MergeFrom(const ActionListEOS& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.EOS.ActionListEOS)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  actions_.MergeFrom(from.actions_);
+}
+
+void ActionListEOS::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.EOS.ActionListEOS)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ActionListEOS::CopyFrom(const ActionListEOS& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.EOS.ActionListEOS)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ActionListEOS::IsInitialized() const {
+  return true;
+}
+
+void ActionListEOS::InternalSwap(ActionListEOS* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&actions_)->InternalSwap(CastToBase(&other->actions_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ActionListEOS::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void TransactionEOS::InitAsDefaultInstance() {
+  ::JUB::Proto::EOS::_TransactionEOS_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
+      ::JUB::Proto::Common::Bip44Path::internal_default_instance());
+}
+class TransactionEOS::_Internal {
+ public:
+  static const ::JUB::Proto::Common::Bip44Path& path(const TransactionEOS* msg);
+};
+
+const ::JUB::Proto::Common::Bip44Path&
+TransactionEOS::_Internal::path(const TransactionEOS* msg) {
+  return *msg->path_;
+}
+void TransactionEOS::clear_path() {
+  if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
+    delete path_;
+  }
+  path_ = nullptr;
+}
+TransactionEOS::TransactionEOS()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:JUB.Proto.EOS.TransactionEOS)
+}
+TransactionEOS::TransactionEOS(const TransactionEOS& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  chainid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.chainid().empty()) {
+    chainid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.chainid_);
+  }
+  expiration_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.expiration().empty()) {
+    expiration_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.expiration_);
+  }
+  referenceblockid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.referenceblockid().empty()) {
+    referenceblockid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.referenceblockid_);
+  }
+  referenceblocktime_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.referenceblocktime().empty()) {
+    referenceblocktime_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.referenceblocktime_);
+  }
+  actionsinjson_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.actionsinjson().empty()) {
+    actionsinjson_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.actionsinjson_);
+  }
+  if (from.has_path()) {
+    path_ = new ::JUB::Proto::Common::Bip44Path(*from.path_);
+  } else {
+    path_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.EOS.TransactionEOS)
+}
+
+void TransactionEOS::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TransactionEOS_Jub_5fEOS_2eproto.base);
+  chainid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  expiration_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  referenceblockid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  referenceblocktime_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  actionsinjson_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  path_ = nullptr;
+}
+
+TransactionEOS::~TransactionEOS() {
+  // @@protoc_insertion_point(destructor:JUB.Proto.EOS.TransactionEOS)
+  SharedDtor();
+}
+
+void TransactionEOS::SharedDtor() {
+  chainid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  expiration_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  referenceblockid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  referenceblocktime_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  actionsinjson_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete path_;
+}
+
+void TransactionEOS::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TransactionEOS& TransactionEOS::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TransactionEOS_Jub_5fEOS_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TransactionEOS::Clear() {
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.EOS.TransactionEOS)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  chainid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  expiration_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  referenceblockid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  referenceblocktime_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  actionsinjson_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
+    delete path_;
+  }
+  path_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TransactionEOS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .JUB.Proto.Common.Bip44Path path = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_path(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string chainID = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_chainid(), ptr, ctx, "JUB.Proto.EOS.TransactionEOS.chainID");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string expiration = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_expiration(), ptr, ctx, "JUB.Proto.EOS.TransactionEOS.expiration");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string referenceBlockId = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_referenceblockid(), ptr, ctx, "JUB.Proto.EOS.TransactionEOS.referenceBlockId");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string referenceBlockTime = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_referenceblocktime(), ptr, ctx, "JUB.Proto.EOS.TransactionEOS.referenceBlockTime");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string actionsInJSON = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_actionsinjson(), ptr, ctx, "JUB.Proto.EOS.TransactionEOS.actionsInJSON");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool TransactionEOS::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:JUB.Proto.EOS.TransactionEOS)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .JUB.Proto.Common.Bip44Path path = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_path()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string chainID = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_chainid()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->chainid().data(), static_cast<int>(this->chainid().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.EOS.TransactionEOS.chainID"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string expiration = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_expiration()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->expiration().data(), static_cast<int>(this->expiration().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.EOS.TransactionEOS.expiration"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string referenceBlockId = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_referenceblockid()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->referenceblockid().data(), static_cast<int>(this->referenceblockid().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.EOS.TransactionEOS.referenceBlockId"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string referenceBlockTime = 5;
+      case 5: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_referenceblocktime()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->referenceblocktime().data(), static_cast<int>(this->referenceblocktime().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.EOS.TransactionEOS.referenceBlockTime"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string actionsInJSON = 6;
+      case 6: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_actionsinjson()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->actionsinjson().data(), static_cast<int>(this->actionsinjson().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.EOS.TransactionEOS.actionsInJSON"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:JUB.Proto.EOS.TransactionEOS)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:JUB.Proto.EOS.TransactionEOS)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void TransactionEOS::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:JUB.Proto.EOS.TransactionEOS)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  if (this->has_path()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::path(this), output);
+  }
+
+  // string chainID = 2;
+  if (this->chainid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->chainid().data(), static_cast<int>(this->chainid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.chainID");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->chainid(), output);
+  }
+
+  // string expiration = 3;
+  if (this->expiration().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->expiration().data(), static_cast<int>(this->expiration().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.expiration");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->expiration(), output);
+  }
+
+  // string referenceBlockId = 4;
+  if (this->referenceblockid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->referenceblockid().data(), static_cast<int>(this->referenceblockid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.referenceBlockId");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->referenceblockid(), output);
+  }
+
+  // string referenceBlockTime = 5;
+  if (this->referenceblocktime().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->referenceblocktime().data(), static_cast<int>(this->referenceblocktime().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.referenceBlockTime");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      5, this->referenceblocktime(), output);
+  }
+
+  // string actionsInJSON = 6;
+  if (this->actionsinjson().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->actionsinjson().data(), static_cast<int>(this->actionsinjson().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.actionsInJSON");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      6, this->actionsinjson(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:JUB.Proto.EOS.TransactionEOS)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* TransactionEOS::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.EOS.TransactionEOS)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  if (this->has_path()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::path(this), target);
+  }
+
+  // string chainID = 2;
+  if (this->chainid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->chainid().data(), static_cast<int>(this->chainid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.chainID");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        2, this->chainid(), target);
+  }
+
+  // string expiration = 3;
+  if (this->expiration().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->expiration().data(), static_cast<int>(this->expiration().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.expiration");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        3, this->expiration(), target);
+  }
+
+  // string referenceBlockId = 4;
+  if (this->referenceblockid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->referenceblockid().data(), static_cast<int>(this->referenceblockid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.referenceBlockId");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        4, this->referenceblockid(), target);
+  }
+
+  // string referenceBlockTime = 5;
+  if (this->referenceblocktime().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->referenceblocktime().data(), static_cast<int>(this->referenceblocktime().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.referenceBlockTime");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        5, this->referenceblocktime(), target);
+  }
+
+  // string actionsInJSON = 6;
+  if (this->actionsinjson().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->actionsinjson().data(), static_cast<int>(this->actionsinjson().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.EOS.TransactionEOS.actionsInJSON");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        6, this->actionsinjson(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.EOS.TransactionEOS)
+  return target;
+}
+
+size_t TransactionEOS::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.EOS.TransactionEOS)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string chainID = 2;
+  if (this->chainid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->chainid());
+  }
+
+  // string expiration = 3;
+  if (this->expiration().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->expiration());
+  }
+
+  // string referenceBlockId = 4;
+  if (this->referenceblockid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->referenceblockid());
+  }
+
+  // string referenceBlockTime = 5;
+  if (this->referenceblocktime().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->referenceblocktime());
+  }
+
+  // string actionsInJSON = 6;
+  if (this->actionsinjson().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->actionsinjson());
+  }
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  if (this->has_path()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *path_);
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TransactionEOS::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.EOS.TransactionEOS)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TransactionEOS* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TransactionEOS>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.EOS.TransactionEOS)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.EOS.TransactionEOS)
+    MergeFrom(*source);
+  }
+}
+
+void TransactionEOS::MergeFrom(const TransactionEOS& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.EOS.TransactionEOS)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.chainid().size() > 0) {
+
+    chainid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.chainid_);
+  }
+  if (from.expiration().size() > 0) {
+
+    expiration_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.expiration_);
+  }
+  if (from.referenceblockid().size() > 0) {
+
+    referenceblockid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.referenceblockid_);
+  }
+  if (from.referenceblocktime().size() > 0) {
+
+    referenceblocktime_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.referenceblocktime_);
+  }
+  if (from.actionsinjson().size() > 0) {
+
+    actionsinjson_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.actionsinjson_);
+  }
+  if (from.has_path()) {
+    mutable_path()->::JUB::Proto::Common::Bip44Path::MergeFrom(from.path());
+  }
+}
+
+void TransactionEOS::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.EOS.TransactionEOS)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TransactionEOS::CopyFrom(const TransactionEOS& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.EOS.TransactionEOS)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TransactionEOS::IsInitialized() const {
+  return true;
+}
+
+void TransactionEOS::InternalSwap(TransactionEOS* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  chainid_.Swap(&other->chainid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  expiration_.Swap(&other->expiration_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  referenceblockid_.Swap(&other->referenceblockid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  referenceblocktime_.Swap(&other->referenceblocktime_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  actionsinjson_.Swap(&other->actionsinjson_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(path_, other->path_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata TransactionEOS::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace EOS
 }  // namespace Proto
@@ -2656,6 +3574,12 @@ template<> PROTOBUF_NOINLINE ::JUB::Proto::EOS::SellRamAction* Arena::CreateMayb
 }
 template<> PROTOBUF_NOINLINE ::JUB::Proto::EOS::ActionEOS* Arena::CreateMaybeMessage< ::JUB::Proto::EOS::ActionEOS >(Arena* arena) {
   return Arena::CreateInternal< ::JUB::Proto::EOS::ActionEOS >(arena);
+}
+template<> PROTOBUF_NOINLINE ::JUB::Proto::EOS::ActionListEOS* Arena::CreateMaybeMessage< ::JUB::Proto::EOS::ActionListEOS >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::EOS::ActionListEOS >(arena);
+}
+template<> PROTOBUF_NOINLINE ::JUB::Proto::EOS::TransactionEOS* Arena::CreateMaybeMessage< ::JUB::Proto::EOS::TransactionEOS >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::EOS::TransactionEOS >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

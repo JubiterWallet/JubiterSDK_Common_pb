@@ -1,4 +1,5 @@
 syntax = "proto3";
+import "Jub_Common.proto";
 
 package JUB.Proto.EOS;
 
@@ -10,7 +11,7 @@ option objc_class_prefix = "EOSProtos";
 //message ContextCfgEOS = JUB.Proto.Common.ContextCfg
 
 enum ENUM_EOS_ACTION_TYPE {
-    XFER   = 0; // transfer
+      XFER = 0; // transfer
       DELE = 1; //   delegatebw
     UNDELE = 2; // undelegatebw
     BUYRAM = 3; //  buyrambytes
@@ -48,9 +49,22 @@ message ActionEOS {
     string currency = 2;
     string name = 3;
     oneof action {
-        TransferAction    xfer_action = 4;
-        DelegateAction    dele_action = 5;
+        TransferAction     xfer_action = 4;
+        DelegateAction     dele_action = 5;
           BuyRamAction  buy_ram_action = 6;
          SellRamAction sell_ram_action = 7;
     }
+}
+
+message ActionListEOS {
+    repeated ActionEOS actions = 1;
+}
+
+message TransactionEOS {
+    JUB.Proto.Common.Bip44Path path = 1;
+    string chainID = 2;
+    string expiration = 3;
+    string referenceBlockId = 4;
+    string referenceBlockTime = 5;
+    string actionsInJSON = 6;
 }
