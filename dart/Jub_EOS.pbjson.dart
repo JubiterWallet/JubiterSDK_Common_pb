@@ -33,7 +33,8 @@ const DelegateAction$json = const {
     const {'1': 'receiver', '3': 2, '4': 1, '5': 9, '10': 'receiver'},
     const {'1': 'net_qty', '3': 3, '4': 1, '5': 9, '10': 'netQty'},
     const {'1': 'cpu_qty', '3': 4, '4': 1, '5': 9, '10': 'cpuQty'},
-    const {'1': 'stake', '3': 5, '4': 1, '5': 8, '10': 'stake'},
+    const {'1': 'transfer', '3': 5, '4': 1, '5': 8, '10': 'transfer'},
+    const {'1': 'stake', '3': 6, '4': 1, '5': 8, '10': 'stake'},
   ],
 };
 

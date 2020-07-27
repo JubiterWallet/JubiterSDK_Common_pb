@@ -112,7 +112,8 @@ typedef GPB_ENUM(EOSProtosDelegateAction_FieldNumber) {
   EOSProtosDelegateAction_FieldNumber_Receiver = 2,
   EOSProtosDelegateAction_FieldNumber_NetQty = 3,
   EOSProtosDelegateAction_FieldNumber_CpuQty = 4,
-  EOSProtosDelegateAction_FieldNumber_Stake = 5,
+  EOSProtosDelegateAction_FieldNumber_Transfer = 5,
+  EOSProtosDelegateAction_FieldNumber_Stake = 6,
 };
 
 @interface EOSProtosDelegateAction : GPBMessage
@@ -124,6 +125,8 @@ typedef GPB_ENUM(EOSProtosDelegateAction_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *netQty;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *cpuQty;
+
+@property(nonatomic, readwrite) BOOL transfer;
 
 @property(nonatomic, readwrite) BOOL stake;
 

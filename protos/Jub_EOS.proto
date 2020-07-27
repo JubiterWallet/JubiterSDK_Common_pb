@@ -30,7 +30,8 @@ message DelegateAction {
     string receiver = 2;
     string net_qty = 3;
     string cpu_qty = 4;
-    bool stake = 5;
+    bool transfer = 5;
+    bool stake = 6;
 }
 
 message BuyRamAction {

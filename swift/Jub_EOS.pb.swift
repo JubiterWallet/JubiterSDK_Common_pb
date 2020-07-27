@@ -112,6 +112,8 @@ public struct JUB_Proto_EOS_DelegateAction {
 
   public var cpuQty: String = String()
 
+  public var transfer: Bool = false
+
   public var stake: Bool = false
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -329,7 +331,8 @@ extension JUB_Proto_EOS_DelegateAction: SwiftProtobuf.Message, SwiftProtobuf._Me
     2: .same(proto: "receiver"),
     3: .standard(proto: "net_qty"),
     4: .standard(proto: "cpu_qty"),
-    5: .same(proto: "stake"),
+    5: .same(proto: "transfer"),
+    6: .same(proto: "stake"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -339,7 +342,8 @@ extension JUB_Proto_EOS_DelegateAction: SwiftProtobuf.Message, SwiftProtobuf._Me
       case 2: try decoder.decodeSingularStringField(value: &self.receiver)
       case 3: try decoder.decodeSingularStringField(value: &self.netQty)
       case 4: try decoder.decodeSingularStringField(value: &self.cpuQty)
-      case 5: try decoder.decodeSingularBoolField(value: &self.stake)
+      case 5: try decoder.decodeSingularBoolField(value: &self.transfer)
+      case 6: try decoder.decodeSingularBoolField(value: &self.stake)
       default: break
       }
     }
@@ -358,8 +362,11 @@ extension JUB_Proto_EOS_DelegateAction: SwiftProtobuf.Message, SwiftProtobuf._Me
     if !self.cpuQty.isEmpty {
       try visitor.visitSingularStringField(value: self.cpuQty, fieldNumber: 4)
     }
+    if self.transfer != false {
+      try visitor.visitSingularBoolField(value: self.transfer, fieldNumber: 5)
+    }
     if self.stake != false {
-      try visitor.visitSingularBoolField(value: self.stake, fieldNumber: 5)
+      try visitor.visitSingularBoolField(value: self.stake, fieldNumber: 6)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -369,6 +376,7 @@ extension JUB_Proto_EOS_DelegateAction: SwiftProtobuf.Message, SwiftProtobuf._Me
     if lhs.receiver != rhs.receiver {return false}
     if lhs.netQty != rhs.netQty {return false}
     if lhs.cpuQty != rhs.cpuQty {return false}
+    if lhs.transfer != rhs.transfer {return false}
     if lhs.stake != rhs.stake {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

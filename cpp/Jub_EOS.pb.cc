@@ -186,6 +186,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fEOS_2eproto::offsets[] P
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::DelegateAction, receiver_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::DelegateAction, net_qty_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::DelegateAction, cpu_qty_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::DelegateAction, transfer_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::DelegateAction, stake_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::EOS::BuyRamAction, _internal_metadata_),
@@ -236,11 +237,11 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fEOS_2eproto::offsets[] P
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::JUB::Proto::EOS::TransferAction)},
   { 9, -1, sizeof(::JUB::Proto::EOS::DelegateAction)},
-  { 19, -1, sizeof(::JUB::Proto::EOS::BuyRamAction)},
-  { 27, -1, sizeof(::JUB::Proto::EOS::SellRamAction)},
-  { 34, -1, sizeof(::JUB::Proto::EOS::ActionEOS)},
-  { 47, -1, sizeof(::JUB::Proto::EOS::ActionListEOS)},
-  { 53, -1, sizeof(::JUB::Proto::EOS::TransactionEOS)},
+  { 20, -1, sizeof(::JUB::Proto::EOS::BuyRamAction)},
+  { 28, -1, sizeof(::JUB::Proto::EOS::SellRamAction)},
+  { 35, -1, sizeof(::JUB::Proto::EOS::ActionEOS)},
+  { 48, -1, sizeof(::JUB::Proto::EOS::ActionListEOS)},
+  { 54, -1, sizeof(::JUB::Proto::EOS::TransactionEOS)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -257,29 +258,30 @@ const char descriptor_table_protodef_Jub_5fEOS_2eproto[] PROTOBUF_SECTION_VARIAB
   "\n\rJub_EOS.proto\022\rJUB.Proto.EOS\032\020Jub_Comm"
   "on.proto\"G\n\016TransferAction\022\014\n\004from\030\001 \001(\t"
   "\022\n\n\002to\030\002 \001(\t\022\r\n\005asset\030\003 \001(\t\022\014\n\004memo\030\004 \001("
-  "\t\"a\n\016DelegateAction\022\014\n\004from\030\001 \001(\t\022\020\n\010rec"
+  "\t\"s\n\016DelegateAction\022\014\n\004from\030\001 \001(\t\022\020\n\010rec"
   "eiver\030\002 \001(\t\022\017\n\007net_qty\030\003 \001(\t\022\017\n\007cpu_qty\030"
-  "\004 \001(\t\022\r\n\005stake\030\005 \001(\010\">\n\014BuyRamAction\022\r\n\005"
-  "payer\030\001 \001(\t\022\r\n\005quant\030\002 \001(\t\022\020\n\010receiver\030\003"
-  " \001(\t\".\n\rSellRamAction\022\017\n\007account\030\001 \001(\t\022\014"
-  "\n\004byte\030\002 \001(\t\"\304\002\n\tActionEOS\0221\n\004type\030\001 \001(\016"
-  "2#.JUB.Proto.EOS.ENUM_EOS_ACTION_TYPE\022\020\n"
-  "\010currency\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\0224\n\013xfer_ac"
-  "tion\030\004 \001(\0132\035.JUB.Proto.EOS.TransferActio"
-  "nH\000\0224\n\013dele_action\030\005 \001(\0132\035.JUB.Proto.EOS"
-  ".DelegateActionH\000\0225\n\016buy_ram_action\030\006 \001("
-  "\0132\033.JUB.Proto.EOS.BuyRamActionH\000\0227\n\017sell"
-  "_ram_action\030\007 \001(\0132\034.JUB.Proto.EOS.SellRa"
-  "mActionH\000B\010\n\006action\":\n\rActionListEOS\022)\n\007"
-  "actions\030\001 \003(\0132\030.JUB.Proto.EOS.ActionEOS\""
-  "\255\001\n\016TransactionEOS\022)\n\004path\030\001 \001(\0132\033.JUB.P"
-  "roto.Common.Bip44Path\022\017\n\007chainID\030\002 \001(\t\022\022"
-  "\n\nexpiration\030\003 \001(\t\022\030\n\020referenceBlockId\030\004"
-  " \001(\t\022\032\n\022referenceBlockTime\030\005 \001(\t\022\025\n\racti"
-  "onsInJSON\030\006 \001(\t*O\n\024ENUM_EOS_ACTION_TYPE\022"
-  "\010\n\004XFER\020\000\022\010\n\004DELE\020\001\022\n\n\006UNDELE\020\002\022\n\n\006BUYRA"
-  "M\020\003\022\013\n\007SELLRAM\020\004B.\n\025com.jubiter.sdk.prot"
-  "oB\tEOSProtos\242\002\tEOSProtosb\006proto3"
+  "\004 \001(\t\022\020\n\010transfer\030\005 \001(\010\022\r\n\005stake\030\006 \001(\010\">"
+  "\n\014BuyRamAction\022\r\n\005payer\030\001 \001(\t\022\r\n\005quant\030\002"
+  " \001(\t\022\020\n\010receiver\030\003 \001(\t\".\n\rSellRamAction\022"
+  "\017\n\007account\030\001 \001(\t\022\014\n\004byte\030\002 \001(\t\"\304\002\n\tActio"
+  "nEOS\0221\n\004type\030\001 \001(\0162#.JUB.Proto.EOS.ENUM_"
+  "EOS_ACTION_TYPE\022\020\n\010currency\030\002 \001(\t\022\014\n\004nam"
+  "e\030\003 \001(\t\0224\n\013xfer_action\030\004 \001(\0132\035.JUB.Proto"
+  ".EOS.TransferActionH\000\0224\n\013dele_action\030\005 \001"
+  "(\0132\035.JUB.Proto.EOS.DelegateActionH\000\0225\n\016b"
+  "uy_ram_action\030\006 \001(\0132\033.JUB.Proto.EOS.BuyR"
+  "amActionH\000\0227\n\017sell_ram_action\030\007 \001(\0132\034.JU"
+  "B.Proto.EOS.SellRamActionH\000B\010\n\006action\":\n"
+  "\rActionListEOS\022)\n\007actions\030\001 \003(\0132\030.JUB.Pr"
+  "oto.EOS.ActionEOS\"\255\001\n\016TransactionEOS\022)\n\004"
+  "path\030\001 \001(\0132\033.JUB.Proto.Common.Bip44Path\022"
+  "\017\n\007chainID\030\002 \001(\t\022\022\n\nexpiration\030\003 \001(\t\022\030\n\020"
+  "referenceBlockId\030\004 \001(\t\022\032\n\022referenceBlock"
+  "Time\030\005 \001(\t\022\025\n\ractionsInJSON\030\006 \001(\t*O\n\024ENU"
+  "M_EOS_ACTION_TYPE\022\010\n\004XFER\020\000\022\010\n\004DELE\020\001\022\n\n"
+  "\006UNDELE\020\002\022\n\n\006BUYRAM\020\003\022\013\n\007SELLRAM\020\004B.\n\025co"
+  "m.jubiter.sdk.protoB\tEOSProtos\242\002\tEOSProt"
+  "osb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fEOS_2eproto_deps[1] = {
   &::descriptor_table_Jub_5fCommon_2eproto,
@@ -296,7 +298,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fEOS_2eproto_once;
 static bool descriptor_table_Jub_5fEOS_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fEOS_2eproto = {
-  &descriptor_table_Jub_5fEOS_2eproto_initialized, descriptor_table_protodef_Jub_5fEOS_2eproto, "Jub_EOS.proto", 1032,
+  &descriptor_table_Jub_5fEOS_2eproto_initialized, descriptor_table_protodef_Jub_5fEOS_2eproto, "Jub_EOS.proto", 1050,
   &descriptor_table_Jub_5fEOS_2eproto_once, descriptor_table_Jub_5fEOS_2eproto_sccs, descriptor_table_Jub_5fEOS_2eproto_deps, 7, 1,
   schemas, file_default_instances, TableStruct_Jub_5fEOS_2eproto::offsets,
   file_level_metadata_Jub_5fEOS_2eproto, 7, file_level_enum_descriptors_Jub_5fEOS_2eproto, file_level_service_descriptors_Jub_5fEOS_2eproto,
@@ -816,7 +818,9 @@ DelegateAction::DelegateAction(const DelegateAction& from)
   if (!from.cpu_qty().empty()) {
     cpu_qty_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.cpu_qty_);
   }
-  stake_ = from.stake_;
+  ::memcpy(&transfer_, &from.transfer_,
+    static_cast<size_t>(reinterpret_cast<char*>(&stake_) -
+    reinterpret_cast<char*>(&transfer_)) + sizeof(stake_));
   // @@protoc_insertion_point(copy_constructor:JUB.Proto.EOS.DelegateAction)
 }
 
@@ -826,7 +830,9 @@ void DelegateAction::SharedCtor() {
   receiver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   net_qty_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   cpu_qty_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  stake_ = false;
+  ::memset(&transfer_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&stake_) -
+      reinterpret_cast<char*>(&transfer_)) + sizeof(stake_));
 }
 
 DelegateAction::~DelegateAction() {
@@ -860,7 +866,9 @@ void DelegateAction::Clear() {
   receiver_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   net_qty_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   cpu_qty_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  stake_ = false;
+  ::memset(&transfer_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&stake_) -
+      reinterpret_cast<char*>(&transfer_)) + sizeof(stake_));
   _internal_metadata_.Clear();
 }
 
@@ -900,9 +908,16 @@ const char* DelegateAction::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool stake = 5;
+      // bool transfer = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          transfer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool stake = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
           stake_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -997,9 +1012,22 @@ bool DelegateAction::MergePartialFromCodedStream(
         break;
       }
 
-      // bool stake = 5;
+      // bool transfer = 5;
       case 5: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &transfer_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool stake = 6;
+      case 6: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
@@ -1077,9 +1105,14 @@ void DelegateAction::SerializeWithCachedSizes(
       4, this->cpu_qty(), output);
   }
 
-  // bool stake = 5;
+  // bool transfer = 5;
+  if (this->transfer() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(5, this->transfer(), output);
+  }
+
+  // bool stake = 6;
   if (this->stake() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(5, this->stake(), output);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(6, this->stake(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1139,9 +1172,14 @@ void DelegateAction::SerializeWithCachedSizes(
         4, this->cpu_qty(), target);
   }
 
-  // bool stake = 5;
+  // bool transfer = 5;
+  if (this->transfer() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->transfer(), target);
+  }
+
+  // bool stake = 6;
   if (this->stake() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->stake(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->stake(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1193,7 +1231,12 @@ size_t DelegateAction::ByteSizeLong() const {
         this->cpu_qty());
   }
 
-  // bool stake = 5;
+  // bool transfer = 5;
+  if (this->transfer() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool stake = 6;
   if (this->stake() != 0) {
     total_size += 1 + 1;
   }
@@ -1241,6 +1284,9 @@ void DelegateAction::MergeFrom(const DelegateAction& from) {
 
     cpu_qty_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.cpu_qty_);
   }
+  if (from.transfer() != 0) {
+    set_transfer(from.transfer());
+  }
   if (from.stake() != 0) {
     set_stake(from.stake());
   }
@@ -1275,6 +1321,7 @@ void DelegateAction::InternalSwap(DelegateAction* other) {
     GetArenaNoVirtual());
   cpu_qty_.Swap(&other->cpu_qty_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(transfer_, other->transfer_);
   swap(stake_, other->stake_);
 }
 

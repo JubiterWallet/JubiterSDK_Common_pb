@@ -82,7 +82,8 @@ class DelegateAction extends $pb.GeneratedMessage {
     ..aOS(2, 'receiver')
     ..aOS(3, 'netQty')
     ..aOS(4, 'cpuQty')
-    ..aOB(5, 'stake')
+    ..aOB(5, 'transfer')
+    ..aOB(6, 'stake')
     ..hasRequiredFields = false
   ;
 
@@ -138,13 +139,22 @@ class DelegateAction extends $pb.GeneratedMessage {
   void clearCpuQty() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get stake => $_getBF(4);
+  $core.bool get transfer => $_getBF(4);
   @$pb.TagNumber(5)
-  set stake($core.bool v) { $_setBool(4, v); }
+  set transfer($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasStake() => $_has(4);
+  $core.bool hasTransfer() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStake() => clearField(5);
+  void clearTransfer() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get stake => $_getBF(5);
+  @$pb.TagNumber(6)
+  set stake($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasStake() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearStake() => clearField(6);
 }
 
 class BuyRamAction extends $pb.GeneratedMessage {

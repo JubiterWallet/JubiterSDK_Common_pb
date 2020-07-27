@@ -174,6 +174,7 @@ typedef struct EOSProtosTransferAction__storage_ {
 @dynamic receiver;
 @dynamic netQty;
 @dynamic cpuQty;
+@dynamic transfer;
 @dynamic stake;
 
 typedef struct EOSProtosDelegateAction__storage_ {
@@ -227,11 +228,20 @@ typedef struct EOSProtosDelegateAction__storage_ {
         .dataType = GPBDataTypeString,
       },
       {
+        .name = "transfer",
+        .dataTypeSpecific.className = NULL,
+        .number = EOSProtosDelegateAction_FieldNumber_Transfer,
+        .hasIndex = 4,
+        .offset = 5,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeBool,
+      },
+      {
         .name = "stake",
         .dataTypeSpecific.className = NULL,
         .number = EOSProtosDelegateAction_FieldNumber_Stake,
-        .hasIndex = 4,
-        .offset = 5,  // Stored in _has_storage_ to save space.
+        .hasIndex = 6,
+        .offset = 7,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBool,
       },

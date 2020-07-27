@@ -419,7 +419,8 @@ class DelegateAction :
     kReceiverFieldNumber = 2,
     kNetQtyFieldNumber = 3,
     kCpuQtyFieldNumber = 4,
-    kStakeFieldNumber = 5,
+    kTransferFieldNumber = 5,
+    kStakeFieldNumber = 6,
   };
   // string from = 1;
   void clear_from();
@@ -465,7 +466,12 @@ class DelegateAction :
   std::string* release_cpu_qty();
   void set_allocated_cpu_qty(std::string* cpu_qty);
 
-  // bool stake = 5;
+  // bool transfer = 5;
+  void clear_transfer();
+  bool transfer() const;
+  void set_transfer(bool value);
+
+  // bool stake = 6;
   void clear_stake();
   bool stake() const;
   void set_stake(bool value);
@@ -479,6 +485,7 @@ class DelegateAction :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr receiver_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr net_qty_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cpu_qty_;
+  bool transfer_;
   bool stake_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fEOS_2eproto;
@@ -1774,7 +1781,21 @@ inline void DelegateAction::set_allocated_cpu_qty(std::string* cpu_qty) {
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.EOS.DelegateAction.cpu_qty)
 }
 
-// bool stake = 5;
+// bool transfer = 5;
+inline void DelegateAction::clear_transfer() {
+  transfer_ = false;
+}
+inline bool DelegateAction::transfer() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.EOS.DelegateAction.transfer)
+  return transfer_;
+}
+inline void DelegateAction::set_transfer(bool value) {
+  
+  transfer_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.EOS.DelegateAction.transfer)
+}
+
+// bool stake = 6;
 inline void DelegateAction::clear_stake() {
   stake_ = false;
 }
