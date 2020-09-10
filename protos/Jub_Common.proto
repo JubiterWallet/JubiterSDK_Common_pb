@@ -7,6 +7,24 @@ option java_package = "com.jubiter.sdk.proto";
 option java_outer_classname = "CommonProtos";
 option objc_class_prefix = "CommonProtos";
 
+// The communication of devices
+enum ENUM_COMMODE {
+    SWI = 0;
+    HID = 1;
+    BLE = 2;
+    NFC = 3;
+    COMMODE_NS_ITEM = 4;
+}
+
+// The product class
+enum ENUM_DEVICE {
+    VD    = 0;
+    BLADE = 1;
+    BIO   = 2;
+    LITE  = 3;
+    DEVICE_NS_ITEM = 4;
+}
+
 // Bip44_path
 // https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
 message Bip44Path {

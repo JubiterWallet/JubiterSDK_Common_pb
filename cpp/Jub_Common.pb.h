@@ -96,6 +96,62 @@ namespace JUB {
 namespace Proto {
 namespace Common {
 
+enum ENUM_COMMODE : int {
+  SWI = 0,
+  HID = 1,
+  BLE = 2,
+  NFC = 3,
+  COMMODE_NS_ITEM = 4,
+  ENUM_COMMODE_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ENUM_COMMODE_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ENUM_COMMODE_IsValid(int value);
+constexpr ENUM_COMMODE ENUM_COMMODE_MIN = SWI;
+constexpr ENUM_COMMODE ENUM_COMMODE_MAX = COMMODE_NS_ITEM;
+constexpr int ENUM_COMMODE_ARRAYSIZE = ENUM_COMMODE_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_COMMODE_descriptor();
+template<typename T>
+inline const std::string& ENUM_COMMODE_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ENUM_COMMODE>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ENUM_COMMODE_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ENUM_COMMODE_descriptor(), enum_t_value);
+}
+inline bool ENUM_COMMODE_Parse(
+    const std::string& name, ENUM_COMMODE* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_COMMODE>(
+    ENUM_COMMODE_descriptor(), name, value);
+}
+enum ENUM_DEVICE : int {
+  VD = 0,
+  BLADE = 1,
+  BIO = 2,
+  LITE = 3,
+  DEVICE_NS_ITEM = 4,
+  ENUM_DEVICE_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ENUM_DEVICE_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ENUM_DEVICE_IsValid(int value);
+constexpr ENUM_DEVICE ENUM_DEVICE_MIN = VD;
+constexpr ENUM_DEVICE ENUM_DEVICE_MAX = DEVICE_NS_ITEM;
+constexpr int ENUM_DEVICE_ARRAYSIZE = ENUM_DEVICE_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_DEVICE_descriptor();
+template<typename T>
+inline const std::string& ENUM_DEVICE_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ENUM_DEVICE>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ENUM_DEVICE_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ENUM_DEVICE_descriptor(), enum_t_value);
+}
+inline bool ENUM_DEVICE_Parse(
+    const std::string& name, ENUM_DEVICE* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_DEVICE>(
+    ENUM_DEVICE_descriptor(), name, value);
+}
 enum ENUM_GRAPHENE_ROLE : int {
   OWNER = 0,
   ACTIVE = 1,
@@ -1801,6 +1857,16 @@ ResultAny::value() const {
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_COMMODE> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_COMMODE>() {
+  return ::JUB::Proto::Common::ENUM_COMMODE_descriptor();
+}
+template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_DEVICE> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_DEVICE>() {
+  return ::JUB::Proto::Common::ENUM_DEVICE_descriptor();
+}
 template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE>() {

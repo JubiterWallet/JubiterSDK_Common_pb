@@ -9,6 +9,48 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class ENUM_COMMODE extends $pb.ProtobufEnum {
+  static const ENUM_COMMODE SWI = ENUM_COMMODE._(0, 'SWI');
+  static const ENUM_COMMODE HID = ENUM_COMMODE._(1, 'HID');
+  static const ENUM_COMMODE BLE = ENUM_COMMODE._(2, 'BLE');
+  static const ENUM_COMMODE NFC = ENUM_COMMODE._(3, 'NFC');
+  static const ENUM_COMMODE COMMODE_NS_ITEM = ENUM_COMMODE._(4, 'COMMODE_NS_ITEM');
+
+  static const $core.List<ENUM_COMMODE> values = <ENUM_COMMODE> [
+    SWI,
+    HID,
+    BLE,
+    NFC,
+    COMMODE_NS_ITEM,
+  ];
+
+  static final $core.Map<$core.int, ENUM_COMMODE> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ENUM_COMMODE valueOf($core.int value) => _byValue[value];
+
+  const ENUM_COMMODE._($core.int v, $core.String n) : super(v, n);
+}
+
+class ENUM_DEVICE extends $pb.ProtobufEnum {
+  static const ENUM_DEVICE VD = ENUM_DEVICE._(0, 'VD');
+  static const ENUM_DEVICE BLADE = ENUM_DEVICE._(1, 'BLADE');
+  static const ENUM_DEVICE BIO = ENUM_DEVICE._(2, 'BIO');
+  static const ENUM_DEVICE LITE = ENUM_DEVICE._(3, 'LITE');
+  static const ENUM_DEVICE DEVICE_NS_ITEM = ENUM_DEVICE._(4, 'DEVICE_NS_ITEM');
+
+  static const $core.List<ENUM_DEVICE> values = <ENUM_DEVICE> [
+    VD,
+    BLADE,
+    BIO,
+    LITE,
+    DEVICE_NS_ITEM,
+  ];
+
+  static final $core.Map<$core.int, ENUM_DEVICE> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ENUM_DEVICE valueOf($core.int value) => _byValue[value];
+
+  const ENUM_DEVICE._($core.int v, $core.String n) : super(v, n);
+}
+
 class ENUM_GRAPHENE_ROLE extends $pb.ProtobufEnum {
   static const ENUM_GRAPHENE_ROLE OWNER = ENUM_GRAPHENE_ROLE._(0, 'OWNER');
   static const ENUM_GRAPHENE_ROLE ACTIVE = ENUM_GRAPHENE_ROLE._(1, 'ACTIVE');

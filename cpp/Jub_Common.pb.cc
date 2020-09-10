@@ -150,7 +150,7 @@ static void InitDefaultsscc_info_Slip48Path_Jub_5fCommon_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Slip48Path_Jub_5fCommon_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fCommon_2eproto[7];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Jub_5fCommon_2eproto[4];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Jub_5fCommon_2eproto[6];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Jub_5fCommon_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fCommon_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -244,14 +244,17 @@ const char descriptor_table_protodef_Jub_5fCommon_2eproto[] PROTOBUF_SECTION_VAR
   "\005value\030\002 \001(\r\"1\n\014ResultString\022\022\n\nstate_co"
   "de\030\001 \001(\004\022\r\n\005value\030\002 \001(\t\"D\n\tResultAny\022\022\n\n"
   "state_code\030\001 \001(\004\022#\n\005value\030\002 \003(\0132\024.google"
-  ".protobuf.Any*+\n\022ENUM_GRAPHENE_ROLE\022\t\n\005O"
-  "WNER\020\000\022\n\n\006ACTIVE\020\001*K\n\026ENUM_MNEMONIC_STRE"
-  "NGTH\022\017\n\013STRENGTH128\020\000\022\017\n\013STRENGTH192\020\001\022\017"
-  "\n\013STRENGTH256\020\002*3\n\006CURVES\022\r\n\tSECP256K1\020\000"
-  "\022\013\n\007ED25519\020\001\022\r\n\tNIST256P1\020\002*$\n\017ENUM_PUB"
-  "_FORMAT\022\007\n\003HEX\020\000\022\010\n\004XPUB\020\001B4\n\025com.jubite"
-  "r.sdk.protoB\014CommonProtos\242\002\014CommonProtos"
-  "b\006proto3"
+  ".protobuf.Any*G\n\014ENUM_COMMODE\022\007\n\003SWI\020\000\022\007"
+  "\n\003HID\020\001\022\007\n\003BLE\020\002\022\007\n\003NFC\020\003\022\023\n\017COMMODE_NS_"
+  "ITEM\020\004*G\n\013ENUM_DEVICE\022\006\n\002VD\020\000\022\t\n\005BLADE\020\001"
+  "\022\007\n\003BIO\020\002\022\010\n\004LITE\020\003\022\022\n\016DEVICE_NS_ITEM\020\004*"
+  "+\n\022ENUM_GRAPHENE_ROLE\022\t\n\005OWNER\020\000\022\n\n\006ACTI"
+  "VE\020\001*K\n\026ENUM_MNEMONIC_STRENGTH\022\017\n\013STRENG"
+  "TH128\020\000\022\017\n\013STRENGTH192\020\001\022\017\n\013STRENGTH256\020"
+  "\002*3\n\006CURVES\022\r\n\tSECP256K1\020\000\022\013\n\007ED25519\020\001\022"
+  "\r\n\tNIST256P1\020\002*$\n\017ENUM_PUB_FORMAT\022\007\n\003HEX"
+  "\020\000\022\010\n\004XPUB\020\001B4\n\025com.jubiter.sdk.protoB\014C"
+  "ommonProtos\242\002\014CommonProtosb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fCommon_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fany_2eproto,
@@ -268,7 +271,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fCommon_2eproto_once;
 static bool descriptor_table_Jub_5fCommon_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fCommon_2eproto = {
-  &descriptor_table_Jub_5fCommon_2eproto_initialized, descriptor_table_protodef_Jub_5fCommon_2eproto, "Jub_Common.proto", 848,
+  &descriptor_table_Jub_5fCommon_2eproto_initialized, descriptor_table_protodef_Jub_5fCommon_2eproto, "Jub_Common.proto", 994,
   &descriptor_table_Jub_5fCommon_2eproto_once, descriptor_table_Jub_5fCommon_2eproto_sccs, descriptor_table_Jub_5fCommon_2eproto_deps, 7, 1,
   schemas, file_default_instances, TableStruct_Jub_5fCommon_2eproto::offsets,
   file_level_metadata_Jub_5fCommon_2eproto, 7, file_level_enum_descriptors_Jub_5fCommon_2eproto, file_level_service_descriptors_Jub_5fCommon_2eproto,
@@ -279,9 +282,43 @@ static bool dynamic_init_dummy_Jub_5fCommon_2eproto = (  ::PROTOBUF_NAMESPACE_ID
 namespace JUB {
 namespace Proto {
 namespace Common {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_GRAPHENE_ROLE_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_COMMODE_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
   return file_level_enum_descriptors_Jub_5fCommon_2eproto[0];
+}
+bool ENUM_COMMODE_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_DEVICE_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[1];
+}
+bool ENUM_DEVICE_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_GRAPHENE_ROLE_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[2];
 }
 bool ENUM_GRAPHENE_ROLE_IsValid(int value) {
   switch (value) {
@@ -295,7 +332,7 @@ bool ENUM_GRAPHENE_ROLE_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_MNEMONIC_STRENGTH_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
-  return file_level_enum_descriptors_Jub_5fCommon_2eproto[1];
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[3];
 }
 bool ENUM_MNEMONIC_STRENGTH_IsValid(int value) {
   switch (value) {
@@ -310,7 +347,7 @@ bool ENUM_MNEMONIC_STRENGTH_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CURVES_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
-  return file_level_enum_descriptors_Jub_5fCommon_2eproto[2];
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[4];
 }
 bool CURVES_IsValid(int value) {
   switch (value) {
@@ -325,7 +362,7 @@ bool CURVES_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_PUB_FORMAT_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
-  return file_level_enum_descriptors_Jub_5fCommon_2eproto[3];
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[5];
 }
 bool ENUM_PUB_FORMAT_IsValid(int value) {
   switch (value) {

@@ -19,6 +19,112 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
+/// The communication of devices
+public enum JUB_Proto_Common_ENUM_COMMODE: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
+  case swi // = 0
+  case hid // = 1
+  case ble // = 2
+  case nfc // = 3
+  case commodeNsItem // = 4
+  case UNRECOGNIZED(Int)
+
+  public init() {
+    self = .swi
+  }
+
+  public init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .swi
+    case 1: self = .hid
+    case 2: self = .ble
+    case 3: self = .nfc
+    case 4: self = .commodeNsItem
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  public var rawValue: Int {
+    switch self {
+    case .swi: return 0
+    case .hid: return 1
+    case .ble: return 2
+    case .nfc: return 3
+    case .commodeNsItem: return 4
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension JUB_Proto_Common_ENUM_COMMODE: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [JUB_Proto_Common_ENUM_COMMODE] = [
+    .swi,
+    .hid,
+    .ble,
+    .nfc,
+    .commodeNsItem,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
+/// The product class
+public enum JUB_Proto_Common_ENUM_DEVICE: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
+  case vd // = 0
+  case blade // = 1
+  case bio // = 2
+  case lite // = 3
+  case deviceNsItem // = 4
+  case UNRECOGNIZED(Int)
+
+  public init() {
+    self = .vd
+  }
+
+  public init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .vd
+    case 1: self = .blade
+    case 2: self = .bio
+    case 3: self = .lite
+    case 4: self = .deviceNsItem
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  public var rawValue: Int {
+    switch self {
+    case .vd: return 0
+    case .blade: return 1
+    case .bio: return 2
+    case .lite: return 3
+    case .deviceNsItem: return 4
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension JUB_Proto_Common_ENUM_DEVICE: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [JUB_Proto_Common_ENUM_DEVICE] = [
+    .vd,
+    .blade,
+    .bio,
+    .lite,
+    .deviceNsItem,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
 /// Graphene role
 public enum JUB_Proto_Common_ENUM_GRAPHENE_ROLE: SwiftProtobuf.Enum {
   public typealias RawValue = Int
@@ -309,6 +415,26 @@ public struct JUB_Proto_Common_ResultAny {
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "JUB.Proto.Common"
+
+extension JUB_Proto_Common_ENUM_COMMODE: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "SWI"),
+    1: .same(proto: "HID"),
+    2: .same(proto: "BLE"),
+    3: .same(proto: "NFC"),
+    4: .same(proto: "COMMODE_NS_ITEM"),
+  ]
+}
+
+extension JUB_Proto_Common_ENUM_DEVICE: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "VD"),
+    1: .same(proto: "BLADE"),
+    2: .same(proto: "BIO"),
+    3: .same(proto: "LITE"),
+    4: .same(proto: "DEVICE_NS_ITEM"),
+  ]
+}
 
 extension JUB_Proto_Common_ENUM_GRAPHENE_ROLE: SwiftProtobuf._ProtoNameProviding {
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [

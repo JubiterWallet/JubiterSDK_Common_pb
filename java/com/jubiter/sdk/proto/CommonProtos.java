@@ -16,6 +16,264 @@ public final class CommonProtos {
   }
   /**
    * <pre>
+   * The communication of devices
+   * </pre>
+   *
+   * Protobuf enum {@code JUB.Proto.Common.ENUM_COMMODE}
+   */
+  public enum ENUM_COMMODE
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SWI = 0;</code>
+     */
+    SWI(0),
+    /**
+     * <code>HID = 1;</code>
+     */
+    HID(1),
+    /**
+     * <code>BLE = 2;</code>
+     */
+    BLE(2),
+    /**
+     * <code>NFC = 3;</code>
+     */
+    NFC(3),
+    /**
+     * <code>COMMODE_NS_ITEM = 4;</code>
+     */
+    COMMODE_NS_ITEM(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SWI = 0;</code>
+     */
+    public static final int SWI_VALUE = 0;
+    /**
+     * <code>HID = 1;</code>
+     */
+    public static final int HID_VALUE = 1;
+    /**
+     * <code>BLE = 2;</code>
+     */
+    public static final int BLE_VALUE = 2;
+    /**
+     * <code>NFC = 3;</code>
+     */
+    public static final int NFC_VALUE = 3;
+    /**
+     * <code>COMMODE_NS_ITEM = 4;</code>
+     */
+    public static final int COMMODE_NS_ITEM_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ENUM_COMMODE valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ENUM_COMMODE forNumber(int value) {
+      switch (value) {
+        case 0: return SWI;
+        case 1: return HID;
+        case 2: return BLE;
+        case 3: return NFC;
+        case 4: return COMMODE_NS_ITEM;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ENUM_COMMODE>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ENUM_COMMODE> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ENUM_COMMODE>() {
+            public ENUM_COMMODE findValueByNumber(int number) {
+              return ENUM_COMMODE.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ENUM_COMMODE[] VALUES = values();
+
+    public static ENUM_COMMODE valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ENUM_COMMODE(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:JUB.Proto.Common.ENUM_COMMODE)
+  }
+
+  /**
+   * <pre>
+   * The product class
+   * </pre>
+   *
+   * Protobuf enum {@code JUB.Proto.Common.ENUM_DEVICE}
+   */
+  public enum ENUM_DEVICE
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>VD = 0;</code>
+     */
+    VD(0),
+    /**
+     * <code>BLADE = 1;</code>
+     */
+    BLADE(1),
+    /**
+     * <code>BIO = 2;</code>
+     */
+    BIO(2),
+    /**
+     * <code>LITE = 3;</code>
+     */
+    LITE(3),
+    /**
+     * <code>DEVICE_NS_ITEM = 4;</code>
+     */
+    DEVICE_NS_ITEM(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>VD = 0;</code>
+     */
+    public static final int VD_VALUE = 0;
+    /**
+     * <code>BLADE = 1;</code>
+     */
+    public static final int BLADE_VALUE = 1;
+    /**
+     * <code>BIO = 2;</code>
+     */
+    public static final int BIO_VALUE = 2;
+    /**
+     * <code>LITE = 3;</code>
+     */
+    public static final int LITE_VALUE = 3;
+    /**
+     * <code>DEVICE_NS_ITEM = 4;</code>
+     */
+    public static final int DEVICE_NS_ITEM_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ENUM_DEVICE valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ENUM_DEVICE forNumber(int value) {
+      switch (value) {
+        case 0: return VD;
+        case 1: return BLADE;
+        case 2: return BIO;
+        case 3: return LITE;
+        case 4: return DEVICE_NS_ITEM;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ENUM_DEVICE>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ENUM_DEVICE> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ENUM_DEVICE>() {
+            public ENUM_DEVICE findValueByNumber(int number) {
+              return ENUM_DEVICE.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ENUM_DEVICE[] VALUES = values();
+
+    public static ENUM_DEVICE valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ENUM_DEVICE(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:JUB.Proto.Common.ENUM_DEVICE)
+  }
+
+  /**
+   * <pre>
    * Graphene role
    * </pre>
    *
@@ -90,7 +348,7 @@ public final class CommonProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(0);
+      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final ENUM_GRAPHENE_ROLE[] VALUES = values();
@@ -201,7 +459,7 @@ public final class CommonProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(1);
+      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final ENUM_MNEMONIC_STRENGTH[] VALUES = values();
@@ -312,7 +570,7 @@ public final class CommonProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(2);
+      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final CURVES[] VALUES = values();
@@ -410,7 +668,7 @@ public final class CommonProtos {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(3);
+      return com.jubiter.sdk.proto.CommonProtos.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final ENUM_PUB_FORMAT[] VALUES = values();
@@ -5448,14 +5706,17 @@ public final class CommonProtos {
       "\005value\030\002 \001(\r\"1\n\014ResultString\022\022\n\nstate_co" +
       "de\030\001 \001(\004\022\r\n\005value\030\002 \001(\t\"D\n\tResultAny\022\022\n\n" +
       "state_code\030\001 \001(\004\022#\n\005value\030\002 \003(\0132\024.google" +
-      ".protobuf.Any*+\n\022ENUM_GRAPHENE_ROLE\022\t\n\005O" +
-      "WNER\020\000\022\n\n\006ACTIVE\020\001*K\n\026ENUM_MNEMONIC_STRE" +
-      "NGTH\022\017\n\013STRENGTH128\020\000\022\017\n\013STRENGTH192\020\001\022\017" +
-      "\n\013STRENGTH256\020\002*3\n\006CURVES\022\r\n\tSECP256K1\020\000" +
-      "\022\013\n\007ED25519\020\001\022\r\n\tNIST256P1\020\002*$\n\017ENUM_PUB" +
-      "_FORMAT\022\007\n\003HEX\020\000\022\010\n\004XPUB\020\001B4\n\025com.jubite" +
-      "r.sdk.protoB\014CommonProtos\242\002\014CommonProtos" +
-      "b\006proto3"
+      ".protobuf.Any*G\n\014ENUM_COMMODE\022\007\n\003SWI\020\000\022\007" +
+      "\n\003HID\020\001\022\007\n\003BLE\020\002\022\007\n\003NFC\020\003\022\023\n\017COMMODE_NS_" +
+      "ITEM\020\004*G\n\013ENUM_DEVICE\022\006\n\002VD\020\000\022\t\n\005BLADE\020\001" +
+      "\022\007\n\003BIO\020\002\022\010\n\004LITE\020\003\022\022\n\016DEVICE_NS_ITEM\020\004*" +
+      "+\n\022ENUM_GRAPHENE_ROLE\022\t\n\005OWNER\020\000\022\n\n\006ACTI" +
+      "VE\020\001*K\n\026ENUM_MNEMONIC_STRENGTH\022\017\n\013STRENG" +
+      "TH128\020\000\022\017\n\013STRENGTH192\020\001\022\017\n\013STRENGTH256\020" +
+      "\002*3\n\006CURVES\022\r\n\tSECP256K1\020\000\022\013\n\007ED25519\020\001\022" +
+      "\r\n\tNIST256P1\020\002*$\n\017ENUM_PUB_FORMAT\022\007\n\003HEX" +
+      "\020\000\022\010\n\004XPUB\020\001B4\n\025com.jubiter.sdk.protoB\014C" +
+      "ommonProtos\242\002\014CommonProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

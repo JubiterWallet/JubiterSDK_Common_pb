@@ -5,6 +5,28 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+const ENUM_COMMODE$json = const {
+  '1': 'ENUM_COMMODE',
+  '2': const [
+    const {'1': 'SWI', '2': 0},
+    const {'1': 'HID', '2': 1},
+    const {'1': 'BLE', '2': 2},
+    const {'1': 'NFC', '2': 3},
+    const {'1': 'COMMODE_NS_ITEM', '2': 4},
+  ],
+};
+
+const ENUM_DEVICE$json = const {
+  '1': 'ENUM_DEVICE',
+  '2': const [
+    const {'1': 'VD', '2': 0},
+    const {'1': 'BLADE', '2': 1},
+    const {'1': 'BIO', '2': 2},
+    const {'1': 'LITE', '2': 3},
+    const {'1': 'DEVICE_NS_ITEM', '2': 4},
+  ],
+};
+
 const ENUM_GRAPHENE_ROLE$json = const {
   '1': 'ENUM_GRAPHENE_ROLE',
   '2': const [

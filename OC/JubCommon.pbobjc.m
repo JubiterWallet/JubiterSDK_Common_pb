@@ -45,6 +45,88 @@ static GPBFileDescriptor *CommonProtosJubCommonRoot_FileDescriptor(void) {
   return descriptor;
 }
 
+#pragma mark - Enum CommonProtosENUM_COMMODE
+
+GPBEnumDescriptor *CommonProtosENUM_COMMODE_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Swi\000Hid\000Ble\000Nfc\000CommodeNsItem\000";
+    static const int32_t values[] = {
+        CommonProtosENUM_COMMODE_Swi,
+        CommonProtosENUM_COMMODE_Hid,
+        CommonProtosENUM_COMMODE_Ble,
+        CommonProtosENUM_COMMODE_Nfc,
+        CommonProtosENUM_COMMODE_CommodeNsItem,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CommonProtosENUM_COMMODE)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:CommonProtosENUM_COMMODE_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL CommonProtosENUM_COMMODE_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case CommonProtosENUM_COMMODE_Swi:
+    case CommonProtosENUM_COMMODE_Hid:
+    case CommonProtosENUM_COMMODE_Ble:
+    case CommonProtosENUM_COMMODE_Nfc:
+    case CommonProtosENUM_COMMODE_CommodeNsItem:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
+#pragma mark - Enum CommonProtosENUM_DEVICE
+
+GPBEnumDescriptor *CommonProtosENUM_DEVICE_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "Vd\000Blade\000Bio\000Lite\000DeviceNsItem\000";
+    static const int32_t values[] = {
+        CommonProtosENUM_DEVICE_Vd,
+        CommonProtosENUM_DEVICE_Blade,
+        CommonProtosENUM_DEVICE_Bio,
+        CommonProtosENUM_DEVICE_Lite,
+        CommonProtosENUM_DEVICE_DeviceNsItem,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CommonProtosENUM_DEVICE)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:CommonProtosENUM_DEVICE_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL CommonProtosENUM_DEVICE_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case CommonProtosENUM_DEVICE_Vd:
+    case CommonProtosENUM_DEVICE_Blade:
+    case CommonProtosENUM_DEVICE_Bio:
+    case CommonProtosENUM_DEVICE_Lite:
+    case CommonProtosENUM_DEVICE_DeviceNsItem:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - Enum CommonProtosENUM_GRAPHENE_ROLE
 
 GPBEnumDescriptor *CommonProtosENUM_GRAPHENE_ROLE_EnumDescriptor(void) {

@@ -31,6 +31,56 @@ CF_EXTERN_C_BEGIN
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark - Enum CommonProtosENUM_COMMODE
+
+/** The communication of devices */
+typedef GPB_ENUM(CommonProtosENUM_COMMODE) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  CommonProtosENUM_COMMODE_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  CommonProtosENUM_COMMODE_Swi = 0,
+  CommonProtosENUM_COMMODE_Hid = 1,
+  CommonProtosENUM_COMMODE_Ble = 2,
+  CommonProtosENUM_COMMODE_Nfc = 3,
+  CommonProtosENUM_COMMODE_CommodeNsItem = 4,
+};
+
+GPBEnumDescriptor *CommonProtosENUM_COMMODE_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL CommonProtosENUM_COMMODE_IsValidValue(int32_t value);
+
+#pragma mark - Enum CommonProtosENUM_DEVICE
+
+/** The product class */
+typedef GPB_ENUM(CommonProtosENUM_DEVICE) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  CommonProtosENUM_DEVICE_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  CommonProtosENUM_DEVICE_Vd = 0,
+  CommonProtosENUM_DEVICE_Blade = 1,
+  CommonProtosENUM_DEVICE_Bio = 2,
+  CommonProtosENUM_DEVICE_Lite = 3,
+  CommonProtosENUM_DEVICE_DeviceNsItem = 4,
+};
+
+GPBEnumDescriptor *CommonProtosENUM_DEVICE_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL CommonProtosENUM_DEVICE_IsValidValue(int32_t value);
+
 #pragma mark - Enum CommonProtosENUM_GRAPHENE_ROLE
 
 /** Graphene role */
