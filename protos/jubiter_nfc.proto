@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+option java_package = "com.jubiter.plugin.protos";
+option java_outer_classname = "JuBiterNfcProtos";
+option objc_class_prefix = "JuBiterNfcProtos";
+
+// Wrapper message for `int32`.
+//
+// Allows for nullability of fields in messages
+//message Int32Value {
+//    // The int32 value.
+//    int32 value = 1;
+//}
+
+message NfcRootKeyStatus {
+    enum Status {
+        HAS_PIN = 0;
+        RESETTED = 2;
+        HAS_ROOT_KEY = 90;
+    };
+    Status status = 1;
+}
+
+message NfcState {
+    enum State {
+        UNKNOWN = 0;
+        ON = 1;
+        OFF = 2;
+    };
+    State state = 1;
+}
+
+message NfcScanResult {
+    NfcDevice device = 1; // The received peer's ID.
+}
+
+message NfcConnectRequest {
+    string remote_name = 1;
+    string remote_id = 2;  // mac or uuid
+    int32 timeout = 3;
+    bool android_auto_connect = 4;  // unused
+}
+
+message NfcDevice {
+    enum Type {
+        NFC = 0;
+    };
+
+    string remote_id = 1; // mac or uuid
+    string name = 2;
+    Type type = 3;
+}
+
+message NfcDeviceStateResponse {
+    enum NfcDeviceState {
+        DISCONNECTED = 0;
+        CONNECTED = 1;
+    }
+    string remote_id = 1;
+    NfcDeviceState state = 2;
+    int32 deviceID = 3;
+}
+
+message NfcConnectedResponse {
+    repeated NfcDevice devices = 1;
+}
