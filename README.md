@@ -6,10 +6,7 @@
 > ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/common.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/shield_contract.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/vote_asset_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --cpp_out=./cpp/Tron/protocol protos/Tron/protocol/core/contract/witness_contract.proto
 
 
 ### Java
@@ -22,10 +19,7 @@
 > ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/common.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/asset_issue_contract.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/balance_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/shield_contract.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/smart_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/vote_asset_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --java_out=./java/Tron protos/Tron/protocol/core/contract/witness_contract.proto
 
 
 ### Swift
@@ -38,10 +32,7 @@
 > ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/common.proto --swift_opt=Visibility=Public
 > ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto --swift_opt=Visibility=Public
 > ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto --swift_opt=Visibility=Public
-> ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/shield_contract.proto --swift_opt=Visibility=Public
 > ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto --swift_opt=Visibility=Public
-> ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/vote_asset_contract.proto --swift_opt=Visibility=Public
-> ✗ protoc --proto_path=./protos/Tron/protocol --swift_out=./swift/Tron/protocol protos/Tron/protocol/core/contract/witness_contract.proto --swift_opt=Visibility=Public
 
 
 ### Objective-C
@@ -52,10 +43,7 @@
 > ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/common.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/shield_contract.proto
 > ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/vote_asset_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/witness_contract.proto
 
 
 ### dart
@@ -69,7 +57,4 @@
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/common.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
-> ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/shield_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
-> ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/vote_asset_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
-> ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/witness_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
