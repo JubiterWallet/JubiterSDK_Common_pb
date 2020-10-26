@@ -25,6 +25,16 @@ enum ENUM_DEVICE {
     DEVICE_NS_ITEM = 4;
 }
 
+// for NFC
+message RootKeyStatus {
+    enum Status {
+        HAS_PIN = 0;
+        RESETTED = 2;
+        HAS_ROOT_KEY = 90;
+    };
+    Status status = 1;
+}
+
 // Bip44_path
 // https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
 message Bip44Path {

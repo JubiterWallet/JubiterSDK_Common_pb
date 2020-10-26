@@ -5,23 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-const NfcRootKeyStatus$json = const {
-  '1': 'NfcRootKeyStatus',
-  '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.NfcRootKeyStatus.Status', '10': 'status'},
-  ],
-  '4': const [NfcRootKeyStatus_Status$json],
-};
-
-const NfcRootKeyStatus_Status$json = const {
-  '1': 'Status',
-  '2': const [
-    const {'1': 'HAS_PIN', '2': 0},
-    const {'1': 'RESETTED', '2': 2},
-    const {'1': 'HAS_ROOT_KEY', '2': 90},
-  ],
-};
-
 const NfcState$json = const {
   '1': 'NfcState',
   '2': const [

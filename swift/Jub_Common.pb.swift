@@ -296,6 +296,63 @@ extension JUB_Proto_Common_ENUM_PUB_FORMAT: CaseIterable {
 
 #endif  // swift(>=4.2)
 
+/// for NFC
+public struct JUB_Proto_Common_RootKeyStatus {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var status: JUB_Proto_Common_RootKeyStatus.Status = .hasPin
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public enum Status: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
+    case hasPin // = 0
+    case resetted // = 2
+    case hasRootKey // = 90
+    case UNRECOGNIZED(Int)
+
+    public init() {
+      self = .hasPin
+    }
+
+    public init?(rawValue: Int) {
+      switch rawValue {
+      case 0: self = .hasPin
+      case 2: self = .resetted
+      case 90: self = .hasRootKey
+      default: self = .UNRECOGNIZED(rawValue)
+      }
+    }
+
+    public var rawValue: Int {
+      switch self {
+      case .hasPin: return 0
+      case .resetted: return 2
+      case .hasRootKey: return 90
+      case .UNRECOGNIZED(let i): return i
+      }
+    }
+
+  }
+
+  public init() {}
+}
+
+#if swift(>=4.2)
+
+extension JUB_Proto_Common_RootKeyStatus.Status: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [JUB_Proto_Common_RootKeyStatus.Status] = [
+    .hasPin,
+    .resetted,
+    .hasRootKey,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
 /// Bip44_path
 /// https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
 public struct JUB_Proto_Common_Bip44Path {
@@ -463,6 +520,43 @@ extension JUB_Proto_Common_ENUM_PUB_FORMAT: SwiftProtobuf._ProtoNameProviding {
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "HEX"),
     1: .same(proto: "XPUB"),
+  ]
+}
+
+extension JUB_Proto_Common_RootKeyStatus: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".RootKeyStatus"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "status"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeSingularEnumField(value: &self.status)
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.status != .hasPin {
+      try visitor.visitSingularEnumField(value: self.status, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: JUB_Proto_Common_RootKeyStatus, rhs: JUB_Proto_Common_RootKeyStatus) -> Bool {
+    if lhs.status != rhs.status {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension JUB_Proto_Common_RootKeyStatus.Status: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "HAS_PIN"),
+    2: .same(proto: "RESETTED"),
+    90: .same(proto: "HAS_ROOT_KEY"),
   ]
 }
 

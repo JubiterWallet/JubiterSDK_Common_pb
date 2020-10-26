@@ -19,62 +19,6 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-public struct NfcRootKeyStatus {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var status: NfcRootKeyStatus.Status = .hasPin
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public enum Status: SwiftProtobuf.Enum {
-    public typealias RawValue = Int
-    case hasPin // = 0
-    case resetted // = 2
-    case hasRootKey // = 90
-    case UNRECOGNIZED(Int)
-
-    public init() {
-      self = .hasPin
-    }
-
-    public init?(rawValue: Int) {
-      switch rawValue {
-      case 0: self = .hasPin
-      case 2: self = .resetted
-      case 90: self = .hasRootKey
-      default: self = .UNRECOGNIZED(rawValue)
-      }
-    }
-
-    public var rawValue: Int {
-      switch self {
-      case .hasPin: return 0
-      case .resetted: return 2
-      case .hasRootKey: return 90
-      case .UNRECOGNIZED(let i): return i
-      }
-    }
-
-  }
-
-  public init() {}
-}
-
-#if swift(>=4.2)
-
-extension NfcRootKeyStatus.Status: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [NfcRootKeyStatus.Status] = [
-    .hasPin,
-    .resetted,
-    .hasRootKey,
-  ]
-}
-
-#endif  // swift(>=4.2)
-
 public struct NfcState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -295,43 +239,6 @@ public struct NfcConnectedResponse {
 }
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
-
-extension NfcRootKeyStatus: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = "NfcRootKeyStatus"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "status"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      switch fieldNumber {
-      case 1: try decoder.decodeSingularEnumField(value: &self.status)
-      default: break
-      }
-    }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.status != .hasPin {
-      try visitor.visitSingularEnumField(value: self.status, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: NfcRootKeyStatus, rhs: NfcRootKeyStatus) -> Bool {
-    if lhs.status != rhs.status {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension NfcRootKeyStatus.Status: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "HAS_PIN"),
-    2: .same(proto: "RESETTED"),
-    90: .same(proto: "HAS_ROOT_KEY"),
-  ]
-}
 
 extension NfcState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = "NfcState"

@@ -115,3 +115,20 @@ class ENUM_PUB_FORMAT extends $pb.ProtobufEnum {
   const ENUM_PUB_FORMAT._($core.int v, $core.String n) : super(v, n);
 }
 
+class RootKeyStatus_Status extends $pb.ProtobufEnum {
+  static const RootKeyStatus_Status HAS_PIN = RootKeyStatus_Status._(0, 'HAS_PIN');
+  static const RootKeyStatus_Status RESETTED = RootKeyStatus_Status._(2, 'RESETTED');
+  static const RootKeyStatus_Status HAS_ROOT_KEY = RootKeyStatus_Status._(90, 'HAS_ROOT_KEY');
+
+  static const $core.List<RootKeyStatus_Status> values = <RootKeyStatus_Status> [
+    HAS_PIN,
+    RESETTED,
+    HAS_ROOT_KEY,
+  ];
+
+  static final $core.Map<$core.int, RootKeyStatus_Status> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static RootKeyStatus_Status valueOf($core.int value) => _byValue[value];
+
+  const RootKeyStatus_Status._($core.int v, $core.String n) : super(v, n);
+}
+

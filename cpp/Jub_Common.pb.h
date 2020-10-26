@@ -49,7 +49,7 @@ struct TableStruct_Jub_5fCommon_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[8]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -77,6 +77,9 @@ extern ResultIntDefaultTypeInternal _ResultInt_default_instance_;
 class ResultString;
 class ResultStringDefaultTypeInternal;
 extern ResultStringDefaultTypeInternal _ResultString_default_instance_;
+class RootKeyStatus;
+class RootKeyStatusDefaultTypeInternal;
+extern RootKeyStatusDefaultTypeInternal _RootKeyStatus_default_instance_;
 class Slip48Path;
 class Slip48PathDefaultTypeInternal;
 extern Slip48PathDefaultTypeInternal _Slip48Path_default_instance_;
@@ -90,12 +93,39 @@ template<> ::JUB::Proto::Common::DeviceInfo* Arena::CreateMaybeMessage<::JUB::Pr
 template<> ::JUB::Proto::Common::ResultAny* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultAny>(Arena*);
 template<> ::JUB::Proto::Common::ResultInt* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultInt>(Arena*);
 template<> ::JUB::Proto::Common::ResultString* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultString>(Arena*);
+template<> ::JUB::Proto::Common::RootKeyStatus* Arena::CreateMaybeMessage<::JUB::Proto::Common::RootKeyStatus>(Arena*);
 template<> ::JUB::Proto::Common::Slip48Path* Arena::CreateMaybeMessage<::JUB::Proto::Common::Slip48Path>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
 namespace Proto {
 namespace Common {
 
+enum RootKeyStatus_Status : int {
+  RootKeyStatus_Status_HAS_PIN = 0,
+  RootKeyStatus_Status_RESETTED = 2,
+  RootKeyStatus_Status_HAS_ROOT_KEY = 90,
+  RootKeyStatus_Status_RootKeyStatus_Status_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  RootKeyStatus_Status_RootKeyStatus_Status_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool RootKeyStatus_Status_IsValid(int value);
+constexpr RootKeyStatus_Status RootKeyStatus_Status_Status_MIN = RootKeyStatus_Status_HAS_PIN;
+constexpr RootKeyStatus_Status RootKeyStatus_Status_Status_MAX = RootKeyStatus_Status_HAS_ROOT_KEY;
+constexpr int RootKeyStatus_Status_Status_ARRAYSIZE = RootKeyStatus_Status_Status_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* RootKeyStatus_Status_descriptor();
+template<typename T>
+inline const std::string& RootKeyStatus_Status_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, RootKeyStatus_Status>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function RootKeyStatus_Status_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    RootKeyStatus_Status_descriptor(), enum_t_value);
+}
+inline bool RootKeyStatus_Status_Parse(
+    const std::string& name, RootKeyStatus_Status* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<RootKeyStatus_Status>(
+    RootKeyStatus_Status_descriptor(), name, value);
+}
 enum ENUM_COMMODE : int {
   SWI = 0,
   HID = 1,
@@ -256,6 +286,169 @@ inline bool ENUM_PUB_FORMAT_Parse(
 }
 // ===================================================================
 
+class RootKeyStatus :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.RootKeyStatus) */ {
+ public:
+  RootKeyStatus();
+  virtual ~RootKeyStatus();
+
+  RootKeyStatus(const RootKeyStatus& from);
+  RootKeyStatus(RootKeyStatus&& from) noexcept
+    : RootKeyStatus() {
+    *this = ::std::move(from);
+  }
+
+  inline RootKeyStatus& operator=(const RootKeyStatus& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RootKeyStatus& operator=(RootKeyStatus&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const RootKeyStatus& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RootKeyStatus* internal_default_instance() {
+    return reinterpret_cast<const RootKeyStatus*>(
+               &_RootKeyStatus_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(RootKeyStatus& a, RootKeyStatus& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RootKeyStatus* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RootKeyStatus* New() const final {
+    return CreateMaybeMessage<RootKeyStatus>(nullptr);
+  }
+
+  RootKeyStatus* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RootKeyStatus>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const RootKeyStatus& from);
+  void MergeFrom(const RootKeyStatus& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RootKeyStatus* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Common.RootKeyStatus";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fCommon_2eproto);
+    return ::descriptor_table_Jub_5fCommon_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef RootKeyStatus_Status Status;
+  static constexpr Status HAS_PIN =
+    RootKeyStatus_Status_HAS_PIN;
+  static constexpr Status RESETTED =
+    RootKeyStatus_Status_RESETTED;
+  static constexpr Status HAS_ROOT_KEY =
+    RootKeyStatus_Status_HAS_ROOT_KEY;
+  static inline bool Status_IsValid(int value) {
+    return RootKeyStatus_Status_IsValid(value);
+  }
+  static constexpr Status Status_MIN =
+    RootKeyStatus_Status_Status_MIN;
+  static constexpr Status Status_MAX =
+    RootKeyStatus_Status_Status_MAX;
+  static constexpr int Status_ARRAYSIZE =
+    RootKeyStatus_Status_Status_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Status_descriptor() {
+    return RootKeyStatus_Status_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Status_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Status>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Status_Name.");
+    return RootKeyStatus_Status_Name(enum_t_value);
+  }
+  static inline bool Status_Parse(const std::string& name,
+      Status* value) {
+    return RootKeyStatus_Status_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kStatusFieldNumber = 1,
+  };
+  // .JUB.Proto.Common.RootKeyStatus.Status status = 1;
+  void clear_status();
+  ::JUB::Proto::Common::RootKeyStatus_Status status() const;
+  void set_status(::JUB::Proto::Common::RootKeyStatus_Status value);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.RootKeyStatus)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  int status_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fCommon_2eproto;
+};
+// -------------------------------------------------------------------
+
 class Bip44Path :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.Bip44Path) */ {
  public:
@@ -298,7 +491,7 @@ class Bip44Path :
                &_Bip44Path_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(Bip44Path& a, Bip44Path& b) {
     a.Swap(&b);
@@ -436,7 +629,7 @@ class Slip48Path :
                &_Slip48Path_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(Slip48Path& a, Slip48Path& b) {
     a.Swap(&b);
@@ -588,7 +781,7 @@ class ContextCfg :
                &_ContextCfg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(ContextCfg& a, ContextCfg& b) {
     a.Swap(&b);
@@ -725,7 +918,7 @@ class DeviceInfo :
                &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(DeviceInfo& a, DeviceInfo& b) {
     a.Swap(&b);
@@ -915,7 +1108,7 @@ class ResultInt :
                &_ResultInt_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   friend void swap(ResultInt& a, ResultInt& b) {
     a.Swap(&b);
@@ -1053,7 +1246,7 @@ class ResultString :
                &_ResultString_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   friend void swap(ResultString& a, ResultString& b) {
     a.Swap(&b);
@@ -1197,7 +1390,7 @@ class ResultAny :
                &_ResultAny_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   friend void swap(ResultAny& a, ResultAny& b) {
     a.Swap(&b);
@@ -1306,6 +1499,24 @@ class ResultAny :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// RootKeyStatus
+
+// .JUB.Proto.Common.RootKeyStatus.Status status = 1;
+inline void RootKeyStatus::clear_status() {
+  status_ = 0;
+}
+inline ::JUB::Proto::Common::RootKeyStatus_Status RootKeyStatus::status() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.RootKeyStatus.status)
+  return static_cast< ::JUB::Proto::Common::RootKeyStatus_Status >(status_);
+}
+inline void RootKeyStatus::set_status(::JUB::Proto::Common::RootKeyStatus_Status value) {
+  
+  status_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.RootKeyStatus.status)
+}
+
+// -------------------------------------------------------------------
+
 // Bip44Path
 
 // bool change = 1;
@@ -1848,6 +2059,8 @@ ResultAny::value() const {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -1857,6 +2070,11 @@ ResultAny::value() const {
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::JUB::Proto::Common::RootKeyStatus_Status> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::RootKeyStatus_Status>() {
+  return ::JUB::Proto::Common::RootKeyStatus_Status_descriptor();
+}
 template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_COMMODE> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_COMMODE>() {

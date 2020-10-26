@@ -12,14 +12,6 @@ option objc_class_prefix = "JuBiterNfcProtos";
 //    int32 value = 1;
 //}
 
-message NfcRootKeyStatus {
-    enum Status {
-        HAS_PIN = 0;
-        RESETTED = 2;
-        HAS_ROOT_KEY = 90;
-    };
-    Status status = 1;
-}
 
 message NfcState {
     enum State {

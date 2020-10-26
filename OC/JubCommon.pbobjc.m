@@ -273,6 +273,100 @@ BOOL CommonProtosENUM_PUB_FORMAT_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - CommonProtosRootKeyStatus
+
+@implementation CommonProtosRootKeyStatus
+
+@dynamic status;
+
+typedef struct CommonProtosRootKeyStatus__storage_ {
+  uint32_t _has_storage_[1];
+  CommonProtosRootKeyStatus_Status status;
+} CommonProtosRootKeyStatus__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "status",
+        .dataTypeSpecific.enumDescFunc = CommonProtosRootKeyStatus_Status_EnumDescriptor,
+        .number = CommonProtosRootKeyStatus_FieldNumber_Status,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CommonProtosRootKeyStatus__storage_, status),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor),
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CommonProtosRootKeyStatus class]
+                                     rootClass:[CommonProtosJubCommonRoot class]
+                                          file:CommonProtosJubCommonRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CommonProtosRootKeyStatus__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t CommonProtosRootKeyStatus_Status_RawValue(CommonProtosRootKeyStatus *message) {
+  GPBDescriptor *descriptor = [CommonProtosRootKeyStatus descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:CommonProtosRootKeyStatus_FieldNumber_Status];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetCommonProtosRootKeyStatus_Status_RawValue(CommonProtosRootKeyStatus *message, int32_t value) {
+  GPBDescriptor *descriptor = [CommonProtosRootKeyStatus descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:CommonProtosRootKeyStatus_FieldNumber_Status];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
+
+#pragma mark - Enum CommonProtosRootKeyStatus_Status
+
+GPBEnumDescriptor *CommonProtosRootKeyStatus_Status_EnumDescriptor(void) {
+  static _Atomic(GPBEnumDescriptor*) descriptor = nil;
+  if (!descriptor) {
+    static const char *valueNames =
+        "HasPin\000Resetted\000HasRootKey\000";
+    static const int32_t values[] = {
+        CommonProtosRootKeyStatus_Status_HasPin,
+        CommonProtosRootKeyStatus_Status_Resetted,
+        CommonProtosRootKeyStatus_Status_HasRootKey,
+    };
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CommonProtosRootKeyStatus_Status)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:CommonProtosRootKeyStatus_Status_IsValidValue];
+    GPBEnumDescriptor *expected = nil;
+    if (!atomic_compare_exchange_strong(&descriptor, &expected, worker)) {
+      [worker release];
+    }
+  }
+  return descriptor;
+}
+
+BOOL CommonProtosRootKeyStatus_Status_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case CommonProtosRootKeyStatus_Status_HasPin:
+    case CommonProtosRootKeyStatus_Status_Resetted:
+    case CommonProtosRootKeyStatus_Status_HasRootKey:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - CommonProtosBip44Path
 
 @implementation CommonProtosBip44Path

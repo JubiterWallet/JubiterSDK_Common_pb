@@ -14,625 +14,6 @@ public final class JuBiterNfcProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface NfcRootKeyStatusOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:NfcRootKeyStatus)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.NfcRootKeyStatus.Status status = 1;</code>
-     */
-    int getStatusValue();
-    /**
-     * <code>.NfcRootKeyStatus.Status status = 1;</code>
-     */
-    com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status getStatus();
-  }
-  /**
-   * Protobuf type {@code NfcRootKeyStatus}
-   */
-  public  static final class NfcRootKeyStatus extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:NfcRootKeyStatus)
-      NfcRootKeyStatusOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use NfcRootKeyStatus.newBuilder() to construct.
-    private NfcRootKeyStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private NfcRootKeyStatus() {
-      status_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new NfcRootKeyStatus();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private NfcRootKeyStatus(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.jubiter.plugin.protos.JuBiterNfcProtos.internal_static_NfcRootKeyStatus_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.jubiter.plugin.protos.JuBiterNfcProtos.internal_static_NfcRootKeyStatus_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.class, com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code NfcRootKeyStatus.Status}
-     */
-    public enum Status
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>HAS_PIN = 0;</code>
-       */
-      HAS_PIN(0),
-      /**
-       * <code>RESETTED = 2;</code>
-       */
-      RESETTED(2),
-      /**
-       * <code>HAS_ROOT_KEY = 90;</code>
-       */
-      HAS_ROOT_KEY(90),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>HAS_PIN = 0;</code>
-       */
-      public static final int HAS_PIN_VALUE = 0;
-      /**
-       * <code>RESETTED = 2;</code>
-       */
-      public static final int RESETTED_VALUE = 2;
-      /**
-       * <code>HAS_ROOT_KEY = 90;</code>
-       */
-      public static final int HAS_ROOT_KEY_VALUE = 90;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Status valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static Status forNumber(int value) {
-        switch (value) {
-          case 0: return HAS_PIN;
-          case 2: return RESETTED;
-          case 90: return HAS_ROOT_KEY;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Status>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Status> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
-              public Status findValueByNumber(int number) {
-                return Status.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Status[] VALUES = values();
-
-      public static Status valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Status(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:NfcRootKeyStatus.Status)
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private int status_;
-    /**
-     * <code>.NfcRootKeyStatus.Status status = 1;</code>
-     */
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.NfcRootKeyStatus.Status status = 1;</code>
-     */
-    public com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status getStatus() {
-      @SuppressWarnings("deprecation")
-      com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status result = com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status.valueOf(status_);
-      return result == null ? com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (status_ != com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status.HAS_PIN.getNumber()) {
-        output.writeEnum(1, status_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (status_ != com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status.HAS_PIN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, status_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus)) {
-        return super.equals(obj);
-      }
-      com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus other = (com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus) obj;
-
-      if (status_ != other.status_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code NfcRootKeyStatus}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:NfcRootKeyStatus)
-        com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatusOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.jubiter.plugin.protos.JuBiterNfcProtos.internal_static_NfcRootKeyStatus_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.jubiter.plugin.protos.JuBiterNfcProtos.internal_static_NfcRootKeyStatus_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.class, com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Builder.class);
-      }
-
-      // Construct using com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        status_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.jubiter.plugin.protos.JuBiterNfcProtos.internal_static_NfcRootKeyStatus_descriptor;
-      }
-
-      @java.lang.Override
-      public com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus getDefaultInstanceForType() {
-        return com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus build() {
-        com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus buildPartial() {
-        com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus result = new com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus(this);
-        result.status_ = status_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus) {
-          return mergeFrom((com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus other) {
-        if (other == com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.getDefaultInstance()) return this;
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int status_ = 0;
-      /**
-       * <code>.NfcRootKeyStatus.Status status = 1;</code>
-       */
-      public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <code>.NfcRootKeyStatus.Status status = 1;</code>
-       */
-      public Builder setStatusValue(int value) {
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.NfcRootKeyStatus.Status status = 1;</code>
-       */
-      public com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status getStatus() {
-        @SuppressWarnings("deprecation")
-        com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status result = com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status.valueOf(status_);
-        return result == null ? com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.NfcRootKeyStatus.Status status = 1;</code>
-       */
-      public Builder setStatus(com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus.Status value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.NfcRootKeyStatus.Status status = 1;</code>
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:NfcRootKeyStatus)
-    }
-
-    // @@protoc_insertion_point(class_scope:NfcRootKeyStatus)
-    private static final com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus();
-    }
-
-    public static com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<NfcRootKeyStatus>
-        PARSER = new com.google.protobuf.AbstractParser<NfcRootKeyStatus>() {
-      @java.lang.Override
-      public NfcRootKeyStatus parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NfcRootKeyStatus(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<NfcRootKeyStatus> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<NfcRootKeyStatus> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.jubiter.plugin.protos.JuBiterNfcProtos.NfcRootKeyStatus getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface NfcStateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:NfcState)
       com.google.protobuf.MessageOrBuilder {
@@ -5306,11 +4687,6 @@ public final class JuBiterNfcProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_NfcRootKeyStatus_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_NfcRootKeyStatus_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NfcState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5349,69 +4725,60 @@ public final class JuBiterNfcProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021jubiter_nfc.proto\"s\n\020NfcRootKeyStatus\022" +
-      "(\n\006status\030\001 \001(\0162\030.NfcRootKeyStatus.Statu" +
-      "s\"5\n\006Status\022\013\n\007HAS_PIN\020\000\022\014\n\010RESETTED\020\002\022\020" +
-      "\n\014HAS_ROOT_KEY\020Z\"Q\n\010NfcState\022\036\n\005state\030\001 " +
-      "\001(\0162\017.NfcState.State\"%\n\005State\022\013\n\007UNKNOWN" +
-      "\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002\"+\n\rNfcScanResult\022\032\n\006" +
-      "device\030\001 \001(\0132\n.NfcDevice\"j\n\021NfcConnectRe" +
-      "quest\022\023\n\013remote_name\030\001 \001(\t\022\021\n\tremote_id\030" +
-      "\002 \001(\t\022\017\n\007timeout\030\003 \001(\005\022\034\n\024android_auto_c" +
-      "onnect\030\004 \001(\010\"\\\n\tNfcDevice\022\021\n\tremote_id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022\035\n\004type\030\003 \001(\0162\017.NfcDe" +
-      "vice.Type\"\017\n\004Type\022\007\n\003NFC\020\000\"\247\001\n\026NfcDevice" +
-      "StateResponse\022\021\n\tremote_id\030\001 \001(\t\0225\n\005stat" +
-      "e\030\002 \001(\0162&.NfcDeviceStateResponse.NfcDevi" +
-      "ceState\022\020\n\010deviceID\030\003 \001(\005\"1\n\016NfcDeviceSt" +
-      "ate\022\020\n\014DISCONNECTED\020\000\022\r\n\tCONNECTED\020\001\"3\n\024" +
-      "NfcConnectedResponse\022\033\n\007devices\030\001 \003(\0132\n." +
-      "NfcDeviceB@\n\031com.jubiter.plugin.protosB\020" +
-      "JuBiterNfcProtos\242\002\020JuBiterNfcProtosb\006pro" +
-      "to3"
+      "\n\021jubiter_nfc.proto\"Q\n\010NfcState\022\036\n\005state" +
+      "\030\001 \001(\0162\017.NfcState.State\"%\n\005State\022\013\n\007UNKN" +
+      "OWN\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002\"+\n\rNfcScanResult\022" +
+      "\032\n\006device\030\001 \001(\0132\n.NfcDevice\"j\n\021NfcConnec" +
+      "tRequest\022\023\n\013remote_name\030\001 \001(\t\022\021\n\tremote_" +
+      "id\030\002 \001(\t\022\017\n\007timeout\030\003 \001(\005\022\034\n\024android_aut" +
+      "o_connect\030\004 \001(\010\"\\\n\tNfcDevice\022\021\n\tremote_i" +
+      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\035\n\004type\030\003 \001(\0162\017.Nf" +
+      "cDevice.Type\"\017\n\004Type\022\007\n\003NFC\020\000\"\247\001\n\026NfcDev" +
+      "iceStateResponse\022\021\n\tremote_id\030\001 \001(\t\0225\n\005s" +
+      "tate\030\002 \001(\0162&.NfcDeviceStateResponse.NfcD" +
+      "eviceState\022\020\n\010deviceID\030\003 \001(\005\"1\n\016NfcDevic" +
+      "eState\022\020\n\014DISCONNECTED\020\000\022\r\n\tCONNECTED\020\001\"" +
+      "3\n\024NfcConnectedResponse\022\033\n\007devices\030\001 \003(\013" +
+      "2\n.NfcDeviceB@\n\031com.jubiter.plugin.proto" +
+      "sB\020JuBiterNfcProtos\242\002\020JuBiterNfcProtosb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_NfcRootKeyStatus_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_NfcRootKeyStatus_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_NfcRootKeyStatus_descriptor,
-        new java.lang.String[] { "Status", });
     internal_static_NfcState_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_NfcState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NfcState_descriptor,
         new java.lang.String[] { "State", });
     internal_static_NfcScanResult_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_NfcScanResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NfcScanResult_descriptor,
         new java.lang.String[] { "Device", });
     internal_static_NfcConnectRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_NfcConnectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NfcConnectRequest_descriptor,
         new java.lang.String[] { "RemoteName", "RemoteId", "Timeout", "AndroidAutoConnect", });
     internal_static_NfcDevice_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_NfcDevice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NfcDevice_descriptor,
         new java.lang.String[] { "RemoteId", "Name", "Type", });
     internal_static_NfcDeviceStateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_NfcDeviceStateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NfcDeviceStateResponse_descriptor,
         new java.lang.String[] { "RemoteId", "State", "DeviceID", });
     internal_static_NfcConnectedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_NfcConnectedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NfcConnectedResponse_descriptor,

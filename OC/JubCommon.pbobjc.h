@@ -170,6 +170,28 @@ GPBEnumDescriptor *CommonProtosENUM_PUB_FORMAT_EnumDescriptor(void);
  **/
 BOOL CommonProtosENUM_PUB_FORMAT_IsValidValue(int32_t value);
 
+#pragma mark - Enum CommonProtosRootKeyStatus_Status
+
+typedef GPB_ENUM(CommonProtosRootKeyStatus_Status) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  CommonProtosRootKeyStatus_Status_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  CommonProtosRootKeyStatus_Status_HasPin = 0,
+  CommonProtosRootKeyStatus_Status_Resetted = 2,
+  CommonProtosRootKeyStatus_Status_HasRootKey = 90,
+};
+
+GPBEnumDescriptor *CommonProtosRootKeyStatus_Status_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL CommonProtosRootKeyStatus_Status_IsValidValue(int32_t value);
+
 #pragma mark - CommonProtosJubCommonRoot
 
 /**
@@ -184,6 +206,33 @@ BOOL CommonProtosENUM_PUB_FORMAT_IsValidValue(int32_t value);
  **/
 @interface CommonProtosJubCommonRoot : GPBRootObject
 @end
+
+#pragma mark - CommonProtosRootKeyStatus
+
+typedef GPB_ENUM(CommonProtosRootKeyStatus_FieldNumber) {
+  CommonProtosRootKeyStatus_FieldNumber_Status = 1,
+};
+
+/**
+ * for NFC
+ **/
+@interface CommonProtosRootKeyStatus : GPBMessage
+
+@property(nonatomic, readwrite) CommonProtosRootKeyStatus_Status status;
+
+@end
+
+/**
+ * Fetches the raw value of a @c CommonProtosRootKeyStatus's @c status property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t CommonProtosRootKeyStatus_Status_RawValue(CommonProtosRootKeyStatus *message);
+/**
+ * Sets the raw value of an @c CommonProtosRootKeyStatus's @c status property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetCommonProtosRootKeyStatus_Status_RawValue(CommonProtosRootKeyStatus *message, int32_t value);
 
 #pragma mark - CommonProtosBip44Path
 

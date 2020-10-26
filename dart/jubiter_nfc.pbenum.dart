@@ -9,23 +9,6 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class NfcRootKeyStatus_Status extends $pb.ProtobufEnum {
-  static const NfcRootKeyStatus_Status HAS_PIN = NfcRootKeyStatus_Status._(0, 'HAS_PIN');
-  static const NfcRootKeyStatus_Status RESETTED = NfcRootKeyStatus_Status._(2, 'RESETTED');
-  static const NfcRootKeyStatus_Status HAS_ROOT_KEY = NfcRootKeyStatus_Status._(90, 'HAS_ROOT_KEY');
-
-  static const $core.List<NfcRootKeyStatus_Status> values = <NfcRootKeyStatus_Status> [
-    HAS_PIN,
-    RESETTED,
-    HAS_ROOT_KEY,
-  ];
-
-  static final $core.Map<$core.int, NfcRootKeyStatus_Status> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static NfcRootKeyStatus_Status valueOf($core.int value) => _byValue[value];
-
-  const NfcRootKeyStatus_Status._($core.int v, $core.String n) : super(v, n);
-}
-
 class NfcState_State extends $pb.ProtobufEnum {
   static const NfcState_State UNKNOWN = NfcState_State._(0, 'UNKNOWN');
   static const NfcState_State ON = NfcState_State._(1, 'ON');

@@ -13,37 +13,6 @@ import 'jubiter_nfc.pbenum.dart';
 
 export 'jubiter_nfc.pbenum.dart';
 
-class NfcRootKeyStatus extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('NfcRootKeyStatus', createEmptyInstance: create)
-    ..e<NfcRootKeyStatus_Status>(1, 'status', $pb.PbFieldType.OE, defaultOrMaker: NfcRootKeyStatus_Status.HAS_PIN, valueOf: NfcRootKeyStatus_Status.valueOf, enumValues: NfcRootKeyStatus_Status.values)
-    ..hasRequiredFields = false
-  ;
-
-  NfcRootKeyStatus._() : super();
-  factory NfcRootKeyStatus() => create();
-  factory NfcRootKeyStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NfcRootKeyStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  NfcRootKeyStatus clone() => NfcRootKeyStatus()..mergeFromMessage(this);
-  NfcRootKeyStatus copyWith(void Function(NfcRootKeyStatus) updates) => super.copyWith((message) => updates(message as NfcRootKeyStatus));
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static NfcRootKeyStatus create() => NfcRootKeyStatus._();
-  NfcRootKeyStatus createEmptyInstance() => create();
-  static $pb.PbList<NfcRootKeyStatus> createRepeated() => $pb.PbList<NfcRootKeyStatus>();
-  @$core.pragma('dart2js:noInline')
-  static NfcRootKeyStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NfcRootKeyStatus>(create);
-  static NfcRootKeyStatus _defaultInstance;
-
-  @$pb.TagNumber(1)
-  NfcRootKeyStatus_Status get status => $_getN(0);
-  @$pb.TagNumber(1)
-  set status(NfcRootKeyStatus_Status v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasStatus() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearStatus() => clearField(1);
-}
-
 class NfcState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NfcState', createEmptyInstance: create)
     ..e<NfcState_State>(1, 'state', $pb.PbFieldType.OE, defaultOrMaker: NfcState_State.UNKNOWN, valueOf: NfcState_State.valueOf, enumValues: NfcState_State.values)

@@ -61,6 +61,23 @@ const ENUM_PUB_FORMAT$json = const {
   ],
 };
 
+const RootKeyStatus$json = const {
+  '1': 'RootKeyStatus',
+  '2': const [
+    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.JUB.Proto.Common.RootKeyStatus.Status', '10': 'status'},
+  ],
+  '4': const [RootKeyStatus_Status$json],
+};
+
+const RootKeyStatus_Status$json = const {
+  '1': 'Status',
+  '2': const [
+    const {'1': 'HAS_PIN', '2': 0},
+    const {'1': 'RESETTED', '2': 2},
+    const {'1': 'HAS_ROOT_KEY', '2': 90},
+  ],
+};
+
 const Bip44Path$json = const {
   '1': 'Bip44Path',
   '2': const [

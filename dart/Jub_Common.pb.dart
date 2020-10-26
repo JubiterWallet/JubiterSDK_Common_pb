@@ -16,6 +16,37 @@ import 'Jub_Common.pbenum.dart';
 
 export 'Jub_Common.pbenum.dart';
 
+class RootKeyStatus extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RootKeyStatus', package: const $pb.PackageName('JUB.Proto.Common'), createEmptyInstance: create)
+    ..e<RootKeyStatus_Status>(1, 'status', $pb.PbFieldType.OE, defaultOrMaker: RootKeyStatus_Status.HAS_PIN, valueOf: RootKeyStatus_Status.valueOf, enumValues: RootKeyStatus_Status.values)
+    ..hasRequiredFields = false
+  ;
+
+  RootKeyStatus._() : super();
+  factory RootKeyStatus() => create();
+  factory RootKeyStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RootKeyStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  RootKeyStatus clone() => RootKeyStatus()..mergeFromMessage(this);
+  RootKeyStatus copyWith(void Function(RootKeyStatus) updates) => super.copyWith((message) => updates(message as RootKeyStatus));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static RootKeyStatus create() => RootKeyStatus._();
+  RootKeyStatus createEmptyInstance() => create();
+  static $pb.PbList<RootKeyStatus> createRepeated() => $pb.PbList<RootKeyStatus>();
+  @$core.pragma('dart2js:noInline')
+  static RootKeyStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RootKeyStatus>(create);
+  static RootKeyStatus _defaultInstance;
+
+  @$pb.TagNumber(1)
+  RootKeyStatus_Status get status => $_getN(0);
+  @$pb.TagNumber(1)
+  set status(RootKeyStatus_Status v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStatus() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStatus() => clearField(1);
+}
+
 class Bip44Path extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Bip44Path', package: const $pb.PackageName('JUB.Proto.Common'), createEmptyInstance: create)
     ..aOB(1, 'change')
