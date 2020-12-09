@@ -19,6 +19,10 @@ extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fany_2eproto ::PROTOBUF_NAMES
 namespace JUB {
 namespace Proto {
 namespace Common {
+class DeviceTypeDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeviceType> _instance;
+} _DeviceType_default_instance_;
 class RootKeyStatusDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RootKeyStatus> _instance;
@@ -96,6 +100,20 @@ static void InitDefaultsscc_info_DeviceInfo_Jub_5fCommon_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeviceInfo_Jub_5fCommon_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_DeviceInfo_Jub_5fCommon_2eproto}, {}};
 
+static void InitDefaultsscc_info_DeviceType_Jub_5fCommon_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::JUB::Proto::Common::_DeviceType_default_instance_;
+    new (ptr) ::JUB::Proto::Common::DeviceType();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::JUB::Proto::Common::DeviceType::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeviceType_Jub_5fCommon_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_DeviceType_Jub_5fCommon_2eproto}, {}};
+
 static void InitDefaultsscc_info_ResultAny_Jub_5fCommon_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -167,11 +185,18 @@ static void InitDefaultsscc_info_Slip48Path_Jub_5fCommon_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Slip48Path_Jub_5fCommon_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Slip48Path_Jub_5fCommon_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fCommon_2eproto[8];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fCommon_2eproto[9];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Jub_5fCommon_2eproto[7];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Jub_5fCommon_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fCommon_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Common::DeviceType, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Common::DeviceType, com_mode_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Common::DeviceType, prds_class_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Common::RootKeyStatus, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -234,17 +259,19 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fCommon_2eproto::offsets[
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Common::ResultAny, value_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::JUB::Proto::Common::RootKeyStatus)},
-  { 6, -1, sizeof(::JUB::Proto::Common::Bip44Path)},
-  { 13, -1, sizeof(::JUB::Proto::Common::Slip48Path)},
-  { 22, -1, sizeof(::JUB::Proto::Common::ContextCfg)},
-  { 28, -1, sizeof(::JUB::Proto::Common::DeviceInfo)},
-  { 39, -1, sizeof(::JUB::Proto::Common::ResultInt)},
-  { 46, -1, sizeof(::JUB::Proto::Common::ResultString)},
-  { 53, -1, sizeof(::JUB::Proto::Common::ResultAny)},
+  { 0, -1, sizeof(::JUB::Proto::Common::DeviceType)},
+  { 7, -1, sizeof(::JUB::Proto::Common::RootKeyStatus)},
+  { 13, -1, sizeof(::JUB::Proto::Common::Bip44Path)},
+  { 20, -1, sizeof(::JUB::Proto::Common::Slip48Path)},
+  { 29, -1, sizeof(::JUB::Proto::Common::ContextCfg)},
+  { 35, -1, sizeof(::JUB::Proto::Common::DeviceInfo)},
+  { 46, -1, sizeof(::JUB::Proto::Common::ResultInt)},
+  { 53, -1, sizeof(::JUB::Proto::Common::ResultString)},
+  { 60, -1, sizeof(::JUB::Proto::Common::ResultAny)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Common::_DeviceType_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Common::_RootKeyStatus_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Common::_Bip44Path_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Common::_Slip48Path_default_instance_),
@@ -257,42 +284,48 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_Jub_5fCommon_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\020Jub_Common.proto\022\020JUB.Proto.Common\032\031go"
-  "ogle/protobuf/any.proto\"~\n\rRootKeyStatus"
-  "\0226\n\006status\030\001 \001(\0162&.JUB.Proto.Common.Root"
-  "KeyStatus.Status\"5\n\006Status\022\013\n\007HAS_PIN\020\000\022"
-  "\014\n\010RESETTED\020\002\022\020\n\014HAS_ROOT_KEY\020Z\"2\n\tBip44"
-  "Path\022\016\n\006change\030\001 \001(\010\022\025\n\raddress_index\030\002 "
-  "\001(\004\"{\n\nSlip48Path\022\017\n\007network\030\001 \001(\004\0222\n\004ro"
-  "le\030\002 \001(\0162$.JUB.Proto.Common.ENUM_GRAPHEN"
-  "E_ROLE\022\025\n\raddress_index\030\003 \001(\004\022\021\n\tkey_ind"
-  "ex\030\004 \001(\004\"\037\n\nContextCfg\022\021\n\tmain_path\030\001 \001("
-  "\t\"\200\001\n\nDeviceInfo\022\n\n\002sn\030\001 \001(\t\022\r\n\005label\030\002 "
-  "\001(\t\022\023\n\013ble_version\030\003 \001(\t\022\030\n\020firmware_ver"
-  "sion\030\004 \001(\t\022\021\n\tpin_retry\030\005 \001(\r\022\025\n\rpin_max"
-  "_retry\030\006 \001(\r\".\n\tResultInt\022\022\n\nstate_code\030"
-  "\001 \001(\004\022\r\n\005value\030\002 \001(\r\"1\n\014ResultString\022\022\n\n"
-  "state_code\030\001 \001(\004\022\r\n\005value\030\002 \001(\t\"D\n\tResul"
-  "tAny\022\022\n\nstate_code\030\001 \001(\004\022#\n\005value\030\002 \003(\0132"
-  "\024.google.protobuf.Any*G\n\014ENUM_COMMODE\022\007\n"
-  "\003SWI\020\000\022\007\n\003HID\020\001\022\007\n\003BLE\020\002\022\007\n\003NFC\020\003\022\023\n\017COM"
-  "MODE_NS_ITEM\020\004*G\n\013ENUM_DEVICE\022\006\n\002VD\020\000\022\t\n"
-  "\005BLADE\020\001\022\007\n\003BIO\020\002\022\010\n\004LITE\020\003\022\022\n\016DEVICE_NS"
-  "_ITEM\020\004*+\n\022ENUM_GRAPHENE_ROLE\022\t\n\005OWNER\020\000"
-  "\022\n\n\006ACTIVE\020\001*K\n\026ENUM_MNEMONIC_STRENGTH\022\017"
-  "\n\013STRENGTH128\020\000\022\017\n\013STRENGTH192\020\001\022\017\n\013STRE"
-  "NGTH256\020\002*3\n\006CURVES\022\r\n\tSECP256K1\020\000\022\013\n\007ED"
-  "25519\020\001\022\r\n\tNIST256P1\020\002*$\n\017ENUM_PUB_FORMA"
-  "T\022\007\n\003HEX\020\000\022\010\n\004XPUB\020\001B4\n\025com.jubiter.sdk."
-  "protoB\014CommonProtos\242\002\014CommonProtosb\006prot"
-  "o3"
+  "ogle/protobuf/any.proto\"\350\002\n\nDeviceType\0226"
+  "\n\010com_mode\030\001 \001(\0162$.JUB.Proto.Common.Devi"
+  "ceType.ComMode\022:\n\nprds_class\030\002 \001(\0162&.JUB"
+  ".Proto.Common.DeviceType.PrdsClass\"k\n\007Co"
+  "mMode\022\030\n\024COM_MODE_UNSPECIFIED\020\000\022\020\n\014COM_M"
+  "ODE_SWI\020\001\022\020\n\014COM_MODE_HID\020\002\022\020\n\014COM_MODE_"
+  "BLE\020\003\022\020\n\014COM_MODE_NFC\020\004\"y\n\tPrdsClass\022\032\n\026"
+  "PRDS_CLASS_UNSPECIFIED\020\000\022\021\n\rPRDS_CLASS_V"
+  "D\020\001\022\024\n\020PRDS_CLASS_BLADE\020\002\022\022\n\016PRDS_CLASS_"
+  "BIO\020\003\022\023\n\017PRDS_CLASS_LITE\020\004\"~\n\rRootKeySta"
+  "tus\0226\n\006status\030\001 \001(\0162&.JUB.Proto.Common.R"
+  "ootKeyStatus.Status\"5\n\006Status\022\013\n\007HAS_PIN"
+  "\020\000\022\014\n\010RESETTED\020\002\022\020\n\014HAS_ROOT_KEY\020Z\"2\n\tBi"
+  "p44Path\022\016\n\006change\030\001 \001(\010\022\025\n\raddress_index"
+  "\030\002 \001(\004\"{\n\nSlip48Path\022\017\n\007network\030\001 \001(\004\0222\n"
+  "\004role\030\002 \001(\0162$.JUB.Proto.Common.ENUM_GRAP"
+  "HENE_ROLE\022\025\n\raddress_index\030\003 \001(\004\022\021\n\tkey_"
+  "index\030\004 \001(\004\"\037\n\nContextCfg\022\021\n\tmain_path\030\001"
+  " \001(\t\"\200\001\n\nDeviceInfo\022\n\n\002sn\030\001 \001(\t\022\r\n\005label"
+  "\030\002 \001(\t\022\023\n\013ble_version\030\003 \001(\t\022\030\n\020firmware_"
+  "version\030\004 \001(\t\022\021\n\tpin_retry\030\005 \001(\r\022\025\n\rpin_"
+  "max_retry\030\006 \001(\r\".\n\tResultInt\022\022\n\nstate_co"
+  "de\030\001 \001(\004\022\r\n\005value\030\002 \001(\r\"1\n\014ResultString\022"
+  "\022\n\nstate_code\030\001 \001(\004\022\r\n\005value\030\002 \001(\t\"D\n\tRe"
+  "sultAny\022\022\n\nstate_code\030\001 \001(\004\022#\n\005value\030\002 \003"
+  "(\0132\024.google.protobuf.Any*+\n\022ENUM_GRAPHEN"
+  "E_ROLE\022\t\n\005OWNER\020\000\022\n\n\006ACTIVE\020\001*K\n\026ENUM_MN"
+  "EMONIC_STRENGTH\022\017\n\013STRENGTH128\020\000\022\017\n\013STRE"
+  "NGTH192\020\001\022\017\n\013STRENGTH256\020\002*3\n\006CURVES\022\r\n\t"
+  "SECP256K1\020\000\022\013\n\007ED25519\020\001\022\r\n\tNIST256P1\020\002*"
+  "$\n\017ENUM_PUB_FORMAT\022\007\n\003HEX\020\000\022\010\n\004XPUB\020\001B4\n"
+  "\025com.jubiter.sdk.protoB\014CommonProtos\242\002\014C"
+  "ommonProtosb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fCommon_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fany_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fCommon_2eproto_sccs[8] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fCommon_2eproto_sccs[9] = {
   &scc_info_Bip44Path_Jub_5fCommon_2eproto.base,
   &scc_info_ContextCfg_Jub_5fCommon_2eproto.base,
   &scc_info_DeviceInfo_Jub_5fCommon_2eproto.base,
+  &scc_info_DeviceType_Jub_5fCommon_2eproto.base,
   &scc_info_ResultAny_Jub_5fCommon_2eproto.base,
   &scc_info_ResultInt_Jub_5fCommon_2eproto.base,
   &scc_info_ResultString_Jub_5fCommon_2eproto.base,
@@ -302,10 +335,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fCommon_2eproto_once;
 static bool descriptor_table_Jub_5fCommon_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fCommon_2eproto = {
-  &descriptor_table_Jub_5fCommon_2eproto_initialized, descriptor_table_protodef_Jub_5fCommon_2eproto, "Jub_Common.proto", 1122,
-  &descriptor_table_Jub_5fCommon_2eproto_once, descriptor_table_Jub_5fCommon_2eproto_sccs, descriptor_table_Jub_5fCommon_2eproto_deps, 8, 1,
+  &descriptor_table_Jub_5fCommon_2eproto_initialized, descriptor_table_protodef_Jub_5fCommon_2eproto, "Jub_Common.proto", 1339,
+  &descriptor_table_Jub_5fCommon_2eproto_once, descriptor_table_Jub_5fCommon_2eproto_sccs, descriptor_table_Jub_5fCommon_2eproto_deps, 9, 1,
   schemas, file_default_instances, TableStruct_Jub_5fCommon_2eproto::offsets,
-  file_level_metadata_Jub_5fCommon_2eproto, 8, file_level_enum_descriptors_Jub_5fCommon_2eproto, file_level_service_descriptors_Jub_5fCommon_2eproto,
+  file_level_metadata_Jub_5fCommon_2eproto, 9, file_level_enum_descriptors_Jub_5fCommon_2eproto, file_level_service_descriptors_Jub_5fCommon_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -313,9 +346,63 @@ static bool dynamic_init_dummy_Jub_5fCommon_2eproto = (  ::PROTOBUF_NAMESPACE_ID
 namespace JUB {
 namespace Proto {
 namespace Common {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* RootKeyStatus_Status_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DeviceType_ComMode_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
   return file_level_enum_descriptors_Jub_5fCommon_2eproto[0];
+}
+bool DeviceType_ComMode_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr DeviceType_ComMode DeviceType::COM_MODE_UNSPECIFIED;
+constexpr DeviceType_ComMode DeviceType::COM_MODE_SWI;
+constexpr DeviceType_ComMode DeviceType::COM_MODE_HID;
+constexpr DeviceType_ComMode DeviceType::COM_MODE_BLE;
+constexpr DeviceType_ComMode DeviceType::COM_MODE_NFC;
+constexpr DeviceType_ComMode DeviceType::ComMode_MIN;
+constexpr DeviceType_ComMode DeviceType::ComMode_MAX;
+constexpr int DeviceType::ComMode_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DeviceType_PrdsClass_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[1];
+}
+bool DeviceType_PrdsClass_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr DeviceType_PrdsClass DeviceType::PRDS_CLASS_UNSPECIFIED;
+constexpr DeviceType_PrdsClass DeviceType::PRDS_CLASS_VD;
+constexpr DeviceType_PrdsClass DeviceType::PRDS_CLASS_BLADE;
+constexpr DeviceType_PrdsClass DeviceType::PRDS_CLASS_BIO;
+constexpr DeviceType_PrdsClass DeviceType::PRDS_CLASS_LITE;
+constexpr DeviceType_PrdsClass DeviceType::PrdsClass_MIN;
+constexpr DeviceType_PrdsClass DeviceType::PrdsClass_MAX;
+constexpr int DeviceType::PrdsClass_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* RootKeyStatus_Status_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
+  return file_level_enum_descriptors_Jub_5fCommon_2eproto[2];
 }
 bool RootKeyStatus_Status_IsValid(int value) {
   switch (value) {
@@ -336,40 +423,6 @@ constexpr RootKeyStatus_Status RootKeyStatus::Status_MIN;
 constexpr RootKeyStatus_Status RootKeyStatus::Status_MAX;
 constexpr int RootKeyStatus::Status_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_COMMODE_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
-  return file_level_enum_descriptors_Jub_5fCommon_2eproto[1];
-}
-bool ENUM_COMMODE_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_DEVICE_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
-  return file_level_enum_descriptors_Jub_5fCommon_2eproto[2];
-}
-bool ENUM_DEVICE_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-      return true;
-    default:
-      return false;
-  }
-}
-
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_GRAPHENE_ROLE_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Jub_5fCommon_2eproto);
   return file_level_enum_descriptors_Jub_5fCommon_2eproto[3];
@@ -426,6 +479,308 @@ bool ENUM_PUB_FORMAT_IsValid(int value) {
     default:
       return false;
   }
+}
+
+
+// ===================================================================
+
+void DeviceType::InitAsDefaultInstance() {
+}
+class DeviceType::_Internal {
+ public:
+};
+
+DeviceType::DeviceType()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:JUB.Proto.Common.DeviceType)
+}
+DeviceType::DeviceType(const DeviceType& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&com_mode_, &from.com_mode_,
+    static_cast<size_t>(reinterpret_cast<char*>(&prds_class_) -
+    reinterpret_cast<char*>(&com_mode_)) + sizeof(prds_class_));
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Common.DeviceType)
+}
+
+void DeviceType::SharedCtor() {
+  ::memset(&com_mode_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&prds_class_) -
+      reinterpret_cast<char*>(&com_mode_)) + sizeof(prds_class_));
+}
+
+DeviceType::~DeviceType() {
+  // @@protoc_insertion_point(destructor:JUB.Proto.Common.DeviceType)
+  SharedDtor();
+}
+
+void DeviceType::SharedDtor() {
+}
+
+void DeviceType::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const DeviceType& DeviceType::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeviceType_Jub_5fCommon_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void DeviceType::Clear() {
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.Common.DeviceType)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&com_mode_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&prds_class_) -
+      reinterpret_cast<char*>(&com_mode_)) + sizeof(prds_class_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* DeviceType::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+          set_com_mode(static_cast<::JUB::Proto::Common::DeviceType_ComMode>(val));
+        } else goto handle_unusual;
+        continue;
+      // .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+          set_prds_class(static_cast<::JUB::Proto::Common::DeviceType_PrdsClass>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool DeviceType::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:JUB.Proto.Common.DeviceType)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
+          int value = 0;
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_com_mode(static_cast< ::JUB::Proto::Common::DeviceType_ComMode >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+          int value = 0;
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_prds_class(static_cast< ::JUB::Proto::Common::DeviceType_PrdsClass >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:JUB.Proto.Common.DeviceType)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:JUB.Proto.Common.DeviceType)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void DeviceType::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:JUB.Proto.Common.DeviceType)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+  if (this->com_mode() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
+      1, this->com_mode(), output);
+  }
+
+  // .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+  if (this->prds_class() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
+      2, this->prds_class(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:JUB.Proto.Common.DeviceType)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* DeviceType::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Common.DeviceType)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+  if (this->com_mode() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->com_mode(), target);
+  }
+
+  // .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+  if (this->prds_class() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      2, this->prds_class(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Common.DeviceType)
+  return target;
+}
+
+size_t DeviceType::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Common.DeviceType)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+  if (this->com_mode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->com_mode());
+  }
+
+  // .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+  if (this->prds_class() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->prds_class());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void DeviceType::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Common.DeviceType)
+  GOOGLE_DCHECK_NE(&from, this);
+  const DeviceType* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DeviceType>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Common.DeviceType)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Common.DeviceType)
+    MergeFrom(*source);
+  }
+}
+
+void DeviceType::MergeFrom(const DeviceType& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Common.DeviceType)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.com_mode() != 0) {
+    set_com_mode(from.com_mode());
+  }
+  if (from.prds_class() != 0) {
+    set_prds_class(from.prds_class());
+  }
+}
+
+void DeviceType::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Common.DeviceType)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void DeviceType::CopyFrom(const DeviceType& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Common.DeviceType)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DeviceType::IsInitialized() const {
+  return true;
+}
+
+void DeviceType::InternalSwap(DeviceType* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(com_mode_, other->com_mode_);
+  swap(prds_class_, other->prds_class_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata DeviceType::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -3096,6 +3451,9 @@ void ResultAny::InternalSwap(ResultAny* other) {
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::JUB::Proto::Common::DeviceType* Arena::CreateMaybeMessage< ::JUB::Proto::Common::DeviceType >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::Common::DeviceType >(arena);
+}
 template<> PROTOBUF_NOINLINE ::JUB::Proto::Common::RootKeyStatus* Arena::CreateMaybeMessage< ::JUB::Proto::Common::RootKeyStatus >(Arena* arena) {
   return Arena::CreateInternal< ::JUB::Proto::Common::RootKeyStatus >(arena);
 }

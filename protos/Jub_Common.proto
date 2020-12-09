@@ -7,25 +7,29 @@ option java_package = "com.jubiter.sdk.proto";
 option java_outer_classname = "CommonProtos";
 option objc_class_prefix = "CommonProtos";
 
-// The communication of devices
-enum ENUM_COMMODE {
-    SWI = 0;
-    HID = 1;
-    BLE = 2;
-    NFC = 3;
-    COMMODE_NS_ITEM = 4;
+message DeviceType {
+    // The communication of devices
+    enum ComMode {
+        COM_MODE_UNSPECIFIED = 0;
+        COM_MODE_SWI = 1;
+        COM_MODE_HID = 2;
+        COM_MODE_BLE = 3;
+        COM_MODE_NFC = 4;
+    };
+
+    // The product class
+    enum PrdsClass {
+        PRDS_CLASS_UNSPECIFIED = 0;
+        PRDS_CLASS_VD    = 1;
+        PRDS_CLASS_BLADE = 2;
+        PRDS_CLASS_BIO   = 3;
+        PRDS_CLASS_LITE  = 4;
+    };
+
+    ComMode com_mode = 1;
+    PrdsClass prds_class = 2;
 }
 
-// The product class
-enum ENUM_DEVICE {
-    VD    = 0;
-    BLADE = 1;
-    BIO   = 2;
-    LITE  = 3;
-    DEVICE_NS_ITEM = 4;
-}
-
-// for NFC
 message RootKeyStatus {
     enum Status {
         HAS_PIN = 0;

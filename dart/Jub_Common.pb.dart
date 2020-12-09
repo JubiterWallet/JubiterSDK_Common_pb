@@ -16,6 +16,47 @@ import 'Jub_Common.pbenum.dart';
 
 export 'Jub_Common.pbenum.dart';
 
+class DeviceType extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceType', package: const $pb.PackageName('JUB.Proto.Common'), createEmptyInstance: create)
+    ..e<DeviceType_ComMode>(1, 'comMode', $pb.PbFieldType.OE, defaultOrMaker: DeviceType_ComMode.COM_MODE_UNSPECIFIED, valueOf: DeviceType_ComMode.valueOf, enumValues: DeviceType_ComMode.values)
+    ..e<DeviceType_PrdsClass>(2, 'prdsClass', $pb.PbFieldType.OE, defaultOrMaker: DeviceType_PrdsClass.PRDS_CLASS_UNSPECIFIED, valueOf: DeviceType_PrdsClass.valueOf, enumValues: DeviceType_PrdsClass.values)
+    ..hasRequiredFields = false
+  ;
+
+  DeviceType._() : super();
+  factory DeviceType() => create();
+  factory DeviceType.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DeviceType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  DeviceType clone() => DeviceType()..mergeFromMessage(this);
+  DeviceType copyWith(void Function(DeviceType) updates) => super.copyWith((message) => updates(message as DeviceType));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeviceType create() => DeviceType._();
+  DeviceType createEmptyInstance() => create();
+  static $pb.PbList<DeviceType> createRepeated() => $pb.PbList<DeviceType>();
+  @$core.pragma('dart2js:noInline')
+  static DeviceType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeviceType>(create);
+  static DeviceType _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DeviceType_ComMode get comMode => $_getN(0);
+  @$pb.TagNumber(1)
+  set comMode(DeviceType_ComMode v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasComMode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearComMode() => clearField(1);
+
+  @$pb.TagNumber(2)
+  DeviceType_PrdsClass get prdsClass => $_getN(1);
+  @$pb.TagNumber(2)
+  set prdsClass(DeviceType_PrdsClass v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPrdsClass() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPrdsClass() => clearField(2);
+}
+
 class RootKeyStatus extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RootKeyStatus', package: const $pb.PackageName('JUB.Proto.Common'), createEmptyInstance: create)
     ..e<RootKeyStatus_Status>(1, 'status', $pb.PbFieldType.OE, defaultOrMaker: RootKeyStatus_Status.HAS_PIN, valueOf: RootKeyStatus_Status.valueOf, enumValues: RootKeyStatus_Status.values)

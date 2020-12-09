@@ -49,7 +49,7 @@ struct TableStruct_Jub_5fCommon_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[8]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[9]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -68,6 +68,9 @@ extern ContextCfgDefaultTypeInternal _ContextCfg_default_instance_;
 class DeviceInfo;
 class DeviceInfoDefaultTypeInternal;
 extern DeviceInfoDefaultTypeInternal _DeviceInfo_default_instance_;
+class DeviceType;
+class DeviceTypeDefaultTypeInternal;
+extern DeviceTypeDefaultTypeInternal _DeviceType_default_instance_;
 class ResultAny;
 class ResultAnyDefaultTypeInternal;
 extern ResultAnyDefaultTypeInternal _ResultAny_default_instance_;
@@ -90,6 +93,7 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::JUB::Proto::Common::Bip44Path* Arena::CreateMaybeMessage<::JUB::Proto::Common::Bip44Path>(Arena*);
 template<> ::JUB::Proto::Common::ContextCfg* Arena::CreateMaybeMessage<::JUB::Proto::Common::ContextCfg>(Arena*);
 template<> ::JUB::Proto::Common::DeviceInfo* Arena::CreateMaybeMessage<::JUB::Proto::Common::DeviceInfo>(Arena*);
+template<> ::JUB::Proto::Common::DeviceType* Arena::CreateMaybeMessage<::JUB::Proto::Common::DeviceType>(Arena*);
 template<> ::JUB::Proto::Common::ResultAny* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultAny>(Arena*);
 template<> ::JUB::Proto::Common::ResultInt* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultInt>(Arena*);
 template<> ::JUB::Proto::Common::ResultString* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultString>(Arena*);
@@ -100,6 +104,62 @@ namespace JUB {
 namespace Proto {
 namespace Common {
 
+enum DeviceType_ComMode : int {
+  DeviceType_ComMode_COM_MODE_UNSPECIFIED = 0,
+  DeviceType_ComMode_COM_MODE_SWI = 1,
+  DeviceType_ComMode_COM_MODE_HID = 2,
+  DeviceType_ComMode_COM_MODE_BLE = 3,
+  DeviceType_ComMode_COM_MODE_NFC = 4,
+  DeviceType_ComMode_DeviceType_ComMode_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  DeviceType_ComMode_DeviceType_ComMode_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool DeviceType_ComMode_IsValid(int value);
+constexpr DeviceType_ComMode DeviceType_ComMode_ComMode_MIN = DeviceType_ComMode_COM_MODE_UNSPECIFIED;
+constexpr DeviceType_ComMode DeviceType_ComMode_ComMode_MAX = DeviceType_ComMode_COM_MODE_NFC;
+constexpr int DeviceType_ComMode_ComMode_ARRAYSIZE = DeviceType_ComMode_ComMode_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DeviceType_ComMode_descriptor();
+template<typename T>
+inline const std::string& DeviceType_ComMode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, DeviceType_ComMode>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function DeviceType_ComMode_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    DeviceType_ComMode_descriptor(), enum_t_value);
+}
+inline bool DeviceType_ComMode_Parse(
+    const std::string& name, DeviceType_ComMode* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<DeviceType_ComMode>(
+    DeviceType_ComMode_descriptor(), name, value);
+}
+enum DeviceType_PrdsClass : int {
+  DeviceType_PrdsClass_PRDS_CLASS_UNSPECIFIED = 0,
+  DeviceType_PrdsClass_PRDS_CLASS_VD = 1,
+  DeviceType_PrdsClass_PRDS_CLASS_BLADE = 2,
+  DeviceType_PrdsClass_PRDS_CLASS_BIO = 3,
+  DeviceType_PrdsClass_PRDS_CLASS_LITE = 4,
+  DeviceType_PrdsClass_DeviceType_PrdsClass_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  DeviceType_PrdsClass_DeviceType_PrdsClass_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool DeviceType_PrdsClass_IsValid(int value);
+constexpr DeviceType_PrdsClass DeviceType_PrdsClass_PrdsClass_MIN = DeviceType_PrdsClass_PRDS_CLASS_UNSPECIFIED;
+constexpr DeviceType_PrdsClass DeviceType_PrdsClass_PrdsClass_MAX = DeviceType_PrdsClass_PRDS_CLASS_LITE;
+constexpr int DeviceType_PrdsClass_PrdsClass_ARRAYSIZE = DeviceType_PrdsClass_PrdsClass_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DeviceType_PrdsClass_descriptor();
+template<typename T>
+inline const std::string& DeviceType_PrdsClass_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, DeviceType_PrdsClass>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function DeviceType_PrdsClass_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    DeviceType_PrdsClass_descriptor(), enum_t_value);
+}
+inline bool DeviceType_PrdsClass_Parse(
+    const std::string& name, DeviceType_PrdsClass* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<DeviceType_PrdsClass>(
+    DeviceType_PrdsClass_descriptor(), name, value);
+}
 enum RootKeyStatus_Status : int {
   RootKeyStatus_Status_HAS_PIN = 0,
   RootKeyStatus_Status_RESETTED = 2,
@@ -125,62 +185,6 @@ inline bool RootKeyStatus_Status_Parse(
     const std::string& name, RootKeyStatus_Status* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<RootKeyStatus_Status>(
     RootKeyStatus_Status_descriptor(), name, value);
-}
-enum ENUM_COMMODE : int {
-  SWI = 0,
-  HID = 1,
-  BLE = 2,
-  NFC = 3,
-  COMMODE_NS_ITEM = 4,
-  ENUM_COMMODE_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  ENUM_COMMODE_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool ENUM_COMMODE_IsValid(int value);
-constexpr ENUM_COMMODE ENUM_COMMODE_MIN = SWI;
-constexpr ENUM_COMMODE ENUM_COMMODE_MAX = COMMODE_NS_ITEM;
-constexpr int ENUM_COMMODE_ARRAYSIZE = ENUM_COMMODE_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_COMMODE_descriptor();
-template<typename T>
-inline const std::string& ENUM_COMMODE_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, ENUM_COMMODE>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function ENUM_COMMODE_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    ENUM_COMMODE_descriptor(), enum_t_value);
-}
-inline bool ENUM_COMMODE_Parse(
-    const std::string& name, ENUM_COMMODE* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_COMMODE>(
-    ENUM_COMMODE_descriptor(), name, value);
-}
-enum ENUM_DEVICE : int {
-  VD = 0,
-  BLADE = 1,
-  BIO = 2,
-  LITE = 3,
-  DEVICE_NS_ITEM = 4,
-  ENUM_DEVICE_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  ENUM_DEVICE_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool ENUM_DEVICE_IsValid(int value);
-constexpr ENUM_DEVICE ENUM_DEVICE_MIN = VD;
-constexpr ENUM_DEVICE ENUM_DEVICE_MAX = DEVICE_NS_ITEM;
-constexpr int ENUM_DEVICE_ARRAYSIZE = ENUM_DEVICE_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ENUM_DEVICE_descriptor();
-template<typename T>
-inline const std::string& ENUM_DEVICE_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, ENUM_DEVICE>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function ENUM_DEVICE_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    ENUM_DEVICE_descriptor(), enum_t_value);
-}
-inline bool ENUM_DEVICE_Parse(
-    const std::string& name, ENUM_DEVICE* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ENUM_DEVICE>(
-    ENUM_DEVICE_descriptor(), name, value);
 }
 enum ENUM_GRAPHENE_ROLE : int {
   OWNER = 0,
@@ -286,6 +290,216 @@ inline bool ENUM_PUB_FORMAT_Parse(
 }
 // ===================================================================
 
+class DeviceType :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.DeviceType) */ {
+ public:
+  DeviceType();
+  virtual ~DeviceType();
+
+  DeviceType(const DeviceType& from);
+  DeviceType(DeviceType&& from) noexcept
+    : DeviceType() {
+    *this = ::std::move(from);
+  }
+
+  inline DeviceType& operator=(const DeviceType& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline DeviceType& operator=(DeviceType&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const DeviceType& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const DeviceType* internal_default_instance() {
+    return reinterpret_cast<const DeviceType*>(
+               &_DeviceType_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(DeviceType& a, DeviceType& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(DeviceType* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline DeviceType* New() const final {
+    return CreateMaybeMessage<DeviceType>(nullptr);
+  }
+
+  DeviceType* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<DeviceType>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const DeviceType& from);
+  void MergeFrom(const DeviceType& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(DeviceType* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Common.DeviceType";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fCommon_2eproto);
+    return ::descriptor_table_Jub_5fCommon_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef DeviceType_ComMode ComMode;
+  static constexpr ComMode COM_MODE_UNSPECIFIED =
+    DeviceType_ComMode_COM_MODE_UNSPECIFIED;
+  static constexpr ComMode COM_MODE_SWI =
+    DeviceType_ComMode_COM_MODE_SWI;
+  static constexpr ComMode COM_MODE_HID =
+    DeviceType_ComMode_COM_MODE_HID;
+  static constexpr ComMode COM_MODE_BLE =
+    DeviceType_ComMode_COM_MODE_BLE;
+  static constexpr ComMode COM_MODE_NFC =
+    DeviceType_ComMode_COM_MODE_NFC;
+  static inline bool ComMode_IsValid(int value) {
+    return DeviceType_ComMode_IsValid(value);
+  }
+  static constexpr ComMode ComMode_MIN =
+    DeviceType_ComMode_ComMode_MIN;
+  static constexpr ComMode ComMode_MAX =
+    DeviceType_ComMode_ComMode_MAX;
+  static constexpr int ComMode_ARRAYSIZE =
+    DeviceType_ComMode_ComMode_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  ComMode_descriptor() {
+    return DeviceType_ComMode_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& ComMode_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, ComMode>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function ComMode_Name.");
+    return DeviceType_ComMode_Name(enum_t_value);
+  }
+  static inline bool ComMode_Parse(const std::string& name,
+      ComMode* value) {
+    return DeviceType_ComMode_Parse(name, value);
+  }
+
+  typedef DeviceType_PrdsClass PrdsClass;
+  static constexpr PrdsClass PRDS_CLASS_UNSPECIFIED =
+    DeviceType_PrdsClass_PRDS_CLASS_UNSPECIFIED;
+  static constexpr PrdsClass PRDS_CLASS_VD =
+    DeviceType_PrdsClass_PRDS_CLASS_VD;
+  static constexpr PrdsClass PRDS_CLASS_BLADE =
+    DeviceType_PrdsClass_PRDS_CLASS_BLADE;
+  static constexpr PrdsClass PRDS_CLASS_BIO =
+    DeviceType_PrdsClass_PRDS_CLASS_BIO;
+  static constexpr PrdsClass PRDS_CLASS_LITE =
+    DeviceType_PrdsClass_PRDS_CLASS_LITE;
+  static inline bool PrdsClass_IsValid(int value) {
+    return DeviceType_PrdsClass_IsValid(value);
+  }
+  static constexpr PrdsClass PrdsClass_MIN =
+    DeviceType_PrdsClass_PrdsClass_MIN;
+  static constexpr PrdsClass PrdsClass_MAX =
+    DeviceType_PrdsClass_PrdsClass_MAX;
+  static constexpr int PrdsClass_ARRAYSIZE =
+    DeviceType_PrdsClass_PrdsClass_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  PrdsClass_descriptor() {
+    return DeviceType_PrdsClass_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& PrdsClass_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, PrdsClass>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function PrdsClass_Name.");
+    return DeviceType_PrdsClass_Name(enum_t_value);
+  }
+  static inline bool PrdsClass_Parse(const std::string& name,
+      PrdsClass* value) {
+    return DeviceType_PrdsClass_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kComModeFieldNumber = 1,
+    kPrdsClassFieldNumber = 2,
+  };
+  // .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+  void clear_com_mode();
+  ::JUB::Proto::Common::DeviceType_ComMode com_mode() const;
+  void set_com_mode(::JUB::Proto::Common::DeviceType_ComMode value);
+
+  // .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+  void clear_prds_class();
+  ::JUB::Proto::Common::DeviceType_PrdsClass prds_class() const;
+  void set_prds_class(::JUB::Proto::Common::DeviceType_PrdsClass value);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.DeviceType)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  int com_mode_;
+  int prds_class_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fCommon_2eproto;
+};
+// -------------------------------------------------------------------
+
 class RootKeyStatus :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.RootKeyStatus) */ {
  public:
@@ -328,7 +542,7 @@ class RootKeyStatus :
                &_RootKeyStatus_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(RootKeyStatus& a, RootKeyStatus& b) {
     a.Swap(&b);
@@ -491,7 +705,7 @@ class Bip44Path :
                &_Bip44Path_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(Bip44Path& a, Bip44Path& b) {
     a.Swap(&b);
@@ -629,7 +843,7 @@ class Slip48Path :
                &_Slip48Path_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(Slip48Path& a, Slip48Path& b) {
     a.Swap(&b);
@@ -781,7 +995,7 @@ class ContextCfg :
                &_ContextCfg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(ContextCfg& a, ContextCfg& b) {
     a.Swap(&b);
@@ -918,7 +1132,7 @@ class DeviceInfo :
                &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   friend void swap(DeviceInfo& a, DeviceInfo& b) {
     a.Swap(&b);
@@ -1108,7 +1322,7 @@ class ResultInt :
                &_ResultInt_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   friend void swap(ResultInt& a, ResultInt& b) {
     a.Swap(&b);
@@ -1246,7 +1460,7 @@ class ResultString :
                &_ResultString_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   friend void swap(ResultString& a, ResultString& b) {
     a.Swap(&b);
@@ -1390,7 +1604,7 @@ class ResultAny :
                &_ResultAny_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   friend void swap(ResultAny& a, ResultAny& b) {
     a.Swap(&b);
@@ -1499,6 +1713,38 @@ class ResultAny :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// DeviceType
+
+// .JUB.Proto.Common.DeviceType.ComMode com_mode = 1;
+inline void DeviceType::clear_com_mode() {
+  com_mode_ = 0;
+}
+inline ::JUB::Proto::Common::DeviceType_ComMode DeviceType::com_mode() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceType.com_mode)
+  return static_cast< ::JUB::Proto::Common::DeviceType_ComMode >(com_mode_);
+}
+inline void DeviceType::set_com_mode(::JUB::Proto::Common::DeviceType_ComMode value) {
+  
+  com_mode_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceType.com_mode)
+}
+
+// .JUB.Proto.Common.DeviceType.PrdsClass prds_class = 2;
+inline void DeviceType::clear_prds_class() {
+  prds_class_ = 0;
+}
+inline ::JUB::Proto::Common::DeviceType_PrdsClass DeviceType::prds_class() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.DeviceType.prds_class)
+  return static_cast< ::JUB::Proto::Common::DeviceType_PrdsClass >(prds_class_);
+}
+inline void DeviceType::set_prds_class(::JUB::Proto::Common::DeviceType_PrdsClass value) {
+  
+  prds_class_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.DeviceType.prds_class)
+}
+
+// -------------------------------------------------------------------
+
 // RootKeyStatus
 
 // .JUB.Proto.Common.RootKeyStatus.Status status = 1;
@@ -2061,6 +2307,8 @@ ResultAny::value() const {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -2070,20 +2318,20 @@ ResultAny::value() const {
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::JUB::Proto::Common::DeviceType_ComMode> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::DeviceType_ComMode>() {
+  return ::JUB::Proto::Common::DeviceType_ComMode_descriptor();
+}
+template <> struct is_proto_enum< ::JUB::Proto::Common::DeviceType_PrdsClass> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::DeviceType_PrdsClass>() {
+  return ::JUB::Proto::Common::DeviceType_PrdsClass_descriptor();
+}
 template <> struct is_proto_enum< ::JUB::Proto::Common::RootKeyStatus_Status> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::RootKeyStatus_Status>() {
   return ::JUB::Proto::Common::RootKeyStatus_Status_descriptor();
-}
-template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_COMMODE> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_COMMODE>() {
-  return ::JUB::Proto::Common::ENUM_COMMODE_descriptor();
-}
-template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_DEVICE> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::JUB::Proto::Common::ENUM_DEVICE>() {
-  return ::JUB::Proto::Common::ENUM_DEVICE_descriptor();
 }
 template <> struct is_proto_enum< ::JUB::Proto::Common::ENUM_GRAPHENE_ROLE> : ::std::true_type {};
 template <>

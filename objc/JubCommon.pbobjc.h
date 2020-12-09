@@ -31,56 +31,6 @@ CF_EXTERN_C_BEGIN
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - Enum CommonProtosENUM_COMMODE
-
-/** The communication of devices */
-typedef GPB_ENUM(CommonProtosENUM_COMMODE) {
-  /**
-   * Value used if any message's field encounters a value that is not defined
-   * by this enum. The message will also have C functions to get/set the rawValue
-   * of the field.
-   **/
-  CommonProtosENUM_COMMODE_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  CommonProtosENUM_COMMODE_Swi = 0,
-  CommonProtosENUM_COMMODE_Hid = 1,
-  CommonProtosENUM_COMMODE_Ble = 2,
-  CommonProtosENUM_COMMODE_Nfc = 3,
-  CommonProtosENUM_COMMODE_CommodeNsItem = 4,
-};
-
-GPBEnumDescriptor *CommonProtosENUM_COMMODE_EnumDescriptor(void);
-
-/**
- * Checks to see if the given value is defined by the enum or was not known at
- * the time this source was generated.
- **/
-BOOL CommonProtosENUM_COMMODE_IsValidValue(int32_t value);
-
-#pragma mark - Enum CommonProtosENUM_DEVICE
-
-/** The product class */
-typedef GPB_ENUM(CommonProtosENUM_DEVICE) {
-  /**
-   * Value used if any message's field encounters a value that is not defined
-   * by this enum. The message will also have C functions to get/set the rawValue
-   * of the field.
-   **/
-  CommonProtosENUM_DEVICE_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
-  CommonProtosENUM_DEVICE_Vd = 0,
-  CommonProtosENUM_DEVICE_Blade = 1,
-  CommonProtosENUM_DEVICE_Bio = 2,
-  CommonProtosENUM_DEVICE_Lite = 3,
-  CommonProtosENUM_DEVICE_DeviceNsItem = 4,
-};
-
-GPBEnumDescriptor *CommonProtosENUM_DEVICE_EnumDescriptor(void);
-
-/**
- * Checks to see if the given value is defined by the enum or was not known at
- * the time this source was generated.
- **/
-BOOL CommonProtosENUM_DEVICE_IsValidValue(int32_t value);
-
 #pragma mark - Enum CommonProtosENUM_GRAPHENE_ROLE
 
 /** Graphene role */
@@ -170,6 +120,56 @@ GPBEnumDescriptor *CommonProtosENUM_PUB_FORMAT_EnumDescriptor(void);
  **/
 BOOL CommonProtosENUM_PUB_FORMAT_IsValidValue(int32_t value);
 
+#pragma mark - Enum CommonProtosDeviceType_ComMode
+
+/** The communication of devices */
+typedef GPB_ENUM(CommonProtosDeviceType_ComMode) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  CommonProtosDeviceType_ComMode_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  CommonProtosDeviceType_ComMode_ComModeUnspecified = 0,
+  CommonProtosDeviceType_ComMode_ComModeSwi = 1,
+  CommonProtosDeviceType_ComMode_ComModeHid = 2,
+  CommonProtosDeviceType_ComMode_ComModeBle = 3,
+  CommonProtosDeviceType_ComMode_ComModeNfc = 4,
+};
+
+GPBEnumDescriptor *CommonProtosDeviceType_ComMode_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL CommonProtosDeviceType_ComMode_IsValidValue(int32_t value);
+
+#pragma mark - Enum CommonProtosDeviceType_PrdsClass
+
+/** The product class */
+typedef GPB_ENUM(CommonProtosDeviceType_PrdsClass) {
+  /**
+   * Value used if any message's field encounters a value that is not defined
+   * by this enum. The message will also have C functions to get/set the rawValue
+   * of the field.
+   **/
+  CommonProtosDeviceType_PrdsClass_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  CommonProtosDeviceType_PrdsClass_PrdsClassUnspecified = 0,
+  CommonProtosDeviceType_PrdsClass_PrdsClassVd = 1,
+  CommonProtosDeviceType_PrdsClass_PrdsClassBlade = 2,
+  CommonProtosDeviceType_PrdsClass_PrdsClassBio = 3,
+  CommonProtosDeviceType_PrdsClass_PrdsClassLite = 4,
+};
+
+GPBEnumDescriptor *CommonProtosDeviceType_PrdsClass_EnumDescriptor(void);
+
+/**
+ * Checks to see if the given value is defined by the enum or was not known at
+ * the time this source was generated.
+ **/
+BOOL CommonProtosDeviceType_PrdsClass_IsValidValue(int32_t value);
+
 #pragma mark - Enum CommonProtosRootKeyStatus_Status
 
 typedef GPB_ENUM(CommonProtosRootKeyStatus_Status) {
@@ -207,15 +207,51 @@ BOOL CommonProtosRootKeyStatus_Status_IsValidValue(int32_t value);
 @interface CommonProtosJubCommonRoot : GPBRootObject
 @end
 
+#pragma mark - CommonProtosDeviceType
+
+typedef GPB_ENUM(CommonProtosDeviceType_FieldNumber) {
+  CommonProtosDeviceType_FieldNumber_ComMode = 1,
+  CommonProtosDeviceType_FieldNumber_PrdsClass = 2,
+};
+
+@interface CommonProtosDeviceType : GPBMessage
+
+@property(nonatomic, readwrite) CommonProtosDeviceType_ComMode comMode;
+
+@property(nonatomic, readwrite) CommonProtosDeviceType_PrdsClass prdsClass;
+
+@end
+
+/**
+ * Fetches the raw value of a @c CommonProtosDeviceType's @c comMode property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t CommonProtosDeviceType_ComMode_RawValue(CommonProtosDeviceType *message);
+/**
+ * Sets the raw value of an @c CommonProtosDeviceType's @c comMode property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetCommonProtosDeviceType_ComMode_RawValue(CommonProtosDeviceType *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c CommonProtosDeviceType's @c prdsClass property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t CommonProtosDeviceType_PrdsClass_RawValue(CommonProtosDeviceType *message);
+/**
+ * Sets the raw value of an @c CommonProtosDeviceType's @c prdsClass property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetCommonProtosDeviceType_PrdsClass_RawValue(CommonProtosDeviceType *message, int32_t value);
+
 #pragma mark - CommonProtosRootKeyStatus
 
 typedef GPB_ENUM(CommonProtosRootKeyStatus_FieldNumber) {
   CommonProtosRootKeyStatus_FieldNumber_Status = 1,
 };
 
-/**
- * for NFC
- **/
 @interface CommonProtosRootKeyStatus : GPBMessage
 
 @property(nonatomic, readwrite) CommonProtosRootKeyStatus_Status status;

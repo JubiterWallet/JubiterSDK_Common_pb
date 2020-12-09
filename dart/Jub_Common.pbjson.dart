@@ -5,28 +5,6 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-const ENUM_COMMODE$json = const {
-  '1': 'ENUM_COMMODE',
-  '2': const [
-    const {'1': 'SWI', '2': 0},
-    const {'1': 'HID', '2': 1},
-    const {'1': 'BLE', '2': 2},
-    const {'1': 'NFC', '2': 3},
-    const {'1': 'COMMODE_NS_ITEM', '2': 4},
-  ],
-};
-
-const ENUM_DEVICE$json = const {
-  '1': 'ENUM_DEVICE',
-  '2': const [
-    const {'1': 'VD', '2': 0},
-    const {'1': 'BLADE', '2': 1},
-    const {'1': 'BIO', '2': 2},
-    const {'1': 'LITE', '2': 3},
-    const {'1': 'DEVICE_NS_ITEM', '2': 4},
-  ],
-};
-
 const ENUM_GRAPHENE_ROLE$json = const {
   '1': 'ENUM_GRAPHENE_ROLE',
   '2': const [
@@ -58,6 +36,37 @@ const ENUM_PUB_FORMAT$json = const {
   '2': const [
     const {'1': 'HEX', '2': 0},
     const {'1': 'XPUB', '2': 1},
+  ],
+};
+
+const DeviceType$json = const {
+  '1': 'DeviceType',
+  '2': const [
+    const {'1': 'com_mode', '3': 1, '4': 1, '5': 14, '6': '.JUB.Proto.Common.DeviceType.ComMode', '10': 'comMode'},
+    const {'1': 'prds_class', '3': 2, '4': 1, '5': 14, '6': '.JUB.Proto.Common.DeviceType.PrdsClass', '10': 'prdsClass'},
+  ],
+  '4': const [DeviceType_ComMode$json, DeviceType_PrdsClass$json],
+};
+
+const DeviceType_ComMode$json = const {
+  '1': 'ComMode',
+  '2': const [
+    const {'1': 'COM_MODE_UNSPECIFIED', '2': 0},
+    const {'1': 'COM_MODE_SWI', '2': 1},
+    const {'1': 'COM_MODE_HID', '2': 2},
+    const {'1': 'COM_MODE_BLE', '2': 3},
+    const {'1': 'COM_MODE_NFC', '2': 4},
+  ],
+};
+
+const DeviceType_PrdsClass$json = const {
+  '1': 'PrdsClass',
+  '2': const [
+    const {'1': 'PRDS_CLASS_UNSPECIFIED', '2': 0},
+    const {'1': 'PRDS_CLASS_VD', '2': 1},
+    const {'1': 'PRDS_CLASS_BLADE', '2': 2},
+    const {'1': 'PRDS_CLASS_BIO', '2': 3},
+    const {'1': 'PRDS_CLASS_LITE', '2': 4},
   ],
 };
 

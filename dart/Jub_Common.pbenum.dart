@@ -9,48 +9,6 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ENUM_COMMODE extends $pb.ProtobufEnum {
-  static const ENUM_COMMODE SWI = ENUM_COMMODE._(0, 'SWI');
-  static const ENUM_COMMODE HID = ENUM_COMMODE._(1, 'HID');
-  static const ENUM_COMMODE BLE = ENUM_COMMODE._(2, 'BLE');
-  static const ENUM_COMMODE NFC = ENUM_COMMODE._(3, 'NFC');
-  static const ENUM_COMMODE COMMODE_NS_ITEM = ENUM_COMMODE._(4, 'COMMODE_NS_ITEM');
-
-  static const $core.List<ENUM_COMMODE> values = <ENUM_COMMODE> [
-    SWI,
-    HID,
-    BLE,
-    NFC,
-    COMMODE_NS_ITEM,
-  ];
-
-  static final $core.Map<$core.int, ENUM_COMMODE> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ENUM_COMMODE valueOf($core.int value) => _byValue[value];
-
-  const ENUM_COMMODE._($core.int v, $core.String n) : super(v, n);
-}
-
-class ENUM_DEVICE extends $pb.ProtobufEnum {
-  static const ENUM_DEVICE VD = ENUM_DEVICE._(0, 'VD');
-  static const ENUM_DEVICE BLADE = ENUM_DEVICE._(1, 'BLADE');
-  static const ENUM_DEVICE BIO = ENUM_DEVICE._(2, 'BIO');
-  static const ENUM_DEVICE LITE = ENUM_DEVICE._(3, 'LITE');
-  static const ENUM_DEVICE DEVICE_NS_ITEM = ENUM_DEVICE._(4, 'DEVICE_NS_ITEM');
-
-  static const $core.List<ENUM_DEVICE> values = <ENUM_DEVICE> [
-    VD,
-    BLADE,
-    BIO,
-    LITE,
-    DEVICE_NS_ITEM,
-  ];
-
-  static final $core.Map<$core.int, ENUM_DEVICE> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ENUM_DEVICE valueOf($core.int value) => _byValue[value];
-
-  const ENUM_DEVICE._($core.int v, $core.String n) : super(v, n);
-}
-
 class ENUM_GRAPHENE_ROLE extends $pb.ProtobufEnum {
   static const ENUM_GRAPHENE_ROLE OWNER = ENUM_GRAPHENE_ROLE._(0, 'OWNER');
   static const ENUM_GRAPHENE_ROLE ACTIVE = ENUM_GRAPHENE_ROLE._(1, 'ACTIVE');
@@ -113,6 +71,48 @@ class ENUM_PUB_FORMAT extends $pb.ProtobufEnum {
   static ENUM_PUB_FORMAT valueOf($core.int value) => _byValue[value];
 
   const ENUM_PUB_FORMAT._($core.int v, $core.String n) : super(v, n);
+}
+
+class DeviceType_ComMode extends $pb.ProtobufEnum {
+  static const DeviceType_ComMode COM_MODE_UNSPECIFIED = DeviceType_ComMode._(0, 'COM_MODE_UNSPECIFIED');
+  static const DeviceType_ComMode COM_MODE_SWI = DeviceType_ComMode._(1, 'COM_MODE_SWI');
+  static const DeviceType_ComMode COM_MODE_HID = DeviceType_ComMode._(2, 'COM_MODE_HID');
+  static const DeviceType_ComMode COM_MODE_BLE = DeviceType_ComMode._(3, 'COM_MODE_BLE');
+  static const DeviceType_ComMode COM_MODE_NFC = DeviceType_ComMode._(4, 'COM_MODE_NFC');
+
+  static const $core.List<DeviceType_ComMode> values = <DeviceType_ComMode> [
+    COM_MODE_UNSPECIFIED,
+    COM_MODE_SWI,
+    COM_MODE_HID,
+    COM_MODE_BLE,
+    COM_MODE_NFC,
+  ];
+
+  static final $core.Map<$core.int, DeviceType_ComMode> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DeviceType_ComMode valueOf($core.int value) => _byValue[value];
+
+  const DeviceType_ComMode._($core.int v, $core.String n) : super(v, n);
+}
+
+class DeviceType_PrdsClass extends $pb.ProtobufEnum {
+  static const DeviceType_PrdsClass PRDS_CLASS_UNSPECIFIED = DeviceType_PrdsClass._(0, 'PRDS_CLASS_UNSPECIFIED');
+  static const DeviceType_PrdsClass PRDS_CLASS_VD = DeviceType_PrdsClass._(1, 'PRDS_CLASS_VD');
+  static const DeviceType_PrdsClass PRDS_CLASS_BLADE = DeviceType_PrdsClass._(2, 'PRDS_CLASS_BLADE');
+  static const DeviceType_PrdsClass PRDS_CLASS_BIO = DeviceType_PrdsClass._(3, 'PRDS_CLASS_BIO');
+  static const DeviceType_PrdsClass PRDS_CLASS_LITE = DeviceType_PrdsClass._(4, 'PRDS_CLASS_LITE');
+
+  static const $core.List<DeviceType_PrdsClass> values = <DeviceType_PrdsClass> [
+    PRDS_CLASS_UNSPECIFIED,
+    PRDS_CLASS_VD,
+    PRDS_CLASS_BLADE,
+    PRDS_CLASS_BIO,
+    PRDS_CLASS_LITE,
+  ];
+
+  static final $core.Map<$core.int, DeviceType_PrdsClass> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DeviceType_PrdsClass valueOf($core.int value) => _byValue[value];
+
+  const DeviceType_PrdsClass._($core.int v, $core.String n) : super(v, n);
 }
 
 class RootKeyStatus_Status extends $pb.ProtobufEnum {

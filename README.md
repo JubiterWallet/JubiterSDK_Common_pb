@@ -36,14 +36,14 @@
 
 
 ### Objective-C
-> ✗ protoc --proto_path=./protos --objc_out=./OC protos/Jub_Ripple.proto
+> ✗ protoc --proto_path=./protos --objc_out=./objc protos/Jub_Ripple.proto
 
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/Discover.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/Tron.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/common.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./OC/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./objc/Tron/protocol protos/Tron/protocol/core/Discover.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./objc/Tron/protocol protos/Tron/protocol/core/Tron.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./objc/Tron/protocol protos/Tron/protocol/core/contract/common.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./objc/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./objc/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --objc_out=./objc/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
 
 
 ### dart
