@@ -14,6 +14,155 @@ public final class JuBiterBlueProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code FpIdVerifyMode}
+   */
+  public enum FpIdVerifyMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>FP_ID_VERIFY_MODE_UNSPECIFIED = 0;</code>
+     */
+    FP_ID_VERIFY_MODE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * reserved
+     * </pre>
+     *
+     * <code>FP_ID_VERIFY_MODE_DEVICE = 1;</code>
+     */
+    FP_ID_VERIFY_MODE_DEVICE(1),
+    /**
+     * <code>FP_ID_VERIFY_MODE_9GRIDS = 2;</code>
+     */
+    FP_ID_VERIFY_MODE_9GRIDS(2),
+    /**
+     * <pre>
+     * reserved
+     * </pre>
+     *
+     * <code>FP_ID_VERIFY_MODE_APDU = 3;</code>
+     */
+    FP_ID_VERIFY_MODE_APDU(3),
+    /**
+     * <pre>
+     * reserved
+     * </pre>
+     *
+     * <code>FP_ID_VERIFY_MODE_FPGT = 4;</code>
+     */
+    FP_ID_VERIFY_MODE_FPGT(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>FP_ID_VERIFY_MODE_UNSPECIFIED = 0;</code>
+     */
+    public static final int FP_ID_VERIFY_MODE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * reserved
+     * </pre>
+     *
+     * <code>FP_ID_VERIFY_MODE_DEVICE = 1;</code>
+     */
+    public static final int FP_ID_VERIFY_MODE_DEVICE_VALUE = 1;
+    /**
+     * <code>FP_ID_VERIFY_MODE_9GRIDS = 2;</code>
+     */
+    public static final int FP_ID_VERIFY_MODE_9GRIDS_VALUE = 2;
+    /**
+     * <pre>
+     * reserved
+     * </pre>
+     *
+     * <code>FP_ID_VERIFY_MODE_APDU = 3;</code>
+     */
+    public static final int FP_ID_VERIFY_MODE_APDU_VALUE = 3;
+    /**
+     * <pre>
+     * reserved
+     * </pre>
+     *
+     * <code>FP_ID_VERIFY_MODE_FPGT = 4;</code>
+     */
+    public static final int FP_ID_VERIFY_MODE_FPGT_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FpIdVerifyMode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static FpIdVerifyMode forNumber(int value) {
+      switch (value) {
+        case 0: return FP_ID_VERIFY_MODE_UNSPECIFIED;
+        case 1: return FP_ID_VERIFY_MODE_DEVICE;
+        case 2: return FP_ID_VERIFY_MODE_9GRIDS;
+        case 3: return FP_ID_VERIFY_MODE_APDU;
+        case 4: return FP_ID_VERIFY_MODE_FPGT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FpIdVerifyMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FpIdVerifyMode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FpIdVerifyMode>() {
+            public FpIdVerifyMode findValueByNumber(int number) {
+              return FpIdVerifyMode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.jubiter.plugin.protos.JuBiterBlueProtos.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final FpIdVerifyMode[] VALUES = values();
+
+    public static FpIdVerifyMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FpIdVerifyMode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:FpIdVerifyMode)
+  }
+
   public interface Int32ValueOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Int32Value)
       com.google.protobuf.MessageOrBuilder {
@@ -30,7 +179,6 @@ public final class JuBiterBlueProtos {
   /**
    * <pre>
    * Wrapper message for `int32`.
-   *
    * Allows for nullability of fields in messages
    * </pre>
    *
@@ -286,7 +434,6 @@ public final class JuBiterBlueProtos {
     /**
      * <pre>
      * Wrapper message for `int32`.
-     *
      * Allows for nullability of fields in messages
      * </pre>
      *
@@ -8005,6 +8152,610 @@ public final class JuBiterBlueProtos {
 
   }
 
+  public interface EnrollFpStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EnrollFpState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 modality_id = 1;</code>
+     */
+    int getModalityId();
+
+    /**
+     * <code>int32 next_index = 2;</code>
+     */
+    int getNextIndex();
+
+    /**
+     * <code>int32 remaining_times = 3;</code>
+     */
+    int getRemainingTimes();
+  }
+  /**
+   * Protobuf type {@code EnrollFpState}
+   */
+  public  static final class EnrollFpState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:EnrollFpState)
+      EnrollFpStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnrollFpState.newBuilder() to construct.
+    private EnrollFpState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnrollFpState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnrollFpState();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnrollFpState(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              modalityId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              nextIndex_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              remainingTimes_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.jubiter.plugin.protos.JuBiterBlueProtos.internal_static_EnrollFpState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.jubiter.plugin.protos.JuBiterBlueProtos.internal_static_EnrollFpState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.class, com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.Builder.class);
+    }
+
+    public static final int MODALITY_ID_FIELD_NUMBER = 1;
+    private int modalityId_;
+    /**
+     * <code>int32 modality_id = 1;</code>
+     */
+    public int getModalityId() {
+      return modalityId_;
+    }
+
+    public static final int NEXT_INDEX_FIELD_NUMBER = 2;
+    private int nextIndex_;
+    /**
+     * <code>int32 next_index = 2;</code>
+     */
+    public int getNextIndex() {
+      return nextIndex_;
+    }
+
+    public static final int REMAINING_TIMES_FIELD_NUMBER = 3;
+    private int remainingTimes_;
+    /**
+     * <code>int32 remaining_times = 3;</code>
+     */
+    public int getRemainingTimes() {
+      return remainingTimes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (modalityId_ != 0) {
+        output.writeInt32(1, modalityId_);
+      }
+      if (nextIndex_ != 0) {
+        output.writeInt32(2, nextIndex_);
+      }
+      if (remainingTimes_ != 0) {
+        output.writeInt32(3, remainingTimes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (modalityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, modalityId_);
+      }
+      if (nextIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, nextIndex_);
+      }
+      if (remainingTimes_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, remainingTimes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState)) {
+        return super.equals(obj);
+      }
+      com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState other = (com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState) obj;
+
+      if (getModalityId()
+          != other.getModalityId()) return false;
+      if (getNextIndex()
+          != other.getNextIndex()) return false;
+      if (getRemainingTimes()
+          != other.getRemainingTimes()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODALITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getModalityId();
+      hash = (37 * hash) + NEXT_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getNextIndex();
+      hash = (37 * hash) + REMAINING_TIMES_FIELD_NUMBER;
+      hash = (53 * hash) + getRemainingTimes();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code EnrollFpState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:EnrollFpState)
+        com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.jubiter.plugin.protos.JuBiterBlueProtos.internal_static_EnrollFpState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.jubiter.plugin.protos.JuBiterBlueProtos.internal_static_EnrollFpState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.class, com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.Builder.class);
+      }
+
+      // Construct using com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modalityId_ = 0;
+
+        nextIndex_ = 0;
+
+        remainingTimes_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.jubiter.plugin.protos.JuBiterBlueProtos.internal_static_EnrollFpState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState getDefaultInstanceForType() {
+        return com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState build() {
+        com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState buildPartial() {
+        com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState result = new com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState(this);
+        result.modalityId_ = modalityId_;
+        result.nextIndex_ = nextIndex_;
+        result.remainingTimes_ = remainingTimes_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState) {
+          return mergeFrom((com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState other) {
+        if (other == com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState.getDefaultInstance()) return this;
+        if (other.getModalityId() != 0) {
+          setModalityId(other.getModalityId());
+        }
+        if (other.getNextIndex() != 0) {
+          setNextIndex(other.getNextIndex());
+        }
+        if (other.getRemainingTimes() != 0) {
+          setRemainingTimes(other.getRemainingTimes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int modalityId_ ;
+      /**
+       * <code>int32 modality_id = 1;</code>
+       */
+      public int getModalityId() {
+        return modalityId_;
+      }
+      /**
+       * <code>int32 modality_id = 1;</code>
+       */
+      public Builder setModalityId(int value) {
+        
+        modalityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 modality_id = 1;</code>
+       */
+      public Builder clearModalityId() {
+        
+        modalityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int nextIndex_ ;
+      /**
+       * <code>int32 next_index = 2;</code>
+       */
+      public int getNextIndex() {
+        return nextIndex_;
+      }
+      /**
+       * <code>int32 next_index = 2;</code>
+       */
+      public Builder setNextIndex(int value) {
+        
+        nextIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 next_index = 2;</code>
+       */
+      public Builder clearNextIndex() {
+        
+        nextIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int remainingTimes_ ;
+      /**
+       * <code>int32 remaining_times = 3;</code>
+       */
+      public int getRemainingTimes() {
+        return remainingTimes_;
+      }
+      /**
+       * <code>int32 remaining_times = 3;</code>
+       */
+      public Builder setRemainingTimes(int value) {
+        
+        remainingTimes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 remaining_times = 3;</code>
+       */
+      public Builder clearRemainingTimes() {
+        
+        remainingTimes_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:EnrollFpState)
+    }
+
+    // @@protoc_insertion_point(class_scope:EnrollFpState)
+    private static final com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState();
+    }
+
+    public static com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnrollFpState>
+        PARSER = new com.google.protobuf.AbstractParser<EnrollFpState>() {
+      @java.lang.Override
+      public EnrollFpState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnrollFpState(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnrollFpState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnrollFpState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.jubiter.plugin.protos.JuBiterBlueProtos.EnrollFpState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Int32Value_descriptor;
   private static final 
@@ -8060,6 +8811,11 @@ public final class JuBiterBlueProtos {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_BluetoothConnectedResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_EnrollFpState_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_EnrollFpState_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8102,9 +8858,15 @@ public final class JuBiterBlueProtos {
       "DeviceState\022\020\n\014DISCONNECTED\020\000\022\016\n\nCONNECT" +
       "ING\020\001\022\r\n\tCONNECTED\020\002\022\021\n\rDISCONNECTING\020\003\"" +
       "?\n\032BluetoothConnectedResponse\022!\n\007devices" +
-      "\030\001 \003(\0132\020.BluetoothDeviceBB\n\031com.jubiter." +
-      "plugin.protosB\021JuBiterBlueProtos\242\002\021JuBit" +
-      "erBlueProtosb\006proto3"
+      "\030\001 \003(\0132\020.BluetoothDevice\"Q\n\rEnrollFpStat" +
+      "e\022\023\n\013modality_id\030\001 \001(\005\022\022\n\nnext_index\030\002 \001" +
+      "(\005\022\027\n\017remaining_times\030\003 \001(\005*\247\001\n\016FpIdVeri" +
+      "fyMode\022!\n\035FP_ID_VERIFY_MODE_UNSPECIFIED\020" +
+      "\000\022\034\n\030FP_ID_VERIFY_MODE_DEVICE\020\001\022\034\n\030FP_ID" +
+      "_VERIFY_MODE_9GRIDS\020\002\022\032\n\026FP_ID_VERIFY_MO" +
+      "DE_APDU\020\003\022\032\n\026FP_ID_VERIFY_MODE_FPGT\020\004BB\n" +
+      "\031com.jubiter.plugin.protosB\021JuBiterBlueP" +
+      "rotos\242\002\021JuBiterBlueProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8176,6 +8938,12 @@ public final class JuBiterBlueProtos {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BluetoothConnectedResponse_descriptor,
         new java.lang.String[] { "Devices", });
+    internal_static_EnrollFpState_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_EnrollFpState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_EnrollFpState_descriptor,
+        new java.lang.String[] { "ModalityId", "NextIndex", "RemainingTimes", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

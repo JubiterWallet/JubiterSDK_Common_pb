@@ -5,6 +5,17 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
+const FpIdVerifyMode$json = const {
+  '1': 'FpIdVerifyMode',
+  '2': const [
+    const {'1': 'FP_ID_VERIFY_MODE_UNSPECIFIED', '2': 0},
+    const {'1': 'FP_ID_VERIFY_MODE_DEVICE', '2': 1},
+    const {'1': 'FP_ID_VERIFY_MODE_9GRIDS', '2': 2},
+    const {'1': 'FP_ID_VERIFY_MODE_APDU', '2': 3},
+    const {'1': 'FP_ID_VERIFY_MODE_FPGT', '2': 4},
+  ],
+};
+
 const Int32Value$json = const {
   '1': 'Int32Value',
   '2': const [
@@ -135,6 +146,15 @@ const BluetoothConnectedResponse$json = const {
   '1': 'BluetoothConnectedResponse',
   '2': const [
     const {'1': 'devices', '3': 1, '4': 3, '5': 11, '6': '.BluetoothDevice', '10': 'devices'},
+  ],
+};
+
+const EnrollFpState$json = const {
+  '1': 'EnrollFpState',
+  '2': const [
+    const {'1': 'modality_id', '3': 1, '4': 1, '5': 5, '10': 'modalityId'},
+    const {'1': 'next_index', '3': 2, '4': 1, '5': 5, '10': 'nextIndex'},
+    const {'1': 'remaining_times', '3': 3, '4': 1, '5': 5, '10': 'remainingTimes'},
   ],
 };
 

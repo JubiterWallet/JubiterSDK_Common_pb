@@ -4,6 +4,7 @@ option java_package = "com.jubiter.plugin.protos";
 option java_outer_classname = "JuBiterBlueProtos";
 option objc_class_prefix = "JuBiterBlueProtos";
 
+
 // Wrapper message for `int32`.
 //
 // Allows for nullability of fields in messages
@@ -79,4 +80,19 @@ message BluetoothDeviceStateResponse {
 
 message BluetoothConnectedResponse {
     repeated BluetoothDevice devices = 1;
+}
+
+
+enum FpIdVerifyMode {
+    FP_ID_VERIFY_MODE_UNSPECIFIED = 0x00;
+    FP_ID_VERIFY_MODE_DEVICE = 0x01;  // reserved
+    FP_ID_VERIFY_MODE_9GRIDS = 0x02;
+    FP_ID_VERIFY_MODE_APDU   = 0x03;  // reserved
+    FP_ID_VERIFY_MODE_FPGT   = 0x04;  // reserved
+}
+
+message EnrollFpState {
+    int32 modality_id = 1;
+    int32 next_index = 2;
+    int32 remaining_times = 3;
 }

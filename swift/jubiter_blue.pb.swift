@@ -19,9 +19,65 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
+public enum FpIdVerifyMode: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
+  case unspecified // = 0
+
+  /// reserved
+  case device // = 1
+  case fpIDVerifyMode9Grids // = 2
+
+  /// reserved
+  case apdu // = 3
+
+  /// reserved
+  case fpgt // = 4
+  case UNRECOGNIZED(Int)
+
+  public init() {
+    self = .unspecified
+  }
+
+  public init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .unspecified
+    case 1: self = .device
+    case 2: self = .fpIDVerifyMode9Grids
+    case 3: self = .apdu
+    case 4: self = .fpgt
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  public var rawValue: Int {
+    switch self {
+    case .unspecified: return 0
+    case .device: return 1
+    case .fpIDVerifyMode9Grids: return 2
+    case .apdu: return 3
+    case .fpgt: return 4
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension FpIdVerifyMode: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [FpIdVerifyMode] = [
+    .unspecified,
+    .device,
+    .fpIDVerifyMode9Grids,
+    .apdu,
+    .fpgt,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
 /// Wrapper message for `int32`.
-///
-///
 ///
 /// Allows for nullability of fields in messages
 public struct Int32Value {
@@ -353,7 +409,33 @@ public struct BluetoothConnectedResponse {
   public init() {}
 }
 
+public struct EnrollFpState {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var modalityID: Int32 = 0
+
+  public var nextIndex: Int32 = 0
+
+  public var remainingTimes: Int32 = 0
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
+
+extension FpIdVerifyMode: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "FP_ID_VERIFY_MODE_UNSPECIFIED"),
+    1: .same(proto: "FP_ID_VERIFY_MODE_DEVICE"),
+    2: .same(proto: "FP_ID_VERIFY_MODE_9GRIDS"),
+    3: .same(proto: "FP_ID_VERIFY_MODE_APDU"),
+    4: .same(proto: "FP_ID_VERIFY_MODE_FPGT"),
+  ]
+}
 
 extension Int32Value: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = "Int32Value"
@@ -731,6 +813,47 @@ extension BluetoothConnectedResponse: SwiftProtobuf.Message, SwiftProtobuf._Mess
 
   public static func ==(lhs: BluetoothConnectedResponse, rhs: BluetoothConnectedResponse) -> Bool {
     if lhs.devices != rhs.devices {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension EnrollFpState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = "EnrollFpState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "modality_id"),
+    2: .standard(proto: "next_index"),
+    3: .standard(proto: "remaining_times"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeSingularInt32Field(value: &self.modalityID)
+      case 2: try decoder.decodeSingularInt32Field(value: &self.nextIndex)
+      case 3: try decoder.decodeSingularInt32Field(value: &self.remainingTimes)
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.modalityID != 0 {
+      try visitor.visitSingularInt32Field(value: self.modalityID, fieldNumber: 1)
+    }
+    if self.nextIndex != 0 {
+      try visitor.visitSingularInt32Field(value: self.nextIndex, fieldNumber: 2)
+    }
+    if self.remainingTimes != 0 {
+      try visitor.visitSingularInt32Field(value: self.remainingTimes, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: EnrollFpState, rhs: EnrollFpState) -> Bool {
+    if lhs.modalityID != rhs.modalityID {return false}
+    if lhs.nextIndex != rhs.nextIndex {return false}
+    if lhs.remainingTimes != rhs.remainingTimes {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

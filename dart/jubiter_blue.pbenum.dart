@@ -9,6 +9,27 @@
 import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class FpIdVerifyMode extends $pb.ProtobufEnum {
+  static const FpIdVerifyMode FP_ID_VERIFY_MODE_UNSPECIFIED = FpIdVerifyMode._(0, 'FP_ID_VERIFY_MODE_UNSPECIFIED');
+  static const FpIdVerifyMode FP_ID_VERIFY_MODE_DEVICE = FpIdVerifyMode._(1, 'FP_ID_VERIFY_MODE_DEVICE');
+  static const FpIdVerifyMode FP_ID_VERIFY_MODE_9GRIDS = FpIdVerifyMode._(2, 'FP_ID_VERIFY_MODE_9GRIDS');
+  static const FpIdVerifyMode FP_ID_VERIFY_MODE_APDU = FpIdVerifyMode._(3, 'FP_ID_VERIFY_MODE_APDU');
+  static const FpIdVerifyMode FP_ID_VERIFY_MODE_FPGT = FpIdVerifyMode._(4, 'FP_ID_VERIFY_MODE_FPGT');
+
+  static const $core.List<FpIdVerifyMode> values = <FpIdVerifyMode> [
+    FP_ID_VERIFY_MODE_UNSPECIFIED,
+    FP_ID_VERIFY_MODE_DEVICE,
+    FP_ID_VERIFY_MODE_9GRIDS,
+    FP_ID_VERIFY_MODE_APDU,
+    FP_ID_VERIFY_MODE_FPGT,
+  ];
+
+  static final $core.Map<$core.int, FpIdVerifyMode> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static FpIdVerifyMode valueOf($core.int value) => _byValue[value];
+
+  const FpIdVerifyMode._($core.int v, $core.String n) : super(v, n);
+}
+
 class BluetoothState_State extends $pb.ProtobufEnum {
   static const BluetoothState_State UNKNOWN = BluetoothState_State._(0, 'UNKNOWN');
   static const BluetoothState_State UNAVAILABLE = BluetoothState_State._(1, 'UNAVAILABLE');

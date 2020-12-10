@@ -418,3 +418,54 @@ class BluetoothConnectedResponse extends $pb.GeneratedMessage {
   $core.List<BluetoothDevice> get devices => $_getList(0);
 }
 
+class EnrollFpState extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnrollFpState', createEmptyInstance: create)
+    ..a<$core.int>(1, 'modalityId', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, 'nextIndex', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, 'remainingTimes', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  EnrollFpState._() : super();
+  factory EnrollFpState() => create();
+  factory EnrollFpState.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EnrollFpState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  EnrollFpState clone() => EnrollFpState()..mergeFromMessage(this);
+  EnrollFpState copyWith(void Function(EnrollFpState) updates) => super.copyWith((message) => updates(message as EnrollFpState));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static EnrollFpState create() => EnrollFpState._();
+  EnrollFpState createEmptyInstance() => create();
+  static $pb.PbList<EnrollFpState> createRepeated() => $pb.PbList<EnrollFpState>();
+  @$core.pragma('dart2js:noInline')
+  static EnrollFpState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnrollFpState>(create);
+  static EnrollFpState _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get modalityId => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set modalityId($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasModalityId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearModalityId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get nextIndex => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set nextIndex($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNextIndex() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNextIndex() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get remainingTimes => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set remainingTimes($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRemainingTimes() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRemainingTimes() => clearField(3);
+}
+
