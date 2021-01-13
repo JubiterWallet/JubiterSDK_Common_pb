@@ -49,7 +49,7 @@ struct TableStruct_Jub_5fCommon_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[9]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[10]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -86,6 +86,9 @@ extern RootKeyStatusDefaultTypeInternal _RootKeyStatus_default_instance_;
 class Slip48Path;
 class Slip48PathDefaultTypeInternal;
 extern Slip48PathDefaultTypeInternal _Slip48Path_default_instance_;
+class Version;
+class VersionDefaultTypeInternal;
+extern VersionDefaultTypeInternal _Version_default_instance_;
 }  // namespace Common
 }  // namespace Proto
 }  // namespace JUB
@@ -99,6 +102,7 @@ template<> ::JUB::Proto::Common::ResultInt* Arena::CreateMaybeMessage<::JUB::Pro
 template<> ::JUB::Proto::Common::ResultString* Arena::CreateMaybeMessage<::JUB::Proto::Common::ResultString>(Arena*);
 template<> ::JUB::Proto::Common::RootKeyStatus* Arena::CreateMaybeMessage<::JUB::Proto::Common::RootKeyStatus>(Arena*);
 template<> ::JUB::Proto::Common::Slip48Path* Arena::CreateMaybeMessage<::JUB::Proto::Common::Slip48Path>(Arena*);
+template<> ::JUB::Proto::Common::Version* Arena::CreateMaybeMessage<::JUB::Proto::Common::Version>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
 namespace Proto {
@@ -1704,6 +1708,151 @@ class ResultAny :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Jub_5fCommon_2eproto;
 };
+// -------------------------------------------------------------------
+
+class Version :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Common.Version) */ {
+ public:
+  Version();
+  virtual ~Version();
+
+  Version(const Version& from);
+  Version(Version&& from) noexcept
+    : Version() {
+    *this = ::std::move(from);
+  }
+
+  inline Version& operator=(const Version& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Version& operator=(Version&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Version& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Version* internal_default_instance() {
+    return reinterpret_cast<const Version*>(
+               &_Version_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(Version& a, Version& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(Version* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Version* New() const final {
+    return CreateMaybeMessage<Version>(nullptr);
+  }
+
+  Version* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Version>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Version& from);
+  void MergeFrom(const Version& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Version* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Common.Version";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fCommon_2eproto);
+    return ::descriptor_table_Jub_5fCommon_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMajorFieldNumber = 1,
+    kMinorFieldNumber = 2,
+    kPatchFieldNumber = 3,
+  };
+  // uint32 major = 1;
+  void clear_major();
+  ::PROTOBUF_NAMESPACE_ID::uint32 major() const;
+  void set_major(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 minor = 2;
+  void clear_minor();
+  ::PROTOBUF_NAMESPACE_ID::uint32 minor() const;
+  void set_minor(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 patch = 3;
+  void clear_patch();
+  ::PROTOBUF_NAMESPACE_ID::uint32 patch() const;
+  void set_patch(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Common.Version)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 major_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 minor_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 patch_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fCommon_2eproto;
+};
 // ===================================================================
 
 
@@ -2290,9 +2439,57 @@ ResultAny::value() const {
   return value_;
 }
 
+// -------------------------------------------------------------------
+
+// Version
+
+// uint32 major = 1;
+inline void Version::clear_major() {
+  major_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Version::major() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Version.major)
+  return major_;
+}
+inline void Version::set_major(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  major_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Version.major)
+}
+
+// uint32 minor = 2;
+inline void Version::clear_minor() {
+  minor_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Version::minor() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Version.minor)
+  return minor_;
+}
+inline void Version::set_minor(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  minor_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Version.minor)
+}
+
+// uint32 patch = 3;
+inline void Version::clear_patch() {
+  patch_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 Version::patch() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Common.Version.patch)
+  return patch_;
+}
+inline void Version::set_patch(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  patch_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Common.Version.patch)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

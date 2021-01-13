@@ -419,3 +419,54 @@ class ResultAny extends $pb.GeneratedMessage {
   $core.List<$0.Any> get value => $_getList(1);
 }
 
+class Version extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Version', package: const $pb.PackageName('JUB.Proto.Common'), createEmptyInstance: create)
+    ..a<$core.int>(1, 'major', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, 'minor', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, 'patch', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  Version._() : super();
+  factory Version() => create();
+  factory Version.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Version.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  Version clone() => Version()..mergeFromMessage(this);
+  Version copyWith(void Function(Version) updates) => super.copyWith((message) => updates(message as Version));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Version create() => Version._();
+  Version createEmptyInstance() => create();
+  static $pb.PbList<Version> createRepeated() => $pb.PbList<Version>();
+  @$core.pragma('dart2js:noInline')
+  static Version getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Version>(create);
+  static Version _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get major => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set major($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMajor() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMajor() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get minor => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set minor($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMinor() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMinor() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get patch => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set patch($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPatch() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPatch() => clearField(3);
+}
+

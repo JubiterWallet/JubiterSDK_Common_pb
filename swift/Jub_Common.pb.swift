@@ -478,6 +478,23 @@ public struct JUB_Proto_Common_ResultAny {
   public init() {}
 }
 
+/// three-part version number
+public struct JUB_Proto_Common_Version {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var major: UInt32 = 0
+
+  public var minor: UInt32 = 0
+
+  public var patch: UInt32 = 0
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "JUB.Proto.Common"
@@ -874,6 +891,47 @@ extension JUB_Proto_Common_ResultAny: SwiftProtobuf.Message, SwiftProtobuf._Mess
   public static func ==(lhs: JUB_Proto_Common_ResultAny, rhs: JUB_Proto_Common_ResultAny) -> Bool {
     if lhs.stateCode != rhs.stateCode {return false}
     if lhs.value != rhs.value {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension JUB_Proto_Common_Version: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".Version"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "major"),
+    2: .same(proto: "minor"),
+    3: .same(proto: "patch"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeSingularUInt32Field(value: &self.major)
+      case 2: try decoder.decodeSingularUInt32Field(value: &self.minor)
+      case 3: try decoder.decodeSingularUInt32Field(value: &self.patch)
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if self.major != 0 {
+      try visitor.visitSingularUInt32Field(value: self.major, fieldNumber: 1)
+    }
+    if self.minor != 0 {
+      try visitor.visitSingularUInt32Field(value: self.minor, fieldNumber: 2)
+    }
+    if self.patch != 0 {
+      try visitor.visitSingularUInt32Field(value: self.patch, fieldNumber: 3)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: JUB_Proto_Common_Version, rhs: JUB_Proto_Common_Version) -> Bool {
+    if lhs.major != rhs.major {return false}
+    if lhs.minor != rhs.minor {return false}
+    if lhs.patch != rhs.patch {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

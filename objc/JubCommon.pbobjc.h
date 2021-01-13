@@ -424,6 +424,27 @@ typedef GPB_ENUM(CommonProtosResultAny_FieldNumber) {
 
 @end
 
+#pragma mark - CommonProtosVersion
+
+typedef GPB_ENUM(CommonProtosVersion_FieldNumber) {
+  CommonProtosVersion_FieldNumber_Major = 1,
+  CommonProtosVersion_FieldNumber_Minor = 2,
+  CommonProtosVersion_FieldNumber_Patch = 3,
+};
+
+/**
+ * three-part version number
+ **/
+@interface CommonProtosVersion : GPBMessage
+
+@property(nonatomic, readwrite) uint32_t major;
+
+@property(nonatomic, readwrite) uint32_t minor;
+
+@property(nonatomic, readwrite) uint32_t patch;
+
+@end
+
 NS_ASSUME_NONNULL_END
 
 CF_EXTERN_C_END

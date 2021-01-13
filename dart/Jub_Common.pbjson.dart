@@ -148,3 +148,12 @@ const ResultAny$json = const {
   ],
 };
 
+const Version$json = const {
+  '1': 'Version',
+  '2': const [
+    const {'1': 'major', '3': 1, '4': 1, '5': 13, '10': 'major'},
+    const {'1': 'minor', '3': 2, '4': 1, '5': 13, '10': 'minor'},
+    const {'1': 'patch', '3': 3, '4': 1, '5': 13, '10': 'patch'},
+  ],
+};
+

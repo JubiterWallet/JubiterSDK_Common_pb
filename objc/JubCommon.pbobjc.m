@@ -907,6 +907,73 @@ typedef struct CommonProtosResultAny__storage_ {
 
 @end
 
+#pragma mark - CommonProtosVersion
+
+@implementation CommonProtosVersion
+
+@dynamic major;
+@dynamic minor;
+@dynamic patch;
+
+typedef struct CommonProtosVersion__storage_ {
+  uint32_t _has_storage_[1];
+  uint32_t major;
+  uint32_t minor;
+  uint32_t patch;
+} CommonProtosVersion__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "major",
+        .dataTypeSpecific.className = NULL,
+        .number = CommonProtosVersion_FieldNumber_Major,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CommonProtosVersion__storage_, major),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "minor",
+        .dataTypeSpecific.className = NULL,
+        .number = CommonProtosVersion_FieldNumber_Minor,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CommonProtosVersion__storage_, minor),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+      {
+        .name = "patch",
+        .dataTypeSpecific.className = NULL,
+        .number = CommonProtosVersion_FieldNumber_Patch,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CommonProtosVersion__storage_, patch),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeUInt32,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[CommonProtosVersion class]
+                                     rootClass:[CommonProtosJubCommonRoot class]
+                                          file:CommonProtosJubCommonRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(CommonProtosVersion__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 
 #pragma clang diagnostic pop
 
