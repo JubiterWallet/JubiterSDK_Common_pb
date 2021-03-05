@@ -285,6 +285,734 @@ public final class RippleProtos {
     // @@protoc_insertion_point(enum_scope:JUB.Proto.Ripple.ENUM_XRP_PYMT_TYPE)
   }
 
+  public interface XrpAddrParseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JUB.Proto.Ripple.XrpAddrParse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string r_address = 1;</code>
+     */
+    java.lang.String getRAddress();
+    /**
+     * <code>string r_address = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRAddressBytes();
+
+    /**
+     * <pre>
+     * [Optional]
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    java.lang.String getTag();
+    /**
+     * <pre>
+     * [Optional]
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+  }
+  /**
+   * Protobuf type {@code JUB.Proto.Ripple.XrpAddrParse}
+   */
+  public  static final class XrpAddrParse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:JUB.Proto.Ripple.XrpAddrParse)
+      XrpAddrParseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use XrpAddrParse.newBuilder() to construct.
+    private XrpAddrParse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private XrpAddrParse() {
+      rAddress_ = "";
+      tag_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new XrpAddrParse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private XrpAddrParse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rAddress_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tag_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.jubiter.sdk.proto.RippleProtos.internal_static_JUB_Proto_Ripple_XrpAddrParse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.jubiter.sdk.proto.RippleProtos.internal_static_JUB_Proto_Ripple_XrpAddrParse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.class, com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.Builder.class);
+    }
+
+    public static final int R_ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object rAddress_;
+    /**
+     * <code>string r_address = 1;</code>
+     */
+    public java.lang.String getRAddress() {
+      java.lang.Object ref = rAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string r_address = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRAddressBytes() {
+      java.lang.Object ref = rAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAG_FIELD_NUMBER = 2;
+    private volatile java.lang.Object tag_;
+    /**
+     * <pre>
+     * [Optional]
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    public java.lang.String getTag() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * [Optional]
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRAddressBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rAddress_);
+      }
+      if (!getTagBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRAddressBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rAddress_);
+      }
+      if (!getTagBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.jubiter.sdk.proto.RippleProtos.XrpAddrParse)) {
+        return super.equals(obj);
+      }
+      com.jubiter.sdk.proto.RippleProtos.XrpAddrParse other = (com.jubiter.sdk.proto.RippleProtos.XrpAddrParse) obj;
+
+      if (!getRAddress()
+          .equals(other.getRAddress())) return false;
+      if (!getTag()
+          .equals(other.getTag())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + R_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRAddress().hashCode();
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getTag().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.jubiter.sdk.proto.RippleProtos.XrpAddrParse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code JUB.Proto.Ripple.XrpAddrParse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:JUB.Proto.Ripple.XrpAddrParse)
+        com.jubiter.sdk.proto.RippleProtos.XrpAddrParseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.jubiter.sdk.proto.RippleProtos.internal_static_JUB_Proto_Ripple_XrpAddrParse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.jubiter.sdk.proto.RippleProtos.internal_static_JUB_Proto_Ripple_XrpAddrParse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.class, com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.Builder.class);
+      }
+
+      // Construct using com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        rAddress_ = "";
+
+        tag_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.jubiter.sdk.proto.RippleProtos.internal_static_JUB_Proto_Ripple_XrpAddrParse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.jubiter.sdk.proto.RippleProtos.XrpAddrParse getDefaultInstanceForType() {
+        return com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.jubiter.sdk.proto.RippleProtos.XrpAddrParse build() {
+        com.jubiter.sdk.proto.RippleProtos.XrpAddrParse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.jubiter.sdk.proto.RippleProtos.XrpAddrParse buildPartial() {
+        com.jubiter.sdk.proto.RippleProtos.XrpAddrParse result = new com.jubiter.sdk.proto.RippleProtos.XrpAddrParse(this);
+        result.rAddress_ = rAddress_;
+        result.tag_ = tag_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.jubiter.sdk.proto.RippleProtos.XrpAddrParse) {
+          return mergeFrom((com.jubiter.sdk.proto.RippleProtos.XrpAddrParse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.jubiter.sdk.proto.RippleProtos.XrpAddrParse other) {
+        if (other == com.jubiter.sdk.proto.RippleProtos.XrpAddrParse.getDefaultInstance()) return this;
+        if (!other.getRAddress().isEmpty()) {
+          rAddress_ = other.rAddress_;
+          onChanged();
+        }
+        if (!other.getTag().isEmpty()) {
+          tag_ = other.tag_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.jubiter.sdk.proto.RippleProtos.XrpAddrParse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.jubiter.sdk.proto.RippleProtos.XrpAddrParse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object rAddress_ = "";
+      /**
+       * <code>string r_address = 1;</code>
+       */
+      public java.lang.String getRAddress() {
+        java.lang.Object ref = rAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string r_address = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRAddressBytes() {
+        java.lang.Object ref = rAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string r_address = 1;</code>
+       */
+      public Builder setRAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string r_address = 1;</code>
+       */
+      public Builder clearRAddress() {
+        
+        rAddress_ = getDefaultInstance().getRAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string r_address = 1;</code>
+       */
+      public Builder setRAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tag_ = "";
+      /**
+       * <pre>
+       * [Optional]
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public java.lang.String getTag() {
+        java.lang.Object ref = tag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * [Optional]
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        java.lang.Object ref = tag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * [Optional]
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * [Optional]
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public Builder clearTag() {
+        
+        tag_ = getDefaultInstance().getTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * [Optional]
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:JUB.Proto.Ripple.XrpAddrParse)
+    }
+
+    // @@protoc_insertion_point(class_scope:JUB.Proto.Ripple.XrpAddrParse)
+    private static final com.jubiter.sdk.proto.RippleProtos.XrpAddrParse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.jubiter.sdk.proto.RippleProtos.XrpAddrParse();
+    }
+
+    public static com.jubiter.sdk.proto.RippleProtos.XrpAddrParse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<XrpAddrParse>
+        PARSER = new com.google.protobuf.AbstractParser<XrpAddrParse>() {
+      @java.lang.Override
+      public XrpAddrParse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new XrpAddrParse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<XrpAddrParse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<XrpAddrParse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.jubiter.sdk.proto.RippleProtos.XrpAddrParse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PymtAmountOrBuilder extends
       // @@protoc_insertion_point(interface_extends:JUB.Proto.Ripple.PymtAmount)
       com.google.protobuf.MessageOrBuilder {
@@ -5795,6 +6523,11 @@ public final class RippleProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_JUB_Proto_Ripple_XrpAddrParse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_JUB_Proto_Ripple_XrpAddrParse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_JUB_Proto_Ripple_PymtAmount_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5823,54 +6556,61 @@ public final class RippleProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020Jub_Ripple.proto\022\020JUB.Proto.Ripple\"=\n\n" +
-      "PymtAmount\022\020\n\010currency\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t\022\016\n\006issuer\030\003 \001(\t\"5\n\007XrpMemo\022\014\n\004type\030\001" +
-      " \001(\t\022\014\n\004data\030\002 \001(\t\022\016\n\006format\030\003 \001(\t\"\220\002\n\007P" +
-      "ymtXRP\0222\n\004type\030\001 \001(\0162$.JUB.Proto.Ripple." +
-      "ENUM_XRP_PYMT_TYPE\022,\n\006amount\030\002 \001(\0132\034.JUB" +
-      ".Proto.Ripple.PymtAmount\022\023\n\013destination\030" +
-      "\003 \001(\t\022\027\n\017destination_tag\030\004 \001(\t\022\022\n\ninvoic" +
-      "e_id\030\005 \001(\t\022.\n\010send_max\030\006 \001(\0132\034.JUB.Proto" +
-      ".Ripple.PymtAmount\0221\n\013deliver_min\030\007 \001(\0132" +
-      "\034.JUB.Proto.Ripple.PymtAmount\"\251\002\n\016Transa" +
-      "ctionXRP\022\017\n\007account\030\001 \001(\t\0220\n\004type\030\002 \001(\0162" +
-      "\".JUB.Proto.Ripple.ENUM_XRP_TX_TYPE\022\013\n\003f" +
-      "ee\030\003 \001(\t\022\020\n\010sequence\030\004 \001(\t\022\026\n\016account_tx" +
-      "n_id\030\005 \001(\t\022\r\n\005flags\030\006 \001(\t\022\034\n\024last_ledger" +
-      "_sequence\030\007 \001(\t\022\'\n\004memo\030\010 \001(\0132\031.JUB.Prot" +
-      "o.Ripple.XrpMemo\022\022\n\nsource_tag\030\t \001(\t\022)\n\004" +
-      "pymt\030\n \001(\0132\031.JUB.Proto.Ripple.PymtXRPH\000B" +
-      "\010\n\006action*\034\n\020ENUM_XRP_TX_TYPE\022\010\n\004PYMT\020\000*" +
-      "R\n\022ENUM_XRP_PYMT_TYPE\022\010\n\004DXRP\020\000\022\006\n\002FX\020\001\022" +
-      "\n\n\006CHECKS\020\002\022\n\n\006ESCROW\020\003\022\010\n\004PRTL\020\004\022\010\n\004CHA" +
-      "N\020\005B4\n\025com.jubiter.sdk.protoB\014RippleProt" +
-      "os\242\002\014RippleProtosb\006proto3"
+      "\n\020Jub_Ripple.proto\022\020JUB.Proto.Ripple\".\n\014" +
+      "XrpAddrParse\022\021\n\tr_address\030\001 \001(\t\022\013\n\003tag\030\002" +
+      " \001(\t\"=\n\nPymtAmount\022\020\n\010currency\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t\022\016\n\006issuer\030\003 \001(\t\"5\n\007XrpMemo\022\014" +
+      "\n\004type\030\001 \001(\t\022\014\n\004data\030\002 \001(\t\022\016\n\006format\030\003 \001" +
+      "(\t\"\220\002\n\007PymtXRP\0222\n\004type\030\001 \001(\0162$.JUB.Proto" +
+      ".Ripple.ENUM_XRP_PYMT_TYPE\022,\n\006amount\030\002 \001" +
+      "(\0132\034.JUB.Proto.Ripple.PymtAmount\022\023\n\013dest" +
+      "ination\030\003 \001(\t\022\027\n\017destination_tag\030\004 \001(\t\022\022" +
+      "\n\ninvoice_id\030\005 \001(\t\022.\n\010send_max\030\006 \001(\0132\034.J" +
+      "UB.Proto.Ripple.PymtAmount\0221\n\013deliver_mi" +
+      "n\030\007 \001(\0132\034.JUB.Proto.Ripple.PymtAmount\"\251\002" +
+      "\n\016TransactionXRP\022\017\n\007account\030\001 \001(\t\0220\n\004typ" +
+      "e\030\002 \001(\0162\".JUB.Proto.Ripple.ENUM_XRP_TX_T" +
+      "YPE\022\013\n\003fee\030\003 \001(\t\022\020\n\010sequence\030\004 \001(\t\022\026\n\016ac" +
+      "count_txn_id\030\005 \001(\t\022\r\n\005flags\030\006 \001(\t\022\034\n\024las" +
+      "t_ledger_sequence\030\007 \001(\t\022\'\n\004memo\030\010 \001(\0132\031." +
+      "JUB.Proto.Ripple.XrpMemo\022\022\n\nsource_tag\030\t" +
+      " \001(\t\022)\n\004pymt\030\n \001(\0132\031.JUB.Proto.Ripple.Py" +
+      "mtXRPH\000B\010\n\006action*\034\n\020ENUM_XRP_TX_TYPE\022\010\n" +
+      "\004PYMT\020\000*R\n\022ENUM_XRP_PYMT_TYPE\022\010\n\004DXRP\020\000\022" +
+      "\006\n\002FX\020\001\022\n\n\006CHECKS\020\002\022\n\n\006ESCROW\020\003\022\010\n\004PRTL\020" +
+      "\004\022\010\n\004CHAN\020\005B4\n\025com.jubiter.sdk.protoB\014Ri" +
+      "ppleProtos\242\002\014RippleProtosb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_JUB_Proto_Ripple_PymtAmount_descriptor =
+    internal_static_JUB_Proto_Ripple_XrpAddrParse_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_JUB_Proto_Ripple_XrpAddrParse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_JUB_Proto_Ripple_XrpAddrParse_descriptor,
+        new java.lang.String[] { "RAddress", "Tag", });
+    internal_static_JUB_Proto_Ripple_PymtAmount_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_JUB_Proto_Ripple_PymtAmount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_JUB_Proto_Ripple_PymtAmount_descriptor,
         new java.lang.String[] { "Currency", "Value", "Issuer", });
     internal_static_JUB_Proto_Ripple_XrpMemo_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_JUB_Proto_Ripple_XrpMemo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_JUB_Proto_Ripple_XrpMemo_descriptor,
         new java.lang.String[] { "Type", "Data", "Format", });
     internal_static_JUB_Proto_Ripple_PymtXRP_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_JUB_Proto_Ripple_PymtXRP_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_JUB_Proto_Ripple_PymtXRP_descriptor,
         new java.lang.String[] { "Type", "Amount", "Destination", "DestinationTag", "InvoiceId", "SendMax", "DeliverMin", });
     internal_static_JUB_Proto_Ripple_TransactionXRP_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_JUB_Proto_Ripple_TransactionXRP_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_JUB_Proto_Ripple_TransactionXRP_descriptor,

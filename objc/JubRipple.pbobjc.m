@@ -122,6 +122,62 @@ BOOL RippleProtosENUM_XRP_PYMT_TYPE_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - RippleProtosXrpAddrParse
+
+@implementation RippleProtosXrpAddrParse
+
+@dynamic rAddress;
+@dynamic tag;
+
+typedef struct RippleProtosXrpAddrParse__storage_ {
+  uint32_t _has_storage_[1];
+  NSString *rAddress;
+  NSString *tag;
+} RippleProtosXrpAddrParse__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "rAddress",
+        .dataTypeSpecific.className = NULL,
+        .number = RippleProtosXrpAddrParse_FieldNumber_RAddress,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RippleProtosXrpAddrParse__storage_, rAddress),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "tag",
+        .dataTypeSpecific.className = NULL,
+        .number = RippleProtosXrpAddrParse_FieldNumber_Tag,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RippleProtosXrpAddrParse__storage_, tag),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[RippleProtosXrpAddrParse class]
+                                     rootClass:[RippleProtosJubRippleRoot class]
+                                          file:RippleProtosJubRippleRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(RippleProtosXrpAddrParse__storage_)
+                                         flags:GPBDescriptorInitializationFlag_None];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 #pragma mark - RippleProtosPymtAmount
 
 @implementation RippleProtosPymtAmount

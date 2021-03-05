@@ -22,6 +22,11 @@ enum ENUM_XRP_PYMT_TYPE {
     CHAN   = 5;  // Payment Channels
 }
 
+message XrpAddrParse {
+    string r_address = 1;
+    string tag = 2;	// [Optional]
+}
+
 message PymtAmount {
     string currency = 1;    // [Optional]
     string value = 2;

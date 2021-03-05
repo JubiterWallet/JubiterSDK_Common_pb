@@ -104,6 +104,22 @@ BOOL RippleProtosENUM_XRP_PYMT_TYPE_IsValidValue(int32_t value);
 @interface RippleProtosJubRippleRoot : GPBRootObject
 @end
 
+#pragma mark - RippleProtosXrpAddrParse
+
+typedef GPB_ENUM(RippleProtosXrpAddrParse_FieldNumber) {
+  RippleProtosXrpAddrParse_FieldNumber_RAddress = 1,
+  RippleProtosXrpAddrParse_FieldNumber_Tag = 2,
+};
+
+@interface RippleProtosXrpAddrParse : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *rAddress;
+
+/** [Optional] */
+@property(nonatomic, readwrite, copy, null_resettable) NSString *tag;
+
+@end
+
 #pragma mark - RippleProtosPymtAmount
 
 typedef GPB_ENUM(RippleProtosPymtAmount_FieldNumber) {

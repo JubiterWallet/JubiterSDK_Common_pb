@@ -48,7 +48,7 @@ struct TableStruct_Jub_5fRipple_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -67,6 +67,9 @@ extern PymtXRPDefaultTypeInternal _PymtXRP_default_instance_;
 class TransactionXRP;
 class TransactionXRPDefaultTypeInternal;
 extern TransactionXRPDefaultTypeInternal _TransactionXRP_default_instance_;
+class XrpAddrParse;
+class XrpAddrParseDefaultTypeInternal;
+extern XrpAddrParseDefaultTypeInternal _XrpAddrParse_default_instance_;
 class XrpMemo;
 class XrpMemoDefaultTypeInternal;
 extern XrpMemoDefaultTypeInternal _XrpMemo_default_instance_;
@@ -77,6 +80,7 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::JUB::Proto::Ripple::PymtAmount* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::PymtAmount>(Arena*);
 template<> ::JUB::Proto::Ripple::PymtXRP* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::PymtXRP>(Arena*);
 template<> ::JUB::Proto::Ripple::TransactionXRP* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::TransactionXRP>(Arena*);
+template<> ::JUB::Proto::Ripple::XrpAddrParse* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::XrpAddrParse>(Arena*);
 template<> ::JUB::Proto::Ripple::XrpMemo* Arena::CreateMaybeMessage<::JUB::Proto::Ripple::XrpMemo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
@@ -138,6 +142,156 @@ inline bool ENUM_XRP_PYMT_TYPE_Parse(
 }
 // ===================================================================
 
+class XrpAddrParse :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Ripple.XrpAddrParse) */ {
+ public:
+  XrpAddrParse();
+  virtual ~XrpAddrParse();
+
+  XrpAddrParse(const XrpAddrParse& from);
+  XrpAddrParse(XrpAddrParse&& from) noexcept
+    : XrpAddrParse() {
+    *this = ::std::move(from);
+  }
+
+  inline XrpAddrParse& operator=(const XrpAddrParse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline XrpAddrParse& operator=(XrpAddrParse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const XrpAddrParse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const XrpAddrParse* internal_default_instance() {
+    return reinterpret_cast<const XrpAddrParse*>(
+               &_XrpAddrParse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(XrpAddrParse& a, XrpAddrParse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(XrpAddrParse* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline XrpAddrParse* New() const final {
+    return CreateMaybeMessage<XrpAddrParse>(nullptr);
+  }
+
+  XrpAddrParse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<XrpAddrParse>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const XrpAddrParse& from);
+  void MergeFrom(const XrpAddrParse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(XrpAddrParse* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Ripple.XrpAddrParse";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fRipple_2eproto);
+    return ::descriptor_table_Jub_5fRipple_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRAddressFieldNumber = 1,
+    kTagFieldNumber = 2,
+  };
+  // string r_address = 1;
+  void clear_r_address();
+  const std::string& r_address() const;
+  void set_r_address(const std::string& value);
+  void set_r_address(std::string&& value);
+  void set_r_address(const char* value);
+  void set_r_address(const char* value, size_t size);
+  std::string* mutable_r_address();
+  std::string* release_r_address();
+  void set_allocated_r_address(std::string* r_address);
+
+  // string tag = 2;
+  void clear_tag();
+  const std::string& tag() const;
+  void set_tag(const std::string& value);
+  void set_tag(std::string&& value);
+  void set_tag(const char* value);
+  void set_tag(const char* value, size_t size);
+  std::string* mutable_tag();
+  std::string* release_tag();
+  void set_allocated_tag(std::string* tag);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Ripple.XrpAddrParse)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr r_address_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tag_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fRipple_2eproto;
+};
+// -------------------------------------------------------------------
+
 class PymtAmount :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Ripple.PymtAmount) */ {
  public:
@@ -180,7 +334,7 @@ class PymtAmount :
                &_PymtAmount_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(PymtAmount& a, PymtAmount& b) {
     a.Swap(&b);
@@ -343,7 +497,7 @@ class XrpMemo :
                &_XrpMemo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(XrpMemo& a, XrpMemo& b) {
     a.Swap(&b);
@@ -506,7 +660,7 @@ class PymtXRP :
                &_PymtXRP_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(PymtXRP& a, PymtXRP& b) {
     a.Swap(&b);
@@ -711,7 +865,7 @@ class TransactionXRP :
                &_TransactionXRP_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(TransactionXRP& a, TransactionXRP& b) {
     a.Swap(&b);
@@ -929,6 +1083,112 @@ class TransactionXRP :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// XrpAddrParse
+
+// string r_address = 1;
+inline void XrpAddrParse::clear_r_address() {
+  r_address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& XrpAddrParse::r_address() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.XrpAddrParse.r_address)
+  return r_address_.GetNoArena();
+}
+inline void XrpAddrParse::set_r_address(const std::string& value) {
+  
+  r_address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ripple.XrpAddrParse.r_address)
+}
+inline void XrpAddrParse::set_r_address(std::string&& value) {
+  
+  r_address_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ripple.XrpAddrParse.r_address)
+}
+inline void XrpAddrParse::set_r_address(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  r_address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ripple.XrpAddrParse.r_address)
+}
+inline void XrpAddrParse::set_r_address(const char* value, size_t size) {
+  
+  r_address_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ripple.XrpAddrParse.r_address)
+}
+inline std::string* XrpAddrParse::mutable_r_address() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.XrpAddrParse.r_address)
+  return r_address_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* XrpAddrParse::release_r_address() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.XrpAddrParse.r_address)
+  
+  return r_address_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void XrpAddrParse::set_allocated_r_address(std::string* r_address) {
+  if (r_address != nullptr) {
+    
+  } else {
+    
+  }
+  r_address_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), r_address);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.XrpAddrParse.r_address)
+}
+
+// string tag = 2;
+inline void XrpAddrParse::clear_tag() {
+  tag_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& XrpAddrParse::tag() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ripple.XrpAddrParse.tag)
+  return tag_.GetNoArena();
+}
+inline void XrpAddrParse::set_tag(const std::string& value) {
+  
+  tag_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ripple.XrpAddrParse.tag)
+}
+inline void XrpAddrParse::set_tag(std::string&& value) {
+  
+  tag_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ripple.XrpAddrParse.tag)
+}
+inline void XrpAddrParse::set_tag(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  tag_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ripple.XrpAddrParse.tag)
+}
+inline void XrpAddrParse::set_tag(const char* value, size_t size) {
+  
+  tag_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ripple.XrpAddrParse.tag)
+}
+inline std::string* XrpAddrParse::mutable_tag() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ripple.XrpAddrParse.tag)
+  return tag_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* XrpAddrParse::release_tag() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ripple.XrpAddrParse.tag)
+  
+  return tag_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void XrpAddrParse::set_allocated_tag(std::string* tag) {
+  if (tag != nullptr) {
+    
+  } else {
+    
+  }
+  tag_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tag);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ripple.XrpAddrParse.tag)
+}
+
+// -------------------------------------------------------------------
+
 // PymtAmount
 
 // string currency = 1;
@@ -2044,6 +2304,8 @@ inline TransactionXRP::ActionCase TransactionXRP::action_case() const {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

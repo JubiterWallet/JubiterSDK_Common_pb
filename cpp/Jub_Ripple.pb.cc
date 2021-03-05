@@ -21,6 +21,10 @@ extern PROTOBUF_INTERNAL_EXPORT_Jub_5fRipple_2eproto ::PROTOBUF_NAMESPACE_ID::in
 namespace JUB {
 namespace Proto {
 namespace Ripple {
+class XrpAddrParseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<XrpAddrParse> _instance;
+} _XrpAddrParse_default_instance_;
 class PymtAmountDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PymtAmount> _instance;
@@ -86,6 +90,20 @@ static void InitDefaultsscc_info_TransactionXRP_Jub_5fRipple_2eproto() {
       &scc_info_XrpMemo_Jub_5fRipple_2eproto.base,
       &scc_info_PymtXRP_Jub_5fRipple_2eproto.base,}};
 
+static void InitDefaultsscc_info_XrpAddrParse_Jub_5fRipple_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::JUB::Proto::Ripple::_XrpAddrParse_default_instance_;
+    new (ptr) ::JUB::Proto::Ripple::XrpAddrParse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::JUB::Proto::Ripple::XrpAddrParse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_XrpAddrParse_Jub_5fRipple_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_XrpAddrParse_Jub_5fRipple_2eproto}, {}};
+
 static void InitDefaultsscc_info_XrpMemo_Jub_5fRipple_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -100,11 +118,18 @@ static void InitDefaultsscc_info_XrpMemo_Jub_5fRipple_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_XrpMemo_Jub_5fRipple_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_XrpMemo_Jub_5fRipple_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fRipple_2eproto[4];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fRipple_2eproto[5];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Jub_5fRipple_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Jub_5fRipple_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fRipple_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ripple::XrpAddrParse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ripple::XrpAddrParse, r_address_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ripple::XrpAddrParse, tag_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ripple::PymtAmount, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -151,13 +176,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fRipple_2eproto::offsets[
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ripple::TransactionXRP, action_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::JUB::Proto::Ripple::PymtAmount)},
-  { 8, -1, sizeof(::JUB::Proto::Ripple::XrpMemo)},
-  { 16, -1, sizeof(::JUB::Proto::Ripple::PymtXRP)},
-  { 28, -1, sizeof(::JUB::Proto::Ripple::TransactionXRP)},
+  { 0, -1, sizeof(::JUB::Proto::Ripple::XrpAddrParse)},
+  { 7, -1, sizeof(::JUB::Proto::Ripple::PymtAmount)},
+  { 15, -1, sizeof(::JUB::Proto::Ripple::XrpMemo)},
+  { 23, -1, sizeof(::JUB::Proto::Ripple::PymtXRP)},
+  { 35, -1, sizeof(::JUB::Proto::Ripple::TransactionXRP)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ripple::_XrpAddrParse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ripple::_PymtAmount_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ripple::_XrpMemo_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ripple::_PymtXRP_default_instance_),
@@ -165,45 +192,47 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_Jub_5fRipple_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\020Jub_Ripple.proto\022\020JUB.Proto.Ripple\"=\n\n"
-  "PymtAmount\022\020\n\010currency\030\001 \001(\t\022\r\n\005value\030\002 "
-  "\001(\t\022\016\n\006issuer\030\003 \001(\t\"5\n\007XrpMemo\022\014\n\004type\030\001"
-  " \001(\t\022\014\n\004data\030\002 \001(\t\022\016\n\006format\030\003 \001(\t\"\220\002\n\007P"
-  "ymtXRP\0222\n\004type\030\001 \001(\0162$.JUB.Proto.Ripple."
-  "ENUM_XRP_PYMT_TYPE\022,\n\006amount\030\002 \001(\0132\034.JUB"
-  ".Proto.Ripple.PymtAmount\022\023\n\013destination\030"
-  "\003 \001(\t\022\027\n\017destination_tag\030\004 \001(\t\022\022\n\ninvoic"
-  "e_id\030\005 \001(\t\022.\n\010send_max\030\006 \001(\0132\034.JUB.Proto"
-  ".Ripple.PymtAmount\0221\n\013deliver_min\030\007 \001(\0132"
-  "\034.JUB.Proto.Ripple.PymtAmount\"\251\002\n\016Transa"
-  "ctionXRP\022\017\n\007account\030\001 \001(\t\0220\n\004type\030\002 \001(\0162"
-  "\".JUB.Proto.Ripple.ENUM_XRP_TX_TYPE\022\013\n\003f"
-  "ee\030\003 \001(\t\022\020\n\010sequence\030\004 \001(\t\022\026\n\016account_tx"
-  "n_id\030\005 \001(\t\022\r\n\005flags\030\006 \001(\t\022\034\n\024last_ledger"
-  "_sequence\030\007 \001(\t\022\'\n\004memo\030\010 \001(\0132\031.JUB.Prot"
-  "o.Ripple.XrpMemo\022\022\n\nsource_tag\030\t \001(\t\022)\n\004"
-  "pymt\030\n \001(\0132\031.JUB.Proto.Ripple.PymtXRPH\000B"
-  "\010\n\006action*\034\n\020ENUM_XRP_TX_TYPE\022\010\n\004PYMT\020\000*"
-  "R\n\022ENUM_XRP_PYMT_TYPE\022\010\n\004DXRP\020\000\022\006\n\002FX\020\001\022"
-  "\n\n\006CHECKS\020\002\022\n\n\006ESCROW\020\003\022\010\n\004PRTL\020\004\022\010\n\004CHA"
-  "N\020\005B4\n\025com.jubiter.sdk.protoB\014RippleProt"
-  "os\242\002\014RippleProtosb\006proto3"
+  "\n\020Jub_Ripple.proto\022\020JUB.Proto.Ripple\".\n\014"
+  "XrpAddrParse\022\021\n\tr_address\030\001 \001(\t\022\013\n\003tag\030\002"
+  " \001(\t\"=\n\nPymtAmount\022\020\n\010currency\030\001 \001(\t\022\r\n\005"
+  "value\030\002 \001(\t\022\016\n\006issuer\030\003 \001(\t\"5\n\007XrpMemo\022\014"
+  "\n\004type\030\001 \001(\t\022\014\n\004data\030\002 \001(\t\022\016\n\006format\030\003 \001"
+  "(\t\"\220\002\n\007PymtXRP\0222\n\004type\030\001 \001(\0162$.JUB.Proto"
+  ".Ripple.ENUM_XRP_PYMT_TYPE\022,\n\006amount\030\002 \001"
+  "(\0132\034.JUB.Proto.Ripple.PymtAmount\022\023\n\013dest"
+  "ination\030\003 \001(\t\022\027\n\017destination_tag\030\004 \001(\t\022\022"
+  "\n\ninvoice_id\030\005 \001(\t\022.\n\010send_max\030\006 \001(\0132\034.J"
+  "UB.Proto.Ripple.PymtAmount\0221\n\013deliver_mi"
+  "n\030\007 \001(\0132\034.JUB.Proto.Ripple.PymtAmount\"\251\002"
+  "\n\016TransactionXRP\022\017\n\007account\030\001 \001(\t\0220\n\004typ"
+  "e\030\002 \001(\0162\".JUB.Proto.Ripple.ENUM_XRP_TX_T"
+  "YPE\022\013\n\003fee\030\003 \001(\t\022\020\n\010sequence\030\004 \001(\t\022\026\n\016ac"
+  "count_txn_id\030\005 \001(\t\022\r\n\005flags\030\006 \001(\t\022\034\n\024las"
+  "t_ledger_sequence\030\007 \001(\t\022\'\n\004memo\030\010 \001(\0132\031."
+  "JUB.Proto.Ripple.XrpMemo\022\022\n\nsource_tag\030\t"
+  " \001(\t\022)\n\004pymt\030\n \001(\0132\031.JUB.Proto.Ripple.Py"
+  "mtXRPH\000B\010\n\006action*\034\n\020ENUM_XRP_TX_TYPE\022\010\n"
+  "\004PYMT\020\000*R\n\022ENUM_XRP_PYMT_TYPE\022\010\n\004DXRP\020\000\022"
+  "\006\n\002FX\020\001\022\n\n\006CHECKS\020\002\022\n\n\006ESCROW\020\003\022\010\n\004PRTL\020"
+  "\004\022\010\n\004CHAN\020\005B4\n\025com.jubiter.sdk.protoB\014Ri"
+  "ppleProtos\242\002\014RippleProtosb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fRipple_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fRipple_2eproto_sccs[4] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fRipple_2eproto_sccs[5] = {
   &scc_info_PymtAmount_Jub_5fRipple_2eproto.base,
   &scc_info_PymtXRP_Jub_5fRipple_2eproto.base,
   &scc_info_TransactionXRP_Jub_5fRipple_2eproto.base,
+  &scc_info_XrpAddrParse_Jub_5fRipple_2eproto.base,
   &scc_info_XrpMemo_Jub_5fRipple_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fRipple_2eproto_once;
 static bool descriptor_table_Jub_5fRipple_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fRipple_2eproto = {
-  &descriptor_table_Jub_5fRipple_2eproto_initialized, descriptor_table_protodef_Jub_5fRipple_2eproto, "Jub_Ripple.proto", 905,
-  &descriptor_table_Jub_5fRipple_2eproto_once, descriptor_table_Jub_5fRipple_2eproto_sccs, descriptor_table_Jub_5fRipple_2eproto_deps, 4, 0,
+  &descriptor_table_Jub_5fRipple_2eproto_initialized, descriptor_table_protodef_Jub_5fRipple_2eproto, "Jub_Ripple.proto", 953,
+  &descriptor_table_Jub_5fRipple_2eproto_once, descriptor_table_Jub_5fRipple_2eproto_sccs, descriptor_table_Jub_5fRipple_2eproto_deps, 5, 0,
   schemas, file_default_instances, TableStruct_Jub_5fRipple_2eproto::offsets,
-  file_level_metadata_Jub_5fRipple_2eproto, 4, file_level_enum_descriptors_Jub_5fRipple_2eproto, file_level_service_descriptors_Jub_5fRipple_2eproto,
+  file_level_metadata_Jub_5fRipple_2eproto, 5, file_level_enum_descriptors_Jub_5fRipple_2eproto, file_level_service_descriptors_Jub_5fRipple_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -240,6 +269,338 @@ bool ENUM_XRP_PYMT_TYPE_IsValid(int value) {
     default:
       return false;
   }
+}
+
+
+// ===================================================================
+
+void XrpAddrParse::InitAsDefaultInstance() {
+}
+class XrpAddrParse::_Internal {
+ public:
+};
+
+XrpAddrParse::XrpAddrParse()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:JUB.Proto.Ripple.XrpAddrParse)
+}
+XrpAddrParse::XrpAddrParse(const XrpAddrParse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  r_address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.r_address().empty()) {
+    r_address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.r_address_);
+  }
+  tag_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.tag().empty()) {
+    tag_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tag_);
+  }
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Ripple.XrpAddrParse)
+}
+
+void XrpAddrParse::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_XrpAddrParse_Jub_5fRipple_2eproto.base);
+  r_address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tag_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+XrpAddrParse::~XrpAddrParse() {
+  // @@protoc_insertion_point(destructor:JUB.Proto.Ripple.XrpAddrParse)
+  SharedDtor();
+}
+
+void XrpAddrParse::SharedDtor() {
+  r_address_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tag_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void XrpAddrParse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const XrpAddrParse& XrpAddrParse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_XrpAddrParse_Jub_5fRipple_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void XrpAddrParse::Clear() {
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.Ripple.XrpAddrParse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  r_address_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tag_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* XrpAddrParse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string r_address = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_r_address(), ptr, ctx, "JUB.Proto.Ripple.XrpAddrParse.r_address");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string tag = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_tag(), ptr, ctx, "JUB.Proto.Ripple.XrpAddrParse.tag");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool XrpAddrParse::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:JUB.Proto.Ripple.XrpAddrParse)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string r_address = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_r_address()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->r_address().data(), static_cast<int>(this->r_address().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ripple.XrpAddrParse.r_address"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string tag = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_tag()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->tag().data(), static_cast<int>(this->tag().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ripple.XrpAddrParse.tag"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:JUB.Proto.Ripple.XrpAddrParse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:JUB.Proto.Ripple.XrpAddrParse)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void XrpAddrParse::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:JUB.Proto.Ripple.XrpAddrParse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string r_address = 1;
+  if (this->r_address().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->r_address().data(), static_cast<int>(this->r_address().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ripple.XrpAddrParse.r_address");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->r_address(), output);
+  }
+
+  // string tag = 2;
+  if (this->tag().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->tag().data(), static_cast<int>(this->tag().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ripple.XrpAddrParse.tag");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->tag(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:JUB.Proto.Ripple.XrpAddrParse)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* XrpAddrParse::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Ripple.XrpAddrParse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string r_address = 1;
+  if (this->r_address().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->r_address().data(), static_cast<int>(this->r_address().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ripple.XrpAddrParse.r_address");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        1, this->r_address(), target);
+  }
+
+  // string tag = 2;
+  if (this->tag().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->tag().data(), static_cast<int>(this->tag().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ripple.XrpAddrParse.tag");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        2, this->tag(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Ripple.XrpAddrParse)
+  return target;
+}
+
+size_t XrpAddrParse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Ripple.XrpAddrParse)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string r_address = 1;
+  if (this->r_address().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->r_address());
+  }
+
+  // string tag = 2;
+  if (this->tag().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->tag());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void XrpAddrParse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Ripple.XrpAddrParse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const XrpAddrParse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<XrpAddrParse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Ripple.XrpAddrParse)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Ripple.XrpAddrParse)
+    MergeFrom(*source);
+  }
+}
+
+void XrpAddrParse::MergeFrom(const XrpAddrParse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Ripple.XrpAddrParse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.r_address().size() > 0) {
+
+    r_address_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.r_address_);
+  }
+  if (from.tag().size() > 0) {
+
+    tag_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tag_);
+  }
+}
+
+void XrpAddrParse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Ripple.XrpAddrParse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void XrpAddrParse::CopyFrom(const XrpAddrParse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Ripple.XrpAddrParse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool XrpAddrParse::IsInitialized() const {
+  return true;
+}
+
+void XrpAddrParse::InternalSwap(XrpAddrParse* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  r_address_.Swap(&other->r_address_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  tag_.Swap(&other->tag_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata XrpAddrParse::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -2519,6 +2880,9 @@ void TransactionXRP::InternalSwap(TransactionXRP* other) {
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::JUB::Proto::Ripple::XrpAddrParse* Arena::CreateMaybeMessage< ::JUB::Proto::Ripple::XrpAddrParse >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::Ripple::XrpAddrParse >(arena);
+}
 template<> PROTOBUF_NOINLINE ::JUB::Proto::Ripple::PymtAmount* Arena::CreateMaybeMessage< ::JUB::Proto::Ripple::PymtAmount >(Arena* arena) {
   return Arena::CreateInternal< ::JUB::Proto::Ripple::PymtAmount >(arena);
 }
