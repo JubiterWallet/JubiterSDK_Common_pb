@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: Jub_Ripple.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -13,20 +13,105 @@ import 'Jub_Ripple.pbenum.dart';
 
 export 'Jub_Ripple.pbenum.dart';
 
+class XrpAddrParse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'XrpAddrParse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.Ripple'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rAddress')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tag')
+    ..hasRequiredFields = false
+  ;
+
+  XrpAddrParse._() : super();
+  factory XrpAddrParse({
+    $core.String? rAddress,
+    $core.String? tag,
+  }) {
+    final _result = create();
+    if (rAddress != null) {
+      _result.rAddress = rAddress;
+    }
+    if (tag != null) {
+      _result.tag = tag;
+    }
+    return _result;
+  }
+  factory XrpAddrParse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory XrpAddrParse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  XrpAddrParse clone() => XrpAddrParse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  XrpAddrParse copyWith(void Function(XrpAddrParse) updates) => super.copyWith((message) => updates(message as XrpAddrParse)) as XrpAddrParse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static XrpAddrParse create() => XrpAddrParse._();
+  XrpAddrParse createEmptyInstance() => create();
+  static $pb.PbList<XrpAddrParse> createRepeated() => $pb.PbList<XrpAddrParse>();
+  @$core.pragma('dart2js:noInline')
+  static XrpAddrParse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<XrpAddrParse>(create);
+  static XrpAddrParse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get rAddress => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set rAddress($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasRAddress() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRAddress() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get tag => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set tag($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTag() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTag() => clearField(2);
+}
+
 class PymtAmount extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PymtAmount', package: const $pb.PackageName('JUB.Proto.Ripple'), createEmptyInstance: create)
-    ..aOS(1, 'currency')
-    ..aOS(2, 'value')
-    ..aOS(3, 'issuer')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PymtAmount', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.Ripple'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'issuer')
     ..hasRequiredFields = false
   ;
 
   PymtAmount._() : super();
-  factory PymtAmount() => create();
+  factory PymtAmount({
+    $core.String? currency,
+    $core.String? value,
+    $core.String? issuer,
+  }) {
+    final _result = create();
+    if (currency != null) {
+      _result.currency = currency;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    if (issuer != null) {
+      _result.issuer = issuer;
+    }
+    return _result;
+  }
   factory PymtAmount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory PymtAmount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   PymtAmount clone() => PymtAmount()..mergeFromMessage(this);
-  PymtAmount copyWith(void Function(PymtAmount) updates) => super.copyWith((message) => updates(message as PymtAmount));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PymtAmount copyWith(void Function(PymtAmount) updates) => super.copyWith((message) => updates(message as PymtAmount)) as PymtAmount; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static PymtAmount create() => PymtAmount._();
@@ -34,7 +119,7 @@ class PymtAmount extends $pb.GeneratedMessage {
   static $pb.PbList<PymtAmount> createRepeated() => $pb.PbList<PymtAmount>();
   @$core.pragma('dart2js:noInline')
   static PymtAmount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PymtAmount>(create);
-  static PymtAmount _defaultInstance;
+  static PymtAmount? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get currency => $_getSZ(0);
@@ -65,19 +150,43 @@ class PymtAmount extends $pb.GeneratedMessage {
 }
 
 class XrpMemo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('XrpMemo', package: const $pb.PackageName('JUB.Proto.Ripple'), createEmptyInstance: create)
-    ..aOS(1, 'type')
-    ..aOS(2, 'data')
-    ..aOS(3, 'format')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'XrpMemo', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.Ripple'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'data')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'format')
     ..hasRequiredFields = false
   ;
 
   XrpMemo._() : super();
-  factory XrpMemo() => create();
+  factory XrpMemo({
+    $core.String? type,
+    $core.String? data,
+    $core.String? format,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (data != null) {
+      _result.data = data;
+    }
+    if (format != null) {
+      _result.format = format;
+    }
+    return _result;
+  }
   factory XrpMemo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory XrpMemo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   XrpMemo clone() => XrpMemo()..mergeFromMessage(this);
-  XrpMemo copyWith(void Function(XrpMemo) updates) => super.copyWith((message) => updates(message as XrpMemo));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  XrpMemo copyWith(void Function(XrpMemo) updates) => super.copyWith((message) => updates(message as XrpMemo)) as XrpMemo; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static XrpMemo create() => XrpMemo._();
@@ -85,7 +194,7 @@ class XrpMemo extends $pb.GeneratedMessage {
   static $pb.PbList<XrpMemo> createRepeated() => $pb.PbList<XrpMemo>();
   @$core.pragma('dart2js:noInline')
   static XrpMemo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<XrpMemo>(create);
-  static XrpMemo _defaultInstance;
+  static XrpMemo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
@@ -116,23 +225,63 @@ class XrpMemo extends $pb.GeneratedMessage {
 }
 
 class PymtXRP extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PymtXRP', package: const $pb.PackageName('JUB.Proto.Ripple'), createEmptyInstance: create)
-    ..e<ENUM_XRP_PYMT_TYPE>(1, 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_XRP_PYMT_TYPE.DXRP, valueOf: ENUM_XRP_PYMT_TYPE.valueOf, enumValues: ENUM_XRP_PYMT_TYPE.values)
-    ..aOM<PymtAmount>(2, 'amount', subBuilder: PymtAmount.create)
-    ..aOS(3, 'destination')
-    ..aOS(4, 'destinationTag')
-    ..aOS(5, 'invoiceId')
-    ..aOM<PymtAmount>(6, 'sendMax', subBuilder: PymtAmount.create)
-    ..aOM<PymtAmount>(7, 'deliverMin', subBuilder: PymtAmount.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PymtXRP', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.Ripple'), createEmptyInstance: create)
+    ..e<ENUM_XRP_PYMT_TYPE>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_XRP_PYMT_TYPE.DXRP, valueOf: ENUM_XRP_PYMT_TYPE.valueOf, enumValues: ENUM_XRP_PYMT_TYPE.values)
+    ..aOM<PymtAmount>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', subBuilder: PymtAmount.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'destination')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'destinationTag')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'invoiceId')
+    ..aOM<PymtAmount>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sendMax', subBuilder: PymtAmount.create)
+    ..aOM<PymtAmount>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deliverMin', subBuilder: PymtAmount.create)
     ..hasRequiredFields = false
   ;
 
   PymtXRP._() : super();
-  factory PymtXRP() => create();
+  factory PymtXRP({
+    ENUM_XRP_PYMT_TYPE? type,
+    PymtAmount? amount,
+    $core.String? destination,
+    $core.String? destinationTag,
+    $core.String? invoiceId,
+    PymtAmount? sendMax,
+    PymtAmount? deliverMin,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (destination != null) {
+      _result.destination = destination;
+    }
+    if (destinationTag != null) {
+      _result.destinationTag = destinationTag;
+    }
+    if (invoiceId != null) {
+      _result.invoiceId = invoiceId;
+    }
+    if (sendMax != null) {
+      _result.sendMax = sendMax;
+    }
+    if (deliverMin != null) {
+      _result.deliverMin = deliverMin;
+    }
+    return _result;
+  }
   factory PymtXRP.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory PymtXRP.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   PymtXRP clone() => PymtXRP()..mergeFromMessage(this);
-  PymtXRP copyWith(void Function(PymtXRP) updates) => super.copyWith((message) => updates(message as PymtXRP));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PymtXRP copyWith(void Function(PymtXRP) updates) => super.copyWith((message) => updates(message as PymtXRP)) as PymtXRP; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static PymtXRP create() => PymtXRP._();
@@ -140,7 +289,7 @@ class PymtXRP extends $pb.GeneratedMessage {
   static $pb.PbList<PymtXRP> createRepeated() => $pb.PbList<PymtXRP>();
   @$core.pragma('dart2js:noInline')
   static PymtXRP getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PymtXRP>(create);
-  static PymtXRP _defaultInstance;
+  static PymtXRP? _defaultInstance;
 
   @$pb.TagNumber(1)
   ENUM_XRP_PYMT_TYPE get type => $_getN(0);
@@ -222,27 +371,79 @@ class TransactionXRP extends $pb.GeneratedMessage {
     10 : TransactionXRP_Action.pymt,
     0 : TransactionXRP_Action.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionXRP', package: const $pb.PackageName('JUB.Proto.Ripple'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionXRP', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.Ripple'), createEmptyInstance: create)
     ..oo(0, [10])
-    ..aOS(1, 'account')
-    ..e<ENUM_XRP_TX_TYPE>(2, 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_XRP_TX_TYPE.PYMT, valueOf: ENUM_XRP_TX_TYPE.valueOf, enumValues: ENUM_XRP_TX_TYPE.values)
-    ..aOS(3, 'fee')
-    ..aOS(4, 'sequence')
-    ..aOS(5, 'accountTxnId')
-    ..aOS(6, 'flags')
-    ..aOS(7, 'lastLedgerSequence')
-    ..aOM<XrpMemo>(8, 'memo', subBuilder: XrpMemo.create)
-    ..aOS(9, 'sourceTag')
-    ..aOM<PymtXRP>(10, 'pymt', subBuilder: PymtXRP.create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account')
+    ..e<ENUM_XRP_TX_TYPE>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_XRP_TX_TYPE.PYMT, valueOf: ENUM_XRP_TX_TYPE.valueOf, enumValues: ENUM_XRP_TX_TYPE.values)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sequence')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountTxnId')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'flags')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastLedgerSequence')
+    ..aOM<XrpMemo>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memo', subBuilder: XrpMemo.create)
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceTag')
+    ..aOM<PymtXRP>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pymt', subBuilder: PymtXRP.create)
     ..hasRequiredFields = false
   ;
 
   TransactionXRP._() : super();
-  factory TransactionXRP() => create();
+  factory TransactionXRP({
+    $core.String? account,
+    ENUM_XRP_TX_TYPE? type,
+    $core.String? fee,
+    $core.String? sequence,
+    $core.String? accountTxnId,
+    $core.String? flags,
+    $core.String? lastLedgerSequence,
+    XrpMemo? memo,
+    $core.String? sourceTag,
+    PymtXRP? pymt,
+  }) {
+    final _result = create();
+    if (account != null) {
+      _result.account = account;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (fee != null) {
+      _result.fee = fee;
+    }
+    if (sequence != null) {
+      _result.sequence = sequence;
+    }
+    if (accountTxnId != null) {
+      _result.accountTxnId = accountTxnId;
+    }
+    if (flags != null) {
+      _result.flags = flags;
+    }
+    if (lastLedgerSequence != null) {
+      _result.lastLedgerSequence = lastLedgerSequence;
+    }
+    if (memo != null) {
+      _result.memo = memo;
+    }
+    if (sourceTag != null) {
+      _result.sourceTag = sourceTag;
+    }
+    if (pymt != null) {
+      _result.pymt = pymt;
+    }
+    return _result;
+  }
   factory TransactionXRP.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionXRP.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransactionXRP clone() => TransactionXRP()..mergeFromMessage(this);
-  TransactionXRP copyWith(void Function(TransactionXRP) updates) => super.copyWith((message) => updates(message as TransactionXRP));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionXRP copyWith(void Function(TransactionXRP) updates) => super.copyWith((message) => updates(message as TransactionXRP)) as TransactionXRP; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionXRP create() => TransactionXRP._();
@@ -250,9 +451,9 @@ class TransactionXRP extends $pb.GeneratedMessage {
   static $pb.PbList<TransactionXRP> createRepeated() => $pb.PbList<TransactionXRP>();
   @$core.pragma('dart2js:noInline')
   static TransactionXRP getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionXRP>(create);
-  static TransactionXRP _defaultInstance;
+  static TransactionXRP? _defaultInstance;
 
-  TransactionXRP_Action whichAction() => _TransactionXRP_ActionByTag[$_whichOneof(0)];
+  TransactionXRP_Action whichAction() => _TransactionXRP_ActionByTag[$_whichOneof(0)]!;
   void clearAction() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

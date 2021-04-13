@@ -8,8 +8,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-goog.provide('proto.protocol.ResourceCode');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
+goog.exportSymbol('proto.protocol.ResourceCode', null, global);
 /**
  * @enum {number}
  */
@@ -18,3 +21,4 @@ proto.protocol.ResourceCode = {
   ENERGY: 1
 };
 
+goog.object.extend(exports, proto.protocol);

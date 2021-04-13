@@ -61,11 +61,11 @@
 
 
 ### js
-> ✗ protoc --proto_path=./protos --js_out=./js protos/Jub_Ripple.proto
+> ✗ protoc --proto_path=./protos --js_out=import_style=commonjs,binary:./js protos/Jub_Ripple.proto
 
-> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/Discover.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/Tron.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/common.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
-> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=import_style=commonjs,binary:./js/Tron/protocol protos/Tron/protocol/core/Discover.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=import_style=commonjs,binary:./js/Tron/protocol protos/Tron/protocol/core/Tron.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=import_style=commonjs,binary:./js/Tron/protocol protos/Tron/protocol/core/contract/common.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=import_style=commonjs,binary:./js/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=import_style=commonjs,binary:./js/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=import_style=commonjs,binary:./js/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
