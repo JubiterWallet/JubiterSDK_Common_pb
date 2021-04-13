@@ -58,3 +58,14 @@
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
 > ✗ protoc --proto_path=./protos/Tron/protocol --dart_out=./dart/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
+
+
+### js
+> ✗ protoc --proto_path=./protos --js_out=./js protos/Jub_Ripple.proto
+
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/Discover.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/Tron.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/common.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/asset_issue_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/balance_contract.proto
+> ✗ protoc --proto_path=./protos/Tron/protocol --js_out=./js/Tron/protocol protos/Tron/protocol/core/contract/smart_contract.proto
