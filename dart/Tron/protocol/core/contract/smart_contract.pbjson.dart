@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: core/contract/smart_contract.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use smartContractDescriptor instead')
 const SmartContract$json = const {
   '1': 'SmartContract',
   '2': const [
@@ -22,6 +26,7 @@ const SmartContract$json = const {
   '3': const [SmartContract_ABI$json],
 };
 
+@$core.Deprecated('Use smartContractDescriptor instead')
 const SmartContract_ABI$json = const {
   '1': 'ABI',
   '2': const [
@@ -30,6 +35,7 @@ const SmartContract_ABI$json = const {
   '3': const [SmartContract_ABI_Entry$json],
 };
 
+@$core.Deprecated('Use smartContractDescriptor instead')
 const SmartContract_ABI_Entry$json = const {
   '1': 'Entry',
   '2': const [
@@ -46,6 +52,7 @@ const SmartContract_ABI_Entry$json = const {
   '4': const [SmartContract_ABI_Entry_EntryType$json, SmartContract_ABI_Entry_StateMutabilityType$json],
 };
 
+@$core.Deprecated('Use smartContractDescriptor instead')
 const SmartContract_ABI_Entry_Param$json = const {
   '1': 'Param',
   '2': const [
@@ -55,6 +62,7 @@ const SmartContract_ABI_Entry_Param$json = const {
   ],
 };
 
+@$core.Deprecated('Use smartContractDescriptor instead')
 const SmartContract_ABI_Entry_EntryType$json = const {
   '1': 'EntryType',
   '2': const [
@@ -66,6 +74,7 @@ const SmartContract_ABI_Entry_EntryType$json = const {
   ],
 };
 
+@$core.Deprecated('Use smartContractDescriptor instead')
 const SmartContract_ABI_Entry_StateMutabilityType$json = const {
   '1': 'StateMutabilityType',
   '2': const [
@@ -77,6 +86,9 @@ const SmartContract_ABI_Entry_StateMutabilityType$json = const {
   ],
 };
 
+/// Descriptor for `SmartContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List smartContractDescriptor = $convert.base64Decode('Cg1TbWFydENvbnRyYWN0EiUKDm9yaWdpbl9hZGRyZXNzGAEgASgMUg1vcmlnaW5BZGRyZXNzEikKEGNvbnRyYWN0X2FkZHJlc3MYAiABKAxSD2NvbnRyYWN0QWRkcmVzcxItCgNhYmkYAyABKAsyGy5wcm90b2NvbC5TbWFydENvbnRyYWN0LkFCSVIDYWJpEhoKCGJ5dGVjb2RlGAQgASgMUghieXRlY29kZRIdCgpjYWxsX3ZhbHVlGAUgASgDUgljYWxsVmFsdWUSQQodY29uc3VtZV91c2VyX3Jlc291cmNlX3BlcmNlbnQYBiABKANSGmNvbnN1bWVVc2VyUmVzb3VyY2VQZXJjZW50EhIKBG5hbWUYByABKAlSBG5hbWUSLgoTb3JpZ2luX2VuZXJneV9saW1pdBgIIAEoA1IRb3JpZ2luRW5lcmd5TGltaXQSGwoJY29kZV9oYXNoGAkgASgMUghjb2RlSGFzaBIZCgh0cnhfaGFzaBgKIAEoDFIHdHJ4SGFzaBrhBQoDQUJJEjkKBmVudHJ5cxgBIAMoCzIhLnByb3RvY29sLlNtYXJ0Q29udHJhY3QuQUJJLkVudHJ5UgZlbnRyeXMangUKBUVudHJ5EhwKCWFub255bW91cxgBIAEoCFIJYW5vbnltb3VzEhoKCGNvbnN0YW50GAIgASgIUghjb25zdGFudBISCgRuYW1lGAMgASgJUgRuYW1lEj8KBmlucHV0cxgEIAMoCzInLnByb3RvY29sLlNtYXJ0Q29udHJhY3QuQUJJLkVudHJ5LlBhcmFtUgZpbnB1dHMSQQoHb3V0cHV0cxgFIAMoCzInLnByb3RvY29sLlNtYXJ0Q29udHJhY3QuQUJJLkVudHJ5LlBhcmFtUgdvdXRwdXRzEj8KBHR5cGUYBiABKA4yKy5wcm90b2NvbC5TbWFydENvbnRyYWN0LkFCSS5FbnRyeS5FbnRyeVR5cGVSBHR5cGUSGAoHcGF5YWJsZRgHIAEoCFIHcGF5YWJsZRJfCg9zdGF0ZU11dGFiaWxpdHkYCCABKA4yNS5wcm90b2NvbC5TbWFydENvbnRyYWN0LkFCSS5FbnRyeS5TdGF0ZU11dGFiaWxpdHlUeXBlUg9zdGF0ZU11dGFiaWxpdHkaSQoFUGFyYW0SGAoHaW5kZXhlZBgBIAEoCFIHaW5kZXhlZBISCgRuYW1lGAIgASgJUgRuYW1lEhIKBHR5cGUYAyABKAlSBHR5cGUiWQoJRW50cnlUeXBlEhQKEFVua25vd25FbnRyeVR5cGUQABIPCgtDb25zdHJ1Y3RvchABEgwKCEZ1bmN0aW9uEAISCQoFRXZlbnQQAxIMCghGYWxsYmFjaxAEImEKE1N0YXRlTXV0YWJpbGl0eVR5cGUSGQoVVW5rbm93bk11dGFiaWxpdHlUeXBlEAASCAoEUHVyZRABEggKBFZpZXcQAhIOCgpOb25wYXlhYmxlEAMSCwoHUGF5YWJsZRAE');
+@$core.Deprecated('Use createSmartContractDescriptor instead')
 const CreateSmartContract$json = const {
   '1': 'CreateSmartContract',
   '2': const [
@@ -87,6 +99,9 @@ const CreateSmartContract$json = const {
   ],
 };
 
+/// Descriptor for `CreateSmartContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSmartContractDescriptor = $convert.base64Decode('ChNDcmVhdGVTbWFydENvbnRyYWN0EiMKDW93bmVyX2FkZHJlc3MYASABKAxSDG93bmVyQWRkcmVzcxI6CgxuZXdfY29udHJhY3QYAiABKAsyFy5wcm90b2NvbC5TbWFydENvbnRyYWN0UgtuZXdDb250cmFjdBIoChBjYWxsX3Rva2VuX3ZhbHVlGAMgASgDUg5jYWxsVG9rZW5WYWx1ZRIZCgh0b2tlbl9pZBgEIAEoA1IHdG9rZW5JZA==');
+@$core.Deprecated('Use triggerSmartContractDescriptor instead')
 const TriggerSmartContract$json = const {
   '1': 'TriggerSmartContract',
   '2': const [
@@ -99,6 +114,9 @@ const TriggerSmartContract$json = const {
   ],
 };
 
+/// Descriptor for `TriggerSmartContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List triggerSmartContractDescriptor = $convert.base64Decode('ChRUcmlnZ2VyU21hcnRDb250cmFjdBIjCg1vd25lcl9hZGRyZXNzGAEgASgMUgxvd25lckFkZHJlc3MSKQoQY29udHJhY3RfYWRkcmVzcxgCIAEoDFIPY29udHJhY3RBZGRyZXNzEh0KCmNhbGxfdmFsdWUYAyABKANSCWNhbGxWYWx1ZRISCgRkYXRhGAQgASgMUgRkYXRhEigKEGNhbGxfdG9rZW5fdmFsdWUYBSABKANSDmNhbGxUb2tlblZhbHVlEhkKCHRva2VuX2lkGAYgASgDUgd0b2tlbklk');
+@$core.Deprecated('Use clearABIContractDescriptor instead')
 const ClearABIContract$json = const {
   '1': 'ClearABIContract',
   '2': const [
@@ -107,6 +125,9 @@ const ClearABIContract$json = const {
   ],
 };
 
+/// Descriptor for `ClearABIContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List clearABIContractDescriptor = $convert.base64Decode('ChBDbGVhckFCSUNvbnRyYWN0EiMKDW93bmVyX2FkZHJlc3MYASABKAxSDG93bmVyQWRkcmVzcxIpChBjb250cmFjdF9hZGRyZXNzGAIgASgMUg9jb250cmFjdEFkZHJlc3M=');
+@$core.Deprecated('Use updateSettingContractDescriptor instead')
 const UpdateSettingContract$json = const {
   '1': 'UpdateSettingContract',
   '2': const [
@@ -116,6 +137,9 @@ const UpdateSettingContract$json = const {
   ],
 };
 
+/// Descriptor for `UpdateSettingContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSettingContractDescriptor = $convert.base64Decode('ChVVcGRhdGVTZXR0aW5nQ29udHJhY3QSIwoNb3duZXJfYWRkcmVzcxgBIAEoDFIMb3duZXJBZGRyZXNzEikKEGNvbnRyYWN0X2FkZHJlc3MYAiABKAxSD2NvbnRyYWN0QWRkcmVzcxJBCh1jb25zdW1lX3VzZXJfcmVzb3VyY2VfcGVyY2VudBgDIAEoA1IaY29uc3VtZVVzZXJSZXNvdXJjZVBlcmNlbnQ=');
+@$core.Deprecated('Use updateEnergyLimitContractDescriptor instead')
 const UpdateEnergyLimitContract$json = const {
   '1': 'UpdateEnergyLimitContract',
   '2': const [
@@ -125,3 +149,5 @@ const UpdateEnergyLimitContract$json = const {
   ],
 };
 
+/// Descriptor for `UpdateEnergyLimitContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateEnergyLimitContractDescriptor = $convert.base64Decode('ChlVcGRhdGVFbmVyZ3lMaW1pdENvbnRyYWN0EiMKDW93bmVyX2FkZHJlc3MYASABKAxSDG93bmVyQWRkcmVzcxIpChBjb250cmFjdF9hZGRyZXNzGAIgASgMUg9jb250cmFjdEFkZHJlc3MSLgoTb3JpZ2luX2VuZXJneV9saW1pdBgDIAEoA1IRb3JpZ2luRW5lcmd5TGltaXQ=');

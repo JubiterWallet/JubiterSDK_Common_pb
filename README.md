@@ -48,6 +48,8 @@
 
 ### dart
 [《在 Flutter 中使用 protobuf》](https://cloud.tencent.com/developer/article/1411245)
+ Note: Dart pub upgraded to v2.13. The plugin has also been upgraded.
+
 > ✗ protoc --proto_path=./protos --dart_out=./dart protos/jubiter_blue.proto --plugin ~/.pub-cache/bin/protoc-gen-dart
 
 > ✗ protoc --proto_path=./protos --dart_out=./dart protos/Jub_Ripple.proto --plugin ~/.pub-cache/bin/protoc-gen-dart

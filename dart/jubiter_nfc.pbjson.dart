@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: jubiter_nfc.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use nfcStateDescriptor instead')
 const NfcState$json = const {
   '1': 'NfcState',
   '2': const [
@@ -13,6 +17,7 @@ const NfcState$json = const {
   '4': const [NfcState_State$json],
 };
 
+@$core.Deprecated('Use nfcStateDescriptor instead')
 const NfcState_State$json = const {
   '1': 'State',
   '2': const [
@@ -22,6 +27,9 @@ const NfcState_State$json = const {
   ],
 };
 
+/// Descriptor for `NfcState`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nfcStateDescriptor = $convert.base64Decode('CghOZmNTdGF0ZRIlCgVzdGF0ZRgBIAEoDjIPLk5mY1N0YXRlLlN0YXRlUgVzdGF0ZSIlCgVTdGF0ZRILCgdVTktOT1dOEAASBgoCT04QARIHCgNPRkYQAg==');
+@$core.Deprecated('Use nfcScanResultDescriptor instead')
 const NfcScanResult$json = const {
   '1': 'NfcScanResult',
   '2': const [
@@ -29,6 +37,9 @@ const NfcScanResult$json = const {
   ],
 };
 
+/// Descriptor for `NfcScanResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nfcScanResultDescriptor = $convert.base64Decode('Cg1OZmNTY2FuUmVzdWx0EiIKBmRldmljZRgBIAEoCzIKLk5mY0RldmljZVIGZGV2aWNl');
+@$core.Deprecated('Use nfcConnectRequestDescriptor instead')
 const NfcConnectRequest$json = const {
   '1': 'NfcConnectRequest',
   '2': const [
@@ -39,6 +50,9 @@ const NfcConnectRequest$json = const {
   ],
 };
 
+/// Descriptor for `NfcConnectRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nfcConnectRequestDescriptor = $convert.base64Decode('ChFOZmNDb25uZWN0UmVxdWVzdBIfCgtyZW1vdGVfbmFtZRgBIAEoCVIKcmVtb3RlTmFtZRIbCglyZW1vdGVfaWQYAiABKAlSCHJlbW90ZUlkEhgKB3RpbWVvdXQYAyABKAVSB3RpbWVvdXQSMAoUYW5kcm9pZF9hdXRvX2Nvbm5lY3QYBCABKAhSEmFuZHJvaWRBdXRvQ29ubmVjdA==');
+@$core.Deprecated('Use nfcDeviceDescriptor instead')
 const NfcDevice$json = const {
   '1': 'NfcDevice',
   '2': const [
@@ -49,6 +63,7 @@ const NfcDevice$json = const {
   '4': const [NfcDevice_Type$json],
 };
 
+@$core.Deprecated('Use nfcDeviceDescriptor instead')
 const NfcDevice_Type$json = const {
   '1': 'Type',
   '2': const [
@@ -56,6 +71,9 @@ const NfcDevice_Type$json = const {
   ],
 };
 
+/// Descriptor for `NfcDevice`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nfcDeviceDescriptor = $convert.base64Decode('CglOZmNEZXZpY2USGwoJcmVtb3RlX2lkGAEgASgJUghyZW1vdGVJZBISCgRuYW1lGAIgASgJUgRuYW1lEiMKBHR5cGUYAyABKA4yDy5OZmNEZXZpY2UuVHlwZVIEdHlwZSIPCgRUeXBlEgcKA05GQxAA');
+@$core.Deprecated('Use nfcDeviceStateResponseDescriptor instead')
 const NfcDeviceStateResponse$json = const {
   '1': 'NfcDeviceStateResponse',
   '2': const [
@@ -66,6 +84,7 @@ const NfcDeviceStateResponse$json = const {
   '4': const [NfcDeviceStateResponse_NfcDeviceState$json],
 };
 
+@$core.Deprecated('Use nfcDeviceStateResponseDescriptor instead')
 const NfcDeviceStateResponse_NfcDeviceState$json = const {
   '1': 'NfcDeviceState',
   '2': const [
@@ -74,6 +93,9 @@ const NfcDeviceStateResponse_NfcDeviceState$json = const {
   ],
 };
 
+/// Descriptor for `NfcDeviceStateResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nfcDeviceStateResponseDescriptor = $convert.base64Decode('ChZOZmNEZXZpY2VTdGF0ZVJlc3BvbnNlEhsKCXJlbW90ZV9pZBgBIAEoCVIIcmVtb3RlSWQSPAoFc3RhdGUYAiABKA4yJi5OZmNEZXZpY2VTdGF0ZVJlc3BvbnNlLk5mY0RldmljZVN0YXRlUgVzdGF0ZRIaCghkZXZpY2VJRBgDIAEoBVIIZGV2aWNlSUQiMQoOTmZjRGV2aWNlU3RhdGUSEAoMRElTQ09OTkVDVEVEEAASDQoJQ09OTkVDVEVEEAE=');
+@$core.Deprecated('Use nfcConnectedResponseDescriptor instead')
 const NfcConnectedResponse$json = const {
   '1': 'NfcConnectedResponse',
   '2': const [
@@ -81,3 +103,5 @@ const NfcConnectedResponse$json = const {
   ],
 };
 
+/// Descriptor for `NfcConnectedResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List nfcConnectedResponseDescriptor = $convert.base64Decode('ChROZmNDb25uZWN0ZWRSZXNwb25zZRIkCgdkZXZpY2VzGAEgAygLMgouTmZjRGV2aWNlUgdkZXZpY2Vz');

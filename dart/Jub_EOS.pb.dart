@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: Jub_EOS.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -16,20 +16,48 @@ import 'Jub_EOS.pbenum.dart';
 export 'Jub_EOS.pbenum.dart';
 
 class TransferAction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferAction', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
-    ..aOS(1, 'from')
-    ..aOS(2, 'to')
-    ..aOS(3, 'asset')
-    ..aOS(4, 'memo')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferAction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'from')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'to')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'asset')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memo')
     ..hasRequiredFields = false
   ;
 
   TransferAction._() : super();
-  factory TransferAction() => create();
+  factory TransferAction({
+    $core.String? from,
+    $core.String? to,
+    $core.String? asset,
+    $core.String? memo,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (to != null) {
+      _result.to = to;
+    }
+    if (asset != null) {
+      _result.asset = asset;
+    }
+    if (memo != null) {
+      _result.memo = memo;
+    }
+    return _result;
+  }
   factory TransferAction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferAction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransferAction clone() => TransferAction()..mergeFromMessage(this);
-  TransferAction copyWith(void Function(TransferAction) updates) => super.copyWith((message) => updates(message as TransferAction));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransferAction copyWith(void Function(TransferAction) updates) => super.copyWith((message) => updates(message as TransferAction)) as TransferAction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferAction create() => TransferAction._();
@@ -37,7 +65,7 @@ class TransferAction extends $pb.GeneratedMessage {
   static $pb.PbList<TransferAction> createRepeated() => $pb.PbList<TransferAction>();
   @$core.pragma('dart2js:noInline')
   static TransferAction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferAction>(create);
-  static TransferAction _defaultInstance;
+  static TransferAction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get from => $_getSZ(0);
@@ -77,22 +105,58 @@ class TransferAction extends $pb.GeneratedMessage {
 }
 
 class DelegateAction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DelegateAction', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
-    ..aOS(1, 'from')
-    ..aOS(2, 'receiver')
-    ..aOS(3, 'netQty')
-    ..aOS(4, 'cpuQty')
-    ..aOB(5, 'transfer')
-    ..aOB(6, 'stake')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DelegateAction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'from')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiver')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'netQty')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cpuQty')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transfer')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stake')
     ..hasRequiredFields = false
   ;
 
   DelegateAction._() : super();
-  factory DelegateAction() => create();
+  factory DelegateAction({
+    $core.String? from,
+    $core.String? receiver,
+    $core.String? netQty,
+    $core.String? cpuQty,
+    $core.bool? transfer,
+    $core.bool? stake,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (receiver != null) {
+      _result.receiver = receiver;
+    }
+    if (netQty != null) {
+      _result.netQty = netQty;
+    }
+    if (cpuQty != null) {
+      _result.cpuQty = cpuQty;
+    }
+    if (transfer != null) {
+      _result.transfer = transfer;
+    }
+    if (stake != null) {
+      _result.stake = stake;
+    }
+    return _result;
+  }
   factory DelegateAction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DelegateAction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   DelegateAction clone() => DelegateAction()..mergeFromMessage(this);
-  DelegateAction copyWith(void Function(DelegateAction) updates) => super.copyWith((message) => updates(message as DelegateAction));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DelegateAction copyWith(void Function(DelegateAction) updates) => super.copyWith((message) => updates(message as DelegateAction)) as DelegateAction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DelegateAction create() => DelegateAction._();
@@ -100,7 +164,7 @@ class DelegateAction extends $pb.GeneratedMessage {
   static $pb.PbList<DelegateAction> createRepeated() => $pb.PbList<DelegateAction>();
   @$core.pragma('dart2js:noInline')
   static DelegateAction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DelegateAction>(create);
-  static DelegateAction _defaultInstance;
+  static DelegateAction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get from => $_getSZ(0);
@@ -158,19 +222,43 @@ class DelegateAction extends $pb.GeneratedMessage {
 }
 
 class BuyRamAction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BuyRamAction', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
-    ..aOS(1, 'payer')
-    ..aOS(2, 'quant')
-    ..aOS(3, 'receiver')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BuyRamAction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'payer')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quant')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiver')
     ..hasRequiredFields = false
   ;
 
   BuyRamAction._() : super();
-  factory BuyRamAction() => create();
+  factory BuyRamAction({
+    $core.String? payer,
+    $core.String? quant,
+    $core.String? receiver,
+  }) {
+    final _result = create();
+    if (payer != null) {
+      _result.payer = payer;
+    }
+    if (quant != null) {
+      _result.quant = quant;
+    }
+    if (receiver != null) {
+      _result.receiver = receiver;
+    }
+    return _result;
+  }
   factory BuyRamAction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BuyRamAction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BuyRamAction clone() => BuyRamAction()..mergeFromMessage(this);
-  BuyRamAction copyWith(void Function(BuyRamAction) updates) => super.copyWith((message) => updates(message as BuyRamAction));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BuyRamAction copyWith(void Function(BuyRamAction) updates) => super.copyWith((message) => updates(message as BuyRamAction)) as BuyRamAction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BuyRamAction create() => BuyRamAction._();
@@ -178,7 +266,7 @@ class BuyRamAction extends $pb.GeneratedMessage {
   static $pb.PbList<BuyRamAction> createRepeated() => $pb.PbList<BuyRamAction>();
   @$core.pragma('dart2js:noInline')
   static BuyRamAction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BuyRamAction>(create);
-  static BuyRamAction _defaultInstance;
+  static BuyRamAction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get payer => $_getSZ(0);
@@ -209,18 +297,38 @@ class BuyRamAction extends $pb.GeneratedMessage {
 }
 
 class SellRamAction extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SellRamAction', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
-    ..aOS(1, 'account')
-    ..aOS(2, 'byte')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SellRamAction', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'account')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'byte')
     ..hasRequiredFields = false
   ;
 
   SellRamAction._() : super();
-  factory SellRamAction() => create();
+  factory SellRamAction({
+    $core.String? account,
+    $core.String? byte,
+  }) {
+    final _result = create();
+    if (account != null) {
+      _result.account = account;
+    }
+    if (byte != null) {
+      _result.byte = byte;
+    }
+    return _result;
+  }
   factory SellRamAction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SellRamAction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SellRamAction clone() => SellRamAction()..mergeFromMessage(this);
-  SellRamAction copyWith(void Function(SellRamAction) updates) => super.copyWith((message) => updates(message as SellRamAction));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SellRamAction copyWith(void Function(SellRamAction) updates) => super.copyWith((message) => updates(message as SellRamAction)) as SellRamAction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SellRamAction create() => SellRamAction._();
@@ -228,7 +336,7 @@ class SellRamAction extends $pb.GeneratedMessage {
   static $pb.PbList<SellRamAction> createRepeated() => $pb.PbList<SellRamAction>();
   @$core.pragma('dart2js:noInline')
   static SellRamAction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SellRamAction>(create);
-  static SellRamAction _defaultInstance;
+  static SellRamAction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get account => $_getSZ(0);
@@ -265,24 +373,64 @@ class ActionEOS extends $pb.GeneratedMessage {
     7 : ActionEOS_Action.sellRamAction,
     0 : ActionEOS_Action.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ActionEOS', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionEOS', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7])
-    ..e<ENUM_EOS_ACTION_TYPE>(1, 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_EOS_ACTION_TYPE.XFER, valueOf: ENUM_EOS_ACTION_TYPE.valueOf, enumValues: ENUM_EOS_ACTION_TYPE.values)
-    ..aOS(2, 'currency')
-    ..aOS(3, 'name')
-    ..aOM<TransferAction>(4, 'xferAction', subBuilder: TransferAction.create)
-    ..aOM<DelegateAction>(5, 'deleAction', subBuilder: DelegateAction.create)
-    ..aOM<BuyRamAction>(6, 'buyRamAction', subBuilder: BuyRamAction.create)
-    ..aOM<SellRamAction>(7, 'sellRamAction', subBuilder: SellRamAction.create)
+    ..e<ENUM_EOS_ACTION_TYPE>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ENUM_EOS_ACTION_TYPE.XFER, valueOf: ENUM_EOS_ACTION_TYPE.valueOf, enumValues: ENUM_EOS_ACTION_TYPE.values)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currency')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..aOM<TransferAction>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'xferAction', subBuilder: TransferAction.create)
+    ..aOM<DelegateAction>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deleAction', subBuilder: DelegateAction.create)
+    ..aOM<BuyRamAction>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'buyRamAction', subBuilder: BuyRamAction.create)
+    ..aOM<SellRamAction>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sellRamAction', subBuilder: SellRamAction.create)
     ..hasRequiredFields = false
   ;
 
   ActionEOS._() : super();
-  factory ActionEOS() => create();
+  factory ActionEOS({
+    ENUM_EOS_ACTION_TYPE? type,
+    $core.String? currency,
+    $core.String? name,
+    TransferAction? xferAction,
+    DelegateAction? deleAction,
+    BuyRamAction? buyRamAction,
+    SellRamAction? sellRamAction,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (currency != null) {
+      _result.currency = currency;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (xferAction != null) {
+      _result.xferAction = xferAction;
+    }
+    if (deleAction != null) {
+      _result.deleAction = deleAction;
+    }
+    if (buyRamAction != null) {
+      _result.buyRamAction = buyRamAction;
+    }
+    if (sellRamAction != null) {
+      _result.sellRamAction = sellRamAction;
+    }
+    return _result;
+  }
   factory ActionEOS.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ActionEOS.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ActionEOS clone() => ActionEOS()..mergeFromMessage(this);
-  ActionEOS copyWith(void Function(ActionEOS) updates) => super.copyWith((message) => updates(message as ActionEOS));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ActionEOS copyWith(void Function(ActionEOS) updates) => super.copyWith((message) => updates(message as ActionEOS)) as ActionEOS; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ActionEOS create() => ActionEOS._();
@@ -290,9 +438,9 @@ class ActionEOS extends $pb.GeneratedMessage {
   static $pb.PbList<ActionEOS> createRepeated() => $pb.PbList<ActionEOS>();
   @$core.pragma('dart2js:noInline')
   static ActionEOS getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionEOS>(create);
-  static ActionEOS _defaultInstance;
+  static ActionEOS? _defaultInstance;
 
-  ActionEOS_Action whichAction() => _ActionEOS_ActionByTag[$_whichOneof(0)];
+  ActionEOS_Action whichAction() => _ActionEOS_ActionByTag[$_whichOneof(0)]!;
   void clearAction() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -368,17 +516,33 @@ class ActionEOS extends $pb.GeneratedMessage {
 }
 
 class ActionListEOS extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ActionListEOS', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
-    ..pc<ActionEOS>(1, 'actions', $pb.PbFieldType.PM, subBuilder: ActionEOS.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ActionListEOS', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
+    ..pc<ActionEOS>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'actions', $pb.PbFieldType.PM, subBuilder: ActionEOS.create)
     ..hasRequiredFields = false
   ;
 
   ActionListEOS._() : super();
-  factory ActionListEOS() => create();
+  factory ActionListEOS({
+    $core.Iterable<ActionEOS>? actions,
+  }) {
+    final _result = create();
+    if (actions != null) {
+      _result.actions.addAll(actions);
+    }
+    return _result;
+  }
   factory ActionListEOS.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ActionListEOS.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ActionListEOS clone() => ActionListEOS()..mergeFromMessage(this);
-  ActionListEOS copyWith(void Function(ActionListEOS) updates) => super.copyWith((message) => updates(message as ActionListEOS));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ActionListEOS copyWith(void Function(ActionListEOS) updates) => super.copyWith((message) => updates(message as ActionListEOS)) as ActionListEOS; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ActionListEOS create() => ActionListEOS._();
@@ -386,29 +550,65 @@ class ActionListEOS extends $pb.GeneratedMessage {
   static $pb.PbList<ActionListEOS> createRepeated() => $pb.PbList<ActionListEOS>();
   @$core.pragma('dart2js:noInline')
   static ActionListEOS getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionListEOS>(create);
-  static ActionListEOS _defaultInstance;
+  static ActionListEOS? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<ActionEOS> get actions => $_getList(0);
 }
 
 class TransactionEOS extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionEOS', package: const $pb.PackageName('JUB.Proto.EOS'), createEmptyInstance: create)
-    ..aOM<$0.Bip44Path>(1, 'path', subBuilder: $0.Bip44Path.create)
-    ..aOS(2, 'chainID', protoName: 'chainID')
-    ..aOS(3, 'expiration')
-    ..aOS(4, 'referenceBlockId', protoName: 'referenceBlockId')
-    ..aOS(5, 'referenceBlockTime', protoName: 'referenceBlockTime')
-    ..aOS(6, 'actionsInJSON', protoName: 'actionsInJSON')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionEOS', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'JUB.Proto.EOS'), createEmptyInstance: create)
+    ..aOM<$0.Bip44Path>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'path', subBuilder: $0.Bip44Path.create)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainID', protoName: 'chainID')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expiration')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referenceBlockId', protoName: 'referenceBlockId')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referenceBlockTime', protoName: 'referenceBlockTime')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'actionsInJSON', protoName: 'actionsInJSON')
     ..hasRequiredFields = false
   ;
 
   TransactionEOS._() : super();
-  factory TransactionEOS() => create();
+  factory TransactionEOS({
+    $0.Bip44Path? path,
+    $core.String? chainID,
+    $core.String? expiration,
+    $core.String? referenceBlockId,
+    $core.String? referenceBlockTime,
+    $core.String? actionsInJSON,
+  }) {
+    final _result = create();
+    if (path != null) {
+      _result.path = path;
+    }
+    if (chainID != null) {
+      _result.chainID = chainID;
+    }
+    if (expiration != null) {
+      _result.expiration = expiration;
+    }
+    if (referenceBlockId != null) {
+      _result.referenceBlockId = referenceBlockId;
+    }
+    if (referenceBlockTime != null) {
+      _result.referenceBlockTime = referenceBlockTime;
+    }
+    if (actionsInJSON != null) {
+      _result.actionsInJSON = actionsInJSON;
+    }
+    return _result;
+  }
   factory TransactionEOS.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionEOS.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransactionEOS clone() => TransactionEOS()..mergeFromMessage(this);
-  TransactionEOS copyWith(void Function(TransactionEOS) updates) => super.copyWith((message) => updates(message as TransactionEOS));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransactionEOS copyWith(void Function(TransactionEOS) updates) => super.copyWith((message) => updates(message as TransactionEOS)) as TransactionEOS; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionEOS create() => TransactionEOS._();
@@ -416,7 +616,7 @@ class TransactionEOS extends $pb.GeneratedMessage {
   static $pb.PbList<TransactionEOS> createRepeated() => $pb.PbList<TransactionEOS>();
   @$core.pragma('dart2js:noInline')
   static TransactionEOS getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionEOS>(create);
-  static TransactionEOS _defaultInstance;
+  static TransactionEOS? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.Bip44Path get path => $_getN(0);

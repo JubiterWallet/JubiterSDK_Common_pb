@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: core/contract/asset_issue_contract.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use assetIssueContractDescriptor instead')
 const AssetIssueContract$json = const {
   '1': 'AssetIssueContract',
   '2': const [
@@ -31,6 +35,7 @@ const AssetIssueContract$json = const {
   '3': const [AssetIssueContract_FrozenSupply$json],
 };
 
+@$core.Deprecated('Use assetIssueContractDescriptor instead')
 const AssetIssueContract_FrozenSupply$json = const {
   '1': 'FrozenSupply',
   '2': const [
@@ -39,6 +44,9 @@ const AssetIssueContract_FrozenSupply$json = const {
   ],
 };
 
+/// Descriptor for `AssetIssueContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List assetIssueContractDescriptor = $convert.base64Decode('ChJBc3NldElzc3VlQ29udHJhY3QSDgoCaWQYKSABKAlSAmlkEiMKDW93bmVyX2FkZHJlc3MYASABKAxSDG93bmVyQWRkcmVzcxISCgRuYW1lGAIgASgMUgRuYW1lEhIKBGFiYnIYAyABKAxSBGFiYnISIQoMdG90YWxfc3VwcGx5GAQgASgDUgt0b3RhbFN1cHBseRJOCg1mcm96ZW5fc3VwcGx5GAUgAygLMikucHJvdG9jb2wuQXNzZXRJc3N1ZUNvbnRyYWN0LkZyb3plblN1cHBseVIMZnJvemVuU3VwcGx5EhcKB3RyeF9udW0YBiABKAVSBnRyeE51bRIcCglwcmVjaXNpb24YByABKAVSCXByZWNpc2lvbhIQCgNudW0YCCABKAVSA251bRIdCgpzdGFydF90aW1lGAkgASgDUglzdGFydFRpbWUSGQoIZW5kX3RpbWUYCiABKANSB2VuZFRpbWUSFAoFb3JkZXIYCyABKANSBW9yZGVyEh0KCnZvdGVfc2NvcmUYECABKAVSCXZvdGVTY29yZRIgCgtkZXNjcmlwdGlvbhgUIAEoDFILZGVzY3JpcHRpb24SEAoDdXJsGBUgASgMUgN1cmwSLwoUZnJlZV9hc3NldF9uZXRfbGltaXQYFiABKANSEWZyZWVBc3NldE5ldExpbWl0EjwKG3B1YmxpY19mcmVlX2Fzc2V0X25ldF9saW1pdBgXIAEoA1IXcHVibGljRnJlZUFzc2V0TmV0TGltaXQSPAobcHVibGljX2ZyZWVfYXNzZXRfbmV0X3VzYWdlGBggASgDUhdwdWJsaWNGcmVlQXNzZXROZXRVc2FnZRI8ChtwdWJsaWNfbGF0ZXN0X2ZyZWVfbmV0X3RpbWUYGSABKANSF3B1YmxpY0xhdGVzdEZyZWVOZXRUaW1lGlQKDEZyb3plblN1cHBseRIjCg1mcm96ZW5fYW1vdW50GAEgASgDUgxmcm96ZW5BbW91bnQSHwoLZnJvemVuX2RheXMYAiABKANSCmZyb3plbkRheXM=');
+@$core.Deprecated('Use transferAssetContractDescriptor instead')
 const TransferAssetContract$json = const {
   '1': 'TransferAssetContract',
   '2': const [
@@ -49,6 +57,9 @@ const TransferAssetContract$json = const {
   ],
 };
 
+/// Descriptor for `TransferAssetContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transferAssetContractDescriptor = $convert.base64Decode('ChVUcmFuc2ZlckFzc2V0Q29udHJhY3QSHQoKYXNzZXRfbmFtZRgBIAEoDFIJYXNzZXROYW1lEiMKDW93bmVyX2FkZHJlc3MYAiABKAxSDG93bmVyQWRkcmVzcxIdCgp0b19hZGRyZXNzGAMgASgMUgl0b0FkZHJlc3MSFgoGYW1vdW50GAQgASgDUgZhbW91bnQ=');
+@$core.Deprecated('Use unfreezeAssetContractDescriptor instead')
 const UnfreezeAssetContract$json = const {
   '1': 'UnfreezeAssetContract',
   '2': const [
@@ -56,6 +67,9 @@ const UnfreezeAssetContract$json = const {
   ],
 };
 
+/// Descriptor for `UnfreezeAssetContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unfreezeAssetContractDescriptor = $convert.base64Decode('ChVVbmZyZWV6ZUFzc2V0Q29udHJhY3QSIwoNb3duZXJfYWRkcmVzcxgBIAEoDFIMb3duZXJBZGRyZXNz');
+@$core.Deprecated('Use updateAssetContractDescriptor instead')
 const UpdateAssetContract$json = const {
   '1': 'UpdateAssetContract',
   '2': const [
@@ -67,6 +81,9 @@ const UpdateAssetContract$json = const {
   ],
 };
 
+/// Descriptor for `UpdateAssetContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateAssetContractDescriptor = $convert.base64Decode('ChNVcGRhdGVBc3NldENvbnRyYWN0EiMKDW93bmVyX2FkZHJlc3MYASABKAxSDG93bmVyQWRkcmVzcxIgCgtkZXNjcmlwdGlvbhgCIAEoDFILZGVzY3JpcHRpb24SEAoDdXJsGAMgASgMUgN1cmwSGwoJbmV3X2xpbWl0GAQgASgDUghuZXdMaW1pdBIoChBuZXdfcHVibGljX2xpbWl0GAUgASgDUg5uZXdQdWJsaWNMaW1pdA==');
+@$core.Deprecated('Use participateAssetIssueContractDescriptor instead')
 const ParticipateAssetIssueContract$json = const {
   '1': 'ParticipateAssetIssueContract',
   '2': const [
@@ -77,3 +94,5 @@ const ParticipateAssetIssueContract$json = const {
   ],
 };
 
+/// Descriptor for `ParticipateAssetIssueContract`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List participateAssetIssueContractDescriptor = $convert.base64Decode('Ch1QYXJ0aWNpcGF0ZUFzc2V0SXNzdWVDb250cmFjdBIjCg1vd25lcl9hZGRyZXNzGAEgASgMUgxvd25lckFkZHJlc3MSHQoKdG9fYWRkcmVzcxgCIAEoDFIJdG9BZGRyZXNzEh0KCmFzc2V0X25hbWUYAyABKAxSCWFzc2V0TmFtZRIWCgZhbW91bnQYBCABKANSBmFtb3VudA==');

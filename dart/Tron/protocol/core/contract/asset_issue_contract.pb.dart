@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: core/contract/asset_issue_contract.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -11,18 +11,38 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AssetIssueContract_FrozenSupply extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssetIssueContract.FrozenSupply', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..aInt64(1, 'frozenAmount')
-    ..aInt64(2, 'frozenDays')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetIssueContract.FrozenSupply', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenAmount')
+    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenDays')
     ..hasRequiredFields = false
   ;
 
   AssetIssueContract_FrozenSupply._() : super();
-  factory AssetIssueContract_FrozenSupply() => create();
+  factory AssetIssueContract_FrozenSupply({
+    $fixnum.Int64? frozenAmount,
+    $fixnum.Int64? frozenDays,
+  }) {
+    final _result = create();
+    if (frozenAmount != null) {
+      _result.frozenAmount = frozenAmount;
+    }
+    if (frozenDays != null) {
+      _result.frozenDays = frozenDays;
+    }
+    return _result;
+  }
   factory AssetIssueContract_FrozenSupply.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AssetIssueContract_FrozenSupply.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   AssetIssueContract_FrozenSupply clone() => AssetIssueContract_FrozenSupply()..mergeFromMessage(this);
-  AssetIssueContract_FrozenSupply copyWith(void Function(AssetIssueContract_FrozenSupply) updates) => super.copyWith((message) => updates(message as AssetIssueContract_FrozenSupply));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AssetIssueContract_FrozenSupply copyWith(void Function(AssetIssueContract_FrozenSupply) updates) => super.copyWith((message) => updates(message as AssetIssueContract_FrozenSupply)) as AssetIssueContract_FrozenSupply; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AssetIssueContract_FrozenSupply create() => AssetIssueContract_FrozenSupply._();
@@ -30,7 +50,7 @@ class AssetIssueContract_FrozenSupply extends $pb.GeneratedMessage {
   static $pb.PbList<AssetIssueContract_FrozenSupply> createRepeated() => $pb.PbList<AssetIssueContract_FrozenSupply>();
   @$core.pragma('dart2js:noInline')
   static AssetIssueContract_FrozenSupply getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AssetIssueContract_FrozenSupply>(create);
-  static AssetIssueContract_FrozenSupply _defaultInstance;
+  static AssetIssueContract_FrozenSupply? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get frozenAmount => $_getI64(0);
@@ -52,35 +72,123 @@ class AssetIssueContract_FrozenSupply extends $pb.GeneratedMessage {
 }
 
 class AssetIssueContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AssetIssueContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, 'name', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, 'abbr', $pb.PbFieldType.OY)
-    ..aInt64(4, 'totalSupply')
-    ..pc<AssetIssueContract_FrozenSupply>(5, 'frozenSupply', $pb.PbFieldType.PM, subBuilder: AssetIssueContract_FrozenSupply.create)
-    ..a<$core.int>(6, 'trxNum', $pb.PbFieldType.O3)
-    ..a<$core.int>(7, 'precision', $pb.PbFieldType.O3)
-    ..a<$core.int>(8, 'num', $pb.PbFieldType.O3)
-    ..aInt64(9, 'startTime')
-    ..aInt64(10, 'endTime')
-    ..aInt64(11, 'order')
-    ..a<$core.int>(16, 'voteScore', $pb.PbFieldType.O3)
-    ..a<$core.List<$core.int>>(20, 'description', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(21, 'url', $pb.PbFieldType.OY)
-    ..aInt64(22, 'freeAssetNetLimit')
-    ..aInt64(23, 'publicFreeAssetNetLimit')
-    ..aInt64(24, 'publicFreeAssetNetUsage')
-    ..aInt64(25, 'publicLatestFreeNetTime')
-    ..aOS(41, 'id')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AssetIssueContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'abbr', $pb.PbFieldType.OY)
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalSupply')
+    ..pc<AssetIssueContract_FrozenSupply>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenSupply', $pb.PbFieldType.PM, subBuilder: AssetIssueContract_FrozenSupply.create)
+    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trxNum', $pb.PbFieldType.O3)
+    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'precision', $pb.PbFieldType.O3)
+    ..a<$core.int>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'num', $pb.PbFieldType.O3)
+    ..aInt64(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTime')
+    ..aInt64(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTime')
+    ..aInt64(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'order')
+    ..a<$core.int>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteScore', $pb.PbFieldType.O3)
+    ..a<$core.List<$core.int>>(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url', $pb.PbFieldType.OY)
+    ..aInt64(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'freeAssetNetLimit')
+    ..aInt64(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicFreeAssetNetLimit')
+    ..aInt64(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicFreeAssetNetUsage')
+    ..aInt64(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicLatestFreeNetTime')
+    ..aOS(41, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..hasRequiredFields = false
   ;
 
   AssetIssueContract._() : super();
-  factory AssetIssueContract() => create();
+  factory AssetIssueContract({
+    $core.List<$core.int>? ownerAddress,
+    $core.List<$core.int>? name,
+    $core.List<$core.int>? abbr,
+    $fixnum.Int64? totalSupply,
+    $core.Iterable<AssetIssueContract_FrozenSupply>? frozenSupply,
+    $core.int? trxNum,
+    $core.int? precision,
+    $core.int? num,
+    $fixnum.Int64? startTime,
+    $fixnum.Int64? endTime,
+    $fixnum.Int64? order,
+    $core.int? voteScore,
+    $core.List<$core.int>? description,
+    $core.List<$core.int>? url,
+    $fixnum.Int64? freeAssetNetLimit,
+    $fixnum.Int64? publicFreeAssetNetLimit,
+    $fixnum.Int64? publicFreeAssetNetUsage,
+    $fixnum.Int64? publicLatestFreeNetTime,
+    $core.String? id,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (abbr != null) {
+      _result.abbr = abbr;
+    }
+    if (totalSupply != null) {
+      _result.totalSupply = totalSupply;
+    }
+    if (frozenSupply != null) {
+      _result.frozenSupply.addAll(frozenSupply);
+    }
+    if (trxNum != null) {
+      _result.trxNum = trxNum;
+    }
+    if (precision != null) {
+      _result.precision = precision;
+    }
+    if (num != null) {
+      _result.num = num;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (order != null) {
+      _result.order = order;
+    }
+    if (voteScore != null) {
+      _result.voteScore = voteScore;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (url != null) {
+      _result.url = url;
+    }
+    if (freeAssetNetLimit != null) {
+      _result.freeAssetNetLimit = freeAssetNetLimit;
+    }
+    if (publicFreeAssetNetLimit != null) {
+      _result.publicFreeAssetNetLimit = publicFreeAssetNetLimit;
+    }
+    if (publicFreeAssetNetUsage != null) {
+      _result.publicFreeAssetNetUsage = publicFreeAssetNetUsage;
+    }
+    if (publicLatestFreeNetTime != null) {
+      _result.publicLatestFreeNetTime = publicLatestFreeNetTime;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    return _result;
+  }
   factory AssetIssueContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AssetIssueContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   AssetIssueContract clone() => AssetIssueContract()..mergeFromMessage(this);
-  AssetIssueContract copyWith(void Function(AssetIssueContract) updates) => super.copyWith((message) => updates(message as AssetIssueContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AssetIssueContract copyWith(void Function(AssetIssueContract) updates) => super.copyWith((message) => updates(message as AssetIssueContract)) as AssetIssueContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AssetIssueContract create() => AssetIssueContract._();
@@ -88,7 +196,7 @@ class AssetIssueContract extends $pb.GeneratedMessage {
   static $pb.PbList<AssetIssueContract> createRepeated() => $pb.PbList<AssetIssueContract>();
   @$core.pragma('dart2js:noInline')
   static AssetIssueContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AssetIssueContract>(create);
-  static AssetIssueContract _defaultInstance;
+  static AssetIssueContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);
@@ -257,20 +365,48 @@ class AssetIssueContract extends $pb.GeneratedMessage {
 }
 
 class TransferAssetContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferAssetContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'assetName', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, 'ownerAddress', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, 'toAddress', $pb.PbFieldType.OY)
-    ..aInt64(4, 'amount')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferAssetContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetName', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress', $pb.PbFieldType.OY)
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
     ..hasRequiredFields = false
   ;
 
   TransferAssetContract._() : super();
-  factory TransferAssetContract() => create();
+  factory TransferAssetContract({
+    $core.List<$core.int>? assetName,
+    $core.List<$core.int>? ownerAddress,
+    $core.List<$core.int>? toAddress,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (assetName != null) {
+      _result.assetName = assetName;
+    }
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TransferAssetContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferAssetContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransferAssetContract clone() => TransferAssetContract()..mergeFromMessage(this);
-  TransferAssetContract copyWith(void Function(TransferAssetContract) updates) => super.copyWith((message) => updates(message as TransferAssetContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransferAssetContract copyWith(void Function(TransferAssetContract) updates) => super.copyWith((message) => updates(message as TransferAssetContract)) as TransferAssetContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferAssetContract create() => TransferAssetContract._();
@@ -278,7 +414,7 @@ class TransferAssetContract extends $pb.GeneratedMessage {
   static $pb.PbList<TransferAssetContract> createRepeated() => $pb.PbList<TransferAssetContract>();
   @$core.pragma('dart2js:noInline')
   static TransferAssetContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferAssetContract>(create);
-  static TransferAssetContract _defaultInstance;
+  static TransferAssetContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get assetName => $_getN(0);
@@ -318,17 +454,33 @@ class TransferAssetContract extends $pb.GeneratedMessage {
 }
 
 class UnfreezeAssetContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnfreezeAssetContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnfreezeAssetContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   UnfreezeAssetContract._() : super();
-  factory UnfreezeAssetContract() => create();
+  factory UnfreezeAssetContract({
+    $core.List<$core.int>? ownerAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    return _result;
+  }
   factory UnfreezeAssetContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UnfreezeAssetContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   UnfreezeAssetContract clone() => UnfreezeAssetContract()..mergeFromMessage(this);
-  UnfreezeAssetContract copyWith(void Function(UnfreezeAssetContract) updates) => super.copyWith((message) => updates(message as UnfreezeAssetContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnfreezeAssetContract copyWith(void Function(UnfreezeAssetContract) updates) => super.copyWith((message) => updates(message as UnfreezeAssetContract)) as UnfreezeAssetContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UnfreezeAssetContract create() => UnfreezeAssetContract._();
@@ -336,7 +488,7 @@ class UnfreezeAssetContract extends $pb.GeneratedMessage {
   static $pb.PbList<UnfreezeAssetContract> createRepeated() => $pb.PbList<UnfreezeAssetContract>();
   @$core.pragma('dart2js:noInline')
   static UnfreezeAssetContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnfreezeAssetContract>(create);
-  static UnfreezeAssetContract _defaultInstance;
+  static UnfreezeAssetContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);
@@ -349,21 +501,53 @@ class UnfreezeAssetContract extends $pb.GeneratedMessage {
 }
 
 class UpdateAssetContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateAssetContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, 'description', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, 'url', $pb.PbFieldType.OY)
-    ..aInt64(4, 'newLimit')
-    ..aInt64(5, 'newPublicLimit')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UpdateAssetContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url', $pb.PbFieldType.OY)
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'newLimit')
+    ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'newPublicLimit')
     ..hasRequiredFields = false
   ;
 
   UpdateAssetContract._() : super();
-  factory UpdateAssetContract() => create();
+  factory UpdateAssetContract({
+    $core.List<$core.int>? ownerAddress,
+    $core.List<$core.int>? description,
+    $core.List<$core.int>? url,
+    $fixnum.Int64? newLimit,
+    $fixnum.Int64? newPublicLimit,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (url != null) {
+      _result.url = url;
+    }
+    if (newLimit != null) {
+      _result.newLimit = newLimit;
+    }
+    if (newPublicLimit != null) {
+      _result.newPublicLimit = newPublicLimit;
+    }
+    return _result;
+  }
   factory UpdateAssetContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UpdateAssetContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   UpdateAssetContract clone() => UpdateAssetContract()..mergeFromMessage(this);
-  UpdateAssetContract copyWith(void Function(UpdateAssetContract) updates) => super.copyWith((message) => updates(message as UpdateAssetContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateAssetContract copyWith(void Function(UpdateAssetContract) updates) => super.copyWith((message) => updates(message as UpdateAssetContract)) as UpdateAssetContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UpdateAssetContract create() => UpdateAssetContract._();
@@ -371,7 +555,7 @@ class UpdateAssetContract extends $pb.GeneratedMessage {
   static $pb.PbList<UpdateAssetContract> createRepeated() => $pb.PbList<UpdateAssetContract>();
   @$core.pragma('dart2js:noInline')
   static UpdateAssetContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateAssetContract>(create);
-  static UpdateAssetContract _defaultInstance;
+  static UpdateAssetContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);
@@ -420,20 +604,48 @@ class UpdateAssetContract extends $pb.GeneratedMessage {
 }
 
 class ParticipateAssetIssueContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ParticipateAssetIssueContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, 'toAddress', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, 'assetName', $pb.PbFieldType.OY)
-    ..aInt64(4, 'amount')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ParticipateAssetIssueContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'assetName', $pb.PbFieldType.OY)
+    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
     ..hasRequiredFields = false
   ;
 
   ParticipateAssetIssueContract._() : super();
-  factory ParticipateAssetIssueContract() => create();
+  factory ParticipateAssetIssueContract({
+    $core.List<$core.int>? ownerAddress,
+    $core.List<$core.int>? toAddress,
+    $core.List<$core.int>? assetName,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (assetName != null) {
+      _result.assetName = assetName;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory ParticipateAssetIssueContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ParticipateAssetIssueContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ParticipateAssetIssueContract clone() => ParticipateAssetIssueContract()..mergeFromMessage(this);
-  ParticipateAssetIssueContract copyWith(void Function(ParticipateAssetIssueContract) updates) => super.copyWith((message) => updates(message as ParticipateAssetIssueContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ParticipateAssetIssueContract copyWith(void Function(ParticipateAssetIssueContract) updates) => super.copyWith((message) => updates(message as ParticipateAssetIssueContract)) as ParticipateAssetIssueContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ParticipateAssetIssueContract create() => ParticipateAssetIssueContract._();
@@ -441,7 +653,7 @@ class ParticipateAssetIssueContract extends $pb.GeneratedMessage {
   static $pb.PbList<ParticipateAssetIssueContract> createRepeated() => $pb.PbList<ParticipateAssetIssueContract>();
   @$core.pragma('dart2js:noInline')
   static ParticipateAssetIssueContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ParticipateAssetIssueContract>(create);
-  static ParticipateAssetIssueContract _defaultInstance;
+  static ParticipateAssetIssueContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);

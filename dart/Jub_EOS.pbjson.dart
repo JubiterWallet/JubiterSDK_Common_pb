@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Jub_EOS.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use eNUM_EOS_ACTION_TYPEDescriptor instead')
 const ENUM_EOS_ACTION_TYPE$json = const {
   '1': 'ENUM_EOS_ACTION_TYPE',
   '2': const [
@@ -16,6 +20,9 @@ const ENUM_EOS_ACTION_TYPE$json = const {
   ],
 };
 
+/// Descriptor for `ENUM_EOS_ACTION_TYPE`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List eNUM_EOS_ACTION_TYPEDescriptor = $convert.base64Decode('ChRFTlVNX0VPU19BQ1RJT05fVFlQRRIICgRYRkVSEAASCAoEREVMRRABEgoKBlVOREVMRRACEgoKBkJVWVJBTRADEgsKB1NFTExSQU0QBA==');
+@$core.Deprecated('Use transferActionDescriptor instead')
 const TransferAction$json = const {
   '1': 'TransferAction',
   '2': const [
@@ -26,6 +33,9 @@ const TransferAction$json = const {
   ],
 };
 
+/// Descriptor for `TransferAction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transferActionDescriptor = $convert.base64Decode('Cg5UcmFuc2ZlckFjdGlvbhISCgRmcm9tGAEgASgJUgRmcm9tEg4KAnRvGAIgASgJUgJ0bxIUCgVhc3NldBgDIAEoCVIFYXNzZXQSEgoEbWVtbxgEIAEoCVIEbWVtbw==');
+@$core.Deprecated('Use delegateActionDescriptor instead')
 const DelegateAction$json = const {
   '1': 'DelegateAction',
   '2': const [
@@ -38,6 +48,9 @@ const DelegateAction$json = const {
   ],
 };
 
+/// Descriptor for `DelegateAction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List delegateActionDescriptor = $convert.base64Decode('Cg5EZWxlZ2F0ZUFjdGlvbhISCgRmcm9tGAEgASgJUgRmcm9tEhoKCHJlY2VpdmVyGAIgASgJUghyZWNlaXZlchIXCgduZXRfcXR5GAMgASgJUgZuZXRRdHkSFwoHY3B1X3F0eRgEIAEoCVIGY3B1UXR5EhoKCHRyYW5zZmVyGAUgASgIUgh0cmFuc2ZlchIUCgVzdGFrZRgGIAEoCFIFc3Rha2U=');
+@$core.Deprecated('Use buyRamActionDescriptor instead')
 const BuyRamAction$json = const {
   '1': 'BuyRamAction',
   '2': const [
@@ -47,6 +60,9 @@ const BuyRamAction$json = const {
   ],
 };
 
+/// Descriptor for `BuyRamAction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List buyRamActionDescriptor = $convert.base64Decode('CgxCdXlSYW1BY3Rpb24SFAoFcGF5ZXIYASABKAlSBXBheWVyEhQKBXF1YW50GAIgASgJUgVxdWFudBIaCghyZWNlaXZlchgDIAEoCVIIcmVjZWl2ZXI=');
+@$core.Deprecated('Use sellRamActionDescriptor instead')
 const SellRamAction$json = const {
   '1': 'SellRamAction',
   '2': const [
@@ -55,6 +71,9 @@ const SellRamAction$json = const {
   ],
 };
 
+/// Descriptor for `SellRamAction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sellRamActionDescriptor = $convert.base64Decode('Cg1TZWxsUmFtQWN0aW9uEhgKB2FjY291bnQYASABKAlSB2FjY291bnQSEgoEYnl0ZRgCIAEoCVIEYnl0ZQ==');
+@$core.Deprecated('Use actionEOSDescriptor instead')
 const ActionEOS$json = const {
   '1': 'ActionEOS',
   '2': const [
@@ -71,6 +90,9 @@ const ActionEOS$json = const {
   ],
 };
 
+/// Descriptor for `ActionEOS`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List actionEOSDescriptor = $convert.base64Decode('CglBY3Rpb25FT1MSNwoEdHlwZRgBIAEoDjIjLkpVQi5Qcm90by5FT1MuRU5VTV9FT1NfQUNUSU9OX1RZUEVSBHR5cGUSGgoIY3VycmVuY3kYAiABKAlSCGN1cnJlbmN5EhIKBG5hbWUYAyABKAlSBG5hbWUSQAoLeGZlcl9hY3Rpb24YBCABKAsyHS5KVUIuUHJvdG8uRU9TLlRyYW5zZmVyQWN0aW9uSABSCnhmZXJBY3Rpb24SQAoLZGVsZV9hY3Rpb24YBSABKAsyHS5KVUIuUHJvdG8uRU9TLkRlbGVnYXRlQWN0aW9uSABSCmRlbGVBY3Rpb24SQwoOYnV5X3JhbV9hY3Rpb24YBiABKAsyGy5KVUIuUHJvdG8uRU9TLkJ1eVJhbUFjdGlvbkgAUgxidXlSYW1BY3Rpb24SRgoPc2VsbF9yYW1fYWN0aW9uGAcgASgLMhwuSlVCLlByb3RvLkVPUy5TZWxsUmFtQWN0aW9uSABSDXNlbGxSYW1BY3Rpb25CCAoGYWN0aW9u');
+@$core.Deprecated('Use actionListEOSDescriptor instead')
 const ActionListEOS$json = const {
   '1': 'ActionListEOS',
   '2': const [
@@ -78,6 +100,9 @@ const ActionListEOS$json = const {
   ],
 };
 
+/// Descriptor for `ActionListEOS`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List actionListEOSDescriptor = $convert.base64Decode('Cg1BY3Rpb25MaXN0RU9TEjIKB2FjdGlvbnMYASADKAsyGC5KVUIuUHJvdG8uRU9TLkFjdGlvbkVPU1IHYWN0aW9ucw==');
+@$core.Deprecated('Use transactionEOSDescriptor instead')
 const TransactionEOS$json = const {
   '1': 'TransactionEOS',
   '2': const [
@@ -90,3 +115,5 @@ const TransactionEOS$json = const {
   ],
 };
 
+/// Descriptor for `TransactionEOS`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionEOSDescriptor = $convert.base64Decode('Cg5UcmFuc2FjdGlvbkVPUxIvCgRwYXRoGAEgASgLMhsuSlVCLlByb3RvLkNvbW1vbi5CaXA0NFBhdGhSBHBhdGgSGAoHY2hhaW5JRBgCIAEoCVIHY2hhaW5JRBIeCgpleHBpcmF0aW9uGAMgASgJUgpleHBpcmF0aW9uEioKEHJlZmVyZW5jZUJsb2NrSWQYBCABKAlSEHJlZmVyZW5jZUJsb2NrSWQSLgoScmVmZXJlbmNlQmxvY2tUaW1lGAUgASgJUhJyZWZlcmVuY2VCbG9ja1RpbWUSJAoNYWN0aW9uc0luSlNPThgGIAEoCVINYWN0aW9uc0luSlNPTg==');

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: jubiter_blue.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -14,17 +14,33 @@ import 'jubiter_blue.pbenum.dart';
 export 'jubiter_blue.pbenum.dart';
 
 class Int32Value extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Int32Value', createEmptyInstance: create)
-    ..a<$core.int>(1, 'value', $pb.PbFieldType.O3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Int32Value', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
   Int32Value._() : super();
-  factory Int32Value() => create();
+  factory Int32Value({
+    $core.int? value,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory Int32Value.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Int32Value.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Int32Value clone() => Int32Value()..mergeFromMessage(this);
-  Int32Value copyWith(void Function(Int32Value) updates) => super.copyWith((message) => updates(message as Int32Value));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Int32Value copyWith(void Function(Int32Value) updates) => super.copyWith((message) => updates(message as Int32Value)) as Int32Value; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Int32Value create() => Int32Value._();
@@ -32,7 +48,7 @@ class Int32Value extends $pb.GeneratedMessage {
   static $pb.PbList<Int32Value> createRepeated() => $pb.PbList<Int32Value>();
   @$core.pragma('dart2js:noInline')
   static Int32Value getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Int32Value>(create);
-  static Int32Value _defaultInstance;
+  static Int32Value? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get value => $_getIZ(0);
@@ -45,17 +61,33 @@ class Int32Value extends $pb.GeneratedMessage {
 }
 
 class BluetoothState extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothState', createEmptyInstance: create)
-    ..e<BluetoothState_State>(1, 'state', $pb.PbFieldType.OE, defaultOrMaker: BluetoothState_State.UNKNOWN, valueOf: BluetoothState_State.valueOf, enumValues: BluetoothState_State.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothState', createEmptyInstance: create)
+    ..e<BluetoothState_State>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: BluetoothState_State.UNKNOWN, valueOf: BluetoothState_State.valueOf, enumValues: BluetoothState_State.values)
     ..hasRequiredFields = false
   ;
 
   BluetoothState._() : super();
-  factory BluetoothState() => create();
+  factory BluetoothState({
+    BluetoothState_State? state,
+  }) {
+    final _result = create();
+    if (state != null) {
+      _result.state = state;
+    }
+    return _result;
+  }
   factory BluetoothState.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothState clone() => BluetoothState()..mergeFromMessage(this);
-  BluetoothState copyWith(void Function(BluetoothState) updates) => super.copyWith((message) => updates(message as BluetoothState));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothState copyWith(void Function(BluetoothState) updates) => super.copyWith((message) => updates(message as BluetoothState)) as BluetoothState; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothState create() => BluetoothState._();
@@ -63,7 +95,7 @@ class BluetoothState extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothState> createRepeated() => $pb.PbList<BluetoothState>();
   @$core.pragma('dart2js:noInline')
   static BluetoothState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothState>(create);
-  static BluetoothState _defaultInstance;
+  static BluetoothState? _defaultInstance;
 
   @$pb.TagNumber(1)
   BluetoothState_State get state => $_getN(0);
@@ -76,22 +108,58 @@ class BluetoothState extends $pb.GeneratedMessage {
 }
 
 class BluetoothAdvertisementData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothAdvertisementData', createEmptyInstance: create)
-    ..aOS(1, 'localName')
-    ..aOM<Int32Value>(2, 'txPowerLevel', subBuilder: Int32Value.create)
-    ..aOB(3, 'connectable')
-    ..m<$core.int, $core.List<$core.int>>(4, 'manufacturerData', entryClassName: 'BluetoothAdvertisementData.ManufacturerDataEntry', keyFieldType: $pb.PbFieldType.O3, valueFieldType: $pb.PbFieldType.OY)
-    ..m<$core.String, $core.List<$core.int>>(5, 'serviceData', entryClassName: 'BluetoothAdvertisementData.ServiceDataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OY)
-    ..pPS(6, 'serviceUuids')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothAdvertisementData', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'localName')
+    ..aOM<Int32Value>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txPowerLevel', subBuilder: Int32Value.create)
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'connectable')
+    ..m<$core.int, $core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'manufacturerData', entryClassName: 'BluetoothAdvertisementData.ManufacturerDataEntry', keyFieldType: $pb.PbFieldType.O3, valueFieldType: $pb.PbFieldType.OY)
+    ..m<$core.String, $core.List<$core.int>>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serviceData', entryClassName: 'BluetoothAdvertisementData.ServiceDataEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OY)
+    ..pPS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serviceUuids')
     ..hasRequiredFields = false
   ;
 
   BluetoothAdvertisementData._() : super();
-  factory BluetoothAdvertisementData() => create();
+  factory BluetoothAdvertisementData({
+    $core.String? localName,
+    Int32Value? txPowerLevel,
+    $core.bool? connectable,
+    $core.Map<$core.int, $core.List<$core.int>>? manufacturerData,
+    $core.Map<$core.String, $core.List<$core.int>>? serviceData,
+    $core.Iterable<$core.String>? serviceUuids,
+  }) {
+    final _result = create();
+    if (localName != null) {
+      _result.localName = localName;
+    }
+    if (txPowerLevel != null) {
+      _result.txPowerLevel = txPowerLevel;
+    }
+    if (connectable != null) {
+      _result.connectable = connectable;
+    }
+    if (manufacturerData != null) {
+      _result.manufacturerData.addAll(manufacturerData);
+    }
+    if (serviceData != null) {
+      _result.serviceData.addAll(serviceData);
+    }
+    if (serviceUuids != null) {
+      _result.serviceUuids.addAll(serviceUuids);
+    }
+    return _result;
+  }
   factory BluetoothAdvertisementData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothAdvertisementData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothAdvertisementData clone() => BluetoothAdvertisementData()..mergeFromMessage(this);
-  BluetoothAdvertisementData copyWith(void Function(BluetoothAdvertisementData) updates) => super.copyWith((message) => updates(message as BluetoothAdvertisementData));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothAdvertisementData copyWith(void Function(BluetoothAdvertisementData) updates) => super.copyWith((message) => updates(message as BluetoothAdvertisementData)) as BluetoothAdvertisementData; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothAdvertisementData create() => BluetoothAdvertisementData._();
@@ -99,7 +167,7 @@ class BluetoothAdvertisementData extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothAdvertisementData> createRepeated() => $pb.PbList<BluetoothAdvertisementData>();
   @$core.pragma('dart2js:noInline')
   static BluetoothAdvertisementData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothAdvertisementData>(create);
-  static BluetoothAdvertisementData _defaultInstance;
+  static BluetoothAdvertisementData? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get localName => $_getSZ(0);
@@ -141,18 +209,38 @@ class BluetoothAdvertisementData extends $pb.GeneratedMessage {
 }
 
 class ScanSettings extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ScanSettings', createEmptyInstance: create)
-    ..a<$core.int>(1, 'androidScanMode', $pb.PbFieldType.O3)
-    ..pPS(2, 'serviceUuids')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ScanSettings', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'androidScanMode', $pb.PbFieldType.O3)
+    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serviceUuids')
     ..hasRequiredFields = false
   ;
 
   ScanSettings._() : super();
-  factory ScanSettings() => create();
+  factory ScanSettings({
+    $core.int? androidScanMode,
+    $core.Iterable<$core.String>? serviceUuids,
+  }) {
+    final _result = create();
+    if (androidScanMode != null) {
+      _result.androidScanMode = androidScanMode;
+    }
+    if (serviceUuids != null) {
+      _result.serviceUuids.addAll(serviceUuids);
+    }
+    return _result;
+  }
   factory ScanSettings.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ScanSettings.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ScanSettings clone() => ScanSettings()..mergeFromMessage(this);
-  ScanSettings copyWith(void Function(ScanSettings) updates) => super.copyWith((message) => updates(message as ScanSettings));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ScanSettings copyWith(void Function(ScanSettings) updates) => super.copyWith((message) => updates(message as ScanSettings)) as ScanSettings; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ScanSettings create() => ScanSettings._();
@@ -160,7 +248,7 @@ class ScanSettings extends $pb.GeneratedMessage {
   static $pb.PbList<ScanSettings> createRepeated() => $pb.PbList<ScanSettings>();
   @$core.pragma('dart2js:noInline')
   static ScanSettings getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ScanSettings>(create);
-  static ScanSettings _defaultInstance;
+  static ScanSettings? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get androidScanMode => $_getIZ(0);
@@ -176,19 +264,43 @@ class ScanSettings extends $pb.GeneratedMessage {
 }
 
 class BluetoothScanResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothScanResult', createEmptyInstance: create)
-    ..aOM<BluetoothDevice>(1, 'device', subBuilder: BluetoothDevice.create)
-    ..aOM<BluetoothAdvertisementData>(2, 'advertisementData', subBuilder: BluetoothAdvertisementData.create)
-    ..a<$core.int>(3, 'rssi', $pb.PbFieldType.O3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothScanResult', createEmptyInstance: create)
+    ..aOM<BluetoothDevice>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'device', subBuilder: BluetoothDevice.create)
+    ..aOM<BluetoothAdvertisementData>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'advertisementData', subBuilder: BluetoothAdvertisementData.create)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rssi', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
   BluetoothScanResult._() : super();
-  factory BluetoothScanResult() => create();
+  factory BluetoothScanResult({
+    BluetoothDevice? device,
+    BluetoothAdvertisementData? advertisementData,
+    $core.int? rssi,
+  }) {
+    final _result = create();
+    if (device != null) {
+      _result.device = device;
+    }
+    if (advertisementData != null) {
+      _result.advertisementData = advertisementData;
+    }
+    if (rssi != null) {
+      _result.rssi = rssi;
+    }
+    return _result;
+  }
   factory BluetoothScanResult.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothScanResult.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothScanResult clone() => BluetoothScanResult()..mergeFromMessage(this);
-  BluetoothScanResult copyWith(void Function(BluetoothScanResult) updates) => super.copyWith((message) => updates(message as BluetoothScanResult));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothScanResult copyWith(void Function(BluetoothScanResult) updates) => super.copyWith((message) => updates(message as BluetoothScanResult)) as BluetoothScanResult; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothScanResult create() => BluetoothScanResult._();
@@ -196,7 +308,7 @@ class BluetoothScanResult extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothScanResult> createRepeated() => $pb.PbList<BluetoothScanResult>();
   @$core.pragma('dart2js:noInline')
   static BluetoothScanResult getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothScanResult>(create);
-  static BluetoothScanResult _defaultInstance;
+  static BluetoothScanResult? _defaultInstance;
 
   @$pb.TagNumber(1)
   BluetoothDevice get device => $_getN(0);
@@ -231,20 +343,48 @@ class BluetoothScanResult extends $pb.GeneratedMessage {
 }
 
 class BluetoothConnectRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothConnectRequest', createEmptyInstance: create)
-    ..aOS(1, 'remoteName')
-    ..aOS(2, 'remoteId')
-    ..a<$core.int>(3, 'timeout', $pb.PbFieldType.O3)
-    ..aOB(4, 'androidAutoConnect')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothConnectRequest', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remoteName')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remoteId')
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeout', $pb.PbFieldType.O3)
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'androidAutoConnect')
     ..hasRequiredFields = false
   ;
 
   BluetoothConnectRequest._() : super();
-  factory BluetoothConnectRequest() => create();
+  factory BluetoothConnectRequest({
+    $core.String? remoteName,
+    $core.String? remoteId,
+    $core.int? timeout,
+    $core.bool? androidAutoConnect,
+  }) {
+    final _result = create();
+    if (remoteName != null) {
+      _result.remoteName = remoteName;
+    }
+    if (remoteId != null) {
+      _result.remoteId = remoteId;
+    }
+    if (timeout != null) {
+      _result.timeout = timeout;
+    }
+    if (androidAutoConnect != null) {
+      _result.androidAutoConnect = androidAutoConnect;
+    }
+    return _result;
+  }
   factory BluetoothConnectRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothConnectRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothConnectRequest clone() => BluetoothConnectRequest()..mergeFromMessage(this);
-  BluetoothConnectRequest copyWith(void Function(BluetoothConnectRequest) updates) => super.copyWith((message) => updates(message as BluetoothConnectRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothConnectRequest copyWith(void Function(BluetoothConnectRequest) updates) => super.copyWith((message) => updates(message as BluetoothConnectRequest)) as BluetoothConnectRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothConnectRequest create() => BluetoothConnectRequest._();
@@ -252,7 +392,7 @@ class BluetoothConnectRequest extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothConnectRequest> createRepeated() => $pb.PbList<BluetoothConnectRequest>();
   @$core.pragma('dart2js:noInline')
   static BluetoothConnectRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothConnectRequest>(create);
-  static BluetoothConnectRequest _defaultInstance;
+  static BluetoothConnectRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get remoteName => $_getSZ(0);
@@ -292,19 +432,43 @@ class BluetoothConnectRequest extends $pb.GeneratedMessage {
 }
 
 class BluetoothDevice extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothDevice', createEmptyInstance: create)
-    ..aOS(1, 'remoteId')
-    ..aOS(2, 'name')
-    ..e<BluetoothDevice_Type>(3, 'type', $pb.PbFieldType.OE, defaultOrMaker: BluetoothDevice_Type.UNKNOWN, valueOf: BluetoothDevice_Type.valueOf, enumValues: BluetoothDevice_Type.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothDevice', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remoteId')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
+    ..e<BluetoothDevice_Type>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: BluetoothDevice_Type.UNKNOWN, valueOf: BluetoothDevice_Type.valueOf, enumValues: BluetoothDevice_Type.values)
     ..hasRequiredFields = false
   ;
 
   BluetoothDevice._() : super();
-  factory BluetoothDevice() => create();
+  factory BluetoothDevice({
+    $core.String? remoteId,
+    $core.String? name,
+    BluetoothDevice_Type? type,
+  }) {
+    final _result = create();
+    if (remoteId != null) {
+      _result.remoteId = remoteId;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    return _result;
+  }
   factory BluetoothDevice.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothDevice.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothDevice clone() => BluetoothDevice()..mergeFromMessage(this);
-  BluetoothDevice copyWith(void Function(BluetoothDevice) updates) => super.copyWith((message) => updates(message as BluetoothDevice));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothDevice copyWith(void Function(BluetoothDevice) updates) => super.copyWith((message) => updates(message as BluetoothDevice)) as BluetoothDevice; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothDevice create() => BluetoothDevice._();
@@ -312,7 +476,7 @@ class BluetoothDevice extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothDevice> createRepeated() => $pb.PbList<BluetoothDevice>();
   @$core.pragma('dart2js:noInline')
   static BluetoothDevice getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothDevice>(create);
-  static BluetoothDevice _defaultInstance;
+  static BluetoothDevice? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get remoteId => $_getSZ(0);
@@ -343,19 +507,43 @@ class BluetoothDevice extends $pb.GeneratedMessage {
 }
 
 class BluetoothDeviceStateResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothDeviceStateResponse', createEmptyInstance: create)
-    ..aOS(1, 'remoteId')
-    ..e<BluetoothDeviceStateResponse_BluetoothDeviceState>(2, 'state', $pb.PbFieldType.OE, defaultOrMaker: BluetoothDeviceStateResponse_BluetoothDeviceState.DISCONNECTED, valueOf: BluetoothDeviceStateResponse_BluetoothDeviceState.valueOf, enumValues: BluetoothDeviceStateResponse_BluetoothDeviceState.values)
-    ..a<$core.int>(3, 'deviceID', $pb.PbFieldType.O3, protoName: 'deviceID')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothDeviceStateResponse', createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remoteId')
+    ..e<BluetoothDeviceStateResponse_BluetoothDeviceState>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: BluetoothDeviceStateResponse_BluetoothDeviceState.DISCONNECTED, valueOf: BluetoothDeviceStateResponse_BluetoothDeviceState.valueOf, enumValues: BluetoothDeviceStateResponse_BluetoothDeviceState.values)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deviceID', $pb.PbFieldType.O3, protoName: 'deviceID')
     ..hasRequiredFields = false
   ;
 
   BluetoothDeviceStateResponse._() : super();
-  factory BluetoothDeviceStateResponse() => create();
+  factory BluetoothDeviceStateResponse({
+    $core.String? remoteId,
+    BluetoothDeviceStateResponse_BluetoothDeviceState? state,
+    $core.int? deviceID,
+  }) {
+    final _result = create();
+    if (remoteId != null) {
+      _result.remoteId = remoteId;
+    }
+    if (state != null) {
+      _result.state = state;
+    }
+    if (deviceID != null) {
+      _result.deviceID = deviceID;
+    }
+    return _result;
+  }
   factory BluetoothDeviceStateResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothDeviceStateResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothDeviceStateResponse clone() => BluetoothDeviceStateResponse()..mergeFromMessage(this);
-  BluetoothDeviceStateResponse copyWith(void Function(BluetoothDeviceStateResponse) updates) => super.copyWith((message) => updates(message as BluetoothDeviceStateResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothDeviceStateResponse copyWith(void Function(BluetoothDeviceStateResponse) updates) => super.copyWith((message) => updates(message as BluetoothDeviceStateResponse)) as BluetoothDeviceStateResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothDeviceStateResponse create() => BluetoothDeviceStateResponse._();
@@ -363,7 +551,7 @@ class BluetoothDeviceStateResponse extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothDeviceStateResponse> createRepeated() => $pb.PbList<BluetoothDeviceStateResponse>();
   @$core.pragma('dart2js:noInline')
   static BluetoothDeviceStateResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothDeviceStateResponse>(create);
-  static BluetoothDeviceStateResponse _defaultInstance;
+  static BluetoothDeviceStateResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get remoteId => $_getSZ(0);
@@ -394,17 +582,33 @@ class BluetoothDeviceStateResponse extends $pb.GeneratedMessage {
 }
 
 class BluetoothConnectedResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BluetoothConnectedResponse', createEmptyInstance: create)
-    ..pc<BluetoothDevice>(1, 'devices', $pb.PbFieldType.PM, subBuilder: BluetoothDevice.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'BluetoothConnectedResponse', createEmptyInstance: create)
+    ..pc<BluetoothDevice>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'devices', $pb.PbFieldType.PM, subBuilder: BluetoothDevice.create)
     ..hasRequiredFields = false
   ;
 
   BluetoothConnectedResponse._() : super();
-  factory BluetoothConnectedResponse() => create();
+  factory BluetoothConnectedResponse({
+    $core.Iterable<BluetoothDevice>? devices,
+  }) {
+    final _result = create();
+    if (devices != null) {
+      _result.devices.addAll(devices);
+    }
+    return _result;
+  }
   factory BluetoothConnectedResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BluetoothConnectedResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   BluetoothConnectedResponse clone() => BluetoothConnectedResponse()..mergeFromMessage(this);
-  BluetoothConnectedResponse copyWith(void Function(BluetoothConnectedResponse) updates) => super.copyWith((message) => updates(message as BluetoothConnectedResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BluetoothConnectedResponse copyWith(void Function(BluetoothConnectedResponse) updates) => super.copyWith((message) => updates(message as BluetoothConnectedResponse)) as BluetoothConnectedResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BluetoothConnectedResponse create() => BluetoothConnectedResponse._();
@@ -412,26 +616,50 @@ class BluetoothConnectedResponse extends $pb.GeneratedMessage {
   static $pb.PbList<BluetoothConnectedResponse> createRepeated() => $pb.PbList<BluetoothConnectedResponse>();
   @$core.pragma('dart2js:noInline')
   static BluetoothConnectedResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BluetoothConnectedResponse>(create);
-  static BluetoothConnectedResponse _defaultInstance;
+  static BluetoothConnectedResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<BluetoothDevice> get devices => $_getList(0);
 }
 
 class EnrollFpState extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnrollFpState', createEmptyInstance: create)
-    ..a<$core.int>(1, 'modalityId', $pb.PbFieldType.O3)
-    ..a<$core.int>(2, 'nextIndex', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, 'remainingTimes', $pb.PbFieldType.O3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'EnrollFpState', createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'modalityId', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextIndex', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'remainingTimes', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
   EnrollFpState._() : super();
-  factory EnrollFpState() => create();
+  factory EnrollFpState({
+    $core.int? modalityId,
+    $core.int? nextIndex,
+    $core.int? remainingTimes,
+  }) {
+    final _result = create();
+    if (modalityId != null) {
+      _result.modalityId = modalityId;
+    }
+    if (nextIndex != null) {
+      _result.nextIndex = nextIndex;
+    }
+    if (remainingTimes != null) {
+      _result.remainingTimes = remainingTimes;
+    }
+    return _result;
+  }
   factory EnrollFpState.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory EnrollFpState.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   EnrollFpState clone() => EnrollFpState()..mergeFromMessage(this);
-  EnrollFpState copyWith(void Function(EnrollFpState) updates) => super.copyWith((message) => updates(message as EnrollFpState));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EnrollFpState copyWith(void Function(EnrollFpState) updates) => super.copyWith((message) => updates(message as EnrollFpState)) as EnrollFpState; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static EnrollFpState create() => EnrollFpState._();
@@ -439,7 +667,7 @@ class EnrollFpState extends $pb.GeneratedMessage {
   static $pb.PbList<EnrollFpState> createRepeated() => $pb.PbList<EnrollFpState>();
   @$core.pragma('dart2js:noInline')
   static EnrollFpState getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnrollFpState>(create);
-  static EnrollFpState _defaultInstance;
+  static EnrollFpState? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get modalityId => $_getIZ(0);

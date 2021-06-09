@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: core/contract/balance_contract.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -13,21 +13,53 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'common.pbenum.dart' as $0;
 
 class FreezeBalanceContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FreezeBalanceContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
-    ..aInt64(2, 'frozenBalance')
-    ..aInt64(3, 'frozenDuration')
-    ..e<$0.ResourceCode>(10, 'resource', $pb.PbFieldType.OE, defaultOrMaker: $0.ResourceCode.BANDWIDTH, valueOf: $0.ResourceCode.valueOf, enumValues: $0.ResourceCode.values)
-    ..a<$core.List<$core.int>>(15, 'receiverAddress', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FreezeBalanceContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenBalance')
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'frozenDuration')
+    ..e<$0.ResourceCode>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'resource', $pb.PbFieldType.OE, defaultOrMaker: $0.ResourceCode.BANDWIDTH, valueOf: $0.ResourceCode.valueOf, enumValues: $0.ResourceCode.values)
+    ..a<$core.List<$core.int>>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiverAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   FreezeBalanceContract._() : super();
-  factory FreezeBalanceContract() => create();
+  factory FreezeBalanceContract({
+    $core.List<$core.int>? ownerAddress,
+    $fixnum.Int64? frozenBalance,
+    $fixnum.Int64? frozenDuration,
+    $0.ResourceCode? resource,
+    $core.List<$core.int>? receiverAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (frozenBalance != null) {
+      _result.frozenBalance = frozenBalance;
+    }
+    if (frozenDuration != null) {
+      _result.frozenDuration = frozenDuration;
+    }
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (receiverAddress != null) {
+      _result.receiverAddress = receiverAddress;
+    }
+    return _result;
+  }
   factory FreezeBalanceContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FreezeBalanceContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   FreezeBalanceContract clone() => FreezeBalanceContract()..mergeFromMessage(this);
-  FreezeBalanceContract copyWith(void Function(FreezeBalanceContract) updates) => super.copyWith((message) => updates(message as FreezeBalanceContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FreezeBalanceContract copyWith(void Function(FreezeBalanceContract) updates) => super.copyWith((message) => updates(message as FreezeBalanceContract)) as FreezeBalanceContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static FreezeBalanceContract create() => FreezeBalanceContract._();
@@ -35,7 +67,7 @@ class FreezeBalanceContract extends $pb.GeneratedMessage {
   static $pb.PbList<FreezeBalanceContract> createRepeated() => $pb.PbList<FreezeBalanceContract>();
   @$core.pragma('dart2js:noInline')
   static FreezeBalanceContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FreezeBalanceContract>(create);
-  static FreezeBalanceContract _defaultInstance;
+  static FreezeBalanceContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);
@@ -84,19 +116,43 @@ class FreezeBalanceContract extends $pb.GeneratedMessage {
 }
 
 class UnfreezeBalanceContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnfreezeBalanceContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
-    ..e<$0.ResourceCode>(10, 'resource', $pb.PbFieldType.OE, defaultOrMaker: $0.ResourceCode.BANDWIDTH, valueOf: $0.ResourceCode.valueOf, enumValues: $0.ResourceCode.values)
-    ..a<$core.List<$core.int>>(15, 'receiverAddress', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UnfreezeBalanceContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..e<$0.ResourceCode>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'resource', $pb.PbFieldType.OE, defaultOrMaker: $0.ResourceCode.BANDWIDTH, valueOf: $0.ResourceCode.valueOf, enumValues: $0.ResourceCode.values)
+    ..a<$core.List<$core.int>>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiverAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   UnfreezeBalanceContract._() : super();
-  factory UnfreezeBalanceContract() => create();
+  factory UnfreezeBalanceContract({
+    $core.List<$core.int>? ownerAddress,
+    $0.ResourceCode? resource,
+    $core.List<$core.int>? receiverAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (receiverAddress != null) {
+      _result.receiverAddress = receiverAddress;
+    }
+    return _result;
+  }
   factory UnfreezeBalanceContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UnfreezeBalanceContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   UnfreezeBalanceContract clone() => UnfreezeBalanceContract()..mergeFromMessage(this);
-  UnfreezeBalanceContract copyWith(void Function(UnfreezeBalanceContract) updates) => super.copyWith((message) => updates(message as UnfreezeBalanceContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnfreezeBalanceContract copyWith(void Function(UnfreezeBalanceContract) updates) => super.copyWith((message) => updates(message as UnfreezeBalanceContract)) as UnfreezeBalanceContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static UnfreezeBalanceContract create() => UnfreezeBalanceContract._();
@@ -104,7 +160,7 @@ class UnfreezeBalanceContract extends $pb.GeneratedMessage {
   static $pb.PbList<UnfreezeBalanceContract> createRepeated() => $pb.PbList<UnfreezeBalanceContract>();
   @$core.pragma('dart2js:noInline')
   static UnfreezeBalanceContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnfreezeBalanceContract>(create);
-  static UnfreezeBalanceContract _defaultInstance;
+  static UnfreezeBalanceContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);
@@ -135,17 +191,33 @@ class UnfreezeBalanceContract extends $pb.GeneratedMessage {
 }
 
 class WithdrawBalanceContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('WithdrawBalanceContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WithdrawBalanceContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
   WithdrawBalanceContract._() : super();
-  factory WithdrawBalanceContract() => create();
+  factory WithdrawBalanceContract({
+    $core.List<$core.int>? ownerAddress,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    return _result;
+  }
   factory WithdrawBalanceContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory WithdrawBalanceContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   WithdrawBalanceContract clone() => WithdrawBalanceContract()..mergeFromMessage(this);
-  WithdrawBalanceContract copyWith(void Function(WithdrawBalanceContract) updates) => super.copyWith((message) => updates(message as WithdrawBalanceContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WithdrawBalanceContract copyWith(void Function(WithdrawBalanceContract) updates) => super.copyWith((message) => updates(message as WithdrawBalanceContract)) as WithdrawBalanceContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WithdrawBalanceContract create() => WithdrawBalanceContract._();
@@ -153,7 +225,7 @@ class WithdrawBalanceContract extends $pb.GeneratedMessage {
   static $pb.PbList<WithdrawBalanceContract> createRepeated() => $pb.PbList<WithdrawBalanceContract>();
   @$core.pragma('dart2js:noInline')
   static WithdrawBalanceContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WithdrawBalanceContract>(create);
-  static WithdrawBalanceContract _defaultInstance;
+  static WithdrawBalanceContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);
@@ -166,19 +238,43 @@ class WithdrawBalanceContract extends $pb.GeneratedMessage {
 }
 
 class TransferContract extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransferContract', package: const $pb.PackageName('protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'ownerAddress', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, 'toAddress', $pb.PbFieldType.OY)
-    ..aInt64(3, 'amount')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferContract', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'protocol'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ownerAddress', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'toAddress', $pb.PbFieldType.OY)
+    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
     ..hasRequiredFields = false
   ;
 
   TransferContract._() : super();
-  factory TransferContract() => create();
+  factory TransferContract({
+    $core.List<$core.int>? ownerAddress,
+    $core.List<$core.int>? toAddress,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TransferContract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferContract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   TransferContract clone() => TransferContract()..mergeFromMessage(this);
-  TransferContract copyWith(void Function(TransferContract) updates) => super.copyWith((message) => updates(message as TransferContract));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TransferContract copyWith(void Function(TransferContract) updates) => super.copyWith((message) => updates(message as TransferContract)) as TransferContract; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferContract create() => TransferContract._();
@@ -186,7 +282,7 @@ class TransferContract extends $pb.GeneratedMessage {
   static $pb.PbList<TransferContract> createRepeated() => $pb.PbList<TransferContract>();
   @$core.pragma('dart2js:noInline')
   static TransferContract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferContract>(create);
-  static TransferContract _defaultInstance;
+  static TransferContract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ownerAddress => $_getN(0);

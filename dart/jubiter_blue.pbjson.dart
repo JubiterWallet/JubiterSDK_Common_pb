@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: jubiter_blue.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use fpIdVerifyModeDescriptor instead')
 const FpIdVerifyMode$json = const {
   '1': 'FpIdVerifyMode',
   '2': const [
@@ -16,6 +20,9 @@ const FpIdVerifyMode$json = const {
   ],
 };
 
+/// Descriptor for `FpIdVerifyMode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List fpIdVerifyModeDescriptor = $convert.base64Decode('Cg5GcElkVmVyaWZ5TW9kZRIhCh1GUF9JRF9WRVJJRllfTU9ERV9VTlNQRUNJRklFRBAAEhwKGEZQX0lEX1ZFUklGWV9NT0RFX0RFVklDRRABEhwKGEZQX0lEX1ZFUklGWV9NT0RFXzlHUklEUxACEhoKFkZQX0lEX1ZFUklGWV9NT0RFX0FQRFUQAxIaChZGUF9JRF9WRVJJRllfTU9ERV9GUEdUEAQ=');
+@$core.Deprecated('Use int32ValueDescriptor instead')
 const Int32Value$json = const {
   '1': 'Int32Value',
   '2': const [
@@ -23,6 +30,9 @@ const Int32Value$json = const {
   ],
 };
 
+/// Descriptor for `Int32Value`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List int32ValueDescriptor = $convert.base64Decode('CgpJbnQzMlZhbHVlEhQKBXZhbHVlGAEgASgFUgV2YWx1ZQ==');
+@$core.Deprecated('Use bluetoothStateDescriptor instead')
 const BluetoothState$json = const {
   '1': 'BluetoothState',
   '2': const [
@@ -31,6 +41,7 @@ const BluetoothState$json = const {
   '4': const [BluetoothState_State$json],
 };
 
+@$core.Deprecated('Use bluetoothStateDescriptor instead')
 const BluetoothState_State$json = const {
   '1': 'State',
   '2': const [
@@ -44,6 +55,9 @@ const BluetoothState_State$json = const {
   ],
 };
 
+/// Descriptor for `BluetoothState`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothStateDescriptor = $convert.base64Decode('Cg5CbHVldG9vdGhTdGF0ZRIrCgVzdGF0ZRgBIAEoDjIVLkJsdWV0b290aFN0YXRlLlN0YXRlUgVzdGF0ZSJpCgVTdGF0ZRILCgdVTktOT1dOEAASDwoLVU5BVkFJTEFCTEUQARIQCgxVTkFVVEhPUklaRUQQAhIOCgpUVVJOSU5HX09OEAMSBgoCT04QBBIPCgtUVVJOSU5HX09GRhAFEgcKA09GRhAG');
+@$core.Deprecated('Use bluetoothAdvertisementDataDescriptor instead')
 const BluetoothAdvertisementData$json = const {
   '1': 'BluetoothAdvertisementData',
   '2': const [
@@ -57,6 +71,7 @@ const BluetoothAdvertisementData$json = const {
   '3': const [BluetoothAdvertisementData_ManufacturerDataEntry$json, BluetoothAdvertisementData_ServiceDataEntry$json],
 };
 
+@$core.Deprecated('Use bluetoothAdvertisementDataDescriptor instead')
 const BluetoothAdvertisementData_ManufacturerDataEntry$json = const {
   '1': 'ManufacturerDataEntry',
   '2': const [
@@ -66,6 +81,7 @@ const BluetoothAdvertisementData_ManufacturerDataEntry$json = const {
   '7': const {'7': true},
 };
 
+@$core.Deprecated('Use bluetoothAdvertisementDataDescriptor instead')
 const BluetoothAdvertisementData_ServiceDataEntry$json = const {
   '1': 'ServiceDataEntry',
   '2': const [
@@ -75,6 +91,9 @@ const BluetoothAdvertisementData_ServiceDataEntry$json = const {
   '7': const {'7': true},
 };
 
+/// Descriptor for `BluetoothAdvertisementData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothAdvertisementDataDescriptor = $convert.base64Decode('ChpCbHVldG9vdGhBZHZlcnRpc2VtZW50RGF0YRIdCgpsb2NhbF9uYW1lGAEgASgJUglsb2NhbE5hbWUSMQoOdHhfcG93ZXJfbGV2ZWwYAiABKAsyCy5JbnQzMlZhbHVlUgx0eFBvd2VyTGV2ZWwSIAoLY29ubmVjdGFibGUYAyABKAhSC2Nvbm5lY3RhYmxlEl4KEW1hbnVmYWN0dXJlcl9kYXRhGAQgAygLMjEuQmx1ZXRvb3RoQWR2ZXJ0aXNlbWVudERhdGEuTWFudWZhY3R1cmVyRGF0YUVudHJ5UhBtYW51ZmFjdHVyZXJEYXRhEk8KDHNlcnZpY2VfZGF0YRgFIAMoCzIsLkJsdWV0b290aEFkdmVydGlzZW1lbnREYXRhLlNlcnZpY2VEYXRhRW50cnlSC3NlcnZpY2VEYXRhEiMKDXNlcnZpY2VfdXVpZHMYBiADKAlSDHNlcnZpY2VVdWlkcxpDChVNYW51ZmFjdHVyZXJEYXRhRW50cnkSEAoDa2V5GAEgASgFUgNrZXkSFAoFdmFsdWUYAiABKAxSBXZhbHVlOgI4ARo+ChBTZXJ2aWNlRGF0YUVudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgMUgV2YWx1ZToCOAE=');
+@$core.Deprecated('Use scanSettingsDescriptor instead')
 const ScanSettings$json = const {
   '1': 'ScanSettings',
   '2': const [
@@ -83,6 +102,9 @@ const ScanSettings$json = const {
   ],
 };
 
+/// Descriptor for `ScanSettings`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scanSettingsDescriptor = $convert.base64Decode('CgxTY2FuU2V0dGluZ3MSKgoRYW5kcm9pZF9zY2FuX21vZGUYASABKAVSD2FuZHJvaWRTY2FuTW9kZRIjCg1zZXJ2aWNlX3V1aWRzGAIgAygJUgxzZXJ2aWNlVXVpZHM=');
+@$core.Deprecated('Use bluetoothScanResultDescriptor instead')
 const BluetoothScanResult$json = const {
   '1': 'BluetoothScanResult',
   '2': const [
@@ -92,6 +114,9 @@ const BluetoothScanResult$json = const {
   ],
 };
 
+/// Descriptor for `BluetoothScanResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothScanResultDescriptor = $convert.base64Decode('ChNCbHVldG9vdGhTY2FuUmVzdWx0EigKBmRldmljZRgBIAEoCzIQLkJsdWV0b290aERldmljZVIGZGV2aWNlEkoKEmFkdmVydGlzZW1lbnRfZGF0YRgCIAEoCzIbLkJsdWV0b290aEFkdmVydGlzZW1lbnREYXRhUhFhZHZlcnRpc2VtZW50RGF0YRISCgRyc3NpGAMgASgFUgRyc3Np');
+@$core.Deprecated('Use bluetoothConnectRequestDescriptor instead')
 const BluetoothConnectRequest$json = const {
   '1': 'BluetoothConnectRequest',
   '2': const [
@@ -102,6 +127,9 @@ const BluetoothConnectRequest$json = const {
   ],
 };
 
+/// Descriptor for `BluetoothConnectRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothConnectRequestDescriptor = $convert.base64Decode('ChdCbHVldG9vdGhDb25uZWN0UmVxdWVzdBIfCgtyZW1vdGVfbmFtZRgBIAEoCVIKcmVtb3RlTmFtZRIbCglyZW1vdGVfaWQYAiABKAlSCHJlbW90ZUlkEhgKB3RpbWVvdXQYAyABKAVSB3RpbWVvdXQSMAoUYW5kcm9pZF9hdXRvX2Nvbm5lY3QYBCABKAhSEmFuZHJvaWRBdXRvQ29ubmVjdA==');
+@$core.Deprecated('Use bluetoothDeviceDescriptor instead')
 const BluetoothDevice$json = const {
   '1': 'BluetoothDevice',
   '2': const [
@@ -112,6 +140,7 @@ const BluetoothDevice$json = const {
   '4': const [BluetoothDevice_Type$json],
 };
 
+@$core.Deprecated('Use bluetoothDeviceDescriptor instead')
 const BluetoothDevice_Type$json = const {
   '1': 'Type',
   '2': const [
@@ -122,6 +151,9 @@ const BluetoothDevice_Type$json = const {
   ],
 };
 
+/// Descriptor for `BluetoothDevice`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothDeviceDescriptor = $convert.base64Decode('Cg9CbHVldG9vdGhEZXZpY2USGwoJcmVtb3RlX2lkGAEgASgJUghyZW1vdGVJZBISCgRuYW1lGAIgASgJUgRuYW1lEikKBHR5cGUYAyABKA4yFS5CbHVldG9vdGhEZXZpY2UuVHlwZVIEdHlwZSIyCgRUeXBlEgsKB1VOS05PV04QABILCgdDTEFTU0lDEAESBgoCTEUQAhIICgREVUFMEAM=');
+@$core.Deprecated('Use bluetoothDeviceStateResponseDescriptor instead')
 const BluetoothDeviceStateResponse$json = const {
   '1': 'BluetoothDeviceStateResponse',
   '2': const [
@@ -132,6 +164,7 @@ const BluetoothDeviceStateResponse$json = const {
   '4': const [BluetoothDeviceStateResponse_BluetoothDeviceState$json],
 };
 
+@$core.Deprecated('Use bluetoothDeviceStateResponseDescriptor instead')
 const BluetoothDeviceStateResponse_BluetoothDeviceState$json = const {
   '1': 'BluetoothDeviceState',
   '2': const [
@@ -142,6 +175,9 @@ const BluetoothDeviceStateResponse_BluetoothDeviceState$json = const {
   ],
 };
 
+/// Descriptor for `BluetoothDeviceStateResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothDeviceStateResponseDescriptor = $convert.base64Decode('ChxCbHVldG9vdGhEZXZpY2VTdGF0ZVJlc3BvbnNlEhsKCXJlbW90ZV9pZBgBIAEoCVIIcmVtb3RlSWQSSAoFc3RhdGUYAiABKA4yMi5CbHVldG9vdGhEZXZpY2VTdGF0ZVJlc3BvbnNlLkJsdWV0b290aERldmljZVN0YXRlUgVzdGF0ZRIaCghkZXZpY2VJRBgDIAEoBVIIZGV2aWNlSUQiWgoUQmx1ZXRvb3RoRGV2aWNlU3RhdGUSEAoMRElTQ09OTkVDVEVEEAASDgoKQ09OTkVDVElORxABEg0KCUNPTk5FQ1RFRBACEhEKDURJU0NPTk5FQ1RJTkcQAw==');
+@$core.Deprecated('Use bluetoothConnectedResponseDescriptor instead')
 const BluetoothConnectedResponse$json = const {
   '1': 'BluetoothConnectedResponse',
   '2': const [
@@ -149,6 +185,9 @@ const BluetoothConnectedResponse$json = const {
   ],
 };
 
+/// Descriptor for `BluetoothConnectedResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bluetoothConnectedResponseDescriptor = $convert.base64Decode('ChpCbHVldG9vdGhDb25uZWN0ZWRSZXNwb25zZRIqCgdkZXZpY2VzGAEgAygLMhAuQmx1ZXRvb3RoRGV2aWNlUgdkZXZpY2Vz');
+@$core.Deprecated('Use enrollFpStateDescriptor instead')
 const EnrollFpState$json = const {
   '1': 'EnrollFpState',
   '2': const [
@@ -158,3 +197,5 @@ const EnrollFpState$json = const {
   ],
 };
 
+/// Descriptor for `EnrollFpState`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enrollFpStateDescriptor = $convert.base64Decode('Cg1FbnJvbGxGcFN0YXRlEh8KC21vZGFsaXR5X2lkGAEgASgFUgptb2RhbGl0eUlkEh0KCm5leHRfaW5kZXgYAiABKAVSCW5leHRJbmRleBInCg9yZW1haW5pbmdfdGltZXMYAyABKAVSDnJlbWFpbmluZ1RpbWVz');

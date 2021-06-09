@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Jub_Ethereum.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use contextCfgETHDescriptor instead')
 const ContextCfgETH$json = const {
   '1': 'ContextCfgETH',
   '2': const [
@@ -13,6 +17,9 @@ const ContextCfgETH$json = const {
   ],
 };
 
+/// Descriptor for `ContextCfgETH`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List contextCfgETHDescriptor = $convert.base64Decode('Cg1Db250ZXh0Q2ZnRVRIEhsKCW1haW5fcGF0aBgBIAEoCVIIbWFpblBhdGgSGQoIY2hhaW5faWQYAiABKA1SB2NoYWluSWQ=');
+@$core.Deprecated('Use transactionETHDescriptor instead')
 const TransactionETH$json = const {
   '1': 'TransactionETH',
   '2': const [
@@ -26,3 +33,5 @@ const TransactionETH$json = const {
   ],
 };
 
+/// Descriptor for `TransactionETH`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionETHDescriptor = $convert.base64Decode('Cg5UcmFuc2FjdGlvbkVUSBIvCgRwYXRoGAEgASgLMhsuSlVCLlByb3RvLkNvbW1vbi5CaXA0NFBhdGhSBHBhdGgSFAoFbm9uY2UYAiABKA1SBW5vbmNlEhsKCWdhc19saW1pdBgDIAEoDVIIZ2FzTGltaXQSJwoQZ2FzX3ByaWNlX2luX3dlaRgEIAEoCVINZ2FzUHJpY2VJbldlaRIOCgJ0bxgFIAEoCVICdG8SIAoMdmFsdWVfaW5fd2VpGAYgASgJUgp2YWx1ZUluV2VpEhQKBWlucHV0GAcgASgJUgVpbnB1dA==');
