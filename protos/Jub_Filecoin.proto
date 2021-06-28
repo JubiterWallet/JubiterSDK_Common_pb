@@ -1,0 +1,24 @@
+syntax = "proto3";
+import "Jub_Common.proto";
+
+package JUB.Proto.Filecoin;
+
+option java_package = "com.jubiter.sdk.proto";
+option java_outer_classname = "FilecoinProtos";
+option objc_class_prefix = "FilecoinProtos";
+
+
+message ContextCfgFIL {
+    string main_path = 1;
+}
+
+message TransactionFIL {
+    JUB.Proto.Common.Bip44Path path = 1;
+    uint32 nonce = 2;
+    uint32 gas_limit = 3;
+    string gas_fee_cap_in_atto = 4;
+    string gas_premium_in_atto = 5;
+    string to = 6;
+    string value_in_atto = 7;
+    string input = 8;
+}
