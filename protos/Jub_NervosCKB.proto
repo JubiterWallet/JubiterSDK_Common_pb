@@ -1,0 +1,50 @@
+syntax = "proto3";
+import "Jub_Common.proto";
+
+package JUB.Proto.NervosCKB;
+
+option java_package = "com.jubiter.sdk.proto";
+option java_outer_classname = "NervosCKBProtos";
+option objc_class_prefix = "NervosCKBProtos";
+
+
+message ContextCfgCKB {
+    string main_path = 1;
+    bool main_net = 2;
+}
+
+message CellDepCKB {
+    uint32 type = 1;
+    string tx_hash = 2;
+    uint32 index = 3; 
+}
+
+message CellScriptCKB {
+    string code_hash = 1;
+    uint32 hash_type = 2;
+    string args = 3;   
+} 
+
+message InputCKB {
+    string pre_hash = 1;
+    uint32 pre_index = 2;
+    uint64 since = 3;
+    uint64 capacity = 4;
+    CellScriptCKB lock = 5;
+    JUB.Proto.Common.Bip44Path path = 6;
+}
+
+message OutputCKB {
+    uint64 capacity = 1;
+    CellScriptCKB lock = 2;
+    CellScriptCKB type = 3;
+    string data = 4;
+    JUB.Proto.Common.Bip44Path path = 5;
+}
+
+message TransactionCKB {
+    uint32 version = 1;
+    repeated CellDepCKB    deps = 2;
+    repeated   InputCKB  inputs = 3;
+    repeated  OutputCKB outputs = 4;
+}

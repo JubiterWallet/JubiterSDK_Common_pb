@@ -15,6 +15,7 @@ enum ENUM_COIN_TYPE_BTC {
     COINUSDT = 3;
     COINDASH = 4;
     COINQTUM = 5;
+    COINCKB = 6;
 }
 
 enum ENUM_TRAN_STYPE_BTC {
