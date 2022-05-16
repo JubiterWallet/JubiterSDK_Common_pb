@@ -48,7 +48,7 @@ struct TableStruct_Jub_5fEthereum_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -64,12 +64,16 @@ extern ContextCfgETHDefaultTypeInternal _ContextCfgETH_default_instance_;
 class TransactionETH;
 class TransactionETHDefaultTypeInternal;
 extern TransactionETHDefaultTypeInternal _TransactionETH_default_instance_;
+class TypedTransaction1559ETH;
+class TypedTransaction1559ETHDefaultTypeInternal;
+extern TypedTransaction1559ETHDefaultTypeInternal _TypedTransaction1559ETH_default_instance_;
 }  // namespace Ethereum
 }  // namespace Proto
 }  // namespace JUB
 PROTOBUF_NAMESPACE_OPEN
 template<> ::JUB::Proto::Ethereum::ContextCfgETH* Arena::CreateMaybeMessage<::JUB::Proto::Ethereum::ContextCfgETH>(Arena*);
 template<> ::JUB::Proto::Ethereum::TransactionETH* Arena::CreateMaybeMessage<::JUB::Proto::Ethereum::TransactionETH>(Arena*);
+template<> ::JUB::Proto::Ethereum::TypedTransaction1559ETH* Arena::CreateMaybeMessage<::JUB::Proto::Ethereum::TypedTransaction1559ETH>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace JUB {
 namespace Proto {
@@ -338,6 +342,7 @@ class TransactionETH :
     kToFieldNumber = 5,
     kValueInWeiFieldNumber = 6,
     kInputFieldNumber = 7,
+    kAccessListInJSONFieldNumber = 8,
     kPathFieldNumber = 1,
     kNonceFieldNumber = 2,
     kGasLimitFieldNumber = 3,
@@ -386,6 +391,17 @@ class TransactionETH :
   std::string* release_input();
   void set_allocated_input(std::string* input);
 
+  // string access_list_in_JSON = 8;
+  void clear_access_list_in_json();
+  const std::string& access_list_in_json() const;
+  void set_access_list_in_json(const std::string& value);
+  void set_access_list_in_json(std::string&& value);
+  void set_access_list_in_json(const char* value);
+  void set_access_list_in_json(const char* value, size_t size);
+  std::string* mutable_access_list_in_json();
+  std::string* release_access_list_in_json();
+  void set_allocated_access_list_in_json(std::string* access_list_in_json);
+
   // .JUB.Proto.Common.Bip44Path path = 1;
   bool has_path() const;
   void clear_path();
@@ -413,6 +429,233 @@ class TransactionETH :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr to_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_in_wei_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr input_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_list_in_json_;
+  ::JUB::Proto::Common::Bip44Path* path_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 nonce_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 gas_limit_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Jub_5fEthereum_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TypedTransaction1559ETH :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:JUB.Proto.Ethereum.TypedTransaction1559ETH) */ {
+ public:
+  TypedTransaction1559ETH();
+  virtual ~TypedTransaction1559ETH();
+
+  TypedTransaction1559ETH(const TypedTransaction1559ETH& from);
+  TypedTransaction1559ETH(TypedTransaction1559ETH&& from) noexcept
+    : TypedTransaction1559ETH() {
+    *this = ::std::move(from);
+  }
+
+  inline TypedTransaction1559ETH& operator=(const TypedTransaction1559ETH& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TypedTransaction1559ETH& operator=(TypedTransaction1559ETH&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TypedTransaction1559ETH& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TypedTransaction1559ETH* internal_default_instance() {
+    return reinterpret_cast<const TypedTransaction1559ETH*>(
+               &_TypedTransaction1559ETH_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(TypedTransaction1559ETH& a, TypedTransaction1559ETH& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TypedTransaction1559ETH* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TypedTransaction1559ETH* New() const final {
+    return CreateMaybeMessage<TypedTransaction1559ETH>(nullptr);
+  }
+
+  TypedTransaction1559ETH* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TypedTransaction1559ETH>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TypedTransaction1559ETH& from);
+  void MergeFrom(const TypedTransaction1559ETH& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TypedTransaction1559ETH* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "JUB.Proto.Ethereum.TypedTransaction1559ETH";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Jub_5fEthereum_2eproto);
+    return ::descriptor_table_Jub_5fEthereum_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMaxPriorityFeePerGasFieldNumber = 4,
+    kMaxFeePreGasFieldNumber = 5,
+    kDestinationFieldNumber = 6,
+    kValueInWeiFieldNumber = 7,
+    kInputFieldNumber = 8,
+    kAccessListInJSONFieldNumber = 9,
+    kPathFieldNumber = 1,
+    kNonceFieldNumber = 2,
+    kGasLimitFieldNumber = 3,
+  };
+  // string max_priority_fee_per_gas = 4;
+  void clear_max_priority_fee_per_gas();
+  const std::string& max_priority_fee_per_gas() const;
+  void set_max_priority_fee_per_gas(const std::string& value);
+  void set_max_priority_fee_per_gas(std::string&& value);
+  void set_max_priority_fee_per_gas(const char* value);
+  void set_max_priority_fee_per_gas(const char* value, size_t size);
+  std::string* mutable_max_priority_fee_per_gas();
+  std::string* release_max_priority_fee_per_gas();
+  void set_allocated_max_priority_fee_per_gas(std::string* max_priority_fee_per_gas);
+
+  // string max_fee_pre_gas = 5;
+  void clear_max_fee_pre_gas();
+  const std::string& max_fee_pre_gas() const;
+  void set_max_fee_pre_gas(const std::string& value);
+  void set_max_fee_pre_gas(std::string&& value);
+  void set_max_fee_pre_gas(const char* value);
+  void set_max_fee_pre_gas(const char* value, size_t size);
+  std::string* mutable_max_fee_pre_gas();
+  std::string* release_max_fee_pre_gas();
+  void set_allocated_max_fee_pre_gas(std::string* max_fee_pre_gas);
+
+  // string destination = 6;
+  void clear_destination();
+  const std::string& destination() const;
+  void set_destination(const std::string& value);
+  void set_destination(std::string&& value);
+  void set_destination(const char* value);
+  void set_destination(const char* value, size_t size);
+  std::string* mutable_destination();
+  std::string* release_destination();
+  void set_allocated_destination(std::string* destination);
+
+  // string value_in_wei = 7;
+  void clear_value_in_wei();
+  const std::string& value_in_wei() const;
+  void set_value_in_wei(const std::string& value);
+  void set_value_in_wei(std::string&& value);
+  void set_value_in_wei(const char* value);
+  void set_value_in_wei(const char* value, size_t size);
+  std::string* mutable_value_in_wei();
+  std::string* release_value_in_wei();
+  void set_allocated_value_in_wei(std::string* value_in_wei);
+
+  // string input = 8;
+  void clear_input();
+  const std::string& input() const;
+  void set_input(const std::string& value);
+  void set_input(std::string&& value);
+  void set_input(const char* value);
+  void set_input(const char* value, size_t size);
+  std::string* mutable_input();
+  std::string* release_input();
+  void set_allocated_input(std::string* input);
+
+  // string access_list_in_JSON = 9;
+  void clear_access_list_in_json();
+  const std::string& access_list_in_json() const;
+  void set_access_list_in_json(const std::string& value);
+  void set_access_list_in_json(std::string&& value);
+  void set_access_list_in_json(const char* value);
+  void set_access_list_in_json(const char* value, size_t size);
+  std::string* mutable_access_list_in_json();
+  std::string* release_access_list_in_json();
+  void set_allocated_access_list_in_json(std::string* access_list_in_json);
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  bool has_path() const;
+  void clear_path();
+  const ::JUB::Proto::Common::Bip44Path& path() const;
+  ::JUB::Proto::Common::Bip44Path* release_path();
+  ::JUB::Proto::Common::Bip44Path* mutable_path();
+  void set_allocated_path(::JUB::Proto::Common::Bip44Path* path);
+
+  // uint32 nonce = 2;
+  void clear_nonce();
+  ::PROTOBUF_NAMESPACE_ID::uint32 nonce() const;
+  void set_nonce(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 gas_limit = 3;
+  void clear_gas_limit();
+  ::PROTOBUF_NAMESPACE_ID::uint32 gas_limit() const;
+  void set_gas_limit(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr max_priority_fee_per_gas_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr max_fee_pre_gas_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr destination_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_in_wei_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr input_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_list_in_json_;
   ::JUB::Proto::Common::Bip44Path* path_;
   ::PROTOBUF_NAMESPACE_ID::uint32 nonce_;
   ::PROTOBUF_NAMESPACE_ID::uint32 gas_limit_;
@@ -776,9 +1019,445 @@ inline void TransactionETH::set_allocated_input(std::string* input) {
   // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.input)
 }
 
+// string access_list_in_JSON = 8;
+inline void TransactionETH::clear_access_list_in_json() {
+  access_list_in_json_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TransactionETH::access_list_in_json() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+  return access_list_in_json_.GetNoArena();
+}
+inline void TransactionETH::set_access_list_in_json(const std::string& value) {
+  
+  access_list_in_json_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+}
+inline void TransactionETH::set_access_list_in_json(std::string&& value) {
+  
+  access_list_in_json_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+}
+inline void TransactionETH::set_access_list_in_json(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  access_list_in_json_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+}
+inline void TransactionETH::set_access_list_in_json(const char* value, size_t size) {
+  
+  access_list_in_json_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+}
+inline std::string* TransactionETH::mutable_access_list_in_json() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+  return access_list_in_json_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TransactionETH::release_access_list_in_json() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+  
+  return access_list_in_json_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TransactionETH::set_allocated_access_list_in_json(std::string* access_list_in_json) {
+  if (access_list_in_json != nullptr) {
+    
+  } else {
+    
+  }
+  access_list_in_json_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_list_in_json);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON)
+}
+
+// -------------------------------------------------------------------
+
+// TypedTransaction1559ETH
+
+// .JUB.Proto.Common.Bip44Path path = 1;
+inline bool TypedTransaction1559ETH::has_path() const {
+  return this != internal_default_instance() && path_ != nullptr;
+}
+inline const ::JUB::Proto::Common::Bip44Path& TypedTransaction1559ETH::path() const {
+  const ::JUB::Proto::Common::Bip44Path* p = path_;
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.path)
+  return p != nullptr ? *p : *reinterpret_cast<const ::JUB::Proto::Common::Bip44Path*>(
+      &::JUB::Proto::Common::_Bip44Path_default_instance_);
+}
+inline ::JUB::Proto::Common::Bip44Path* TypedTransaction1559ETH::release_path() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.path)
+  
+  ::JUB::Proto::Common::Bip44Path* temp = path_;
+  path_ = nullptr;
+  return temp;
+}
+inline ::JUB::Proto::Common::Bip44Path* TypedTransaction1559ETH::mutable_path() {
+  
+  if (path_ == nullptr) {
+    auto* p = CreateMaybeMessage<::JUB::Proto::Common::Bip44Path>(GetArenaNoVirtual());
+    path_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.path)
+  return path_;
+}
+inline void TypedTransaction1559ETH::set_allocated_path(::JUB::Proto::Common::Bip44Path* path) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(path_);
+  }
+  if (path) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      path = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, path, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  path_ = path;
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.path)
+}
+
+// uint32 nonce = 2;
+inline void TypedTransaction1559ETH::clear_nonce() {
+  nonce_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 TypedTransaction1559ETH::nonce() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.nonce)
+  return nonce_;
+}
+inline void TypedTransaction1559ETH::set_nonce(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  nonce_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.nonce)
+}
+
+// uint32 gas_limit = 3;
+inline void TypedTransaction1559ETH::clear_gas_limit() {
+  gas_limit_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 TypedTransaction1559ETH::gas_limit() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.gas_limit)
+  return gas_limit_;
+}
+inline void TypedTransaction1559ETH::set_gas_limit(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  gas_limit_ = value;
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.gas_limit)
+}
+
+// string max_priority_fee_per_gas = 4;
+inline void TypedTransaction1559ETH::clear_max_priority_fee_per_gas() {
+  max_priority_fee_per_gas_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TypedTransaction1559ETH::max_priority_fee_per_gas() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+  return max_priority_fee_per_gas_.GetNoArena();
+}
+inline void TypedTransaction1559ETH::set_max_priority_fee_per_gas(const std::string& value) {
+  
+  max_priority_fee_per_gas_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+}
+inline void TypedTransaction1559ETH::set_max_priority_fee_per_gas(std::string&& value) {
+  
+  max_priority_fee_per_gas_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+}
+inline void TypedTransaction1559ETH::set_max_priority_fee_per_gas(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  max_priority_fee_per_gas_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+}
+inline void TypedTransaction1559ETH::set_max_priority_fee_per_gas(const char* value, size_t size) {
+  
+  max_priority_fee_per_gas_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+}
+inline std::string* TypedTransaction1559ETH::mutable_max_priority_fee_per_gas() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+  return max_priority_fee_per_gas_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TypedTransaction1559ETH::release_max_priority_fee_per_gas() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+  
+  return max_priority_fee_per_gas_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TypedTransaction1559ETH::set_allocated_max_priority_fee_per_gas(std::string* max_priority_fee_per_gas) {
+  if (max_priority_fee_per_gas != nullptr) {
+    
+  } else {
+    
+  }
+  max_priority_fee_per_gas_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), max_priority_fee_per_gas);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas)
+}
+
+// string max_fee_pre_gas = 5;
+inline void TypedTransaction1559ETH::clear_max_fee_pre_gas() {
+  max_fee_pre_gas_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TypedTransaction1559ETH::max_fee_pre_gas() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+  return max_fee_pre_gas_.GetNoArena();
+}
+inline void TypedTransaction1559ETH::set_max_fee_pre_gas(const std::string& value) {
+  
+  max_fee_pre_gas_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+}
+inline void TypedTransaction1559ETH::set_max_fee_pre_gas(std::string&& value) {
+  
+  max_fee_pre_gas_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+}
+inline void TypedTransaction1559ETH::set_max_fee_pre_gas(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  max_fee_pre_gas_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+}
+inline void TypedTransaction1559ETH::set_max_fee_pre_gas(const char* value, size_t size) {
+  
+  max_fee_pre_gas_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+}
+inline std::string* TypedTransaction1559ETH::mutable_max_fee_pre_gas() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+  return max_fee_pre_gas_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TypedTransaction1559ETH::release_max_fee_pre_gas() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+  
+  return max_fee_pre_gas_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TypedTransaction1559ETH::set_allocated_max_fee_pre_gas(std::string* max_fee_pre_gas) {
+  if (max_fee_pre_gas != nullptr) {
+    
+  } else {
+    
+  }
+  max_fee_pre_gas_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), max_fee_pre_gas);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas)
+}
+
+// string destination = 6;
+inline void TypedTransaction1559ETH::clear_destination() {
+  destination_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TypedTransaction1559ETH::destination() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+  return destination_.GetNoArena();
+}
+inline void TypedTransaction1559ETH::set_destination(const std::string& value) {
+  
+  destination_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+}
+inline void TypedTransaction1559ETH::set_destination(std::string&& value) {
+  
+  destination_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+}
+inline void TypedTransaction1559ETH::set_destination(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  destination_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+}
+inline void TypedTransaction1559ETH::set_destination(const char* value, size_t size) {
+  
+  destination_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+}
+inline std::string* TypedTransaction1559ETH::mutable_destination() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+  return destination_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TypedTransaction1559ETH::release_destination() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+  
+  return destination_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TypedTransaction1559ETH::set_allocated_destination(std::string* destination) {
+  if (destination != nullptr) {
+    
+  } else {
+    
+  }
+  destination_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), destination);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.destination)
+}
+
+// string value_in_wei = 7;
+inline void TypedTransaction1559ETH::clear_value_in_wei() {
+  value_in_wei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TypedTransaction1559ETH::value_in_wei() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+  return value_in_wei_.GetNoArena();
+}
+inline void TypedTransaction1559ETH::set_value_in_wei(const std::string& value) {
+  
+  value_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+}
+inline void TypedTransaction1559ETH::set_value_in_wei(std::string&& value) {
+  
+  value_in_wei_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+}
+inline void TypedTransaction1559ETH::set_value_in_wei(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  value_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+}
+inline void TypedTransaction1559ETH::set_value_in_wei(const char* value, size_t size) {
+  
+  value_in_wei_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+}
+inline std::string* TypedTransaction1559ETH::mutable_value_in_wei() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+  return value_in_wei_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TypedTransaction1559ETH::release_value_in_wei() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+  
+  return value_in_wei_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TypedTransaction1559ETH::set_allocated_value_in_wei(std::string* value_in_wei) {
+  if (value_in_wei != nullptr) {
+    
+  } else {
+    
+  }
+  value_in_wei_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value_in_wei);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei)
+}
+
+// string input = 8;
+inline void TypedTransaction1559ETH::clear_input() {
+  input_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TypedTransaction1559ETH::input() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+  return input_.GetNoArena();
+}
+inline void TypedTransaction1559ETH::set_input(const std::string& value) {
+  
+  input_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+}
+inline void TypedTransaction1559ETH::set_input(std::string&& value) {
+  
+  input_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+}
+inline void TypedTransaction1559ETH::set_input(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  input_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+}
+inline void TypedTransaction1559ETH::set_input(const char* value, size_t size) {
+  
+  input_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+}
+inline std::string* TypedTransaction1559ETH::mutable_input() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+  return input_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TypedTransaction1559ETH::release_input() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+  
+  return input_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TypedTransaction1559ETH::set_allocated_input(std::string* input) {
+  if (input != nullptr) {
+    
+  } else {
+    
+  }
+  input_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), input);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.input)
+}
+
+// string access_list_in_JSON = 9;
+inline void TypedTransaction1559ETH::clear_access_list_in_json() {
+  access_list_in_json_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& TypedTransaction1559ETH::access_list_in_json() const {
+  // @@protoc_insertion_point(field_get:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+  return access_list_in_json_.GetNoArena();
+}
+inline void TypedTransaction1559ETH::set_access_list_in_json(const std::string& value) {
+  
+  access_list_in_json_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+}
+inline void TypedTransaction1559ETH::set_access_list_in_json(std::string&& value) {
+  
+  access_list_in_json_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+}
+inline void TypedTransaction1559ETH::set_access_list_in_json(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  access_list_in_json_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+}
+inline void TypedTransaction1559ETH::set_access_list_in_json(const char* value, size_t size) {
+  
+  access_list_in_json_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+}
+inline std::string* TypedTransaction1559ETH::mutable_access_list_in_json() {
+  
+  // @@protoc_insertion_point(field_mutable:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+  return access_list_in_json_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* TypedTransaction1559ETH::release_access_list_in_json() {
+  // @@protoc_insertion_point(field_release:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+  
+  return access_list_in_json_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void TypedTransaction1559ETH::set_allocated_access_list_in_json(std::string* access_list_in_json) {
+  if (access_list_in_json != nullptr) {
+    
+  } else {
+    
+  }
+  access_list_in_json_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_list_in_json);
+  // @@protoc_insertion_point(field_set_allocated:JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

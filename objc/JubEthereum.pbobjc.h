@@ -71,6 +71,7 @@ typedef GPB_ENUM(EthereumProtosTransactionETH_FieldNumber) {
   EthereumProtosTransactionETH_FieldNumber_To = 5,
   EthereumProtosTransactionETH_FieldNumber_ValueInWei = 6,
   EthereumProtosTransactionETH_FieldNumber_Input = 7,
+  EthereumProtosTransactionETH_FieldNumber_AccessListInJson = 8,
 };
 
 @interface EthereumProtosTransactionETH : GPBMessage
@@ -90,6 +91,46 @@ typedef GPB_ENUM(EthereumProtosTransactionETH_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *valueInWei;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *input;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *accessListInJson;
+
+@end
+
+#pragma mark - EthereumProtosTypedTransaction1559ETH
+
+typedef GPB_ENUM(EthereumProtosTypedTransaction1559ETH_FieldNumber) {
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_Path = 1,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_Nonce = 2,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_GasLimit = 3,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_MaxPriorityFeePerGas = 4,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_MaxFeePreGas = 5,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_Destination = 6,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_ValueInWei = 7,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_Input = 8,
+  EthereumProtosTypedTransaction1559ETH_FieldNumber_AccessListInJson = 9,
+};
+
+@interface EthereumProtosTypedTransaction1559ETH : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) CommonProtosBip44Path *path;
+/** Test to see if @c path has been set. */
+@property(nonatomic, readwrite) BOOL hasPath;
+
+@property(nonatomic, readwrite) uint32_t nonce;
+
+@property(nonatomic, readwrite) uint32_t gasLimit;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *maxPriorityFeePerGas;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *maxFeePreGas;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *destination;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *valueInWei;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *input;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *accessListInJson;
 
 @end
 

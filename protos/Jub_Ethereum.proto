@@ -21,4 +21,17 @@ message TransactionETH {
     string to = 5;
     string value_in_wei = 6;
     string input = 7;
+    string access_list_in_JSON = 8;
+}
+
+message TypedTransaction1559ETH {
+    JUB.Proto.Common.Bip44Path path = 1;
+    uint32 nonce = 2;
+    uint32 gas_limit = 3;
+    string max_priority_fee_per_gas = 4;
+    string max_fee_pre_gas = 5;
+    string destination = 6;
+    string value_in_wei = 7;
+    string input = 8;
+    string access_list_in_JSON = 9;
 }

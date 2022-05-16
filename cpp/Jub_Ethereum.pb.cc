@@ -27,6 +27,10 @@ class TransactionETHDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TransactionETH> _instance;
 } _TransactionETH_default_instance_;
+class TypedTransaction1559ETHDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TypedTransaction1559ETH> _instance;
+} _TypedTransaction1559ETH_default_instance_;
 }  // namespace Ethereum
 }  // namespace Proto
 }  // namespace JUB
@@ -59,7 +63,22 @@ static void InitDefaultsscc_info_TransactionETH_Jub_5fEthereum_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_TransactionETH_Jub_5fEthereum_2eproto}, {
       &scc_info_Bip44Path_Jub_5fCommon_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fEthereum_2eproto[2];
+static void InitDefaultsscc_info_TypedTransaction1559ETH_Jub_5fEthereum_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::JUB::Proto::Ethereum::_TypedTransaction1559ETH_default_instance_;
+    new (ptr) ::JUB::Proto::Ethereum::TypedTransaction1559ETH();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::JUB::Proto::Ethereum::TypedTransaction1559ETH::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TypedTransaction1559ETH_Jub_5fEthereum_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_TypedTransaction1559ETH_Jub_5fEthereum_2eproto}, {
+      &scc_info_Bip44Path_Jub_5fCommon_2eproto.base,}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Jub_5fEthereum_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Jub_5fEthereum_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Jub_5fEthereum_2eproto = nullptr;
 
@@ -83,42 +102,67 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Jub_5fEthereum_2eproto::offset
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TransactionETH, to_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TransactionETH, value_in_wei_),
   PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TransactionETH, input_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TransactionETH, access_list_in_json_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, path_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, nonce_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, gas_limit_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, max_priority_fee_per_gas_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, max_fee_pre_gas_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, destination_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, value_in_wei_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, input_),
+  PROTOBUF_FIELD_OFFSET(::JUB::Proto::Ethereum::TypedTransaction1559ETH, access_list_in_json_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::JUB::Proto::Ethereum::ContextCfgETH)},
   { 7, -1, sizeof(::JUB::Proto::Ethereum::TransactionETH)},
+  { 20, -1, sizeof(::JUB::Proto::Ethereum::TypedTransaction1559ETH)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ethereum::_ContextCfgETH_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ethereum::_TransactionETH_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::JUB::Proto::Ethereum::_TypedTransaction1559ETH_default_instance_),
 };
 
 const char descriptor_table_protodef_Jub_5fEthereum_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\022Jub_Ethereum.proto\022\022JUB.Proto.Ethereum"
   "\032\020Jub_Common.proto\"4\n\rContextCfgETH\022\021\n\tm"
-  "ain_path\030\001 \001(\t\022\020\n\010chain_id\030\002 \001(\r\"\250\001\n\016Tra"
+  "ain_path\030\001 \001(\t\022\020\n\010chain_id\030\002 \001(\r\"\305\001\n\016Tra"
   "nsactionETH\022)\n\004path\030\001 \001(\0132\033.JUB.Proto.Co"
   "mmon.Bip44Path\022\r\n\005nonce\030\002 \001(\r\022\021\n\tgas_lim"
   "it\030\003 \001(\r\022\030\n\020gas_price_in_wei\030\004 \001(\t\022\n\n\002to"
   "\030\005 \001(\t\022\024\n\014value_in_wei\030\006 \001(\t\022\r\n\005input\030\007 "
+  "\001(\t\022\033\n\023access_list_in_JSON\030\010 \001(\t\"\370\001\n\027Typ"
+  "edTransaction1559ETH\022)\n\004path\030\001 \001(\0132\033.JUB"
+  ".Proto.Common.Bip44Path\022\r\n\005nonce\030\002 \001(\r\022\021"
+  "\n\tgas_limit\030\003 \001(\r\022 \n\030max_priority_fee_pe"
+  "r_gas\030\004 \001(\t\022\027\n\017max_fee_pre_gas\030\005 \001(\t\022\023\n\013"
+  "destination\030\006 \001(\t\022\024\n\014value_in_wei\030\007 \001(\t\022"
+  "\r\n\005input\030\010 \001(\t\022\033\n\023access_list_in_JSON\030\t "
   "\001(\tB8\n\025com.jubiter.sdk.protoB\016EthereumPr"
   "otos\242\002\016EthereumProtosb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Jub_5fEthereum_2eproto_deps[1] = {
   &::descriptor_table_Jub_5fCommon_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fEthereum_2eproto_sccs[2] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Jub_5fEthereum_2eproto_sccs[3] = {
   &scc_info_ContextCfgETH_Jub_5fEthereum_2eproto.base,
   &scc_info_TransactionETH_Jub_5fEthereum_2eproto.base,
+  &scc_info_TypedTransaction1559ETH_Jub_5fEthereum_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Jub_5fEthereum_2eproto_once;
 static bool descriptor_table_Jub_5fEthereum_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Jub_5fEthereum_2eproto = {
-  &descriptor_table_Jub_5fEthereum_2eproto_initialized, descriptor_table_protodef_Jub_5fEthereum_2eproto, "Jub_Ethereum.proto", 349,
-  &descriptor_table_Jub_5fEthereum_2eproto_once, descriptor_table_Jub_5fEthereum_2eproto_sccs, descriptor_table_Jub_5fEthereum_2eproto_deps, 2, 1,
+  &descriptor_table_Jub_5fEthereum_2eproto_initialized, descriptor_table_protodef_Jub_5fEthereum_2eproto, "Jub_Ethereum.proto", 629,
+  &descriptor_table_Jub_5fEthereum_2eproto_once, descriptor_table_Jub_5fEthereum_2eproto_sccs, descriptor_table_Jub_5fEthereum_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_Jub_5fEthereum_2eproto::offsets,
-  file_level_metadata_Jub_5fEthereum_2eproto, 2, file_level_enum_descriptors_Jub_5fEthereum_2eproto, file_level_service_descriptors_Jub_5fEthereum_2eproto,
+  file_level_metadata_Jub_5fEthereum_2eproto, 3, file_level_enum_descriptors_Jub_5fEthereum_2eproto, file_level_service_descriptors_Jub_5fEthereum_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -486,6 +530,10 @@ TransactionETH::TransactionETH(const TransactionETH& from)
   if (!from.input().empty()) {
     input_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.input_);
   }
+  access_list_in_json_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.access_list_in_json().empty()) {
+    access_list_in_json_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.access_list_in_json_);
+  }
   if (from.has_path()) {
     path_ = new ::JUB::Proto::Common::Bip44Path(*from.path_);
   } else {
@@ -503,6 +551,7 @@ void TransactionETH::SharedCtor() {
   to_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   value_in_wei_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   input_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  access_list_in_json_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&path_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&gas_limit_) -
       reinterpret_cast<char*>(&path_)) + sizeof(gas_limit_));
@@ -518,6 +567,7 @@ void TransactionETH::SharedDtor() {
   to_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   value_in_wei_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   input_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  access_list_in_json_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete path_;
 }
 
@@ -540,6 +590,7 @@ void TransactionETH::Clear() {
   to_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   value_in_wei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   input_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  access_list_in_json_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
     delete path_;
   }
@@ -604,6 +655,13 @@ const char* TransactionETH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_input(), ptr, ctx, "JUB.Proto.Ethereum.TransactionETH.input");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string access_list_in_JSON = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_access_list_in_json(), ptr, ctx, "JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -734,6 +792,21 @@ bool TransactionETH::MergePartialFromCodedStream(
         break;
       }
 
+      // string access_list_in_JSON = 8;
+      case 8: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_access_list_in_json()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->access_list_in_json().data(), static_cast<int>(this->access_list_in_json().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -817,6 +890,16 @@ void TransactionETH::SerializeWithCachedSizes(
       7, this->input(), output);
   }
 
+  // string access_list_in_JSON = 8;
+  if (this->access_list_in_json().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->access_list_in_json().data(), static_cast<int>(this->access_list_in_json().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      8, this->access_list_in_json(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -891,6 +974,17 @@ void TransactionETH::SerializeWithCachedSizes(
         7, this->input(), target);
   }
 
+  // string access_list_in_JSON = 8;
+  if (this->access_list_in_json().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->access_list_in_json().data(), static_cast<int>(this->access_list_in_json().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TransactionETH.access_list_in_JSON");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        8, this->access_list_in_json(), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -938,6 +1032,13 @@ size_t TransactionETH::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->input());
+  }
+
+  // string access_list_in_JSON = 8;
+  if (this->access_list_in_json().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->access_list_in_json());
   }
 
   // .JUB.Proto.Common.Bip44Path path = 1;
@@ -1004,6 +1105,10 @@ void TransactionETH::MergeFrom(const TransactionETH& from) {
 
     input_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.input_);
   }
+  if (from.access_list_in_json().size() > 0) {
+
+    access_list_in_json_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.access_list_in_json_);
+  }
   if (from.has_path()) {
     mutable_path()->::JUB::Proto::Common::Bip44Path::MergeFrom(from.path());
   }
@@ -1044,12 +1149,754 @@ void TransactionETH::InternalSwap(TransactionETH* other) {
     GetArenaNoVirtual());
   input_.Swap(&other->input_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  access_list_in_json_.Swap(&other->access_list_in_json_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(path_, other->path_);
   swap(nonce_, other->nonce_);
   swap(gas_limit_, other->gas_limit_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TransactionETH::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void TypedTransaction1559ETH::InitAsDefaultInstance() {
+  ::JUB::Proto::Ethereum::_TypedTransaction1559ETH_default_instance_._instance.get_mutable()->path_ = const_cast< ::JUB::Proto::Common::Bip44Path*>(
+      ::JUB::Proto::Common::Bip44Path::internal_default_instance());
+}
+class TypedTransaction1559ETH::_Internal {
+ public:
+  static const ::JUB::Proto::Common::Bip44Path& path(const TypedTransaction1559ETH* msg);
+};
+
+const ::JUB::Proto::Common::Bip44Path&
+TypedTransaction1559ETH::_Internal::path(const TypedTransaction1559ETH* msg) {
+  return *msg->path_;
+}
+void TypedTransaction1559ETH::clear_path() {
+  if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
+    delete path_;
+  }
+  path_ = nullptr;
+}
+TypedTransaction1559ETH::TypedTransaction1559ETH()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+}
+TypedTransaction1559ETH::TypedTransaction1559ETH(const TypedTransaction1559ETH& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  max_priority_fee_per_gas_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.max_priority_fee_per_gas().empty()) {
+    max_priority_fee_per_gas_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.max_priority_fee_per_gas_);
+  }
+  max_fee_pre_gas_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.max_fee_pre_gas().empty()) {
+    max_fee_pre_gas_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.max_fee_pre_gas_);
+  }
+  destination_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.destination().empty()) {
+    destination_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.destination_);
+  }
+  value_in_wei_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.value_in_wei().empty()) {
+    value_in_wei_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.value_in_wei_);
+  }
+  input_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.input().empty()) {
+    input_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.input_);
+  }
+  access_list_in_json_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.access_list_in_json().empty()) {
+    access_list_in_json_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.access_list_in_json_);
+  }
+  if (from.has_path()) {
+    path_ = new ::JUB::Proto::Common::Bip44Path(*from.path_);
+  } else {
+    path_ = nullptr;
+  }
+  ::memcpy(&nonce_, &from.nonce_,
+    static_cast<size_t>(reinterpret_cast<char*>(&gas_limit_) -
+    reinterpret_cast<char*>(&nonce_)) + sizeof(gas_limit_));
+  // @@protoc_insertion_point(copy_constructor:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+}
+
+void TypedTransaction1559ETH::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TypedTransaction1559ETH_Jub_5fEthereum_2eproto.base);
+  max_priority_fee_per_gas_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  max_fee_pre_gas_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  destination_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  value_in_wei_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  input_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  access_list_in_json_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&path_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&gas_limit_) -
+      reinterpret_cast<char*>(&path_)) + sizeof(gas_limit_));
+}
+
+TypedTransaction1559ETH::~TypedTransaction1559ETH() {
+  // @@protoc_insertion_point(destructor:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  SharedDtor();
+}
+
+void TypedTransaction1559ETH::SharedDtor() {
+  max_priority_fee_per_gas_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  max_fee_pre_gas_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  destination_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  value_in_wei_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  input_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  access_list_in_json_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete path_;
+}
+
+void TypedTransaction1559ETH::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TypedTransaction1559ETH& TypedTransaction1559ETH::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TypedTransaction1559ETH_Jub_5fEthereum_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TypedTransaction1559ETH::Clear() {
+// @@protoc_insertion_point(message_clear_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  max_priority_fee_per_gas_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  max_fee_pre_gas_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  destination_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  value_in_wei_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  input_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  access_list_in_json_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && path_ != nullptr) {
+    delete path_;
+  }
+  path_ = nullptr;
+  ::memset(&nonce_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&gas_limit_) -
+      reinterpret_cast<char*>(&nonce_)) + sizeof(gas_limit_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TypedTransaction1559ETH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .JUB.Proto.Common.Bip44Path path = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_path(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 nonce = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          nonce_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 gas_limit = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          gas_limit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string max_priority_fee_per_gas = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_max_priority_fee_per_gas(), ptr, ctx, "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string max_fee_pre_gas = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_max_fee_pre_gas(), ptr, ctx, "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string destination = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_destination(), ptr, ctx, "JUB.Proto.Ethereum.TypedTransaction1559ETH.destination");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string value_in_wei = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_value_in_wei(), ptr, ctx, "JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string input = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_input(), ptr, ctx, "JUB.Proto.Ethereum.TypedTransaction1559ETH.input");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string access_list_in_JSON = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_access_list_in_json(), ptr, ctx, "JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool TypedTransaction1559ETH::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .JUB.Proto.Common.Bip44Path path = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_path()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 nonce = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &nonce_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 gas_limit = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &gas_limit_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string max_priority_fee_per_gas = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_max_priority_fee_per_gas()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->max_priority_fee_per_gas().data(), static_cast<int>(this->max_priority_fee_per_gas().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string max_fee_pre_gas = 5;
+      case 5: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_max_fee_pre_gas()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->max_fee_pre_gas().data(), static_cast<int>(this->max_fee_pre_gas().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string destination = 6;
+      case 6: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_destination()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->destination().data(), static_cast<int>(this->destination().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TypedTransaction1559ETH.destination"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string value_in_wei = 7;
+      case 7: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_value_in_wei()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->value_in_wei().data(), static_cast<int>(this->value_in_wei().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string input = 8;
+      case 8: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_input()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->input().data(), static_cast<int>(this->input().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TypedTransaction1559ETH.input"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string access_list_in_JSON = 9;
+      case 9: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_access_list_in_json()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->access_list_in_json().data(), static_cast<int>(this->access_list_in_json().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void TypedTransaction1559ETH::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  if (this->has_path()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, _Internal::path(this), output);
+  }
+
+  // uint32 nonce = 2;
+  if (this->nonce() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->nonce(), output);
+  }
+
+  // uint32 gas_limit = 3;
+  if (this->gas_limit() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->gas_limit(), output);
+  }
+
+  // string max_priority_fee_per_gas = 4;
+  if (this->max_priority_fee_per_gas().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->max_priority_fee_per_gas().data(), static_cast<int>(this->max_priority_fee_per_gas().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->max_priority_fee_per_gas(), output);
+  }
+
+  // string max_fee_pre_gas = 5;
+  if (this->max_fee_pre_gas().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->max_fee_pre_gas().data(), static_cast<int>(this->max_fee_pre_gas().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      5, this->max_fee_pre_gas(), output);
+  }
+
+  // string destination = 6;
+  if (this->destination().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->destination().data(), static_cast<int>(this->destination().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.destination");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      6, this->destination(), output);
+  }
+
+  // string value_in_wei = 7;
+  if (this->value_in_wei().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->value_in_wei().data(), static_cast<int>(this->value_in_wei().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      7, this->value_in_wei(), output);
+  }
+
+  // string input = 8;
+  if (this->input().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->input().data(), static_cast<int>(this->input().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.input");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      8, this->input(), output);
+  }
+
+  // string access_list_in_JSON = 9;
+  if (this->access_list_in_json().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->access_list_in_json().data(), static_cast<int>(this->access_list_in_json().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      9, this->access_list_in_json(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* TypedTransaction1559ETH::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  if (this->has_path()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, _Internal::path(this), target);
+  }
+
+  // uint32 nonce = 2;
+  if (this->nonce() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->nonce(), target);
+  }
+
+  // uint32 gas_limit = 3;
+  if (this->gas_limit() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->gas_limit(), target);
+  }
+
+  // string max_priority_fee_per_gas = 4;
+  if (this->max_priority_fee_per_gas().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->max_priority_fee_per_gas().data(), static_cast<int>(this->max_priority_fee_per_gas().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_priority_fee_per_gas");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        4, this->max_priority_fee_per_gas(), target);
+  }
+
+  // string max_fee_pre_gas = 5;
+  if (this->max_fee_pre_gas().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->max_fee_pre_gas().data(), static_cast<int>(this->max_fee_pre_gas().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.max_fee_pre_gas");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        5, this->max_fee_pre_gas(), target);
+  }
+
+  // string destination = 6;
+  if (this->destination().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->destination().data(), static_cast<int>(this->destination().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.destination");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        6, this->destination(), target);
+  }
+
+  // string value_in_wei = 7;
+  if (this->value_in_wei().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->value_in_wei().data(), static_cast<int>(this->value_in_wei().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.value_in_wei");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        7, this->value_in_wei(), target);
+  }
+
+  // string input = 8;
+  if (this->input().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->input().data(), static_cast<int>(this->input().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.input");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        8, this->input(), target);
+  }
+
+  // string access_list_in_JSON = 9;
+  if (this->access_list_in_json().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->access_list_in_json().data(), static_cast<int>(this->access_list_in_json().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "JUB.Proto.Ethereum.TypedTransaction1559ETH.access_list_in_JSON");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        9, this->access_list_in_json(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  return target;
+}
+
+size_t TypedTransaction1559ETH::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string max_priority_fee_per_gas = 4;
+  if (this->max_priority_fee_per_gas().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->max_priority_fee_per_gas());
+  }
+
+  // string max_fee_pre_gas = 5;
+  if (this->max_fee_pre_gas().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->max_fee_pre_gas());
+  }
+
+  // string destination = 6;
+  if (this->destination().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->destination());
+  }
+
+  // string value_in_wei = 7;
+  if (this->value_in_wei().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->value_in_wei());
+  }
+
+  // string input = 8;
+  if (this->input().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->input());
+  }
+
+  // string access_list_in_JSON = 9;
+  if (this->access_list_in_json().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->access_list_in_json());
+  }
+
+  // .JUB.Proto.Common.Bip44Path path = 1;
+  if (this->has_path()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *path_);
+  }
+
+  // uint32 nonce = 2;
+  if (this->nonce() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->nonce());
+  }
+
+  // uint32 gas_limit = 3;
+  if (this->gas_limit() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->gas_limit());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TypedTransaction1559ETH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TypedTransaction1559ETH* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TypedTransaction1559ETH>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+    MergeFrom(*source);
+  }
+}
+
+void TypedTransaction1559ETH::MergeFrom(const TypedTransaction1559ETH& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.max_priority_fee_per_gas().size() > 0) {
+
+    max_priority_fee_per_gas_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.max_priority_fee_per_gas_);
+  }
+  if (from.max_fee_pre_gas().size() > 0) {
+
+    max_fee_pre_gas_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.max_fee_pre_gas_);
+  }
+  if (from.destination().size() > 0) {
+
+    destination_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.destination_);
+  }
+  if (from.value_in_wei().size() > 0) {
+
+    value_in_wei_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.value_in_wei_);
+  }
+  if (from.input().size() > 0) {
+
+    input_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.input_);
+  }
+  if (from.access_list_in_json().size() > 0) {
+
+    access_list_in_json_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.access_list_in_json_);
+  }
+  if (from.has_path()) {
+    mutable_path()->::JUB::Proto::Common::Bip44Path::MergeFrom(from.path());
+  }
+  if (from.nonce() != 0) {
+    set_nonce(from.nonce());
+  }
+  if (from.gas_limit() != 0) {
+    set_gas_limit(from.gas_limit());
+  }
+}
+
+void TypedTransaction1559ETH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TypedTransaction1559ETH::CopyFrom(const TypedTransaction1559ETH& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:JUB.Proto.Ethereum.TypedTransaction1559ETH)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TypedTransaction1559ETH::IsInitialized() const {
+  return true;
+}
+
+void TypedTransaction1559ETH::InternalSwap(TypedTransaction1559ETH* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  max_priority_fee_per_gas_.Swap(&other->max_priority_fee_per_gas_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  max_fee_pre_gas_.Swap(&other->max_fee_pre_gas_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  destination_.Swap(&other->destination_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  value_in_wei_.Swap(&other->value_in_wei_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  input_.Swap(&other->input_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  access_list_in_json_.Swap(&other->access_list_in_json_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(path_, other->path_);
+  swap(nonce_, other->nonce_);
+  swap(gas_limit_, other->gas_limit_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata TypedTransaction1559ETH::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1064,6 +1911,9 @@ template<> PROTOBUF_NOINLINE ::JUB::Proto::Ethereum::ContextCfgETH* Arena::Creat
 }
 template<> PROTOBUF_NOINLINE ::JUB::Proto::Ethereum::TransactionETH* Arena::CreateMaybeMessage< ::JUB::Proto::Ethereum::TransactionETH >(Arena* arena) {
   return Arena::CreateInternal< ::JUB::Proto::Ethereum::TransactionETH >(arena);
+}
+template<> PROTOBUF_NOINLINE ::JUB::Proto::Ethereum::TypedTransaction1559ETH* Arena::CreateMaybeMessage< ::JUB::Proto::Ethereum::TypedTransaction1559ETH >(Arena* arena) {
+  return Arena::CreateInternal< ::JUB::Proto::Ethereum::TypedTransaction1559ETH >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
